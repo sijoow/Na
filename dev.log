@@ -1,0 +1,2117 @@
+
+> nhatrang-planner@0.1.0 dev
+> next dev -H 0.0.0.0
+
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+- Environments: .env.local, .env
+✓ Ready in 680ms
+⚠ Warning: Next.js ignored package-lock.json in C:\Users\WeMA1 because it is outside the current Git repository (C:\Users\WeMA1\Desktop\Na\nhatrang-planner).
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+✓ Running next.config.ts took 63ms
+
+ GET /api/trip 200 in 1313ms (next.js: 196ms, proxy.ts: 335ms, application-code: 781ms)
+ GET / 200 in 378ms (next.js: 110ms, proxy.ts: 33ms, application-code: 235ms)
+ GET /api/trip 200 in 1481ms (next.js: 558ms, proxy.ts: 337ms, application-code: 587ms)
+ GET /api/trip 200 in 1516ms (next.js: 591ms, proxy.ts: 337ms, application-code: 589ms)
+ GET /api/trip 200 in 53ms (next.js: 15ms, proxy.ts: 10ms, application-code: 27ms)
+ GET /api/trip 200 in 53ms (next.js: 23ms, proxy.ts: 10ms, application-code: 20ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ PUT /api/trip 200 in 36ms (next.js: 6ms, proxy.ts: 6ms, application-code: 25ms)
+ PUT /api/trip 409 in 56ms (next.js: 7ms, proxy.ts: 6ms, application-code: 43ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 5ms, application-code: 27ms)
+ GET /api/trip 200 in 30ms (next.js: 5ms, proxy.ts: 5ms, application-code: 20ms)
+ GET /api/trip 200 in 45ms (next.js: 5ms, proxy.ts: 5ms, application-code: 35ms)
+ GET / 200 in 94ms (next.js: 28ms, proxy.ts: 6ms, application-code: 60ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 12ms, application-code: 32ms)
+ GET /api/trip 200 in 50ms (next.js: 5ms, proxy.ts: 26ms, application-code: 20ms)
+ GET /api/trip 200 in 53ms (next.js: 15ms, proxy.ts: 6ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 6ms, application-code: 27ms)
+ GET /api/trip 200 in 32ms (next.js: 5ms, proxy.ts: 5ms, application-code: 23ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+✓ Compiled in 92ms
+ GET / 200 in 65ms (next.js: 23ms, proxy.ts: 6ms, application-code: 36ms)
+ GET /api/trip 200 in 42ms (next.js: 4ms, proxy.ts: 5ms, application-code: 33ms)
+ GET /api/trip 200 in 52ms (next.js: 11ms, proxy.ts: 5ms, application-code: 37ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 5ms, application-code: 21ms)
+ GET /api/trip 200 in 38ms (next.js: 9ms, proxy.ts: 4ms, application-code: 25ms)
+ GET / 200 in 58ms (next.js: 16ms, proxy.ts: 5ms, application-code: 37ms)
+ GET /api/trip 200 in 29ms (next.js: 4ms, proxy.ts: 4ms, application-code: 21ms)
+ GET /api/trip 200 in 34ms (next.js: 10ms, proxy.ts: 5ms, application-code: 19ms)
+✓ Compiled in 185ms
+ GET / 200 in 49ms (next.js: 19ms, proxy.ts: 5ms, application-code: 25ms)
+ GET /api/trip 200 in 44ms (next.js: 12ms, proxy.ts: 5ms, application-code: 27ms)
+ GET / 200 in 79ms (next.js: 19ms, proxy.ts: 5ms, application-code: 54ms)
+ GET /api/trip 200 in 27ms (next.js: 3ms, proxy.ts: 5ms, application-code: 19ms)
+ GET / 200 in 80ms (next.js: 34ms, proxy.ts: 7ms, application-code: 39ms)
+ GET /api/trip 200 in 37ms (next.js: 8ms, proxy.ts: 9ms, application-code: 20ms)
+ GET /api/trip 200 in 43ms (next.js: 15ms, proxy.ts: 10ms, application-code: 18ms)
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET /api/trip 200 in 51ms (next.js: 22ms, proxy.ts: 5ms, application-code: 25ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 42ms (next.js: 13ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 43ms (next.js: 14ms, proxy.ts: 5ms, application-code: 25ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET / 200 in 51ms (next.js: 9ms, proxy.ts: 5ms, application-code: 36ms)
+ GET /api/trip 200 in 194ms (next.js: 75ms, proxy.ts: 8ms, application-code: 110ms)
+ GET /api/trip 200 in 199ms (next.js: 129ms, proxy.ts: 46ms, application-code: 24ms)
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `2026-10-04~10-06 (2박, 성인2)`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET /api/trip 200 in 47ms (next.js: 5ms, proxy.ts: 7ms, application-code: 35ms)
+ GET /api/trip 200 in 36ms (next.js: 8ms, proxy.ts: 6ms, application-code: 22ms)
+ GET /api/trip 200 in 58ms (next.js: 7ms, proxy.ts: 29ms, application-code: 22ms)
+ GET /api/trip 200 in 104ms (next.js: 4ms, proxy.ts: 6ms, application-code: 94ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 4ms, application-code: 27ms)
+✓ Compiled in 67ms
+✓ Compiled in 71ms
+ GET / 200 in 47ms (next.js: 16ms, proxy.ts: 7ms, application-code: 25ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET / 200 in 47ms (next.js: 17ms, proxy.ts: 6ms, application-code: 24ms)
+✓ Compiled in 49ms
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+✓ Compiled in 83ms
+ GET / 200 in 52ms (next.js: 14ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 27ms (next.js: 5ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET / 200 in 41ms (next.js: 14ms, proxy.ts: 4ms, application-code: 22ms)
+✓ Compiled in 39ms
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 53ms (next.js: 14ms, proxy.ts: 11ms, application-code: 29ms)
+ GET /api/trip 200 in 70ms (next.js: 29ms, proxy.ts: 11ms, application-code: 30ms)
+ GET /api/trip 200 in 52ms (next.js: 7ms, proxy.ts: 9ms, application-code: 36ms)
+[browser] ./src/data/guide.ts:10:24
+Error: Unterminated regexp literal
+   8 | function firstClause(text: string, max = 40): string {
+   9 |   const t = text.replace(/^[[^]]*]s*/, "").trim();
+> 10 |   const cut = t.search(/s(|.s|[/);
+     |                        ^^^^^^^^^^^
+  11 |   const head = (cut > 0 ? t.slice(0, cut) : t).trim();
+  12 |   return head.length > max ? `${head.slice(0, max)}…` : head;
+  13 | }
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/data/guide.ts [Client Component Browser]
+    ./src/components/ToursShopsTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/data/guide.ts [Client Component SSR]
+    ./src/components/ToursShopsTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/data/guide.ts:10:24
+Error: Unterminated regexp literal
+   8 | function firstClause(text: string, max = 40): string {
+   9 |   const t = text.replace(/^[[^]]*]s*/, "").trim();
+> 10 |   const cut = t.search(/s(|.s|[/);
+     |                        ^^^^^^^^^^^
+  11 |   const head = (cut > 0 ? t.slice(0, cut) : t).trim();
+  12 |   return head.length > max ? `${head.slice(0, max)}…` : head;
+  13 | }
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/data/guide.ts [Client Component Browser]
+    ./src/components/ToursShopsTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/data/guide.ts [Client Component SSR]
+    ./src/components/ToursShopsTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/data/guide.ts:10:24
+Error: Unterminated regexp literal
+   8 | function firstClause(text: string, max = 40): string {
+   9 |   const t = text.replace(/^[[^]]*]s*/, "").trim();
+> 10 |   const cut = t.search(/s(|.s|[/);
+     |                        ^^^^^^^^^^^
+  11 |   const head = (cut > 0 ? t.slice(0, cut) : t).trim();
+  12 |   return head.length > max ? `${head.slice(0, max)}…` : head;
+  13 | }
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/data/guide.ts [Client Component Browser]
+    ./src/components/ToursShopsTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/data/guide.ts [Client Component SSR]
+    ./src/components/ToursShopsTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/data/guide.ts:10:24
+Error: Unterminated regexp literal
+   8 | function firstClause(text: string, max = 40): string {
+   9 |   const t = text.replace(/^[[^]]*]s*/, "").trim();
+> 10 |   const cut = t.search(/s(|.s|[/);
+     |                        ^^^^^^^^^^^
+  11 |   const head = (cut > 0 ? t.slice(0, cut) : t).trim();
+  12 |   return head.length > max ? `${head.slice(0, max)}…` : head;
+  13 | }
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/data/guide.ts [Client Component Browser]
+    ./src/components/ToursShopsTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/data/guide.ts [Client Component SSR]
+    ./src/components/ToursShopsTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+ GET /api/trip 200 in 27ms (next.js: 3ms, proxy.ts: 4ms, application-code: 20ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 9ms, proxy.ts: 11ms, application-code: 19ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 32ms (next.js: 3ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 27ms (next.js: 5ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 5ms, application-code: 34ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 44ms (next.js: 4ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 35ms (next.js: 5ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 44ms (next.js: 4ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 42ms (next.js: 10ms, proxy.ts: 11ms, application-code: 21ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET / 200 in 74ms (next.js: 5ms, proxy.ts: 4ms, application-code: 65ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 49ms (next.js: 7ms, proxy.ts: 14ms, application-code: 27ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 5ms, application-code: 38ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 5ms, application-code: 21ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 68ms (next.js: 13ms, proxy.ts: 4ms, application-code: 51ms)
+ GET /api/trip 200 in 66ms (next.js: 10ms, proxy.ts: 13ms, application-code: 43ms)
+ GET /api/trip 200 in 68ms (next.js: 25ms, proxy.ts: 13ms, application-code: 29ms)
+ GET /api/trip 200 in 73ms (next.js: 37ms, proxy.ts: 12ms, application-code: 25ms)
+ GET /api/trip 200 in 32ms (next.js: 4ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 5ms, application-code: 18ms)
+ GET /api/trip 200 in 36ms (next.js: 7ms, proxy.ts: 5ms, application-code: 24ms)
+ GET /api/trip 200 in 32ms (next.js: 4ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 48ms (next.js: 6ms, proxy.ts: 13ms, application-code: 28ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 5ms, application-code: 39ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 118ms (next.js: 4ms, proxy.ts: 5ms, application-code: 108ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 4ms, application-code: 22ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 42ms (next.js: 4ms, proxy.ts: 5ms, application-code: 33ms)
+ GET /api/trip 200 in 42ms (next.js: 14ms, proxy.ts: 11ms, application-code: 17ms)
+✓ Compiled in 209ms
+ GET / 200 in 79ms (next.js: 16ms, proxy.ts: 5ms, application-code: 58ms)
+ GET /api/trip 200 in 46ms (next.js: 14ms, proxy.ts: 7ms, application-code: 24ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 99ms (next.js: 4ms, proxy.ts: 4ms, application-code: 92ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 3ms, application-code: 28ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+✓ Compiled in 65ms
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 148ms (next.js: 13ms, proxy.ts: 5ms, application-code: 131ms)
+ GET /api/trip 200 in 32ms (next.js: 7ms, proxy.ts: 8ms, application-code: 18ms)
+ GET /api/trip 200 in 40ms (next.js: 12ms, proxy.ts: 6ms, application-code: 21ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 8ms, proxy.ts: 7ms, application-code: 25ms)
+ GET /api/trip 200 in 40ms (next.js: 14ms, proxy.ts: 6ms, application-code: 20ms)
+ GET / 200 in 68ms (next.js: 6ms, proxy.ts: 4ms, application-code: 58ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 7ms, application-code: 31ms)
+ GET /api/trip 200 in 51ms (next.js: 22ms, proxy.ts: 8ms, application-code: 22ms)
+ GET /api/trip 200 in 45ms (next.js: 3ms, proxy.ts: 6ms, application-code: 36ms)
+ GET / 200 in 46ms (next.js: 9ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 41ms (next.js: 10ms, proxy.ts: 10ms, application-code: 21ms)
+ GET /api/trip 200 in 45ms (next.js: 17ms, proxy.ts: 10ms, application-code: 18ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 32ms (next.js: 7ms, proxy.ts: 9ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 13ms, proxy.ts: 8ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET / 200 in 41ms (next.js: 7ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 52ms (next.js: 18ms, proxy.ts: 8ms, application-code: 25ms)
+ GET /api/trip 200 in 52ms (next.js: 13ms, proxy.ts: 20ms, application-code: 19ms)
+ GET / 200 in 43ms (next.js: 6ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 41ms (next.js: 14ms, proxy.ts: 10ms, application-code: 17ms)
+ GET /api/trip 200 in 45ms (next.js: 7ms, proxy.ts: 11ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 38ms (next.js: 6ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 37ms (next.js: 12ms, proxy.ts: 7ms, application-code: 17ms)
+ GET /api/trip 200 in 41ms (next.js: 5ms, proxy.ts: 8ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+✓ Compiled in 82ms
+ GET /api/trip 200 in 41ms (next.js: 3ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 68ms
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 3ms, application-code: 33ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 63ms
+ GET /api/trip 200 in 30ms (next.js: 3ms, proxy.ts: 4ms, application-code: 22ms)
+✓ Compiled in 80ms
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 152ms
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 6ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 3ms, application-code: 32ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+✓ Compiled in 287ms
+ GET / 200 in 104ms (next.js: 37ms, proxy.ts: 11ms, application-code: 56ms)
+ GET /api/trip 200 in 108ms (next.js: 17ms, proxy.ts: 57ms, application-code: 35ms)
+ GET /api/trip 200 in 113ms (next.js: 8ms, proxy.ts: 58ms, application-code: 47ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 56ms (next.js: 14ms, proxy.ts: 5ms, application-code: 38ms)
+ GET /api/trip 200 in 42ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+✓ Compiled in 50ms
+ GET / 200 in 49ms (next.js: 24ms, proxy.ts: 7ms, application-code: 18ms)
+ GET /api/trip 200 in 54ms (next.js: 5ms, proxy.ts: 7ms, application-code: 42ms)
+✓ Compiled in 45ms
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET / 200 in 38ms (next.js: 14ms, proxy.ts: 4ms, application-code: 21ms)
+ GET / 200 in 41ms (next.js: 14ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 4ms, application-code: 22ms)
+ GET / 200 in 205ms (next.js: 99ms, proxy.ts: 64ms, application-code: 42ms)
+ GET / 200 in 42ms (next.js: 8ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 36ms (next.js: 7ms, proxy.ts: 5ms, application-code: 25ms)
+ GET / 200 in 39ms (next.js: 7ms, proxy.ts: 5ms, application-code: 28ms)
+ GET / 200 in 36ms (next.js: 7ms, proxy.ts: 4ms, application-code: 25ms)
+ GET / 200 in 37ms (next.js: 7ms, proxy.ts: 5ms, application-code: 25ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 42ms (next.js: 8ms, proxy.ts: 8ms, application-code: 26ms)
+ GET / 200 in 38ms (next.js: 8ms, proxy.ts: 4ms, application-code: 25ms)
+ GET / 200 in 36ms (next.js: 8ms, proxy.ts: 5ms, application-code: 24ms)
+ GET / 200 in 38ms (next.js: 7ms, proxy.ts: 5ms, application-code: 26ms)
+ GET / 200 in 43ms (next.js: 8ms, proxy.ts: 5ms, application-code: 30ms)
+ GET / 200 in 39ms (next.js: 7ms, proxy.ts: 5ms, application-code: 27ms)
+ GET / 200 in 41ms (next.js: 7ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 30ms (next.js: 6ms, proxy.ts: 5ms, application-code: 19ms)
+ GET /manifest.webmanifest 200 in 471ms (next.js: 456ms, application-code: 15ms)
+ GET /api/trip 200 in 68ms (next.js: 35ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 47ms (next.js: 7ms, proxy.ts: 4ms, application-code: 35ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 5ms, application-code: 27ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 33ms (next.js: 7ms, proxy.ts: 5ms, application-code: 21ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 8ms, application-code: 8ms)
+ GET /api/trip 200 in 45ms (next.js: 5ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 48ms (next.js: 4ms, proxy.ts: 5ms, application-code: 39ms)
+✓ Compiled in 624ms
+ GET / 200 in 703ms (next.js: 552ms, proxy.ts: 62ms, application-code: 89ms)
+ GET / 200 in 54ms (next.js: 10ms, proxy.ts: 9ms, application-code: 35ms)
+ GET / 200 in 55ms (next.js: 6ms, proxy.ts: 7ms, application-code: 42ms)
+ GET / 200 in 47ms (next.js: 8ms, proxy.ts: 9ms, application-code: 29ms)
+ GET / 200 in 51ms (next.js: 11ms, proxy.ts: 8ms, application-code: 32ms)
+ GET / 200 in 60ms (next.js: 7ms, proxy.ts: 6ms, application-code: 48ms)
+ GET / 200 in 51ms (next.js: 8ms, proxy.ts: 11ms, application-code: 31ms)
+ GET / 200 in 44ms (next.js: 7ms, proxy.ts: 7ms, application-code: 30ms)
+ GET / 200 in 59ms (next.js: 19ms, proxy.ts: 7ms, application-code: 33ms)
+ GET / 200 in 49ms (next.js: 8ms, proxy.ts: 5ms, application-code: 36ms)
+ GET / 200 in 74ms (next.js: 9ms, proxy.ts: 7ms, application-code: 58ms)
+ GET / 200 in 52ms (next.js: 9ms, proxy.ts: 6ms, application-code: 37ms)
+ GET / 200 in 57ms (next.js: 10ms, proxy.ts: 6ms, application-code: 42ms)
+ GET / 200 in 53ms (next.js: 12ms, proxy.ts: 8ms, application-code: 33ms)
+ GET / 200 in 47ms (next.js: 9ms, proxy.ts: 5ms, application-code: 33ms)
+ GET / 200 in 52ms (next.js: 9ms, proxy.ts: 5ms, application-code: 38ms)
+ GET / 200 in 40ms (next.js: 8ms, proxy.ts: 5ms, application-code: 26ms)
+ GET /manifest.webmanifest 200 in 30ms (next.js: 20ms, application-code: 10ms)
+ GET / 200 in 497ms (next.js: 225ms, proxy.ts: 218ms, application-code: 54ms)
+ GET / 200 in 48ms (next.js: 7ms, proxy.ts: 5ms, application-code: 36ms)
+ GET / 200 in 52ms (next.js: 6ms, proxy.ts: 7ms, application-code: 39ms)
+ GET / 200 in 48ms (next.js: 9ms, proxy.ts: 6ms, application-code: 33ms)
+ GET / 200 in 112ms (next.js: 42ms, proxy.ts: 6ms, application-code: 63ms)
+ GET / 200 in 91ms (next.js: 52ms, proxy.ts: 6ms, application-code: 33ms)
+ GET / 200 in 44ms (next.js: 9ms, proxy.ts: 6ms, application-code: 29ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 6ms, application-code: 29ms)
+ GET / 200 in 41ms (next.js: 7ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 5ms, application-code: 30ms)
+ GET / 200 in 40ms (next.js: 6ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 41ms (next.js: 7ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 38ms (next.js: 7ms, proxy.ts: 5ms, application-code: 26ms)
+ GET / 200 in 41ms (next.js: 8ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 39ms (next.js: 6ms, proxy.ts: 5ms, application-code: 28ms)
+ GET / 200 in 60ms (next.js: 7ms, proxy.ts: 5ms, application-code: 48ms)
+ GET / 200 in 100ms (next.js: 15ms, proxy.ts: 7ms, application-code: 77ms)
+ GET /api/trip 200 in 105ms (next.js: 61ms, proxy.ts: 9ms, application-code: 34ms)
+ GET / 200 in 52ms (next.js: 14ms, proxy.ts: 8ms, application-code: 30ms)
+ GET / 200 in 49ms (next.js: 8ms, proxy.ts: 6ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 22ms (next.js: 16ms, application-code: 6ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 1898ms (next.js: 366ms, proxy.ts: 7ms, generate-params: 1091ms, application-code: 433ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 40ms (next.js: 7ms, proxy.ts: 7ms, generate-params: 9ms, application-code: 18ms)
+ GET /apple-icon 200 in 238ms (next.js: 218ms, proxy.ts: 7ms, application-code: 13ms)
+ GET /api/trip 200 in 40ms (next.js: 9ms, proxy.ts: 5ms, application-code: 25ms)
+ GET /icon/192 200 in 34ms (next.js: 8ms, proxy.ts: 4ms, generate-params: 8ms, application-code: 15ms)
+ GET /icon/512 200 in 28ms (next.js: 5ms, proxy.ts: 5ms, generate-params: 0.0ms, application-code: 18ms)
+ GET /icon/maskable 200 in 27ms (next.js: 6ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 17ms)
+ GET /apple-icon 200 in 21ms (next.js: 4ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /manifest.webmanifest 200 in 9ms (next.js: 4ms, application-code: 5ms)
+ GET / 200 in 108ms (next.js: 13ms, proxy.ts: 4ms, application-code: 91ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 5ms, application-code: 22ms)
+ GET /api/trip 200 in 28ms (next.js: 5ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 42ms (next.js: 4ms, proxy.ts: 4ms, application-code: 34ms)
+ GET / 200 in 42ms (next.js: 13ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET /apple-icon 200 in 25ms (next.js: 8ms, proxy.ts: 5ms, application-code: 12ms)
+ GET /api/trip 200 in 41ms (next.js: 3ms, proxy.ts: 3ms, application-code: 35ms)
+ GET /icon/512?x=2 200 in 40ms (next.js: 10ms, proxy.ts: 4ms, generate-params: 7ms, application-code: 20ms)
+ GET /icon/maskable?x=2 200 in 30ms (next.js: 6ms, proxy.ts: 4ms, generate-params: 0.0ms, application-code: 19ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 6ms, application-code: 36ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 7ms, application-code: 35ms)
+✓ Compiled in 50ms
+ GET /api/trip 200 in 126ms (next.js: 42ms, proxy.ts: 52ms, application-code: 32ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET / 200 in 53ms (next.js: 15ms, proxy.ts: 6ms, application-code: 32ms)
+✓ Compiled in 72ms
+[browser] Uncaught ReferenceError: PHONE_PREVIEW is not defined
+    at eval (src/components/OverviewTab.tsx:108:28)
+    at Array.map (<anonymous>)
+    at eval (src/components/OverviewTab.tsx:103:28)
+    at Array.map (<anonymous>)
+    at OverviewTab (src/components/OverviewTab.tsx:76:21)
+    at PlannerApp (src/components/PlannerApp.tsx:219:11)
+    at Home (src\app\page.tsx:4:10)
+  106 |                     // 폰에서는 처음 5개만 보여 주고 나머지는 '외 N개'로
+  107 |                     className={`flex gap-2 ${item.done ? "text-ink-4 line-through" : "text-ink-2"} ${
+> 108 |                       i >= PHONE_PREVIEW ? "max-md:hidden" : ""
+      |                            ^
+  109 |                     }`}
+  110 |                   >
+  111 |                     <span className="w-11 shrink-0 font-medium tabular-nums text-ink-3">
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /api/trip 200 in 55ms (next.js: 10ms, proxy.ts: 17ms, application-code: 28ms)
+ GET /manifest.webmanifest 200 in 19ms (next.js: 8ms, application-code: 11ms)
+ GET /apple-icon 200 in 82ms (next.js: 15ms, application-code: 67ms)
+ GET /api/trip 200 in 160ms (next.js: 30ms, proxy.ts: 29ms, application-code: 100ms)
+✓ Compiled in 86ms
+ GET / 200 in 207ms (next.js: 77ms, proxy.ts: 42ms, application-code: 88ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 4ms, application-code: 8ms)
+ GET /apple-icon 200 in 35ms (next.js: 16ms, application-code: 18ms)
+ GET /api/trip 200 in 75ms (next.js: 9ms, proxy.ts: 12ms, application-code: 54ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 33ms (next.js: 8ms, generate-params: 7ms, application-code: 18ms)
+ GET /api/trip 200 in 101ms (next.js: 10ms, proxy.ts: 71ms, application-code: 19ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 6ms, application-code: 27ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 44ms (next.js: 14ms, proxy.ts: 4ms, application-code: 26ms)
+✓ Compiled in 65ms
+ GET /manifest.webmanifest 200 in 14ms (next.js: 6ms, application-code: 8ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 33ms (next.js: 4ms, generate-params: 7ms, application-code: 23ms)
+ GET /apple-icon 200 in 14ms (next.js: 3ms, application-code: 11ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 14ms (next.js: 3ms, generate-params: 0.0ms, application-code: 11ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET / 200 in 39ms (next.js: 14ms, proxy.ts: 4ms, application-code: 22ms)
+✓ Compiled in 50ms
+ GET /manifest.webmanifest 200 in 10ms (next.js: 5ms, application-code: 5ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 34ms (next.js: 3ms, generate-params: 7ms, application-code: 24ms)
+ GET /apple-icon 200 in 18ms (next.js: 5ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 15ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 48ms (next.js: 3ms, generate-params: 0.0ms, application-code: 45ms)
+ GET / 200 in 44ms (next.js: 13ms, proxy.ts: 5ms, application-code: 27ms)
+✓ Compiled in 67ms
+ GET /manifest.webmanifest 200 in 30ms (next.js: 22ms, application-code: 8ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 33ms (next.js: 4ms, generate-params: 7ms, application-code: 22ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 32ms (next.js: 4ms, generate-params: 0.0ms, application-code: 28ms)
+ GET /apple-icon 200 in 20ms (next.js: 4ms, application-code: 16ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 24ms (next.js: 4ms, generate-params: 0.0ms, application-code: 20ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 26ms (next.js: 3ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 42ms (next.js: 13ms, proxy.ts: 4ms, application-code: 24ms)
+✓ Compiled in 70ms
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 35ms (next.js: 5ms, generate-params: 7ms, application-code: 24ms)
+ GET /apple-icon 200 in 27ms (next.js: 3ms, application-code: 23ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 19ms (next.js: 3ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 15ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+✓ Compiled in 64ms
+ GET / 200 in 55ms (next.js: 14ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 34ms (next.js: 4ms, generate-params: 7ms, application-code: 23ms)
+ GET /apple-icon 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 15ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /api/trip 200 in 31ms (next.js: 3ms, proxy.ts: 4ms, application-code: 24ms)
+ GET / 200 in 49ms (next.js: 13ms, proxy.ts: 10ms, application-code: 26ms)
+✓ Compiled in 82ms
+ GET /manifest.webmanifest 200 in 13ms (next.js: 6ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 35ms (next.js: 4ms, generate-params: 7ms, application-code: 25ms)
+ GET /apple-icon 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 19ms (next.js: 4ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET / 200 in 49ms (next.js: 18ms, proxy.ts: 4ms, application-code: 27ms)
+✓ Compiled in 91ms
+ GET /manifest.webmanifest 200 in 37ms (next.js: 29ms, application-code: 8ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 41ms (next.js: 7ms, generate-params: 7ms, application-code: 27ms)
+ GET /apple-icon 200 in 25ms (next.js: 3ms, application-code: 22ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 30ms (next.js: 15ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 49ms (next.js: 3ms, proxy.ts: 4ms, application-code: 42ms)
+✓ Compiled in 80ms
+ GET / 200 in 59ms (next.js: 15ms, proxy.ts: 14ms, application-code: 30ms)
+ GET /manifest.webmanifest 200 in 35ms (next.js: 28ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 35ms (next.js: 5ms, generate-params: 7ms, application-code: 23ms)
+ GET /apple-icon 200 in 17ms (next.js: 4ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 5ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 4ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 11ms, proxy.ts: 4ms, application-code: 24ms)
+✓ Compiled in 47ms
+ GET /manifest.webmanifest 200 in 9ms (next.js: 4ms, application-code: 6ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 30ms (next.js: 4ms, generate-params: 6ms, application-code: 21ms)
+ GET /apple-icon 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 15ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 4ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 329ms (next.js: 69ms, proxy.ts: 117ms, application-code: 143ms)
+ GET / 200 in 50ms (next.js: 17ms, proxy.ts: 8ms, application-code: 25ms)
+✓ Compiled in 106ms
+ GET /manifest.webmanifest 200 in 30ms (next.js: 23ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 32ms (next.js: 4ms, generate-params: 7ms, application-code: 21ms)
+ GET /apple-icon 200 in 28ms (next.js: 4ms, application-code: 24ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 4ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET / 200 in 38ms (next.js: 12ms, proxy.ts: 5ms, application-code: 21ms)
+✓ Compiled in 66ms
+ GET /manifest.webmanifest 200 in 10ms (next.js: 5ms, application-code: 5ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 30ms (next.js: 3ms, generate-params: 6ms, application-code: 21ms)
+ GET /apple-icon 200 in 16ms (next.js: 3ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 4ms, generate-params: 0.0ms, application-code: 13ms)
+✓ Compiled in 59ms
+ GET / 200 in 88ms (next.js: 13ms, proxy.ts: 8ms, application-code: 67ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 33ms (next.js: 3ms, generate-params: 7ms, application-code: 22ms)
+ GET /apple-icon 200 in 16ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 4ms, application-code: 18ms)
+✓ Compiled in 70ms
+ GET / 200 in 49ms (next.js: 15ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, application-code: 6ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 31ms (next.js: 4ms, generate-params: 6ms, application-code: 21ms)
+ GET /apple-icon 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.1ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 31ms (next.js: 3ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 45ms (next.js: 3ms, proxy.ts: 3ms, application-code: 39ms)
+ GET /api/trip 200 in 25ms (next.js: 6ms, proxy.ts: 4ms, application-code: 15ms)
+✓ Compiled in 65ms
+ GET / 200 in 46ms (next.js: 14ms, proxy.ts: 6ms, application-code: 26ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 7ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 46ms (next.js: 15ms, generate-params: 7ms, application-code: 25ms)
+ GET /apple-icon 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET / 200 in 61ms (next.js: 10ms, proxy.ts: 5ms, application-code: 46ms)
+ GET /manifest.webmanifest 200 in 53ms (next.js: 47ms, application-code: 6ms)
+ GET /api/trip 200 in 81ms (next.js: 56ms, proxy.ts: 7ms, application-code: 18ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 37ms (next.js: 3ms, generate-params: 7ms, application-code: 27ms)
+ GET /apple-icon 200 in 26ms (next.js: 5ms, application-code: 21ms)
+ GET /api/trip 200 in 50ms (next.js: 9ms, proxy.ts: 8ms, application-code: 32ms)
+ GET /api/trip 200 in 51ms (next.js: 19ms, proxy.ts: 12ms, application-code: 20ms)
+ GET / 200 in 46ms (next.js: 7ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 24ms (next.js: 15ms, application-code: 8ms)
+ GET /apple-icon 200 in 27ms (next.js: 5ms, application-code: 22ms)
+ GET /api/trip 200 in 53ms (next.js: 19ms, proxy.ts: 11ms, application-code: 23ms)
+ GET /api/trip 200 in 56ms (next.js: 30ms, proxy.ts: 7ms, application-code: 18ms)
+ GET / 200 in 46ms (next.js: 6ms, proxy.ts: 5ms, application-code: 36ms)
+ GET /manifest.webmanifest 200 in 28ms (next.js: 22ms, application-code: 6ms)
+ GET /apple-icon 200 in 22ms (next.js: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 9ms, application-code: 25ms)
+ GET /api/trip 200 in 40ms (next.js: 13ms, proxy.ts: 9ms, application-code: 18ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET / 200 in 46ms (next.js: 7ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 10ms, application-code: 7ms)
+ GET /api/trip 200 in 47ms (next.js: 7ms, proxy.ts: 8ms, application-code: 33ms)
+ GET /api/trip 200 in 46ms (next.js: 13ms, proxy.ts: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 42ms (next.js: 6ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 4ms, application-code: 6ms)
+ GET /apple-icon 200 in 19ms (next.js: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 29ms (next.js: 4ms, proxy.ts: 9ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 12ms, proxy.ts: 8ms, application-code: 16ms)
+ GET / 200 in 44ms (next.js: 6ms, proxy.ts: 7ms, application-code: 31ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 5ms, application-code: 7ms)
+ GET /apple-icon 200 in 20ms (next.js: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 36ms (next.js: 5ms, proxy.ts: 8ms, application-code: 23ms)
+ GET /api/trip 200 in 37ms (next.js: 11ms, proxy.ts: 8ms, application-code: 18ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 40ms (next.js: 6ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /manifest.webmanifest 200 in 23ms (next.js: 17ms, application-code: 6ms)
+ GET /apple-icon 200 in 19ms (next.js: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 9ms, application-code: 23ms)
+ GET /api/trip 200 in 38ms (next.js: 12ms, proxy.ts: 9ms, application-code: 17ms)
+ GET / 200 in 43ms (next.js: 6ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 5ms, application-code: 8ms)
+ GET /apple-icon 200 in 19ms (next.js: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 36ms (next.js: 5ms, proxy.ts: 8ms, application-code: 23ms)
+ GET /api/trip 200 in 37ms (next.js: 11ms, proxy.ts: 8ms, application-code: 17ms)
+ GET /api/trip 200 in 46ms (next.js: 3ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 41ms (next.js: 5ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 51ms (next.js: 20ms, proxy.ts: 6ms, application-code: 25ms)
+✓ Compiled in 66ms
+ GET /manifest.webmanifest 200 in 13ms (next.js: 6ms, application-code: 8ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 36ms (next.js: 4ms, generate-params: 7ms, application-code: 25ms)
+ GET /apple-icon 200 in 19ms (next.js: 4ms, application-code: 16ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 33ms (next.js: 18ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 21ms (next.js: 4ms, generate-params: 0.0ms, application-code: 17ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /api/trip 200 in 107ms (next.js: 65ms, proxy.ts: 5ms, application-code: 36ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 5ms, application-code: 18ms)
+ GET / 200 in 86ms (next.js: 35ms, proxy.ts: 27ms, application-code: 24ms)
+✓ Compiled in 216ms
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 47ms (next.js: 15ms, generate-params: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 27ms (next.js: 4ms, generate-params: 0.0ms, application-code: 23ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 3ms, application-code: 15ms)
+✓ Compiled in 130ms
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 21ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 28ms (next.js: 3ms, proxy.ts: 4ms, application-code: 20ms)
+ GET / 200 in 48ms (next.js: 7ms, proxy.ts: 5ms, application-code: 36ms)
+ GET /manifest.webmanifest 200 in 37ms (next.js: 30ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 106ms (next.js: 5ms, generate-params: 9ms, application-code: 93ms)
+ GET /apple-icon 200 in 112ms (next.js: 29ms, application-code: 83ms)
+ GET /api/trip 200 in 102ms (next.js: 20ms, proxy.ts: 34ms, application-code: 48ms)
+ GET /api/trip 200 in 130ms (next.js: 25ms, proxy.ts: 51ms, application-code: 53ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 53ms (next.js: 8ms, proxy.ts: 6ms, application-code: 40ms)
+ GET /manifest.webmanifest 200 in 15ms (next.js: 9ms, application-code: 7ms)
+ GET /api/trip 200 in 41ms (next.js: 7ms, proxy.ts: 8ms, application-code: 25ms)
+ GET /api/trip 200 in 51ms (next.js: 20ms, proxy.ts: 6ms, application-code: 25ms)
+ GET /apple-icon 200 in 39ms (next.js: 17ms, application-code: 21ms)
+ GET / 200 in 43ms (next.js: 7ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 6ms, application-code: 8ms)
+ GET /apple-icon 200 in 29ms (next.js: 7ms, application-code: 22ms)
+ GET /api/trip 200 in 103ms (next.js: 8ms, proxy.ts: 14ms, application-code: 81ms)
+ GET /api/trip 200 in 110ms (next.js: 27ms, proxy.ts: 15ms, application-code: 67ms)
+ GET /api/trip 200 in 156ms (next.js: 17ms, proxy.ts: 13ms, application-code: 127ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET / 200 in 47ms (next.js: 6ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /manifest.webmanifest 200 in 15ms (next.js: 8ms, application-code: 7ms)
+ GET /apple-icon 200 in 21ms (next.js: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 36ms (next.js: 12ms, proxy.ts: 9ms, application-code: 15ms)
+ GET /api/trip 200 in 43ms (next.js: 5ms, proxy.ts: 9ms, application-code: 29ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET / 200 in 44ms (next.js: 6ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /apple-icon 200 in 21ms (next.js: 7ms, application-code: 15ms)
+ GET /api/trip 200 in 52ms (next.js: 14ms, proxy.ts: 22ms, application-code: 17ms)
+ GET /api/trip 200 in 45ms (next.js: 5ms, proxy.ts: 9ms, application-code: 32ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET / 200 in 41ms (next.js: 6ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 5ms, application-code: 6ms)
+ GET /apple-icon 200 in 20ms (next.js: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 8ms, application-code: 24ms)
+ GET /api/trip 200 in 41ms (next.js: 12ms, proxy.ts: 8ms, application-code: 20ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET / 200 in 43ms (next.js: 6ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /manifest.webmanifest 200 in 41ms (next.js: 31ms, application-code: 9ms)
+ GET /apple-icon 200 in 34ms (next.js: 22ms, application-code: 12ms)
+ GET /api/trip 200 in 56ms (next.js: 8ms, proxy.ts: 11ms, application-code: 37ms)
+ GET /api/trip 200 in 57ms (next.js: 16ms, proxy.ts: 10ms, application-code: 30ms)
+ GET / 200 in 46ms (next.js: 6ms, proxy.ts: 4ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 15ms (next.js: 8ms, application-code: 7ms)
+ GET /apple-icon 200 in 18ms (next.js: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 33ms (next.js: 4ms, proxy.ts: 9ms, application-code: 20ms)
+ GET /api/trip 200 in 34ms (next.js: 10ms, proxy.ts: 8ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 84ms
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+ GET /api/trip 500 in 866ms (next.js: 689ms, proxy.ts: 4ms, application-code: 173ms)
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+ GET /api/trip 500 in 31ms (next.js: 13ms, proxy.ts: 4ms, application-code: 14ms)
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+[browser] ./src/components/MapTab.tsx:217:25
+Error: Expected '</', got 'ident'
+  215 |                       <a
+  216 |                         className={}
+> 217 |                         href={directionsUrl(from, to)}
+      |                         ^^^^
+  218 |                         target="_blank"
+  219 |                         rel="noopener noreferrer"
+  220 |                       >
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MapTab.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Client Component Browser]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MapTab.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Client Component SSR]
+    ./src/components/PlannerApp.tsx [Server Component]
+    ./src/app/page.tsx [Server Component] 
+ GET / 200 in 54ms (next.js: 21ms, proxy.ts: 7ms, application-code: 26ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 5ms, application-code: 9ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 71ms (next.js: 4ms, generate-params: 7ms, application-code: 60ms)
+ GET /apple-icon 200 in 40ms (next.js: 6ms, application-code: 34ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 28ms (next.js: 5ms, generate-params: 0.0ms, application-code: 23ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 26ms (next.js: 4ms, generate-params: 0.0ms, application-code: 22ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 26ms (next.js: 8ms, generate-params: 0.0ms, application-code: 19ms)
+ GET /api/trip 200 in 40ms (next.js: 7ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 78ms (next.js: 46ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 31ms)
+✓ Compiled in 72ms
+ GET / 200 in 68ms (next.js: 23ms, proxy.ts: 6ms, application-code: 39ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 5ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 37ms (next.js: 4ms, generate-params: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 18ms (next.js: 4ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 3ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 4ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET / 200 in 47ms (next.js: 7ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 31ms (next.js: 21ms, application-code: 10ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 35ms (next.js: 3ms, generate-params: 6ms, application-code: 25ms)
+ GET /apple-icon 200 in 19ms (next.js: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 42ms (next.js: 11ms, proxy.ts: 8ms, application-code: 23ms)
+ GET /api/trip 200 in 47ms (next.js: 16ms, proxy.ts: 10ms, application-code: 21ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET / 200 in 52ms (next.js: 8ms, proxy.ts: 5ms, application-code: 39ms)
+ GET /manifest.webmanifest 200 in 51ms (next.js: 44ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 39ms (next.js: 6ms, generate-params: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 40ms (next.js: 27ms, application-code: 14ms)
+ GET /api/trip 200 in 93ms (next.js: 10ms, proxy.ts: 41ms, application-code: 43ms)
+ GET /api/trip 200 in 102ms (next.js: 73ms, proxy.ts: 7ms, application-code: 22ms)
+ GET /api/trip 200 in 41ms (next.js: 13ms, proxy.ts: 4ms, application-code: 24ms)
+ GET / 200 in 61ms (next.js: 8ms, proxy.ts: 5ms, application-code: 49ms)
+ GET /manifest.webmanifest 200 in 43ms (next.js: 35ms, application-code: 8ms)
+ GET /apple-icon 200 in 35ms (next.js: 4ms, application-code: 31ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 25ms (next.js: 4ms, generate-params: 7ms, application-code: 15ms)
+ GET /api/trip 200 in 97ms (next.js: 29ms, proxy.ts: 9ms, application-code: 59ms)
+ GET /api/trip 200 in 98ms (next.js: 51ms, proxy.ts: 28ms, application-code: 19ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 94ms
+ GET / 200 in 60ms (next.js: 23ms, proxy.ts: 7ms, application-code: 30ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 7ms, application-code: 5ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 35ms (next.js: 3ms, generate-params: 6ms, application-code: 25ms)
+ GET /apple-icon 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 15ms (next.js: 3ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 5ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 40ms (next.js: 13ms, proxy.ts: 5ms, application-code: 22ms)
+✓ Compiled in 38ms
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 46ms (next.js: 13ms, generate-params: 6ms, application-code: 26ms)
+ GET /apple-icon 200 in 20ms (next.js: 5ms, application-code: 16ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 4ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 4ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 4ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 5ms, application-code: 22ms)
+✓ Compiled in 114ms
+ GET / 200 in 52ms (next.js: 22ms, proxy.ts: 6ms, application-code: 25ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 6ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 50ms (next.js: 17ms, generate-params: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 17ms (next.js: 4ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 20ms (next.js: 6ms, generate-params: 0.0ms, application-code: 14ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 17ms (next.js: 4ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 110ms (next.js: 56ms, proxy.ts: 22ms, application-code: 32ms)
+ GET / 200 in 51ms (next.js: 7ms, proxy.ts: 5ms, application-code: 40ms)
+ GET /manifest.webmanifest 200 in 19ms (next.js: 11ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 37ms (next.js: 4ms, generate-params: 7ms, application-code: 26ms)
+ GET /apple-icon 200 in 19ms (next.js: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 43ms (next.js: 8ms, proxy.ts: 8ms, application-code: 27ms)
+ GET /api/trip 200 in 49ms (next.js: 23ms, proxy.ts: 7ms, application-code: 19ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 5ms, application-code: 29ms)
+ GET / 200 in 48ms (next.js: 8ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /manifest.webmanifest 200 in 73ms (next.js: 63ms, application-code: 11ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 43ms (next.js: 4ms, generate-params: 7ms, application-code: 32ms)
+ GET /apple-icon 200 in 24ms (next.js: 5ms, application-code: 19ms)
+ GET /api/trip 200 in 44ms (next.js: 8ms, proxy.ts: 12ms, application-code: 24ms)
+ GET /api/trip 200 in 47ms (next.js: 20ms, proxy.ts: 9ms, application-code: 18ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 236ms (next.js: 4ms, proxy.ts: 4ms, application-code: 228ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET / 200 in 49ms (next.js: 7ms, proxy.ts: 5ms, application-code: 38ms)
+ GET /manifest.webmanifest 200 in 53ms (next.js: 46ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 73ms (next.js: 4ms, generate-params: 6ms, application-code: 63ms)
+ GET /apple-icon 200 in 41ms (next.js: 6ms, application-code: 35ms)
+ GET /api/trip 200 in 78ms (next.js: 8ms, proxy.ts: 45ms, application-code: 25ms)
+ GET /api/trip 200 in 76ms (next.js: 18ms, proxy.ts: 42ms, application-code: 16ms)
+ GET /api/trip 200 in 96ms (next.js: 5ms, proxy.ts: 5ms, application-code: 86ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 42ms (next.js: 7ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 11ms, application-code: 6ms)
+ GET /apple-icon 200 in 25ms (next.js: 5ms, application-code: 19ms)
+ GET /api/trip 200 in 37ms (next.js: 6ms, proxy.ts: 9ms, application-code: 23ms)
+ GET /api/trip 200 in 38ms (next.js: 13ms, proxy.ts: 9ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET / 200 in 53ms (next.js: 8ms, proxy.ts: 4ms, application-code: 40ms)
+ GET /manifest.webmanifest 200 in 29ms (next.js: 21ms, application-code: 8ms)
+ GET /apple-icon 200 in 21ms (next.js: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 42ms (next.js: 15ms, proxy.ts: 9ms, application-code: 18ms)
+ GET /api/trip 200 in 45ms (next.js: 6ms, proxy.ts: 10ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 7ms, application-code: 29ms)
+ GET / 200 in 42ms (next.js: 7ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 5ms, application-code: 6ms)
+ GET /apple-icon 200 in 20ms (next.js: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 6ms, proxy.ts: 8ms, application-code: 24ms)
+ GET /api/trip 200 in 46ms (next.js: 13ms, proxy.ts: 8ms, application-code: 25ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET / 200 in 43ms (next.js: 7ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET /apple-icon 200 in 21ms (next.js: 5ms, application-code: 16ms)
+ GET /api/trip 200 in 35ms (next.js: 12ms, proxy.ts: 7ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 8ms, application-code: 25ms)
+ GET /api/trip 200 in 201ms (next.js: 4ms, proxy.ts: 4ms, application-code: 193ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 36ms (next.js: 8ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 20ms (next.js: 4ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /api/trip 200 in 28ms (next.js: 4ms, proxy.ts: 4ms, application-code: 20ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 44ms (next.js: 5ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 133ms (next.js: 88ms, proxy.ts: 13ms, application-code: 32ms)
+ GET /api/trip 200 in 44ms (next.js: 5ms, proxy.ts: 4ms, application-code: 36ms)
+ GET / 200 in 57ms (next.js: 10ms, proxy.ts: 5ms, application-code: 42ms)
+ GET /manifest.webmanifest 200 in 33ms (next.js: 19ms, application-code: 14ms)
+ GET /api/trip 200 in 94ms (next.js: 12ms, proxy.ts: 14ms, application-code: 67ms)
+ GET /api/trip 200 in 36ms (next.js: 8ms, proxy.ts: 9ms, application-code: 19ms)
+ GET /api/trip 200 in 48ms (next.js: 6ms, proxy.ts: 17ms, application-code: 26ms)
+ GET /apple-icon 200 in 128ms (next.js: 60ms, application-code: 69ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 135ms (next.js: 77ms, generate-params: 11ms, application-code: 47ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 46ms (next.js: 5ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 3ms, application-code: 31ms)
+ GET / 200 in 54ms (next.js: 8ms, proxy.ts: 5ms, application-code: 41ms)
+ GET /manifest.webmanifest 200 in 24ms (next.js: 12ms, application-code: 12ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 52ms (next.js: 4ms, generate-params: 7ms, application-code: 42ms)
+ GET /apple-icon 200 in 36ms (next.js: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 50ms (next.js: 10ms, proxy.ts: 13ms, application-code: 27ms)
+ GET /api/trip 200 in 49ms (next.js: 19ms, proxy.ts: 13ms, application-code: 18ms)
+ GET /api/trip 200 in 37ms (next.js: 12ms, proxy.ts: 5ms, application-code: 20ms)
+✓ Compiled in 128ms
+ GET / 200 in 72ms (next.js: 23ms, proxy.ts: 5ms, application-code: 44ms)
+ GET /manifest.webmanifest 200 in 42ms (next.js: 35ms, application-code: 7ms)
+ GET /apple-icon 200 in 52ms (next.js: 27ms, application-code: 26ms)
+ GET /api/trip 200 in 58ms (next.js: 8ms, proxy.ts: 9ms, application-code: 41ms)
+ GET /api/trip 200 in 59ms (next.js: 35ms, proxy.ts: 7ms, application-code: 16ms)
+ GET / 200 in 43ms (next.js: 7ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 7ms, application-code: 6ms)
+ GET /apple-icon 200 in 21ms (next.js: 6ms, application-code: 15ms)
+ GET /api/trip 200 in 34ms (next.js: 5ms, proxy.ts: 8ms, application-code: 21ms)
+ GET /api/trip 200 in 39ms (next.js: 13ms, proxy.ts: 8ms, application-code: 19ms)
+ GET /api/trip 200 in 46ms (next.js: 5ms, proxy.ts: 4ms, application-code: 38ms)
+ GET / 200 in 54ms (next.js: 9ms, proxy.ts: 5ms, application-code: 40ms)
+ GET /manifest.webmanifest 200 in 39ms (next.js: 30ms, application-code: 9ms)
+ GET /apple-icon 200 in 25ms (next.js: 5ms, application-code: 20ms)
+ GET /api/trip 200 in 41ms (next.js: 7ms, proxy.ts: 9ms, application-code: 26ms)
+ GET /api/trip 200 in 47ms (next.js: 15ms, proxy.ts: 9ms, application-code: 23ms)
+ GET /api/trip 200 in 54ms (next.js: 20ms, proxy.ts: 6ms, application-code: 28ms)
+ GET / 200 in 50ms (next.js: 9ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /manifest.webmanifest 200 in 28ms (next.js: 21ms, application-code: 7ms)
+ GET /apple-icon 200 in 24ms (next.js: 8ms, application-code: 16ms)
+ GET /api/trip 200 in 56ms (next.js: 7ms, proxy.ts: 21ms, application-code: 28ms)
+ GET /api/trip 200 in 51ms (next.js: 16ms, proxy.ts: 9ms, application-code: 26ms)
+ GET / 200 in 52ms (next.js: 7ms, proxy.ts: 5ms, application-code: 40ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 5ms, application-code: 7ms)
+ GET /apple-icon 200 in 23ms (next.js: 7ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 9ms, application-code: 25ms)
+ GET /api/trip 200 in 41ms (next.js: 14ms, proxy.ts: 9ms, application-code: 19ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 48ms (next.js: 8ms, proxy.ts: 4ms, application-code: 35ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 7ms, application-code: 7ms)
+ GET /apple-icon 200 in 22ms (next.js: 6ms, application-code: 16ms)
+ GET /api/trip 200 in 120ms (next.js: 6ms, proxy.ts: 10ms, application-code: 103ms)
+ GET /api/trip 200 in 120ms (next.js: 13ms, proxy.ts: 10ms, application-code: 97ms)
+ GET / 200 in 61ms (next.js: 7ms, proxy.ts: 4ms, application-code: 50ms)
+ GET /manifest.webmanifest 200 in 16ms (next.js: 10ms, application-code: 6ms)
+ GET /apple-icon 200 in 22ms (next.js: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 9ms, application-code: 24ms)
+ GET /api/trip 200 in 39ms (next.js: 13ms, proxy.ts: 8ms, application-code: 18ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 114ms (next.js: 83ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 34ms (next.js: 4ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+✓ Compiled in 343ms
+ GET / 200 in 75ms (next.js: 26ms, proxy.ts: 7ms, application-code: 43ms)
+ GET /api/trip 200 in 34ms (next.js: 6ms, proxy.ts: 7ms, application-code: 20ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 5ms, application-code: 8ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 45ms (next.js: 6ms, generate-params: 9ms, application-code: 31ms)
+ GET /apple-icon 200 in 20ms (next.js: 4ms, application-code: 16ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 20ms (next.js: 4ms, generate-params: 0.0ms, application-code: 16ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 32ms (next.js: 4ms, generate-params: 0.0ms, application-code: 28ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 25ms (next.js: 4ms, generate-params: 0.0ms, application-code: 21ms)
+ GET /api/trip 200 in 30ms (next.js: 5ms, proxy.ts: 5ms, application-code: 21ms)
+✓ Compiled in 49ms
+ GET / 200 in 63ms (next.js: 23ms, proxy.ts: 6ms, application-code: 34ms)
+ GET /api/trip 200 in 64ms (next.js: 39ms, proxy.ts: 8ms, application-code: 17ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 5ms, application-code: 7ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 54ms (next.js: 13ms, generate-params: 8ms, application-code: 33ms)
+ GET /apple-icon 200 in 23ms (next.js: 4ms, application-code: 19ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 18ms (next.js: 5ms, generate-params: 0.0ms, application-code: 13ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 20ms (next.js: 5ms, generate-params: 0.0ms, application-code: 15ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 16ms (next.js: 4ms, generate-params: 0.0ms, application-code: 12ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+- Environments: .env.local, .env
+✓ Ready in 776ms
+⚠ Warning: Next.js ignored package-lock.json in C:\Users\WeMA1 because it is outside the current Git repository (C:\Users\WeMA1\Desktop\Na\nhatrang-planner).
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+✓ Running next.config.ts took 105ms
+
+ GET /api/trip 200 in 1502ms (next.js: 228ms, proxy.ts: 471ms, application-code: 803ms)
+ GET / 200 in 1042ms (next.js: 673ms, proxy.ts: 54ms, application-code: 315ms)
+ GET /manifest.webmanifest 200 in 183ms (next.js: 143ms, application-code: 40ms)
+ GET /api/trip 200 in 223ms (next.js: 14ms, proxy.ts: 10ms, application-code: 198ms)
+ GET /api/trip 200 in 389ms (next.js: 174ms, proxy.ts: 9ms, application-code: 207ms)
+ GET /apple-icon 200 in 432ms (next.js: 44ms, application-code: 388ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 989ms (next.js: 50ms, generate-params: 918ms, application-code: 22ms)
+ GET /api/trip 200 in 47ms (next.js: 5ms, proxy.ts: 5ms, application-code: 36ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 57ms (next.js: 5ms, proxy.ts: 6ms, application-code: 46ms)
+ GET /api/trip 200 in 31ms (next.js: 5ms, proxy.ts: 5ms, application-code: 22ms)
+ GET / 200 in 64ms (next.js: 14ms, proxy.ts: 5ms, application-code: 44ms)
+ GET /manifest.webmanifest 200 in 67ms (next.js: 58ms, application-code: 9ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 71ms (next.js: 5ms, generate-params: 10ms, application-code: 56ms)
+ GET /apple-icon 200 in 77ms (next.js: 47ms, application-code: 30ms)
+ GET /api/trip 200 in 96ms (next.js: 34ms, proxy.ts: 14ms, application-code: 49ms)
+ GET /api/trip 200 in 167ms (next.js: 59ms, proxy.ts: 14ms, application-code: 94ms)
+ GET /api/trip 200 in 45ms (next.js: 6ms, proxy.ts: 7ms, application-code: 32ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 6ms, application-code: 33ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 30ms (next.js: 5ms, proxy.ts: 6ms, application-code: 18ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 5ms, application-code: 34ms)
+ GET /api/trip 200 in 41ms (next.js: 5ms, proxy.ts: 4ms, application-code: 32ms)
+ GET / 200 in 61ms (next.js: 9ms, proxy.ts: 8ms, application-code: 45ms)
+ GET /manifest.webmanifest 200 in 54ms (next.js: 47ms, application-code: 7ms)
+ GET /api/trip 200 in 42ms (next.js: 7ms, proxy.ts: 8ms, application-code: 27ms)
+ GET /api/trip 200 in 53ms (next.js: 22ms, proxy.ts: 10ms, application-code: 22ms)
+ GET /apple-icon 200 in 44ms (next.js: 5ms, application-code: 39ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 36ms (next.js: 4ms, generate-params: 8ms, application-code: 24ms)
+ GET /api/trip 200 in 34ms (next.js: 4ms, proxy.ts: 5ms, application-code: 25ms)
+ GET /api/trip 200 in 26ms (next.js: 5ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 20ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 6ms, application-code: 18ms)
+ GET /api/trip 200 in 28ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 57ms (next.js: 3ms, proxy.ts: 5ms, application-code: 48ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 6ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET / 200 in 77ms (next.js: 20ms, proxy.ts: 8ms, application-code: 49ms)
+ GET / 200 in 190ms (next.js: 65ms, proxy.ts: 8ms, application-code: 117ms)
+ GET / 200 in 130ms (next.js: 38ms, proxy.ts: 12ms, application-code: 80ms)
+ GET /api/trip 200 in 100ms (next.js: 24ms, proxy.ts: 17ms, application-code: 59ms)
+ GET /api/trip 200 in 105ms (next.js: 40ms, proxy.ts: 15ms, application-code: 50ms)
+ GET /api/trip 200 in 102ms (next.js: 47ms, proxy.ts: 10ms, application-code: 45ms)
+ GET /api/trip 200 in 176ms (next.js: 35ms, proxy.ts: 10ms, application-code: 131ms)
+ GET /api/trip 200 in 51ms (next.js: 23ms, proxy.ts: 10ms, application-code: 18ms)
+ GET /api/trip 200 in 182ms (next.js: 129ms, proxy.ts: 9ms, application-code: 44ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 31ms (next.js: 6ms, proxy.ts: 4ms, application-code: 21ms)
+ GET / 200 in 142ms (next.js: 59ms, proxy.ts: 5ms, application-code: 77ms)
+ GET / 200 in 163ms (next.js: 104ms, proxy.ts: 7ms, application-code: 53ms)
+ GET / 200 in 208ms (next.js: 38ms, proxy.ts: 46ms, application-code: 124ms)
+ GET /api/trip 200 in 55ms (next.js: 12ms, proxy.ts: 16ms, application-code: 27ms)
+ GET /api/trip 200 in 65ms (next.js: 22ms, proxy.ts: 15ms, application-code: 28ms)
+ GET /api/trip 200 in 54ms (next.js: 13ms, proxy.ts: 10ms, application-code: 31ms)
+ GET /api/trip 200 in 58ms (next.js: 23ms, proxy.ts: 8ms, application-code: 26ms)
+ GET /api/trip 200 in 71ms (next.js: 30ms, proxy.ts: 23ms, application-code: 18ms)
+ GET /api/trip 200 in 70ms (next.js: 24ms, proxy.ts: 16ms, application-code: 31ms)
+ GET /api/trip 200 in 74ms (next.js: 15ms, proxy.ts: 13ms, application-code: 46ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 46ms (next.js: 5ms, proxy.ts: 6ms, application-code: 36ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 32ms (next.js: 3ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 4ms, application-code: 22ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 45ms (next.js: 4ms, proxy.ts: 5ms, application-code: 37ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 31ms (next.js: 3ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 5ms, application-code: 22ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 7ms, application-code: 25ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 45ms (next.js: 4ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 42ms (next.js: 3ms, proxy.ts: 4ms, application-code: 35ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 5ms, application-code: 16ms)
+ GET /api/trip 200 in 48ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 26ms (next.js: 3ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 3ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 41ms (next.js: 3ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 28ms (next.js: 3ms, proxy.ts: 4ms, application-code: 21ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 40ms)
+ GET /api/trip 200 in 39ms (next.js: 7ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 8ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 48ms (next.js: 4ms, proxy.ts: 4ms, application-code: 40ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 20ms (next.js: 4ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 35ms (next.js: 5ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 47ms (next.js: 3ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 7ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 25ms (next.js: 6ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 51ms (next.js: 4ms, proxy.ts: 4ms, application-code: 44ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 60ms (next.js: 4ms, proxy.ts: 5ms, application-code: 51ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 6ms, application-code: 26ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 50ms (next.js: 8ms, proxy.ts: 17ms, application-code: 25ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 43ms (next.js: 4ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 35ms (next.js: 3ms, proxy.ts: 5ms, application-code: 27ms)
+ GET /api/trip 200 in 325ms (next.js: 61ms, proxy.ts: 213ms, application-code: 51ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 3ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 42ms (next.js: 3ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 13ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 44ms (next.js: 3ms, proxy.ts: 3ms, application-code: 37ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 45ms (next.js: 3ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 223ms (next.js: 201ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 4ms, application-code: 34ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 42ms (next.js: 4ms, proxy.ts: 5ms, application-code: 33ms)
+ GET /api/trip 200 in 45ms (next.js: 5ms, proxy.ts: 4ms, application-code: 36ms)
+ GET /api/trip 200 in 64ms (next.js: 20ms, proxy.ts: 5ms, application-code: 39ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 25ms (next.js: 3ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 34ms (next.js: 5ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 32ms (next.js: 4ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 7ms, proxy.ts: 7ms, application-code: 22ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 47ms (next.js: 3ms, proxy.ts: 4ms, application-code: 40ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 33ms (next.js: 3ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 5ms, application-code: 16ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 5ms, proxy.ts: 6ms, application-code: 27ms)
+ GET /api/trip 200 in 32ms (next.js: 3ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 9ms, proxy.ts: 7ms, application-code: 22ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 35ms (next.js: 3ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 54ms (next.js: 9ms, proxy.ts: 11ms, application-code: 34ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 34ms (next.js: 5ms, proxy.ts: 8ms, application-code: 21ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 34ms (next.js: 3ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 50ms (next.js: 8ms, proxy.ts: 15ms, application-code: 28ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 26ms (next.js: 5ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 7ms, proxy.ts: 14ms, application-code: 18ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 22ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 5ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 3ms, application-code: 33ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 37ms (next.js: 7ms, proxy.ts: 7ms, application-code: 23ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 6ms, application-code: 28ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 3ms, application-code: 15ms)
+ GET /api/trip 200 in 37ms (next.js: 5ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 34ms (next.js: 4ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 8ms, application-code: 25ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 49ms (next.js: 6ms, proxy.ts: 15ms, application-code: 27ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 33ms (next.js: 4ms, proxy.ts: 4ms, application-code: 26ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 5ms, application-code: 15ms)
+ GET /api/trip 200 in 62ms (next.js: 5ms, proxy.ts: 22ms, application-code: 35ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 50ms (next.js: 4ms, proxy.ts: 15ms, application-code: 31ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 5ms, application-code: 27ms)
+ GET /api/trip 200 in 34ms (next.js: 3ms, proxy.ts: 8ms, application-code: 23ms)
+ GET /api/trip 200 in 30ms (next.js: 3ms, proxy.ts: 6ms, application-code: 20ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 35ms (next.js: 6ms, proxy.ts: 11ms, application-code: 18ms)
+ GET /api/trip 200 in 39ms (next.js: 6ms, proxy.ts: 6ms, application-code: 28ms)
+ GET /api/trip 200 in 49ms (next.js: 10ms, proxy.ts: 14ms, application-code: 25ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 33ms (next.js: 3ms, proxy.ts: 11ms, application-code: 20ms)
+ GET /api/trip 200 in 30ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 56ms (next.js: 33ms, proxy.ts: 4ms, application-code: 19ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 55ms (next.js: 4ms, proxy.ts: 5ms, application-code: 47ms)
+ GET /api/trip 200 in 25ms (next.js: 4ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 43ms (next.js: 3ms, proxy.ts: 5ms, application-code: 35ms)
+ GET /api/trip 200 in 31ms (next.js: 4ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 33ms (next.js: 3ms, proxy.ts: 4ms, application-code: 25ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 49ms (next.js: 4ms, proxy.ts: 12ms, application-code: 33ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 32ms (next.js: 3ms, proxy.ts: 13ms, application-code: 15ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 29ms)
+ GET /api/trip 200 in 49ms (next.js: 7ms, proxy.ts: 13ms, application-code: 29ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 49ms (next.js: 9ms, proxy.ts: 16ms, application-code: 25ms)
+ GET /api/trip 200 in 47ms (next.js: 9ms, proxy.ts: 15ms, application-code: 23ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 34ms (next.js: 3ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 49ms (next.js: 9ms, proxy.ts: 14ms, application-code: 26ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 3ms, application-code: 17ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 3ms, application-code: 31ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 8ms, proxy.ts: 9ms, application-code: 20ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 45ms (next.js: 10ms, proxy.ts: 16ms, application-code: 19ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 41ms (next.js: 8ms, proxy.ts: 15ms, application-code: 18ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 49ms (next.js: 9ms, proxy.ts: 17ms, application-code: 24ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 5ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 3ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 64ms (next.js: 12ms, proxy.ts: 18ms, application-code: 33ms)
+ GET /api/trip 200 in 50ms (next.js: 8ms, proxy.ts: 15ms, application-code: 26ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 39ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 32ms (next.js: 4ms, proxy.ts: 4ms, application-code: 24ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 46ms (next.js: 4ms, proxy.ts: 4ms, application-code: 38ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 40ms (next.js: 3ms, proxy.ts: 4ms, application-code: 33ms)
+ GET /api/trip 200 in 41ms (next.js: 4ms, proxy.ts: 6ms, application-code: 32ms)
+ GET /api/trip 200 in 35ms (next.js: 3ms, proxy.ts: 7ms, application-code: 25ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 7ms, application-code: 26ms)
+ GET /api/trip 200 in 35ms (next.js: 4ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 37ms (next.js: 4ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 27ms (next.js: 5ms, proxy.ts: 5ms, application-code: 17ms)
+ GET /api/trip 200 in 37ms (next.js: 3ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 27ms (next.js: 3ms, proxy.ts: 10ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 21ms (next.js: 3ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 3ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 3ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 51ms (next.js: 7ms, proxy.ts: 16ms, application-code: 28ms)
+ GET /api/trip 200 in 35ms (next.js: 3ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 43ms (next.js: 8ms, proxy.ts: 15ms, application-code: 19ms)
+ GET /api/trip 200 in 35ms (next.js: 3ms, proxy.ts: 4ms, application-code: 28ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 6ms, application-code: 30ms)
+ GET /api/trip 200 in 34ms (next.js: 3ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 38ms (next.js: 3ms, proxy.ts: 3ms, application-code: 31ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 22ms (next.js: 3ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 57ms (next.js: 28ms, proxy.ts: 5ms, application-code: 24ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 47ms (next.js: 4ms, proxy.ts: 4ms, application-code: 39ms)
+ GET /api/trip 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 36ms (next.js: 4ms, proxy.ts: 5ms, application-code: 28ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 38ms (next.js: 4ms, proxy.ts: 5ms, application-code: 29ms)
+ GET /api/trip 200 in 40ms (next.js: 5ms, proxy.ts: 4ms, application-code: 31ms)
+ GET /api/trip 200 in 26ms (next.js: 3ms, proxy.ts: 3ms, application-code: 20ms)
+ GET /api/trip 200 in 39ms (next.js: 4ms, proxy.ts: 4ms, application-code: 30ms)
+ GET /api/trip 200 in 36ms (next.js: 6ms, proxy.ts: 3ms, application-code: 27ms)
+ GET /api/trip 200 in 23ms (next.js: 4ms, proxy.ts: 4ms, application-code: 15ms)
+ GET /api/trip 200 in 26ms (next.js: 4ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 72ms (next.js: 36ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 48ms (next.js: 8ms, proxy.ts: 9ms, application-code: 31ms)
+ GET / 200 in 77ms (next.js: 8ms, proxy.ts: 7ms, application-code: 62ms)
+ GET /manifest.webmanifest 200 in 52ms (next.js: 34ms, application-code: 18ms)
+ GET /apple-icon 200 in 36ms (next.js: 8ms, application-code: 29ms)
+ GET /api/trip 200 in 98ms (next.js: 31ms, proxy.ts: 12ms, application-code: 55ms)
+ GET /icon/192?bd5760d52738c3f5 200 in 55ms (next.js: 13ms, generate-params: 10ms, application-code: 31ms)
+ GET /api/trip 200 in 100ms (next.js: 38ms, proxy.ts: 11ms, application-code: 51ms)
+ GET /api/trip 200 in 27ms (next.js: 4ms, proxy.ts: 4ms, application-code: 18ms)
+ GET /api/trip 200 in 33ms (next.js: 5ms, proxy.ts: 10ms, application-code: 18ms)
+ GET /api/trip 200 in 30ms (next.js: 3ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/trip 200 in 35ms (next.js: 5ms, proxy.ts: 4ms, application-code: 27ms)
+ GET /api/trip 200 in 31ms (next.js: 8ms, proxy.ts: 5ms, application-code: 18ms)
+ GET /api/trip 200 in 41ms (next.js: 3ms, proxy.ts: 5ms, application-code: 32ms)
+ GET /api/trip 200 in 22ms (next.js: 4ms, proxy.ts: 4ms, application-code: 14ms)
+ GET /api/trip 200 in 23ms (next.js: 3ms, proxy.ts: 4ms, application-code: 16ms)
+ GET /api/trip 200 in 40ms (next.js: 4ms, proxy.ts: 4ms, application-code: 32ms)
+ GET /api/trip 200 in 35ms (next.js: 5ms, proxy.ts: 8ms, application-code: 21ms)
+ GET /api/trip 200 in 44ms (next.js: 4ms, proxy.ts: 4ms, application-code: 37ms)
+ GET /api/trip 200 in 36ms (next.js: 8ms, proxy.ts: 6ms, application-code: 22ms)
+ GET /api/trip 200 in 24ms (next.js: 4ms, proxy.ts: 5ms, application-code: 16ms)

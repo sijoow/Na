@@ -1,0 +1,979 @@
+{
+  "exchangeRate": {
+    "krwPer1000Vnd": 52.5,
+    "source": "ExchangeRate-API https://open.er-api.com/v6/latest/KRW 재조회(1원=19.044456동, 1,000동=52.51원). 교차확인: fawazahmed0 currency-api https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/vnd.json (2026-09-23, 1,000동=52.10원). 둘 다 시장 중간값이에요. 현지 현찰 환전은 이보다 불리해요. 2026.7 후기에서 담시장 앞 금은방은 5만원권 10만원=1,720,000동(1,000동≈58원), 시내 금은방은 100달러=2,625,000동이었어요(https://blog.naver.com/dpfladl651/224355099716). Grab을 해외 카드로 결제하면 4% 수수료가 따로 붙어요.",
+    "asOf": "2026-09-24 (open.er-api 2026-09-24 00:02 UTC 갱신분 재확인)"
+  },
+  "places": [
+    {
+      "id": "cam-ranh-airport",
+      "name": "깜란 국제공항 (국제선 터미널)",
+      "localName": "Sân bay quốc tế Cam Ranh – Ga Quốc tế (Cam Ranh International Airport, T2)",
+      "kind": "airport",
+      "lat": 12.0103933,
+      "lng": 109.2165501,
+      "address": "Nguyễn Tất Thành, Phường Bắc Cam Ranh, Tỉnh Khánh Hòa, Việt Nam",
+      "note": "[좌표 검증] OSM 국제선 터미널 건물(way 854478990)과 일치하고, 역지오코딩 결과는 'Ga Quốc tế Đến'이에요. 한국 노선은 국제선 터미널을 써요. 밖으로 나와 왼쪽 택시 승강장 쪽이나 횡단보도 건너 Grab 픽업존에서 차를 만나요. 출구 바로 앞은 앱에서 정차 금지로 떠요(2026.9 후기). 앱의 출발지는 '도착층(Đến)'으로 맞추세요. 출발층으로 찍어서 헤맨 후기가 있어요. 예약 픽업 기사는 1~3번 게이트나 6번 기둥 앞에서 이름표를 들고 기다려요. 주차료(9인승 이하)는 첫 30분 9,000동, 이후 30분마다 4,000동이에요(공식, 2025.6.1~).",
+      "source": "https://www.openstreetmap.org/way/854478990 , https://camranh.aero/vi/airport-guide/transport/parking , https://blog.naver.com/bee9393/224412596476 , https://blog.naver.com/bb893/224298695133 , https://blog.naver.com/och9_9/224343036285 , https://blog.naver.com/firepreview/223017123281"
+    },
+    {
+      "id": "city-hotel-area",
+      "name": "나트랑 시내 쩐푸 해변 중심 (하바나 호텔 앞)",
+      "localName": "Trần Phú – Nha Trang Beach (Havana Nha Trang 인근)",
+      "kind": "lodging-area",
+      "lat": 12.2434932,
+      "lng": 109.1958235,
+      "address": "Trần Phú, Phước Hòa, Phường Nha Trang, Tỉnh Khánh Hòa, Việt Nam",
+      "note": "[좌표 검증] OSM 하바나 호텔(way 650959856)과 일치해요. 시내 숙소를 대표하는 지점이에요. 해변은 바로 앞이에요. 직선거리로 야시장 약 0.4km, 퍼홍 약 0.4km, 롯데마트 골드코스트 약 0.5km라 모두 걸어갈 수 있어요. 호텔이 정해지면 그 좌표로 바꾸세요.",
+      "source": "https://www.openstreetmap.org/way/650959856"
+    },
+    {
+      "id": "dam-market",
+      "name": "담시장",
+      "localName": "Chợ Đầm",
+      "kind": "shopping",
+      "lat": 12.2553289,
+      "lng": 109.1916641,
+      "address": "Chợ Đầm, Bến Chợ / Phan Bội Châu, Phước Hòa, Phường Nha Trang, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM relation 21159862(Đầm Market)와 일치해요. 새벽부터 18시 무렵까지 열지만, 가게는 오후 4~5시부터 닫기 시작해요(2025.8 후기). 오후 일찍 가세요. 흥정이 기본이에요. 에어컨이 없고 붐비니 아이 손을 꼭 잡으세요. 건어물, 과자, 라탄백 같은 기념품을 사기 좋아요. 시장 앞 금은방(김빈)에서 환전도 돼요(2026.7 후기).",
+      "source": "https://www.openstreetmap.org/relation/21159862 , https://blog.naver.com/mwehsh1/223971722186 , https://blog.naver.com/dpfladl651/224355099716"
+    },
+    {
+      "id": "nha-trang-cathedral",
+      "name": "나트랑 대성당 (산 성당)",
+      "localName": "Nhà thờ Chính tòa Nha Trang (Nhà thờ Núi / Nhà thờ Đá / Christ the King Cathedral)",
+      "kind": "sight",
+      "lat": 12.2467333,
+      "lng": 109.188137,
+      "address": "31A Thái Nguyên, Phường Nha Trang, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM way 162818208(Christ the King Cathedral)과 일치해요. 회색 돌로 지은 고딕 성당이에요. 분홍색 '핑크성당'은 다낭·호치민 성당이에요. 입장은 무료예요. 입구에서 돈을 받는 사람은 무단 징수이니 내지 마세요(2025.3 기사). 10/4는 일요일이라 05:00~07:00, 11:00~16:30에만 열어요. 일요 미사는 05:00, 07:00, 09:30, 15:00, 16:30, 18:30이에요. 11:00~14:30 사이에 가세요. 어깨와 무릎을 가리는 옷을 입어야 해요.",
+      "source": "https://www.openstreetmap.org/way/162818208 , https://newlifetravel.vn/nha-tho-da-nha-trang/ , https://crystalbay.com/58-nha-tho-da-nha-trang-gio-le-va-nhung-dieu-can-biet-khi-tham-quan-n56378.html"
+    },
+    {
+      "id": "night-market",
+      "name": "나트랑 야시장",
+      "localName": "Chợ đêm Nha Trang (Nha Trang Night Market)",
+      "kind": "shopping",
+      "lat": 12.2396492,
+      "lng": 109.1957898,
+      "address": "Trần Phú~Hùng Vương 사이 (Nguyễn Thị 거리), 침향탑(Tháp Trầm Hương) 맞은편, Phường Nha Trang",
+      "note": "[좌표 검증] OSM way 196749901(Night market)과 일치해요. 2026년에 이전했다는 소식은 없어요. 18:00~23:00에 열고 19~21시가 가장 붐벼요. 약 500m 거리에 먹거리와 기념품 가게가 모여 있어요. 흥정은 필수예요. 시내 숙소에서 걸어서 5~7분이에요.",
+      "source": "https://www.openstreetmap.org/way/196749901 , https://newlifetravel.vn/cho-dem-nha-trang/"
+    },
+    {
+      "id": "po-nagar",
+      "name": "포나가르 참탑",
+      "localName": "Tháp Bà Ponagar (Po Nagar Cham Towers)",
+      "kind": "sight",
+      "lat": 12.2653884,
+      "lng": 109.1951777,
+      "address": "61 Hai Tháng Tư, Phường Bắc Nha Trang (구 Vĩnh Phước), Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM way 146780347(Tháp Po Nagar, 유적지)과 일치해요. 입장료는 1인 약 3만동이에요(출처별 22,000~30,000동). 아이 무료 기준은 출처마다 1m 미만, 1.4m 미만으로 달라요. 운영시간도 06:00~18:00, 08:00~18:00으로 출처마다 달라요. 어깨와 무릎을 가려야 하고, 입구에서 가운을 빌릴 수 있어요. 계단이 많아 유모차는 불편해요. 더운 오후보다 오전에 가세요.",
+      "source": "https://www.openstreetmap.org/way/146780347 , https://newlifetravel.vn/thap-ba-ponagar/ , https://dulichlive.com/nha-trang/kinh-nghiem-du-lich-thap-ba-ponagar-kem-gia-ve-gio-mo-cua.html , https://blog.naver.com/gmltj77/223922241402"
+    },
+    {
+      "id": "i-resort",
+      "name": "아이리조트 (머드온천)",
+      "localName": "I-Resort Nha Trang (Hot Mineral Springs & Mud Bath)",
+      "kind": "activity",
+      "lat": 12.2717501,
+      "lng": 109.1747925,
+      "address": "Tổ 19, thôn Xuân Ngọc, Phường Tây Nha Trang, Tỉnh Khánh Hòa (공식 주소)",
+      "note": "[좌표 검증] OSM way 397966700(i-Resort)과 일치해요. [주소 교정] 공식 주소로 바꿨어요. 공식 운영시간은 08:00~17:30이고 16:30 이후에는 표를 팔지 않아요. 머드탕은 08:00~15:00, 온수풀과 워터파크는 08:00~17:00이에요(2026.9 후기). 입장권은 성인 20만동, 키 1~1.4m 8만동, 1m 미만 무료예요. 머드+수영장+워터파크 콤보(4번)는 1~3명이면 1인 40만동, 4~10명이면 1인 35만동이에요. 수영복, 수건, 생수를 무료로 줘요(공식).",
+      "source": "https://www.i-resort.vn/bang-gia-ve-bun-khoang-nong-iresort-nha-trang-2026 , https://www.openstreetmap.org/way/397966700 , https://seayoutravel.vn/en/product/i-resort-nha-trang-hot-mineral-springs-entrance-ticket/ , https://blog.naver.com/akasia602/224393172299"
+    },
+    {
+      "id": "vinwonders-pier",
+      "name": "빈펄 케이블카 탑승장 (육지 터미널)",
+      "localName": "Ga cáp treo Vinpearl (Vinpearl Cable Car Station / Vinpearl Ropeway Station)",
+      "kind": "pier",
+      "lat": 12.2028768,
+      "lng": 109.2173375,
+      "address": "Trần Phú (남쪽 끝), TDP Trường Hải, Phường Nam Nha Trang (구 Vĩnh Nguyên), Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM way 1249479211(Vinpearl Ropeway Station)과 일치해요. 공식 안내(2025.11)에서 빈원더스로 가는 유일한 수단은 이곳에서 타는 케이블카예요. 날씨나 점검으로 멈추면 무료 스피드보트·카누가 대신 다녀요. 케이블카 운행시간은 공식 08:30~22:30이에요. 시내 중심에서 남쪽으로 약 6.1km이고, Grab으로 10~15분 걸려요(후기 10~20분). 케이블카에 음료를 들고 탈 수 없다는 후기가 있어요.",
+      "source": "https://www.openstreetmap.org/way/1249479211 , https://vinwonders.com/en/wonderpedia/news/how-to-get-to-vinwonders-nha-trang/ , https://blog.naver.com/bnmbnm0713/224051251025 , https://blog.naver.com/quin1234/223499793425"
+    },
+    {
+      "id": "vinwonders",
+      "name": "빈원더스 나트랑 (혼째섬)",
+      "localName": "VinWonders Nha Trang (Đảo Hòn Tre)",
+      "kind": "activity",
+      "lat": 12.2173958,
+      "lng": 109.2412179,
+      "address": "Đảo Hòn Tre (구 Vĩnh Nguyên), Nha Trang, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM way 1353575545(VinWonders, 테마파크)와 일치해요. 파크 운영은 08:30~20:00, 워터파크는 10:00~17:30, 타타쇼는 19:30쯤이에요(공식). 1일권은 성인(140cm 이상) 105만동, 어린이(100~140cm)와 경로 80만동, 100cm 미만 무료예요. 16시 이후권은 70만/55만동이에요. 모든 표에 왕복 케이블카가 포함돼요(공식). 만 4살은 100cm를 넘는 경우가 많으니 어린이 요금을 예상하세요. 아쿠아리움은 2026.8 후기에서 운영이 확인됐어요.",
+      "source": "https://www.openstreetmap.org/way/1353575545 , https://vinwonders.com/en/vinwonders-nha-trang-price-and-regulations/ , https://vinwonders.com/vi/wonderpedia/news/vinwonders-nha-trang-gio-mo-cua/ , https://blog.naver.com/jasmin83bk/224385621813"
+    },
+    {
+      "id": "lotte-mart",
+      "name": "롯데마트 골드코스트점",
+      "localName": "LOTTE Mart Nha Trang Gold Coast",
+      "kind": "shopping",
+      "lat": 12.2482338,
+      "lng": 109.1951162,
+      "address": "Tầng 3–4, Gold Coast, 01 Trần Hưng Đạo, Phường Nha Trang, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM way 1239587429(Lotte Mart Nha Trang Gold Coast)와 일치해요. 08:30~22:00에 열어요(공식). 2026.7~8 후기에서도 영업이 확인됐어요. 같은 건물 12층에 쿠우쿠우 뷔페가 있어요. 서쪽 23/10 거리에 롯데마트 지점이 따로 있으니 목적지는 꼭 'Gold Coast'로 고르세요.",
+      "source": "https://lottemart.com.vn/he-thong/sieu-thi-nha-trang-gold-coast/ , https://www.openstreetmap.org/way/1239587429 , https://blog.naver.com/pon07094/224387635973"
+    },
+    {
+      "id": "cam-ranh-resort-area",
+      "name": "캄란 바이다이 리조트 지역",
+      "localName": "Bãi Dài, Cam Ranh (Nguyễn Tất Thành 해안도로)",
+      "kind": "lodging-area",
+      "lat": 12.0500128,
+      "lng": 109.2082756,
+      "address": "Bãi Dài, Nguyễn Tất Thành, Phường Bắc Cam Ranh / Xã Cam Lâm, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM 바이다이 해변(way 231779290)의 중심점이에요. 대표 지점이라 실제 리조트 위치와는 달라요. 리조트는 공항 북쪽 해안도로를 따라 늘어서 있어요. 예를 들어 모벤픽은 12.0447, 109.2055(공항까지 5.3km), 알마는 12.0733, 109.1930(공항까지 9.2km, 시내까지 29.9km, OSRM)이에요. 숙소가 정해지면 그 좌표로 바꾸세요. Grab '바이다이–나트랑' 노선요금이 적용되는 구역이에요. 주변에 편의시설과 ATM이 적으니 현금은 시내에서 미리 준비하세요(2026.8 후기).",
+      "source": "https://www.openstreetmap.org/way/231779290 , https://nominatim.openstreetmap.org/search?format=json&q=Alma%20Resort%20Cam%20Ranh , https://nominatim.openstreetmap.org/search?format=json&q=Movenpick%20Resort%20Cam%20Ranh , https://blog.naver.com/akhds/224386631796"
+    },
+    {
+      "id": "nam-cuong-dunes",
+      "name": "남끄엉 사막 (판랑 사막)",
+      "localName": "Đồi cát Nam Cương (Nam Cuong Sand Dunes)",
+      "kind": "activity",
+      "lat": 11.5162854,
+      "lng": 109.0000748,
+      "address": "Đường ven biển, An Hải, Xã Phước Dinh, Tỉnh Khánh Hòa (구 닌투언성, 2025.7 행정개편으로 카인호아성에 통합)",
+      "note": "[좌표 검증] OSM node 7191035885(Nam Cuong Sand Dunes)와 일치해요. 캄란 리조트에서 약 74km예요. OSRM 자유주행은 64분이지만 후기로는 1시간 20~30분 걸려요. 입구에서 지프로 갈아타고 모래 언덕에 올라가요. 모래썰매를 탈 수 있고, ATV는 별도 요금이에요(후기 1인 25만동). 10/7 일몰은 17:30쯤이에요(천문 계산값). 모자와 물을 챙기세요. 운동화보다 슬리퍼를 권하는 후기가 있어요.",
+      "source": "https://www.openstreetmap.org/node/7191035885 , https://blog.naver.com/rkttodyy/224409930843 , https://blog.naver.com/cafe412/224403898368 , https://blog.naver.com/woo_m_/224399765808"
+    },
+    {
+      "id": "pho-hong",
+      "name": "퍼홍 쌀국수",
+      "localName": "Phở Hồng",
+      "kind": "food",
+      "lat": 12.2441573,
+      "lng": 109.1923548,
+      "address": "40 Lê Thánh Tôn, Phước Hòa, Phường Nha Trang, Tỉnh Khánh Hòa",
+      "note": "[좌표 검증] OSM node 4696505389(pho hong, 40 Le Thanh Ton)과 일치해요. 1987년부터 영업한 로컬 쌀국수집이고, 2026.7 후기도 있어요. 에어컨이 없어 더워요. 시내 숙소에서 걸어서 5~7분이라 아침이나 가벼운 식사로 좋아요. 롯데마트·쿠우쿠우에서는 직선 약 0.55km예요.",
+      "source": "https://www.openstreetmap.org/node/4696505389 , https://blog.naver.com/myskyphk/224357255542"
+    },
+    {
+      "id": "kuukuu-seafood-buffet",
+      "name": "쿠우쿠우 씨푸드 뷔페 (골드코스트몰 12층)",
+      "localName": "Kuukuu Seafood Buffet – Gold Coast Mall 12F",
+      "kind": "food",
+      "lat": 12.2482338,
+      "lng": 109.1951162,
+      "address": "Tầng 12, Gold Coast, 01 Trần Hưng Đạo, Phường Nha Trang, Tỉnh Khánh Hòa",
+      "note": "좌표는 골드코스트 건물 기준이에요(롯데마트와 같아요). 성인 요금은 평일 런치(11:00~16:00) 49만동, 평일 디너(17:00~22:00)·주말 60만동, 공휴일 65만동이에요. 만 7~12세 33만동, 만 3~6세 23만동이고, 만 3세 미만은 무료예요. 세금은 따로 붙는다는 후기가 있어요. 평일 16:00~17:00은 브레이크 타임이에요. 놀이방과 수유실이 있어요(2026.9 후기).",
+      "source": "https://blog.naver.com/kongmistar/224420575295 , https://www.openstreetmap.org/way/1239587429"
+    }
+  ],
+  "legs": [
+    {
+      "day": "D2",
+      "fromId": "cam-ranh-airport",
+      "toId": "cam-ranh-resort-area",
+      "distanceKm": 5.6,
+      "durationMin": 10,
+      "grabType": "GrabCar 7인승 (또는 호텔 픽업)",
+      "fareVndMin": 90000,
+      "fareVndMax": 220000,
+      "note": "새벽 01시경 공항 → 공항 근처 호텔(0.5박). 호텔 픽업이 있으면 그걸 쓰고, 없으면 Grab. 심야라 요금이 범위 위쪽일 수 있어요. 숙소가 정해지면 지도 위치가 그 호텔로 바뀌어요. (요금은 D7 공항 구간 조사값 기준)",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://camranh.aero/vi/airport-guide/transport/parking , https://blog.naver.com/sjm2014/223355707936 , https://www.openstreetmap.org/way/854478990 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D2",
+      "fromId": "cam-ranh-resort-area",
+      "toId": "city-hotel-area",
+      "distanceKm": 31.5,
+      "durationMin": 40,
+      "grabType": "GrabCar 7인승",
+      "fareVndMin": 330000,
+      "fareVndMax": 500000,
+      "note": "오전 11시 체크아웃 후 시내로 (낮이라 심야 할증 없음). Grab 공식 '공항↔나트랑' 노선요금: 7인승 약 39만동, 4인승 약 34만동(VAT 포함, 2025.7~2026.12) + 플랫폼 수수료 5천~1.9만동. 해외 카드로 결제하면 4%가 더 붙어요. 공항 근처 호텔에서 출발하면 거리가 조금 짧아 요금이 약간 낮을 수 있어요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://www.grab.com/vn/en/blog/grab-trien-khai-dich-vu-grabcar-theo-tuyen-bai-dai-nha-trang/ , https://blog.naver.com/dddd1233-/224388864118 , https://blog.naver.com/hyheo99/223353347878 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D2",
+      "fromId": "city-hotel-area",
+      "toId": "nha-trang-cathedral",
+      "distanceKm": 1.6,
+      "durationMin": 6,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 32000,
+      "fareVndMax": 55000,
+      "note": "일요일(10/4)은 11:00~16:30만 개방 — 15시쯤 도착. [교정] 최소요금을 27,000동에서 32,000동으로 올렸어요. 숙소 앞 쩐푸 해변으로 돌아와 산책해요. 10/4 나트랑 일몰은 17:31쯤이에요(천문 계산값). OSRM은 1.61km예요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D2",
+      "fromId": "nha-trang-cathedral",
+      "toId": "dam-market",
+      "distanceKm": 1.5,
+      "durationMin": 6,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 32000,
+      "fareVndMax": 55000,
+      "note": "담시장은 16~17시부터 가게를 닫기 시작해요. [교정] 최소요금을 27,000동에서 32,000동으로 올렸어요(플랫폼 수수료 반영). 10/4는 일요일이라 성당은 05:00~07:00, 11:00~16:30에만 열어요. 15:00와 16:30에 미사가 있으니 11:00~14:30 사이에 도착하세요. 입장은 무료예요. 입구에서 돈을 받는 사람은 무단 징수예요. 어깨와 무릎을 가리는 옷을 입으세요. OSRM은 1.53km예요.",
+      "source": "https://newlifetravel.vn/nha-tho-da-nha-trang/ , https://crystalbay.com/58-nha-tho-da-nha-trang-gio-le-va-nhung-dieu-can-biet-khi-tham-quan-n56378.html , https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D2",
+      "fromId": "dam-market",
+      "toId": "city-hotel-area",
+      "distanceKm": 2.5,
+      "durationMin": 8,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 35000,
+      "fareVndMax": 65000,
+      "note": "[교정] 요금을 3만~6만에서 3.5만~6.5만동으로, 시간을 10분에서 8분으로 바꿨어요. 공식 요율은 첫 2km 27,000동, 이후 km당 12,960동, 분당 550동이에요. 여기에 플랫폼 수수료(5,000동~)가 붙어서 짧은 거리도 약 32,000동부터예요. 2026.7 후기에서 시내→담시장은 카드 결제로 33,280동이었어요. 가게가 오후 4~5시부터 닫기 시작하니 점심을 먹고 바로 가세요. 목적지는 'Chợ Đầm'으로 검색하세요. OSRM은 2.48km, 자유주행 4분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/dpfladl651/224355099716 , https://blog.naver.com/mwehsh1/223971722186 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D2",
+      "fromId": "city-hotel-area",
+      "toId": "night-market",
+      "distanceKm": 0.5,
+      "durationMin": 7,
+      "grabType": "도보",
+      "fareVndMin": 0,
+      "fareVndMax": 0,
+      "note": "침향탑 맞은편, 쩐푸 거리와 훙브엉 거리 사이에 있어요. 18:00~23:00에 열고 19~21시가 가장 붐벼요. 흥정은 필수예요. OSRM으로 0.53km예요.",
+      "source": "https://newlifetravel.vn/cho-dem-nha-trang/ , https://www.openstreetmap.org/way/196749901"
+    },
+    {
+      "day": "D2",
+      "fromId": "night-market",
+      "toId": "city-hotel-area",
+      "distanceKm": 0.5,
+      "durationMin": 7,
+      "grabType": "도보 (아이가 지치면 GrabCar 4인승)",
+      "fareVndMin": 0,
+      "fareVndMax": 55000,
+      "note": "[교정] 최대요금을 35,000동에서 55,000동으로 올렸어요. 걸어서 7분이면 돼요. 아이가 지치면 Grab 4인승을 부르세요(약 32,000~50,000동). 일방통행 때문에 차로는 1.82km를 돌아가요(OSRM). 야시장 골목은 GPS가 튀니 핀을 쩐푸 큰길 쪽에 두세요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/din5555/224182930870 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D3",
+      "fromId": "city-hotel-area",
+      "toId": "vinwonders-pier",
+      "distanceKm": 6.1,
+      "durationMin": 12,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 85000,
+      "fareVndMax": 140000,
+      "note": "[교정] 요금을 7만~13만에서 8.5만~14만동으로, 시간을 15분에서 12분으로 바꿨어요. 공식 요율로 약 8.6만동에 플랫폼 수수료가 더해지고, 붐비면 탄력요금이 붙어요. 목적지는 'Vinpearl Cable Car Station'이나 'Ga cáp treo Vinpearl'로 검색하세요. 기사에게 '빈원더스 케이블카'라고 하면 탑승장 앞에 내려줘요. 10/3~10/9는 한국 연휴(개천절·한글날) 기간이라 붐빌 수 있어요. 07:30~08:00에 도착하세요. OSRM은 6.11km, 자유주행 9분이고 후기로는 10~12분이에요. Grab 바이크는 34,230동이었어요(2025.8).",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/bnmbnm0713/224051251025 , https://blog.naver.com/jasmin83bk/224385621813 , https://blog.naver.com/nrsla/223959013885 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D3",
+      "fromId": "vinwonders-pier",
+      "toId": "vinwonders",
+      "distanceKm": 2.6,
+      "durationMin": 10,
+      "grabType": "해상 케이블카 (입장권에 왕복 포함)",
+      "fareVndMin": 0,
+      "fareVndMax": 0,
+      "note": "2024년 1월 26일 재개통한 Doppelmayr 신형 케이블카예요. 길이 2,642.8m, 12인승 캐빈이고 최소 약 8분 걸려요(바오카인호아). 날씨나 점검으로 멈추면 무료 스피드보트·카누가 대신 다니고, 이것도 입장권에 포함돼요(공식). 음료를 들고 탈 수 없다는 후기가 있어요. 대기는 10~40분 정도예요.",
+      "source": "https://baokhanhhoa.vn/du-lich/202401/vinpearl-nha-trang-khai-truong-vinpearl-harbour-va-he-thong-cap-treo-moi-tu-ngay-26-1-9d11341/ , https://vinwonders.com/en/wonderpedia/news/how-to-get-to-vinwonders-nha-trang/ , https://vinwonders.com/en/vinwonders-nha-trang-price-and-regulations/"
+    },
+    {
+      "day": "D3",
+      "fromId": "vinwonders",
+      "toId": "vinwonders-pier",
+      "distanceKm": 2.6,
+      "durationMin": 10,
+      "grabType": "해상 케이블카 (입장권에 왕복 포함)",
+      "fareVndMin": 0,
+      "fareVndMax": 0,
+      "note": "워터파크는 17:30에 닫고(공식) 파크는 20:00에 닫아요. 그 무렵에 귀가 인파가 몰려요. 아이 체력을 생각해 16~17시쯤 일찍 나오면 줄이 짧아요. 섬 쪽 탑승장은 '빈펄 하버' 상점가 안에 있어요.",
+      "source": "https://vinwonders.com/vi/wonderpedia/news/vinwonders-nha-trang-gio-mo-cua/ , https://blog.naver.com/jasmin83bk/224385621813 , https://blog.naver.com/honey__cat/224046616676"
+    },
+    {
+      "day": "D3",
+      "fromId": "vinwonders-pier",
+      "toId": "city-hotel-area",
+      "distanceKm": 6.9,
+      "durationMin": 15,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 95000,
+      "fareVndMax": 155000,
+      "note": "[교정] 요금을 8만~15만에서 9.5만~15.5만동으로 바꿨어요. 공식 요율로 약 9.7만동에 플랫폼 수수료가 더해져요. 탑승장 앞 호객 택시 말고 앱으로 부르세요. 퇴장 인파가 몰리는 시간에는 탄력요금이 붙을 수 있어요. OSRM은 6.88km, 자유주행 10분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/din5555/224182930870 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D4",
+      "fromId": "city-hotel-area",
+      "toId": "po-nagar",
+      "distanceKm": 4.3,
+      "durationMin": 10,
+      "grabType": "GrabCar 4인승 (캐리어는 호텔에 보관)",
+      "fareVndMin": 60000,
+      "fareVndMax": 105000,
+      "note": "[교정] 요금을 5만~9만에서 6만~10.5만동으로, 시간을 12분에서 10분으로 바꿨어요. 체크아웃하고 캐리어는 호텔에 맡기세요. 입장료는 1인 약 3만동이에요. 어깨와 무릎을 가리는 옷이 필요하고 계단이 많아요. OSRM은 4.33km, 자유주행 6분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://newlifetravel.vn/thap-ba-ponagar/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D4",
+      "fromId": "po-nagar",
+      "toId": "i-resort",
+      "distanceKm": 5.5,
+      "durationMin": 15,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 80000,
+      "fareVndMax": 130000,
+      "note": "[교정] 요금을 6만~11만에서 8만~13만동으로 바꿨어요. 목적지는 'I-Resort Nha Trang'으로 검색하세요. 머드탕은 15:00에 닫고 매표는 16:30에 끝나니 점심 전후에 도착하세요. 강을 돌아가서 직선거리(2.3km)보다 멀어요. OSRM은 5.5km, 10분이에요.",
+      "source": "https://www.i-resort.vn/bang-gia-ve-bun-khoang-nong-iresort-nha-trang-2026 , https://blog.naver.com/akasia602/224393172299 , https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D4",
+      "fromId": "i-resort",
+      "toId": "city-hotel-area",
+      "distanceKm": 7.3,
+      "durationMin": 20,
+      "grabType": "GrabCar 4인승",
+      "fareVndMin": 100000,
+      "fareVndMax": 160000,
+      "note": "[교정] 요금을 9만~15만에서 10만~16만동으로 바꿨어요. 공식 요율로 약 10.4만동에 플랫폼 수수료가 더해져요. 2026년 9월 후기에서 시내→아이리조트 Green SM 요금은 110,000동이었고, 돌아올 때 Grab도 잘 잡혔어요. 시내까지 약 23분 걸린다는 후기가 있어요. 호텔에서 캐리어를 찾은 뒤 다음 구간은 7인승으로 부르세요. OSRM은 7.28km, 자유주행 12분이에요.",
+      "source": "https://blog.naver.com/kimar1220/224406490145 , https://blog.naver.com/akasia602/224393172299 , https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D4",
+      "fromId": "city-hotel-area",
+      "toId": "cam-ranh-resort-area",
+      "distanceKm": 31.5,
+      "durationMin": 40,
+      "grabType": "GrabCar 7인승 (캐리어 적재)",
+      "fareVndMin": 330000,
+      "fareVndMax": 500000,
+      "note": "[교정] 최소요금을 35만동에서 33만동으로 내렸어요(북쪽 리조트 반영). Grab 공식 '바이다이–나트랑' 노선요금(2026.7.14 갱신 표)은 7인승 253,899동(최소 25km)이고, 25km를 넘으면 km당 14,727동, 분당 864동이 붙어요. 바이다이 중심(31.5km) 기준으로 약 36만동이고, 여기에 플랫폼 수수료와 해외카드 4%가 더해져요. 4인승은 243,000동에 km당 10,996동이에요. 2024.12 Grab 블로그의 '최소 34km, 284,727동'은 옛 요금이에요. 후기(2026.8): 알마 리조트까지 시내→리조트 37만동, 리조트→시내 32만동. 시내에서 리조트까지는 28~34km라 요금이 달라져요. OSRM은 31.49km, 33분이고 후기로는 30~40분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://www.grab.com/vn/en/blog/grab-trien-khai-dich-vu-grabcar-theo-tuyen-bai-dai-nha-trang/ , https://blog.naver.com/dddd1233-/224388864118 , https://blog.naver.com/hyheo99/223353347878 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D5",
+      "fromId": "cam-ranh-resort-area",
+      "toId": "nam-cuong-dunes",
+      "distanceKm": 74,
+      "durationMin": 80,
+      "grabType": "단독 투어 차량(4·7인승) + 현지 지프",
+      "fareVndMin": 2000000,
+      "fareVndMax": 2300000,
+      "note": "[교정] 시간을 90분에서 80분으로 바꿨어요(OSRM 73.8km, 자유주행 64분, 후기 1시간 20~30분). Grab보다 투어가 현실적이에요. Grab 4인승은 공식 요율로 편도만 약 100만동이고, 사막에서 돌아올 차를 구하기 어려워요. 단독 택시투어는 차량 1대 왕복(지프 포함) 요금이 4인승 200만~210만동, 7인승 220만~230만동이에요. 캄란·공항 픽업은 추가요금이 없어요. 식사, 양떼목장 입장료 6만동, 포클롱가라이 입장료 2만동은 따로 내요(2026.9 업체 안내 후기). 조인 선셋투어는 1인 37,000원부터지만 시내 출발 기준이라, 시내 밖 숙소는 추가요금이 붙어요. 10/7 일몰은 17:30쯤이에요. 사막만 보면 14:30 전후, 양떼목장과 포클롱가라이까지 넣으면 12~13시에 출발하세요. 공안 단속으로 30분 늦어진 후기가 있어요(2026.9).",
+      "source": "https://blog.naver.com/cafe412/224403898368 , https://blog.naver.com/rkttodyy/224409930843 , https://blog.naver.com/woo_m_/224399765808 , https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D5",
+      "fromId": "nam-cuong-dunes",
+      "toId": "cam-ranh-resort-area",
+      "distanceKm": 74,
+      "durationMin": 80,
+      "grabType": "투어 차량 (귀환 포함)",
+      "fareVndMin": 0,
+      "fareVndMax": 0,
+      "note": "[교정] 시간을 90분에서 80분으로 바꿨어요. 돌아오는 비용은 가는 구간의 투어 요금에 들어 있어요. 일몰(17:30)을 보고 저녁을 먹으면 리조트에 20:30~21:00쯤 도착해요. 단독투어는 식사비가 별도예요. 조인 선셋투어는 시내 기준 10:00~21:00 일정이에요.",
+      "source": "https://blog.naver.com/cafe412/224403898368 , https://blog.naver.com/rkttodyy/224409930843 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D6",
+      "fromId": "cam-ranh-resort-area",
+      "toId": "lotte-mart",
+      "distanceKm": 31.9,
+      "durationMin": 40,
+      "grabType": "GrabCar 4인승 (짐 없음) 또는 리조트 시내 셔틀",
+      "fareVndMin": 280000,
+      "fareVndMax": 450000,
+      "note": "공식 '바이다이–나트랑' 4인승 노선요금은 243,000동(최소 25km)이고, 25km를 넘으면 km당 10,996동이 붙어요. 바이다이 중심 기준 약 32만동이고, 플랫폼 수수료·탄력요금·해외카드 4%가 더해질 수 있어요. 북쪽 리조트(약 28km)는 28만동 안팎부터예요. 리조트 시내 셔틀(무료/유료)이 있는지 먼저 확인하세요. 목적지는 'Lotte Mart Gold Coast'예요(08:30~22:00). OSRM은 31.86km, 33분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://lottemart.com.vn/he-thong/sieu-thi-nha-trang-gold-coast/ , https://blog.naver.com/dddd1233-/224388864118 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D6",
+      "fromId": "lotte-mart",
+      "toId": "kuukuu-seafood-buffet",
+      "distanceKm": 0,
+      "durationMin": 3,
+      "grabType": "도보 (같은 건물 엘리베이터로 12층)",
+      "fareVndMin": 0,
+      "fareVndMax": 0,
+      "note": "10/8(목)은 평일 디너(17:00~22:00)라 성인 60만동, 만 7~12세 33만동, 만 3~6세 23만동이에요. 세금은 따로 붙는다는 후기가 있어요. 평일 16:00~17:00은 브레이크 타임이에요. 놀이방이 있어요. 먼저 식사하고 내려오면서 장을 보세요. [교정] 다른 선택지인 퍼홍 쌀국수는 약 1km가 아니라 직선 약 0.55km예요(걸어서 8~10분).",
+      "source": "https://blog.naver.com/kongmistar/224420575295"
+    },
+    {
+      "day": "D6",
+      "fromId": "kuukuu-seafood-buffet",
+      "toId": "cam-ranh-resort-area",
+      "distanceKm": 32,
+      "durationMin": 40,
+      "grabType": "GrabCar 4인승 (쇼핑 짐이 많으면 7인승)",
+      "fareVndMin": 300000,
+      "fareVndMax": 480000,
+      "note": "공식 '바이다이–나트랑' 노선요금 기준으로 4인승 약 32만동, 7인승 약 36만동에 플랫폼 수수료가 붙어요. 밤에는 탄력요금이 붙을 수 있어요. 골드코스트 앞은 붐비니 핀을 쩐흥다오(Trần Hưng Đạo) 쪽 출입구에 정확히 두세요. 기념품 봉투가 많으면 7인승을 부르세요. OSRM은 32.03km, 33분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/din5555/224182930870 , OSRM https://router.project-osrm.org"
+    },
+    {
+      "day": "D7",
+      "fromId": "cam-ranh-resort-area",
+      "toId": "cam-ranh-airport",
+      "distanceKm": 5.6,
+      "durationMin": 10,
+      "grabType": "GrabCar 7인승 (캐리어 적재)",
+      "fareVndMin": 90000,
+      "fareVndMax": 220000,
+      "note": "[교정] 요금을 10만~20만에서 9만~22만동으로, 시간을 12분에서 10분으로 바꿨어요. 10/10 01:35 국제선이라 22:00에 출발하면 3시간 넘게 일찍 도착해요. 리조트 위치에 따라 3~12km(5~15분)예요. 이 구간은 노선요금이 아니라 일반 요율(7인승 2km 33,382동, km당 15,807동, 분당 864동)이 적용돼요. 바이다이 중심(5.6km)이면 약 10만~15만동, 알마(9.2km)면 약 16만~22만동이에요. 공항 주차료(첫 30분 9,000동)는 따로예요. Grab '사전예약'을 쓰면 5,000동이 추가돼요. 기사가 배정된 뒤 출발 60분 이내에 취소하면 요금 100%가 취소수수료예요(공식). 리조트 공항 셔틀도 확인하세요. 캄란 리조트→공항에 40만동을 부른 택시 사례(2024)가 있으니 앱 요금과 비교하세요. 목적지는 국제선 출발(Ga Quốc tế Đi)로 지정하세요. OSRM은 5.59km, 7분이에요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://camranh.aero/vi/airport-guide/transport/parking , https://blog.naver.com/sjm2014/223355707936 , https://www.openstreetmap.org/way/854478990 , OSRM https://router.project-osrm.org"
+    }
+  ],
+  "grabTips": [
+    {
+      "title": "출국 전 한국에서 가입·인증 끝내기 + 데이터 준비",
+      "body": "Grab 앱은 한국에서 설치하고 한국 휴대폰 번호로 SMS 인증까지 마치세요. 현지 유심으로 바꾸면 인증 문자를 못 받는 경우가 있어요. 깜란공항에 내리자마자 데이터를 쓸 수 있게 eSIM이나 유심을 미리 준비하세요. 지역이 이상하게 뜨면 'Khanh Hoa'로 맞추세요.",
+      "source": "https://blog.naver.com/bb893/224298695133 , https://blog.naver.com/din5555/224182930870 , https://blog.naver.com/bee9393/224412596476"
+    },
+    {
+      "title": "해외 카드 결제는 4% 수수료, 현금이 약 4% 싸요",
+      "body": "Visa·Master 카드나 트래블월렛 카드를 등록하면 내릴 때 자동으로 결제돼 잔돈 시비가 없어요. 다만 해외에서 발급한 카드로 결제하면 최종 요금의 4%가 '해외카드 처리 수수료'로 붙어요(Grab 공식 공지, 2024.3 후기부터 확인). 2026년 후기의 결제액 33,280동과 382,720동은 32,000동, 368,000동에 정확히 4%를 더한 금액이에요. 편의와 4% 절약 중에 고르세요. '결제수단을 확인할 수 없습니다' 오류는 현지에서 카드를 지웠다가 다시 등록해 해결한 사례가 있어요. 트래블로그 카드가 등록되지 않았다는 후기(2024)도 있으니 예비 카드를 챙기세요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/mirkwon12/223392635997 , https://blog.naver.com/dpfladl651/224355099716 , https://blog.naver.com/bee9393/224412596476 , https://blog.naver.com/hungry_sujin/223311358640 , https://blog.naver.com/choochu122/223573491065"
+    },
+    {
+      "title": "짧은 거리도 약 3만 2천동부터",
+      "body": "카인호아(나트랑) GrabCar 4인승 공식 요율은 첫 2km 27,000동, 이후 km당 12,960동, 분당 550동이에요. 7인승(6 chỗ)은 33,382동, 15,807동, 864동이에요(2025.7~2026.12). 호출할 때마다 플랫폼 수수료 5,000~19,000동이 더해져서 1~2km도 약 32,000동부터예요. 수요가 많을 때나 야간, 악천후에는 할증이 붙어요(공식 항목). 급하지 않으면 10~15분 뒤에 다시 확인하세요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/dpfladl651/224355099716 , https://blog.naver.com/din5555/224182930870"
+    },
+    {
+      "title": "현금으로 낼 때는 소액권 준비",
+      "body": "앱에서 결제수단을 현금으로 바꿀 수 있어요. 다만 잔돈이 없다고 하거나 0 단위를 헷갈리게 하는 경우가 있으니 1만·2만·5만동 소액권을 따로 챙기세요. 1,000동은 약 52원이라 35만동은 약 1만 8천 원이에요.",
+      "source": "https://blog.naver.com/din5555/224182930870 , https://open.er-api.com/v6/latest/KRW"
+    },
+    {
+      "title": "깜란공항 Grab 타는 곳",
+      "body": "국제선 출구 바로 앞은 앱에서 정차 금지 구역으로 떠요. 밖으로 나와 왼쪽 택시 승강장 쪽이나 횡단보도 건너 Grab 픽업존으로 간 뒤 호출하세요. 출발지를 '도착층(Ga Quốc tế Đến)'으로 맞추세요. 출발층으로 잘못 찍어 기사와 엇갈린 후기가 있어요. 앱 채팅으로 기둥 번호를 알려주면 만나기 쉬워요. 미리 예약한 픽업 기사는 1~3번 게이트나 6번 기둥 앞에서 이름표를 들고 기다려요.",
+      "source": "https://blog.naver.com/bee9393/224412596476 , https://blog.naver.com/bb893/224298695133 , https://blog.naver.com/och9_9/224343036285 , https://blog.naver.com/firepreview/223017123281 , https://blog.naver.com/eun_9101/223808433670"
+    },
+    {
+      "title": "공항 요금은 공식 노선요금 + 수수료 + 공항 주차료",
+      "body": "Grab 공식 '공항⇔나트랑' 노선요금은 4인승 343,636동, 7인승(GrabCar 6 chỗ) 392,727동이에요(최소 40km, VAT 8% 포함, 2025.7~2026.12). 여기에 플랫폼 수수료 5,000~19,000동과 해외카드 4%가 더해질 수 있어요. 통행료와 공항 출입·주차료(첫 30분 9,000동)는 별도라 기사가 따로 달라고 할 수 있어요. 2026년 9월 후기의 4인승 실제 요금은 349,000~382,720동이었어요. 택시 승강장 게시 요금은 4인승 28만동, 7인승 35만동이었어요(2025.9).",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://camranh.aero/vi/airport-guide/transport/parking , https://blog.naver.com/everything91/224411745310 , https://blog.naver.com/bee9393/224412596476 , https://blog.naver.com/ymylove0329/224004517631"
+    },
+    {
+      "title": "캐리어가 크면 7인승(GrabCar 7-seater / 6 chỗ)",
+      "body": "4인 가족에 캐리어가 있어서 4인승에 짐을 못 실었다는 후기가 있어요. 3명이라도 큰 캐리어가 2개 이상이면 공항과 숙소 이동은 7인승이 안전해요. 4인승에 28인치 캐리어가 넉넉히 들어갔다는 픽업 후기도 있어서 차량마다 달라요. 짐 없는 시내 이동은 4인승으로 충분하고, 기본요금이 약 19% 싸요(2km 27,000동 vs 33,382동).",
+      "source": "https://blog.naver.com/coco_luvu/223482307027 , https://blog.naver.com/eun_9101/223808433670 , https://www.grab.com/vn/blog/driver/thongtindichvu/"
+    },
+    {
+      "title": "새벽 1시 도착은 할증과 배차 지연에 대비",
+      "body": "새벽에는 차가 적고 야간·탄력 할증이 붙을 수 있어요. 자정 도착 후기에서 4인승 374,000동, 7인승 424,000동이 나왔고(2023), 새벽에 Grab이 안 잡혔다는 후기도 있어요(2026.8). 아이와 함께라면 픽업 예약도 괜찮아요. 야간할증 없이 4인승 30만동, 7인승 35만동인 업체가 있고, 클룩 7인승은 23,200원이었어요. 클룩 사례는 도착 후 90분까지 무료로 기다려주고, 그 뒤로는 10만동이 붙었어요. 호출이 안 되면 10~15분 뒤 다시 불러보세요.",
+      "source": "https://blog.naver.com/firepreview/223017123281 , https://blog.naver.com/mongssi9/224377559094 , https://blog.naver.com/eun_9101/223808433670 , https://blog.naver.com/och9_9/224343036285"
+    },
+    {
+      "title": "귀국 날은 Grab 사전예약도 방법",
+      "body": "Grab '사전예약(Đặt trước chuyến xe)'으로 리조트에서 공항 가는 차를 미리 잡을 수 있어요. 한 번에 5,000동이 추가돼요. 기사가 배정된 뒤 출발 60분 이내에 취소하면 요금의 100%를 취소수수료로 내요(공식). 리조트 공항 셔틀이나 픽업업체와 요금을 비교해 보세요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/bb893/224298695133"
+    },
+    {
+      "title": "Grab 사칭·호객 택시 주의",
+      "body": "'앱 오류가 났으니 취소하고 현금으로 싸게 가자'는 사람은 따라가지 마세요. 앱에 뜬 차량 번호, 차종, 기사 얼굴이 실제와 같은지 확인하고 타세요. 식당이나 공항 직원이 소개한 택시가 나중에 값을 바꾼 사례가 있어요. 캄란 리조트에서 공항까지 15분 거리에 40만동을 부른 택시 사례(2024)도 있어요.",
+      "source": "https://blog.naver.com/din5555/224182930870 , https://blog.naver.com/sky_chrono/224362133790 , https://blog.naver.com/sjm2014/223355707936"
+    },
+    {
+      "title": "Grab 차량에는 아이 카시트가 없어요",
+      "body": "Grab 차량에는 유아 카시트가 없어서 뒷좌석 안전벨트만 매고 타야 해요. 만 4살이면 휴대용 부스터나 카시트를 챙기는 게 좋아요. 공항이나 캄란처럼 먼 구간만 카시트를 추가할 수 있는 픽업 업체를 예약하는 방법도 있어요.",
+      "source": "https://blog.naver.com/cocoluv24/223794725519 , https://blog.naver.com/yeppikhw/224385295948 , https://blog.naver.com/jjinz302/224380363105 , https://blog.naver.com/hyheo99/223353347878"
+    },
+    {
+      "title": "목적지는 베트남어·영문 정식 이름으로, 핀은 정확히",
+      "body": "'Chợ Đầm', 'Nhà thờ Núi Nha Trang', 'Tháp Bà Ponagar', 'I-Resort Nha Trang', 'Vinpearl Cable Car Station', 'Lotte Mart Gold Coast'처럼 현지 표기로 검색하세요. 롯데마트는 지점이 2곳이라 'Gold Coast'를 꼭 확인하세요. 핀은 실제로 서 있는 건물 입구로 옮기세요. 앱 채팅은 한국어로 써도 베트남어로 자동 번역돼요.",
+      "source": "https://blog.naver.com/din5555/224182930870 , https://blog.naver.com/honey__cat/224046616676 , https://lottemart.com.vn/he-thong/sieu-thi-nha-trang-gold-coast/"
+    },
+    {
+      "title": "팁은 의무가 아니에요",
+      "body": "베트남은 팁 문화가 없어요. 캐리어를 실어주는 등 도움을 받았으면 앱에서 소액을 팁으로 줄 수 있어요(후기 사례 5,000동). 팁에는 해외카드 4% 수수료가 붙지 않아요(공식).",
+      "source": "https://blog.naver.com/firepreview/223017123281 , https://www.grab.com/vn/blog/driver/thongtindichvu/"
+    },
+    {
+      "title": "캄란 리조트↔시내 노선요금, Green SM·셔틀도 대안",
+      "body": "Grab 공식 '바이다이–나트랑' 노선요금은 4인승 243,000동, 7인승 253,899동이에요(최소 25km, 2026.7.14 갱신 표). 25km를 넘으면 km당 10,996동, 14,727동이 붙어요. 리조트 위치에 따라 4인승 약 28만~35만동, 7인승 약 30만~40만동에 수수료가 더해져요. 알마 리조트 후기(2026.8)는 시내→리조트 37만동, 리조트→시내 32만동이었어요. 밤늦게 Grab이 안 잡히면 리조트 셔틀이나 전기택시 앱 Green SM(2026.4.13에 Xanh SM에서 이름을 바꿈)을 확인하세요. 2026년 9월 후기에서 Green SM 시내→아이리조트 요금은 110,000동이었어요. 할인은 앱의 Offers 탭과 Grab 트래블패스(후기 기준 약 25,000동짜리 할인 바우처 묶음)를 확인하세요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/dddd1233-/224388864118 , https://blog.naver.com/kimar1220/224406490145 , https://en.wikipedia.org/wiki/Green_SM , https://www.grab.com/global/travel-pass/ , https://blog.naver.com/bb893/224298695133"
+    }
+  ],
+  "vinwondersAccess": "[2026-09-24 재검증 결론] 빈원더스(혼째섬)에 가려면 육지 쩐푸 거리 남쪽 끝의 '빈펄 케이블카 탑승장(Vinpearl Cable Car Station / Ga cáp treo Vinpearl)'에서 해상 케이블카를 타요. 탑승장 좌표는 12.20288, 109.21734이고 OSM의 'Vinpearl Ropeway Station'과 일치해요. 공식 안내(2025-11-25)는 케이블카를 '유일한 이동 수단'이라고 적고 있어요. 2026년 9월 13~23일 한국어 후기 여러 건에서도 케이블카로 드나든 것이 확인돼요. 따로 다니는 정기 여객선은 없어요.\n① 케이블카: 2021년 10월부터 교체 공사로 멈췄다가 2024년 1월 26일 Doppelmayr 신형으로 재개통했어요. 길이 2,642.8m, 12인승 캐빈, 최소 약 8분, 시간당 5,280명이에요. 섬 쪽 도착지는 같은 날 문을 연 '빈펄 하버' 상점가예요.\n② 입장권에 포함: 1일권은 성인(140cm 이상) 1,050,000동, 어린이(100~140cm)와 경로 800,000동이고 100cm 미만은 무료예요. 16시 이후권은 700,000동/550,000동이에요. 모두 왕복 케이블카가 포함돼요(공식 요금 페이지, VAT 포함). 만 4살은 키 100cm를 넘는 경우가 많으니 현장 키 측정 기준으로 어린이 요금(80만동)을 예상하세요.\n③ 대체 수단: 날씨나 점검으로 케이블카가 멈추면 무료 스피드보트·카누로 대신 실어 날라요(공식). 10월은 나트랑 우기가 시작되는 때라 바뀔 수 있어요. 2026년 10월 점검 공지는 찾지 못했어요(2026-09-24 기준). 전날 공식 페이스북이나 핫라인 1900 6677로 확인하세요.\n④ 운영시간: 파크 08:30~20:00, 워터파크 10:00~17:30, 타타쇼 19:30쯤이에요(공식 베트남어 페이지). 케이블카는 공식 영문 안내 기준 08:30~22:30이고, 다른 안내에는 08:00~21:45로 나와요. 섬에서 나오는 마지막 편은 현장에서 확인하세요.\n⑤ 가는 법과 팁: 시내 쩐푸 중심에서 6.1km예요(OSRM). Grab 4인승으로 10~15분이고, 공식 요율과 플랫폼 수수료 기준으로 약 8.5만~14만동이에요. 목적지는 'Vinpearl Cable Car Station'으로 검색하거나 기사에게 '빈원더스 케이블카'라고 하세요. 케이블카에 음료를 들고 탈 수 없다는 후기가 있어요. 10/3~10/9는 한국 연휴라 붐빌 수 있어요. QR 입장권을 미리 사고 07:30~08:00에 도착하세요.\n[이전 정보 정정] '케이블카 운휴, 선착장에서 스피드보트만 운행'이라는 정보는 공사 기간(2021~2023) 이야기예요. 워터파크 마감은 17:30~18:00이 아니라 공식 17:30이에요.\n[출처] https://vinwonders.com/en/wonderpedia/news/how-to-get-to-vinwonders-nha-trang/ (2025-11-25), https://vinwonders.com/en/vinwonders-nha-trang-price-and-regulations/ , https://vinwonders.com/vi/wonderpedia/news/vinwonders-nha-trang-gio-mo-cua/ , https://baokhanhhoa.vn/du-lich/202401/vinpearl-nha-trang-khai-truong-vinpearl-harbour-va-he-thong-cap-treo-moi-tu-ngay-26-1-9d11341/ , https://www.openstreetmap.org/way/1249479211 , https://blog.naver.com/rlathfql3/224420810818 (2026-09-23), https://blog.naver.com/soko3067/224408523685 (2026-09-23), https://blog.naver.com/uvdmemwee42/224410633994 (2026-09-14), https://blog.naver.com/jasmin83bk/224385621813 (2026-08), https://blog.naver.com/bnmbnm0713/224051251025 (2025-10), https://blog.naver.com/kohhok95/223179755461 (2023, 공사 기간 스피드보트 운행)",
+  "blogTopics": [
+    {
+      "topic": "판랑 사막투어 아이와 함께 (선셋·캄란 픽업·가격·소요시간·4살 가능 여부)",
+      "placeId": "nam-cuong-dunes",
+      "summary": "1) 판랑은 나트랑에서 편도 약 2시간입니다. '판랑 투어는 깜란 리조트에 묵을 때 넣으라'는 후기가 있고, 캄란 리조트(모벤픽)에서 내리는 조건으로 차량비를 5만동 깎은 사례도 있어 D5에 넣은 계획과 잘 맞아요.\n2) 아이와 함께라면 오후에 출발하는 선셋 투어가 무난하다는 후기가 많습니다. 오전엔 수영장에서 놀고 이동 중 차에서 재울 수 있어요. 아이 컨디션에 맞춰 일정을 바꾸기 쉬운 단독(개별) 차량을 권하는 의견이 많지만, 한국어 가이드 조인 투어도 괜찮았다는 후기가 있습니다. 예상 7시간이 실제로는 8시간 넘게 걸린 사례도 있어요.\n3) 비용: 현지 업체(호아드라이버) 단독 차량은 좌석 수 기준으로 4인승 155만~160만동, 7인승 190만동입니다. 지프 45분 60만동, 양농장·참탑 입장료(아이 무료), 식사, 팁은 따로 내요. 한국어 가이드 데이투어는 2025년 초 기준 성인 55달러, 만 4~11세 50달러이고 각각 신청비 1만원이 붙었습니다. ATV는 1인 25만동이 추가돼요.\n4) 주의할 점은 모래바람(선글라스, 얇은 긴 옷, 고정되는 모자), 사막의 더위, 차멀미(아이가 토한 사례), 그리고 유아에겐 너무 가파른 모래썰매입니다. '만 3세 이하는 비추'라는 의견도 있지만, 만 2세·28개월 아기와 무사히 다녀온 후기도 있어요.\n5) 4인승을 예약했는데 소형 세단(엑센트)이 와서 짐을 싣고 뒷좌석에 3명이 앉기 비좁았던 사례가 있습니다. 짐이 있거나 여유 있게 타려면 7인승을 고려하세요.",
+      "posts": [
+        {
+          "title": "28개월 아기와 나트랑 판랑사막투어1 (KIM KHOA 금은방 환전→휴게소→양 농장→포 클롱 가라이 탑)",
+          "url": "https://blog.naver.com/idto43/223970393576",
+          "author": "규세 (규세 Blog :))",
+          "date": "2025-08-14",
+          "summary": "현지 업체 호아드라이버의 개별 선셋 투어(2025년 5월)로, 12:30에 픽업해 모벤픽 깜란에서 내렸습니다. 4인승 왕복 155만동(깜란 리조트 드랍이라 공식가 160만동에서 5만동 할인), 지프 45분 60만동이었고 양농장·참탑은 아기 무료였어요. 예상 7시간이 실제로는 8시간 넘게 걸렸습니다. 4인승으로 소형 세단(엑센트)이 와서 짐까지 싣고 3명이 뒷좌석에 타기 좁았고, 식사할 시간이 없어 간식으로 버텼다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 판랑투어 현지택시 만2세 아기랑 단독투어 후기",
+          "url": "https://blog.naver.com/hhl430/223847993357",
+          "author": "리미 (나니 in the trip)",
+          "date": "2025-04-27",
+          "summary": "만 2세 아기, 초등생, 60대 어머니와 현지 업체(호아드라이버) 차량으로 단독 투어를 했습니다. 요금은 인원이 아니라 좌석 기준이라 4석 160만동, 7석 190만동, 16석 270만동(약 14만원)이었어요. 한국 업체는 5명 기준 조인·단독 모두 30만원 안팎이었다고 합니다. 아기가 차에서 푹 자도록 양농장·사원은 빼고 사막만 갔어요. 지프는 45분 60만동이고 아기 포함 5명이 탈 수 있었습니다. 이날은 바람이 없어 모래바람 걱정이 없었고 '다녀오길 잘했다'는 결론이지만, 매우 더웠다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑판랑사막투어 선셋 지프투어 아이랑 준비물 후기",
+          "url": "https://blog.naver.com/mumiya0520/224388665565",
+          "author": "무미야 (무미야의 발견)",
+          "date": "2026-08-27",
+          "summary": "부모님, 아이들과 12시에 출발하는 선셋 투어(카페 경유)를 이용했고, 오전엔 수영장에서 놀다 떠날 수 있어 좋았다고 합니다. 호텔 픽업·드랍과 짐 보관이 됐어요. 카페까지 약 1시간 30분 걸리니 출발 전 화장실은 필수입니다. 지프 1대에 4~6명이 타고, 모래썰매는 경사가 너무 가팔라 아이들은 못 타고 지프로 언덕을 내려왔어요. ATV는 1인 25만동, 가이드 팁은 1인 5만동이고 카페 비용은 따로입니다(여행사 제휴 링크가 있는 글).",
+          "withKids": true
+        },
+        {
+          "title": "[베트랑] 나트랑 여행코스 <판랑 사막투어> 아이랑 가족여행 투어 후기",
+          "url": "https://blog.naver.com/happyarm/224292628682",
+          "author": "나는야 아둘맘 (오늘은 뭐할까?)",
+          "date": "2026-05-21",
+          "summary": "부모님, 아이들과 한국어 가이드가 있는 조인 선셋 투어(베나자 예약)를 다녀왔습니다. '판랑 투어는 깜란 리조트에 묵을 때 넣는 걸 추천'한다고 적었어요(보통 시내→깜란→판랑 동선). 순서는 양떼목장, 지정 식당 점심(맛은 기대 말 것, 추가금), 카페, 포롱자라이 사원(언덕이라 운동화 추천), 핑크 지프·모래썰매였고, 아이들이 원해 ATV도 탔어요. 조인 투어라 다른 팀의 저녁 식사를 기다릴 수도 있다는 안내를 받았다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 판랑 사막투어 코스 지프차 스냅 촬영 아이와 이용후기",
+          "url": "https://blog.naver.com/tzatza86/223973066369",
+          "author": "백조언니 쪼이 (오늘도 엔쪼이)",
+          "date": "2025-08-17",
+          "summary": "전년도 판랑 투어 때 아이가 차에서 토해 고민했지만 다시 가서 만족했다는 후기입니다. 여행천사의 리무진버스(16/29인승) 조인 데이투어로 캐리어도 실을 수 있었고, 무료인 둘째에게도 좌석을 따로 줬어요. 양농장 먹이는 1만동이고 전문 포토그래퍼가 동행했습니다. 키가 작은 둘째는 모래바람을 얼굴에 그대로 맞아 눈이 따가워 힘들어했어요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 사막투어 판랑투어 시간 가격 여행코스 복장 정리",
+          "url": "https://blog.naver.com/wkwmd81/223775380385",
+          "author": "고고씽 (해외여행 고고씽)",
+          "date": "2025-03-05",
+          "summary": "한국어 가이드 데이투어(08:00~17:30)입니다. 성인은 신청비 1만원에 55달러(약 8.8만원)였고, 픽업, 지프, 모래썰매, 점심, 참파 유적지, 양떼목장이 포함됐어요. 만 4~11세는 1만원에 50달러, 만 3세 이하는 무료지만 '만 3세 이하면 안 가는 걸 추천'했습니다. 모래가 살에 닿으면 따가워 원피스·반팔·반바지는 비추이고, 선글라스는 필수, 모자는 고정되는 것을 권합니다.",
+          "withKids": false
+        }
+      ]
+    },
+    {
+      "topic": "빈원더스 4~5살 아이와 (키 제한·아쿠아리움/키즈존/워터파크·케이블카/배·소요시간·입장권)",
+      "placeId": "vinwonders",
+      "summary": "1) 시내에서 그랩으로 선착장에 간 뒤 왕복 케이블카(입장권 포함, 10~15분)를 탑니다. 날씨가 나쁘거나 이른 오전 케이블카 운영 전에는 스피드보트로 대체돼요. 운영시간은 글마다 달라(공원 08:30~20:00 또는 09:00~20:00, 케이블카 막차 21:45) 당일 앱으로 확인해야 합니다.\n2) 요금은 나이가 아니라 키로 정합니다. 100cm 미만 무료, 100~140cm 80만동, 성인 105만동, 16시 이후 성인 70만동이고, 매표소에서 키를 재요(애매한 키를 그냥 통과시켜 준 사례도 있음). 온라인 예매가 현장가보다 쌉니다.\n3) 키 100cm 안팎인 4살이 탈 것은 적습니다. 알파인코스터·플라잉시네마 100cm(보호자 동반), 타다리버 105cm, 마인어드벤처 110cm이고 대부분의 스릴 기구는 120~130cm 이상이에요. 동물원(기린 먹이주기), 아쿠아리움, 회전목마·범퍼카, 에어컨 되는 실내놀이터·오락실(무료), 버드쇼, 음악분수(19:00)·타타쇼(19:30 또는 20:30, 날짜별 확인) 위주로 짜면 만족도가 높았어요. 타타쇼의 악당 장면을 무서워할 수 있어 어린 아이는 뒷자리를 권합니다.\n4) 16시 이후 입장권으로는 동물원(17:30 마감)과 워터파크(18:00 마감, 슬라이드 17:30) 중 하나만 볼 수 있어, 아이와 가면 종일권을 권하는 후기가 많아요. 워터파크는 140cm 미만이면 유수풀도 못 들어가 할 것이 적다는 평입니다. 아쿠아리움은 2026년 2월 '공사 중' 후기가 있었지만 6월 후기에서는 관람했으니 방문 전 앱으로 확인하세요.\n5) 휴대용 유모차가 편했습니다(트라이크 2대는 케이블카와 에스컬레이터 이동이 힘들었음). 그늘이 적어 양산·손선풍기가 필요하고 한낮엔 실내로 피하세요. 입구에서 가방 검사를 하는데, 외부 음식은 원칙상 금지지만 아이 간식 정도는 통과된 사례가 있어요.",
+      "posts": [
+        {
+          "title": "나트랑 빈원더스 놀이기구 아이 기린 먹이주기 아이와 다녀온 후기",
+          "url": "https://blog.naver.com/yoim04/224184187350",
+          "author": "맘멜로디",
+          "date": "2026-02-15",
+          "summary": "키 100cm가 안 되는 4살과 방문했습니다. 대부분의 놀이기구가 120cm 이상, 짚라인 130cm 이상, 알파인코스터 100cm 이상(보호자 동반)이라 탈 수 있는 게 회전목마 정도였어요. 대신 동물원의 홍학과 기린 먹이주기에서 가장 오래, 가장 만족스럽게 보냈다고 합니다. 오전엔 케이블카 대기 줄이 길고 대기 공간에 에어컨이 없어, 어린 아이면 휴대용 유모차와 손선풍기를 권했어요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 빈원더스 위치 지도 가는법 5살 아이랑 사파리 후기 입장권 할인 방법 워터파크 준비물",
+          "url": "https://blog.naver.com/dmk__/224369211880",
+          "author": "다마 (보부상의 여행, 육아 노트)",
+          "date": "2026-08-05",
+          "summary": "그랩으로 탑승장에 가서 건넜습니다. 9시 반쯤 도착했는데 케이블카 운영 전이라 갈 때는 스피드보트, 올 때는 케이블카(각 10~15분)를 탔고 케이블카가 훨씬 나았대요. 예매가는 성인 종일권 약 5.8만원, 오후 4시권 약 3.8만원이었어요. 키 제한은 알파인코스터·플라잉시네마 100cm, 타다리버 105cm, 마인어드벤처 110cm, Tilt of Thunder 120cm이고, 100cm 미만은 무료입니다. 아이 키가 작아 회전목마 정도만 탔고, 그늘이 적어 양산을 꼭 챙기라고 해요(할인코드·제휴 링크가 있는 글).",
+          "withKids": true
+        },
+        {
+          "title": "[나트랑] | Day-6 빈원더스 사파리, 아쿠아리움, 타타쇼 후기 | 46개월 & 30개월 아이랑 함께한 6박7일 나트랑 가족여행",
+          "url": "https://blog.naver.com/lovedoong_22/224323240787",
+          "author": "리유 (사랑둥이 호이남매)",
+          "date": "2026-06-22",
+          "summary": "14시쯤 그랩으로 선착장에 갔고, 입장권은 전날 앱으로 샀습니다. 100cm 미만은 무료였고 키가 애매한 46개월도 그냥 통과했어요. 입구에서 가방 검사가 있었습니다. 사파리, 에어컨 되는 아쿠아리움, 플라잉시네마(첫째만), 롯데리아 저녁을 거쳐 분수쇼(19:00)와 타타쇼(19:30)를 봤어요. 트라이크 2대를 들고 케이블카와 에스컬레이터로 이동하기가 쉽지 않았고, 100cm 미만이라 탈 것이 적었다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "빈원더스 나트랑 아이랑 다녀온 솔직후기(구빈펄랜드)",
+          "url": "https://blog.naver.com/eogjf12/224197028605",
+          "author": "연이네 (두 딸, 오늘도 기록)",
+          "date": "2026-02-26",
+          "summary": "6살·9살과 방문했는데 아쿠아리움이 공사 중이라 못 들어갔고, 워터파크는 체력상 뺐지만 놀이공원만으로 충분했다고 해요. 에어컨 되는 대형 실내놀이터(트램펄린·볼풀)와 무료 오락실, 버드쇼, 동물원을 추천했고, 회전목마·범퍼카·어린이 기구는 대기가 거의 없었어요. 더위가 생각보다 강하고, 타타쇼는 꼭 보되 악당 장면이 무서울 수 있어 어린 아이는 뒷자리를 권했습니다.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 빈원더스 (입장권 요금·케이블카 운행시간·섬 들어가는 법 2026)",
+          "url": "https://blog.naver.com/happybumblebee/224418181955",
+          "author": "물결 (너울너울 물결로그)",
+          "date": "2026-09-22",
+          "summary": "공식 안내를 정리한 글입니다. 섬에 들어가는 기본 수단은 케이블카이고, 날씨가 나쁘면 스피드보트로 대체돼요. 요금은 성인(140cm 이상) 105만동, 아동(100~140cm)·60세 이상 80만동, 16시 이후 성인 70만동, 2일권 135만동이며 왕복 케이블카가 포함됩니다. 100cm 미만은 무료예요. 케이블카 08:00~22:00(막차 21:45), 공원 08:30~20:00이지만 공식 페이지마다 표기가 달라 당일 앱 확인을 권했습니다.",
+          "withKids": false
+        },
+        {
+          "title": "나트랑 빈원더스 입장권 가격비교 오후권 솔직후기",
+          "url": "https://blog.naver.com/bodoru/224321705025",
+          "author": "보돌 (보돌 또 어디가?)",
+          "date": "2026-06-20",
+          "summary": "오후 4시권 후기입니다. 16시 이후 입장하면 동물원(17:30 마감)과 워터파크(18:00 마감, 슬라이드 17:30) 중 하나만 고를 수 있어 아쉬웠대요. 워터파크는 140cm 미만이면 유수풀도 못 들어가 파도풀·물놀이터·작은 슬라이드 정도뿐이라, 키가 작거나 수영을 못하면 재미가 덜하다는 평입니다. 음악분수 19:00, 타타쇼 19:30이었어요(제휴 링크가 있는 글).",
+          "withKids": false
+        }
+      ]
+    },
+    {
+      "topic": "머드온천 아이와 (아이리조트 vs 탑바 vs 100에그, 유아 이용·가격)",
+      "placeId": "i-resort",
+      "summary": "1) 4살 동반이면 아이리조트가 가장 무난하다는 결론이 많습니다. 머드 20분 뒤 온천풀과 미끄럼틀, 수심 0.8m 유아 물놀이터가 있는 워터파크까지 이어져요. 키 100cm 미만은 무료이고 아이 옷도 빌려줍니다. 머드+수영장은 성인 35만~40만동, 100cm 이상 아동 20만동이고, 현장가가 온라인 예매가와 비슷했다는 후기도 있어요.\n2) 탑바는 원조이자 가성비로, 머드가 진하고 시내에서 약 15분입니다(유아 옷 대여 가능). 100에그는 달걀 테마의 사진 명소로 머드 포함 25만동이지만 셋 중 시내에서 가장 멀어요. 물놀이가 목적이면 아이리조트, 부모님 동반이나 가성비면 탑바를 고릅니다.\n3) 준비물은 방수 기저귀, 여벌 옷과 버릴 속옷, 여분 수건, 아이 바디워시·로션, 아쿠아슈즈(돌바닥이 뜨거움)입니다. 샤워 물이 바닷물이라 제대로 씻기 어려워 숙소나 마사지샵에서 다시 씻었다는 후기가 여럿이에요. 아이리조트 매점은 현금만 받습니다.\n4) 머드가 뜨겁거나 따가워 아이가 20분을 못 채우고 나온 사례가 있습니다. 슬라이드와 깊은 풀은 키 제한이 있어 안전요원이 막아요. 아이리조트에 귀중품을 맡겼다가 지갑 현금이 빈 것 같다는 후기가 있으니 현금은 최소한으로 맡기세요.\n5) D4 동선: 포나가르 사원에서 그랩으로 머드온천에 간 후기가 여러 개 있습니다. 아이리조트는 캐리어 등 짐 보관이 되고, 흐린 날엔 머드 뒤 이동할 때 쌀쌀할 수 있어요.",
+      "posts": [
+        {
+          "title": "나트랑 아이리조트 머드온천 4살 아이랑 함께 준비물, 포나가르사원, 마담프엉, 모벤픽 바다뷰 디럭스룸 배달음식",
+          "url": "https://blog.naver.com/hye_lyn_/224058205927",
+          "author": "러블리니 (마이린)",
+          "date": "2025-10-29",
+          "summary": "캄란 모벤픽에서 그랩으로 아이리조트에 갔다가 포나가르로 이어진 일정입니다. 4살(키 89cm)은 100cm 미만이라 무료였고 아이 옷도 빌렸어요. 더운 머드 미네랄은 성인 1인 40만동인데 할인받아 2인 72만동이었습니다. 머드는 20분이고, 일부 구역은 아이 입장이 막혀 미끄럼틀 있는 온천에서 2시간 놀았대요. 준비물은 방수 기저귀, 갈아입힐 기저귀, 아기 바디워시·로션, 여분 수건입니다.",
+          "withKids": true
+        },
+        {
+          "title": "아이랑 나트랑 자유여행 아이리조트 머드스파 온천 가격 그랩 워터파크 찐후기",
+          "url": "https://blog.naver.com/ajufamily/223924987523",
+          "author": "아주패밀리 (사진 찍는 엄마의 집 안&밖)",
+          "date": "2025-07-07",
+          "summary": "5살 아이 컨디션을 보고 당일 아침 시내 레스참 호텔에서 그랩(편도 약 9.7만동, 20분)으로 갔습니다. 요금은 머드+수영장 성인 35만~40만·아동 20만동이고, 키 100cm인 아이는 따로 재지 않아 무료였어요. 캐리어 등 짐 보관이 되지만, 맡긴 지갑에서 현금이 빈 것 같다며 주의하라고 했습니다. 샤워 물이 바닷물이라 숙소에서 다시 씻었고, 아쿠아슈즈는 필수, 워터파크 유아 물놀이터는 수심 0.8m라고 해요(제휴 링크 고지).",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 가족여행 아이리조트 머드스파 온천 워터파크 아이랑 가볼만한곳",
+          "url": "https://blog.naver.com/thwls930/224249871146",
+          "author": "환호맘 (환호네 Blog)",
+          "date": "2026-04-12",
+          "summary": "포나가르 사원에 들렀다가 그랩으로 이동했습니다. 클룩 예약을 취소하고 현장에서 샀는데 가격이 비슷했고, 더운 머드 미네랄 성인 35만동·아동 20만동을 카드로 냈어요. 머드 20분 뒤 온천과 파도풀에서 놀다 버기로 워터파크에 갔는데, 막내는 키가 안 돼 큰 슬라이드를 못 탔고 깊은 수영장에선 안전요원이 바로 막았대요. 매점은 현금만 받습니다.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 머드온천 탑바 아이리조트 비교 7월 8월 괜찮을까?",
+          "url": "https://blog.naver.com/minettelee/224335993796",
+          "author": "꿈양 (꿈꾸는 양갱, 꿈양의 여행기록)",
+          "date": "2026-07-04",
+          "summary": "탑바는 07:30~17:00, 머드가 진하고 시내에서 15분이며 현장가 35만동입니다. 아이리조트는 워터파크 중심의 현대식으로 08:30~17:30, 머드가 묽고 시내에서 30분이며 현장가 50만동이에요(머드+온천+수영장 기준). 아이 동반·물놀이면 아이리조트, 부모님·가성비면 탑바를 추천했고, 작성자는 부모님과 탑바에 갔습니다. 욕조는 쓰기 직전에 청소하고 새 머드를 채워 준다고 해요(제휴 링크가 있는 글).",
+          "withKids": false
+        },
+        {
+          "title": "6살 아이랑 11월 나트랑 여행(호핑투어 취소.. 탑바 머드온천, 짜오마오)",
+          "url": "https://blog.naver.com/hwaaaaaang_/224118516181",
+          "author": "황 (HwangWorld)",
+          "date": "2025-12-22",
+          "summary": "11월 말 파도가 높아 해변이 통제되고 호핑투어가 취소돼 탑바 머드온천으로 대신했습니다. 유아 옷도 빌려줬고, 성인 남자는 바지만 대여됐어요. 아이가 머드가 따갑다고 해 일찍 나왔고, 날이 추워 이동할 때 쌀쌀했다고 합니다. 온천풀 물은 더울 정도로 따뜻했고, 씻지 않고 그랩으로 호텔에 돌아가 샤워했대요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 100EGG 머드스파, 귀국전 무조건 들러야할 피로회복 힐링존!!",
+          "url": "https://blog.naver.com/6digitalnomad9/224421060067",
+          "author": "푸어디노랜서 (디지털노마드 프로여행러)",
+          "date": "2026-09-23",
+          "summary": "성인 일행의 후기입니다. 아이리조트는 워터파크를 갖춘 최대 규모(도심에서 20분), 탑바는 원조·가성비(15분), 100에그는 달걀 테마 사진 명소이고 셋 중 시내에서 가장 멀다고 비교했어요. 100에그는 머드 포함 25만동이고 수영복 대여·구매, 온수풀·대형 수영장이 있습니다. 상주 사진기사가 찍은 사진을 액자로 20만동에 판다고 해요.",
+          "withKids": false
+        }
+      ]
+    },
+    {
+      "topic": "담시장 쇼핑 팁·흥정·아이 동반 주의",
+      "placeId": "dam-market",
+      "summary": "1) 4살 동반이면 문 여는 시간에 맞춰 일찍 가서 살 것만 짧게 사라는 것이 공통 결론입니다. 실내 시장인데 에어컨이 없어 한낮엔 찜통이고(3층 카페만 시원), 1층은 건어물 냄새가 나요. 8시 50분에 간 날은 한산하고 덥지 않았지만, 10시가 넘자 아이가 더워했다는 후기가 있어요. 영업은 대략 05:00~18:30이지만 오후 5시쯤 문을 닫은 가게가 많았다는 후기도 있어, D2 오후 방문이면 가장 더운 데다 시간도 빠듯합니다.\n2) 택시 하차장 쪽 신관이 깨끗하고 상인도 친절한 편입니다. 2층은 옷·가방·크록스·캐리어, 3층엔 정찰제 속옷 가게와 카페가 있어요. 신관엔 엘리베이터가 있으니 유모차를 들고 계단을 오르지 마세요.\n3) 흥정 시세(2026년 후기): 원피스·티셔츠 10만~11만동, 코끼리바지 5만동, 롱샴 짝퉁 10만~25만동, 노스페이스 백팩 30만동입니다. 첫 호가의 50%를 부르고 60% 선에서 합의하라는 팁이 있고, 한 가게에서 여러 개를 묶어 깎는 게 유리해요. 현금(VND)만 받으니 1만·2만·5만동 소액권을 챙기세요. 화장실은 5,000동이고, 장난감은 비싸서 비추라는 후기가 있어요.\n4) 들어가기 전 아이에게 사탕수수·망고주스를 사 주면 좋아요. 해변에서 그랩 기본요금(3만~5만동)으로 5~10분이고, 롯데마트 골드코스트까지는 걸어서 7~8분입니다. 힘들면 쾌적한 시내 기념품점(악어샵 등)이나 야시장으로 대체해도 됩니다(티셔츠 가격 차이가 크지 않음).",
+      "posts": [
+        {
+          "title": "[베트남여행]나트랑 담시장 쇼핑리스트 신관 정보",
+          "url": "https://blog.naver.com/wlduql0708/224294703509",
+          "author": "애니 (#애니블로그)",
+          "date": "2026-05-24",
+          "summary": "실내 시장인데 에어컨이 없어 무척 덥기 때문에 아이 동반이면 비추이고, 간다면 오픈 시간에 맞춰 살 것만 사라고 했습니다(그래도 세 번 갔대요). 입구가 깨끗한 신관이고, 왼쪽 낡은 건물이 구관이에요. 1층은 건어물 냄새, 2층은 캐리어·가방·티셔츠·크록스입니다. 시장에 들어가기 전 아이에게 사탕수수나 망고주스를 사 주라고 권했어요.",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 아이랑 가볼만한 곳 담시장 쇼핑 리스트 (질러팬티,보석팬티,진주)",
+          "url": "https://blog.naver.com/heehee211211/224374070857",
+          "author": "히히하하호호 (나도 역시 내가 제일 중요해)",
+          "date": "2026-08-16",
+          "summary": "너무 더워 입구에서 음료부터 샀습니다(코코넛커피 3만, 수박주스 2만, 망고주스 2.5만동). 신관 3층 속옷 가게는 정찰제로 보석팬티 10개 23만동이었어요. 코끼리바지 5만동, 롱샴 미니백 6개 65만동에 샀고, 화장실은 5,000동이 필요합니다. 아이 장난감은 쿠팡보다 비싸 비추라고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 아이랑 여행 기념품 선물 쇼핑 담시장 흥정 방법",
+          "url": "https://blog.naver.com/syokan/224305419379",
+          "author": "다원파파 (아들이랑 일본 여행기)",
+          "date": "2026-06-04",
+          "summary": "운영은 05:00~18:30이고, 해변에서 그랩 기본요금(3만~5만동)으로 5~10분 걸립니다. 흥정해서 산 가격은 원피스·셔츠 10만동, 코끼리바지 5만동, 짝퉁 스투시 티 11만동, 롱샴 25만동이에요. 부른 값의 50%를 부르고 60%에 합의하라고 합니다. 현금(VND)만 받으니 소액권을 챙기라고 하고, 야시장 티셔츠와 가격 차이가 크지 않았다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "🇻🇳아이랑 나트랑 여행/나트랑도깨비 베나자 유심/담시장 흥정 가방 가격 시세 후기/쇼핑 떼샷",
+          "url": "https://blog.naver.com/lovelybi_a/224406341355",
+          "author": "일상다반사 (내 인생 가장 설레는,)",
+          "date": "2026-09-09",
+          "summary": "6살 아이와 9월 초에 여러 번 갔습니다(신관은 오른쪽). 첫날 8시 50분에 도착하니 문을 안 연 가게도 있었지만 사람이 없고 덥지 않아 좋았대요. 롱샴 미디움 15만·작은 것 10만동, 노스페이스 백팩 30만동, 미우미우 35만동이었고, 묶어서 105만동을 100만동으로 깎았어요. 아이와 함께라 1시간 만에 끝내고 3층 카페에서 쉬었다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "[생후52개월 아이랑 나트랑여행] 나트랑 씨에스타 조식/나트랑 시내 구경/나트랑 담시장/나트랑 롯데마트 골드코스트점/DS약국/PALI SPA 깜란지역 공항 픽드롭무료 나트랑 마사지",
+          "url": "https://blog.naver.com/idyean/224192468644",
+          "author": "Haeny (Haeny's life)",
+          "date": "2026-02-23",
+          "summary": "52개월 아이와 흐린 오전에 시내를 20분 걸어 담시장에 갔습니다. 10시가 넘자 아이가 더워했고, 설 연휴라 인파가 엄청났대요. 1층엔 장난감·건어물, 2층엔 옷·축구유니폼이 있었어요. 걸어서 7~8분 거리인 롯데마트 골드코스트로 옮기자 시원하고 깨끗해 대비가 컸지만, 담시장도 한 번쯤은 가볼 만하다고 합니다.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑- 시내 악어샵 쇼핑, 아이랑 다녀온 후기",
+          "url": "https://blog.naver.com/kyung7388/224369912574",
+          "author": "달콩콩 (경이별이 일상기록)",
+          "date": "2026-08-06",
+          "summary": "담시장은 아이와 다니기 어렵다고 판단해 덥지 않고 쾌적한 시내 기념품점 '악어샵'(1~3층)에서 짧게 쇼핑했습니다. 옷·모자 품질이 좋았고 키링·지비츠 종류가 많대요. 아이 간식은 필수이고, 지루해하면 잠깐 영상을 보여 주며 부부가 교대로 쇼핑했다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 포나가르사원  담시장 두 번 방문 아이랑 꿀팁",
+          "url": "https://blog.naver.com/ranlee510/224345261451",
+          "author": "라니 (행복한 라니 블로그)",
+          "date": "2026-07-13",
+          "summary": "아이와 담시장에 두 번 갔습니다. 처음엔 오후 1시쯤 갔는데 5시에 가게들이 문을 닫아 아쉬웠대요. 신관은 과일가게를 지나 5번 출구로 들어가고, 엘리베이터가 있으니 유모차를 들고 계단을 오르지 말라고 합니다. 내부는 매우 덥고 3층 카페만 시원해 아이들이 쉬기 좋았어요. 롱샴 미니는 흥정해도 10만동이 최저였습니다.",
+          "withKids": true
+        }
+      ]
+    },
+    {
+      "topic": "나트랑 야시장 · 나트랑 대성당",
+      "placeId": "night-market",
+      "summary": "1) 일정표의 '핑크성당'은 다낭·호치민 성당 이야기입니다. 나트랑 대성당은 언덕 위 회색 석조 네오고딕 성당이에요. 입장료는 없지만 입구에서 기부금(1인 1만동)을 요구한 사례가 있고, 5살과 둘러보는 데 약 16분이면 충분했다고 합니다.\n2) 2023년 후기 기준 주말 개방은 05:00~07:00, 11:00~16:30이고, 미사 중에는 내부 관람이 제한됩니다. D2(10/4)가 일요일이라 11:00~16:30 사이에 가는 것이 안전해요(현장 변동 가능). 성당 안은 유모차가 다니기 편하지만 나가는 길이 계단이라 유모차를 접어야 합니다.\n3) 야시장은 저녁 5시쯤 해변 쪽(탑쩜흐엉 맞은편)에 서는 작은 골목 규모입니다. 담시장과 물건이 겹치고 10~15% 비싸며, 사람이 몰리고 통풍이 안 돼 4살에겐 힘들다는 평이 많아요. 저녁 해변 산책 겸 짧게 둘러보고, 아이 손을 꼭 잡으세요. 유모차는 사실상 어렵습니다.\n4) 주말 밤 야시장 주변은 그랩이 아예 안 잡힌 사례가 있습니다. 대안으로 에어컨 되는 AB스퀘어몰 오락실, 야시장 입구 자전거 체험(10만동에서 5만동으로 흥정)을 즐긴 후기가 있어요.",
+      "posts": [
+        {
+          "title": "나트랑 야시장 솔직 비추 후기 (아이랑 가면 불지옥)",
+          "url": "https://blog.naver.com/fullmoon_zip/224347646099",
+          "author": "보름집 (아이와 보름날)",
+          "date": "2026-07-15",
+          "summary": "통로에 사람이 너무 많고 통풍이 안 돼 사우나 같았다고 합니다. 아이가 들어서자마자 나가자고 했고, 유모차는 거의 불가능했어요. 운동복 등을 56만동에 샀습니다. 주말 밤이라 야시장 근처에서 그랩이 아예 안 잡혀 현지 택시와 흥정해 돌아왔대요(수수료 고지가 있는 글).",
+          "withKids": true
+        },
+        {
+          "title": "[5세 아이랑 베트남 여행] 나트랑 시내 야시장 및 자전거 체험",
+          "url": "https://blog.naver.com/taemin210331/223942845606",
+          "author": "때때맘 (때때 육아일기)",
+          "date": "2025-09-01",
+          "summary": "저녁을 먹고 걸어서 갔습니다. 담시장과 겹치는 물건이 많고 가격은 10~15% 비쌌으며, 규모도 생각보다 작았어요. 사람이 많아 아이를 잘 데리고 다녀야 합니다. 입구에서 호텔까지 가는 자전거를 10만동에서 5만동으로 흥정해 탔는데 아이가 매우 좋아했고, 해변과도 가까웠다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "내돈내산) 아이랑 나트랑 여행 (4살) - 나트랑 시내 소품샵 l 나트랑 야시장 담시장 ㅣ 망고커피 ㅣ 나트랑 부부샵 l 나트랑 골드코스트",
+          "url": "https://blog.naver.com/todaymohadi/224146881506",
+          "author": "오늘은모하디",
+          "date": "2026-01-14",
+          "summary": "4살과 시클로를 타고 담시장에 갔는데, 흥정을 안 해 두 배(그래도 약 5천원)를 냈고 매연을 마셔야 한다고 해요. 해변길을 걸은 뒤 들른 야시장은 규모가 크지 않아 구경만 했고, 에어컨 되는 카페에서 음료를 마시며 쉬었다가 골드코스트에 들렀어요.",
+          "withKids": true
+        },
+        {
+          "title": "[아이랑나트랑여행]앙반미,cccp카페,ab스퀘어몰오락실,안토이,야시장",
+          "url": "https://blog.naver.com/sjdhkskanwlro/224353114858",
+          "author": "너와나무지개 (보석같은 하루의 기록)",
+          "date": "2026-07-21",
+          "summary": "8살과 3인 가족 여행입니다. 야시장은 저녁 5시부터 해변 탑쩜흐엉 맞은편에 서는 작은 골목 규모이고, 먹을 것은 철판 아이스크림 정도였어요. 코끼리바지를 흥정해 마트의 절반(약 5천원)에 샀다고 합니다. 저녁 전 시원한 AB스퀘어몰 오락실이 아이에게 인기였어요.",
+          "withKids": true
+        },
+        {
+          "title": "🇻🇳나트랑 대성당 Nha Tho Chanh Toa Kito Vua 5살 아이랑 입장료 방문시간 씀모이시장에서 걸어가기 등 상세정보",
+          "url": "https://blog.naver.com/ryuworld1117/223288261803",
+          "author": "러브류 (LOVE RYU❤️)",
+          "date": "2023-12-10",
+          "summary": "개방은 평일 05:00~17:00, 주말 05:00~07:00·11:00~16:30이고, 미사는 평일 2회(04:45·17:00), 주말 6회입니다. 미사 중엔 내부 관람이 제한돼요. 입장료는 없지만 입구에서 1인 1만동을 기부하라고 해 1만동만 냈대요. 안토이에서 씀모이시장을 거쳐 걸어서 10~15분입니다. 성당 안은 유모차가 다니기 편하지만 나가는 길이 계단이고, 5살과 관람에 16분 걸렸어요.",
+          "withKids": true
+        },
+        {
+          "title": "7살 아이랑 나트랑 여행 필수 코스: 아오자이 입고 대성당·포나가르·담시장 인생샷 찍은 B코스 스냅 내돈내산 후기",
+          "url": "https://blog.naver.com/piggomi/224404368297",
+          "author": "돼고미 (돼고미네 기록보관소)",
+          "date": "2026-09-08",
+          "summary": "캄란 알마리조트에서 베나자 셔틀로 시내에 나와, 아오자이 스냅(전용차, 3시간)으로 대성당, 포나가르, 담시장을 돌았습니다. 대성당은 1930년대 석조 고딕 양식으로 회색 돌벽과 스테인드글라스가 있는 언덕 위 성당이에요. 국경일 시즌이라 포나가르가 붐볐고, 아이 체력을 생각해 담시장에선 쇼핑 없이 시장 옆 골목에서 촬영만 했다고 해요.",
+          "withKids": true
+        }
+      ]
+    },
+    {
+      "topic": "포나가르 참탑 아이와",
+      "placeId": "po-nagar",
+      "summary": "1) 입장료는 성인 30,000동이고 현금만 받으며, 아이는 무료입니다(만 3~5세 무료 후기 다수, 매표소에서 되물어야 했던 사례도 있음). 티켓은 입장 게이트에서 회수되니 인증샷은 들어가기 전에 찍으세요. 운영은 06:00~17:30/18:00이고 관람은 30분~1시간이면 충분합니다.\n2) 계단과 그늘에 대한 평은 갈립니다. '가파른 계단이 있고 그늘이 없어 유모차를 입구에 두고 아기를 안고 올랐다'는 후기와 '큰 나무 그늘이 꽤 있고 계단이 많지 않아 아이와 무리 없었다'는 후기가 모두 있어요. 휴대용 유모차는 접을 각오를 하세요.\n3) 점심 무렵엔 단체 관광객으로 줄을 설 만큼 붐비고 매우 덥습니다. 아침 일찍 간 것이 '한 수'였다는 후기가 있으니 D4는 아침 일찍 가는 것이 유리해요.\n4) 복장: 입장 자체엔 규제가 없고, 탑 내부(기도 공간)에 들어갈 때만 어깨·무릎을 가리면 됩니다(가릴 옷을 빌려줌). 노출이 심한 옷은 피하세요.\n5) 포나가르에서 그랩으로 머드온천(탑바·아이리조트)에 간 후기가 여러 개라 D4 계획과 잘 맞습니다. 깜란에 묵으며 기사 포함 렌트카(8시간 10만원 미만)로 시내 나들이를 한 가족도 있어요.",
+      "posts": [
+        {
+          "title": "나트랑 가볼만한곳 포나가르사원 5세 아이와 방문, 복장 입장료 시간 등",
+          "url": "https://blog.naver.com/naho_holic/223930009544",
+          "author": "온리 (Only blog)",
+          "date": "2025-07-11",
+          "summary": "깜란에 묵으며 기사 포함 렌트카(8시간, 10만원 미만)로 시내 나들이를 했습니다. 입장료는 성인 30,000동(현금만)이고 만 3세 아이는 무료였지만, 매표소 직원에게 되물어야 했대요. 티켓은 입장 기계에 회수되고, 06:00~18:00(입장 17:30까지로 앎)이라 늦어도 16시쯤 가길 권했어요. 입장 복장 규제는 없고 탑 내부만 규제가 있습니다. 점심 때는 줄을 설 만큼 붐비고 더웠지만, 나무 그늘이 꽤 있고 계단이 많지 않아 아이와 30~40분 둘러보기 무리 없었다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 포나가르사원  담시장 두 번 방문 아이랑 꿀팁",
+          "url": "https://blog.naver.com/ranlee510/224345261451",
+          "author": "라니 (행복한 라니 블로그)",
+          "date": "2026-07-13",
+          "summary": "전날 지나가다 관광버스와 인파가 너무 많아 방문을 다음 날로 미뤘습니다. 어른 30,000동, 아이 무료이고, 티켓은 입장할 때 회수되니 미리 사진을 찍으라고 해요. 생각보다 작아 관람은 1시간 안팎이었고, 방문한 날 전통 공연이 있었어요. 메인 포토존은 줄이 길어 뒤편에서 찍었다고 합니다.",
+          "withKids": true
+        },
+        {
+          "title": "아기와 나트랑 여행 – 포나가르 사원, 반미판, CCCP커피, 냐벱, 네일샵, 느좋카페",
+          "url": "https://blog.naver.com/fridayhaeji/224044150748",
+          "author": "강인마미 (강인이랑 마미랑)",
+          "date": "2025-10-17",
+          "summary": "20개월 아기와 아침 일찍 방문했습니다. 생각보다 가파른 계단이 있고 그늘이 없어 유모차는 입구에 맡기고 아기를 안고 올랐다며, 이른 시간에 간 것이 '한 수'였다고 해요. 볼거리가 아주 많지는 않아 가볍게 들르는 코스라는 평입니다.",
+          "withKids": true
+        },
+        {
+          "title": "5살 아이랑 4박6일 나트랑 여행 3일차 (2025.08.12~2025.08.17) / 포나가르 사원, 탑바 머드온천, 세일링클럽",
+          "url": "https://blog.naver.com/hai_mommy/224020122283",
+          "author": "싱지 (하이어멍 생존일기)",
+          "date": "2025-09-24",
+          "summary": "그랩으로 포나가르에 갔다가 탑바 머드온천으로 이어지는, D4와 비슷한 동선입니다. 한낮이었지만 바람이 불어 많이 덥지 않았고 사원에서 1시간쯤 보냈어요. 내부에 안 들어가면 긴바지가 필수는 아니지만 노출이 심한 옷은 피하라고 합니다. 탑바는 샤워 물이 바닷물이라 피부가 뒤집혔다며, 머드 후엔 샤워되는 마사지샵으로 가길 추천했어요.",
+          "withKids": true
+        },
+        {
+          "title": "[Nha Trang] 아이와 나트랑 여행 : 김청 환전소, 포나가르 사원",
+          "url": "https://blog.naver.com/ujnbhy123/223837668286",
+          "author": "놀고잽이차누맘 (놀고잽이 일하는 애엄마)",
+          "date": "2025-04-17",
+          "summary": "시내 하바나호텔에서 김청 환전소까지 걸어서 10분, 이후 택시로 포나가르에 갔습니다. 운영은 06:00~18:00, 성인 30,000동이고 어린이는 무료였던 것으로 기억한다고 해요. 꼭대기까지 계단을 좀 올라야 하고, 사원 내부는 어깨·무릎을 가려야 합니다. 땡볕이 힘들면 오후 늦게 가는 것을 권했어요.",
+          "withKids": true
+        }
+      ]
+    },
+    {
+      "topic": "롯데마트 나트랑 기념품 쇼핑 리스트",
+      "placeId": "lotte-mart",
+      "summary": "1) 지점이 두 곳입니다. 냐짱점(롱선사 근처, 08:00~22:00)은 골드코스트점보다 크고 한산하다는 후기가 있고, 골드코스트점은 시내 쇼핑몰 3~4층(08:30~22:00)에 있어요. 두 곳이 가깝다는 후기와 거리가 꽤 있다는 후기가 엇갈리니 동선에 가까운 곳을 고르세요. 둘 다 카드 결제가 되고 1층에 ATM이 있어요.\n2) 인기 품목은 마카다미아·캐슈넛, 건망고, 체리쉬·탑 망고젤리(컵 젤리는 위탁수하물, 봉지 젤리는 기내 반입 가능), G7·코코넛커피(시음 가능), An 쌀과자, Ahh·칼치즈 과자, 하오하오 라면, 콜게이트 치약, 칠리소스·마기 간장, 방향제·바셀린 로션입니다. 비판텐(약 6.4만동)은 마트가 아니라 약국에서 사요.\n3) 아이 동반 팁: 장난감 코너가 '당근'이 되고, 햇반·라면 같은 한국 식품과 리조트에서 먹을 우유·요거트·간식을 사기 좋아요. 과일은 시내 과일가게가 더 쌉니다. 비닐봉투가 유료로 바뀌었으니 장바구니를 챙기세요.\n4) D6 동선 팁: 골드코스트점 고객센터(3층 계산대 왼편)에 무료 짐 보관이 있어, 쇼핑 후 시내에서 저녁을 먹을 때 유용합니다. 무료 배달은 15만동 이상·반경 10km 이내라 캄란 리조트는 해당되지 않을 가능성이 크니 직접 들고 가야 해요. 캄란에 묵은 가족이 택시로 40분 걸려 한 번에 몰아 샀다는 후기도 있습니다.",
+      "posts": [
+        {
+          "title": "나트랑 롯데마트 쇼핑리스트 l 4살 6살 아이랑 나트랑 여행",
+          "url": "https://blog.naver.com/bbmoonkk/224346172761",
+          "author": "찡빵부부 (아누 남매와 함께 자라는 기록)",
+          "date": "2026-07-14",
+          "summary": "골드코스트점은 백화점 같은 복합몰이고, 냐짱점이 더 편해 거의 매일 갔다고 합니다. 산 것은 마카다미아, 체리쉬 망고젤리(무거움), 아이들이 순식간에 먹은 An 쌀과자 김맛, 하오하오 새우라면, 코코넛커피(시음 후 구매), 새우소금이에요. 더위에 지친 아이들을 장난감으로 달랬대요.",
+          "withKids": true
+        },
+        {
+          "title": "아이랑 나트랑 4박 6일 여행 PART18_ 나트랑 롯데마트 골드코스트점 쇼핑리스트 과자 젤리 커피 맥주 추천리스트 추천템 기념품 짐보관 배달방법",
+          "url": "https://blog.naver.com/sionw_kd/223488215387",
+          "author": "지니뀨니 (매일 새롭게)",
+          "date": "2024-06-23",
+          "summary": "골드코스트점은 08:30~22:00 영업에 휴무가 없고, 카드 결제가 되며 1층에 BIDV ATM이 있습니다. 3층은 식품, 4층은 장난감·생활용품·커피 코너예요. 3층 계산대 왼편 고객센터에서 무료 짐 보관과 배달(15만동 이상, 반경 10km 무료, 3~4시간 소요)이 되지만, 쇼핑 후 깜란으로 이동해 배달은 쓰지 않았다고 해요. 과일은 시내 가게가 더 쌌고, 장난감을 사면 고객센터에서 건전지를 넣어 준대요.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 롯데마트 쇼핑리스트 : 과자 커피 등 총정리!",
+          "url": "https://blog.naver.com/mamanomad/223831067111",
+          "author": "센텀맘 (아이셋과 느림보 여행)",
+          "date": "2025-04-13",
+          "summary": "캄란 풀빌라에 묵어 택시로 약 40분 걸려 냐짱점(08:00~22:00)에 한 번만 가서 몰아 샀습니다. 냐짱점과 골드코스트점은 가깝고 큰 차이가 없다고 해요. 1층은 신선식품과 한국 식품(햇반·라면, 입 짧은 아이에게 유용), 2층은 넛츠·커피·과자 같은 선물용이에요. 숙소에서 먹을 우유·요거트·과일도 샀고, 전자레인지 없이 포트로 햇반 데우는 법도 적었습니다.",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 롯데마트 쇼핑 리스트 ( 롯데마트 나트랑점)",
+          "url": "https://blog.naver.com/iamemya/224232199709",
+          "author": "주부엠마 (여행하는 주부 엠마의 기억을 위한 기록)",
+          "date": "2026-03-28",
+          "summary": "엄마와 아이 둘이 간 5박 7일 여행입니다. 롯데마트 나트랑점은 롱선사 근처로 골드코스트점보다 크고 한산했어요. 레몬그라스 방향제 56,800동, 바셀린 글루타 로션 104,900동, 헤어 세럼, 콜게이트 치약, 아이 잠옷(9.9만동, 사이즈가 작게 나옴)을 샀고, 인기였던 하트·복숭아 치약은 없었습니다. 비닐봉투가 유료가 됐으니 장바구니를 챙기라고 해요(쇼핑 커넥트 수수료 고지).",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 아이랑 여행｜쇼핑 추천 리스트 (롯데마트 추천템 포함)",
+          "url": "https://blog.naver.com/tmrdays/224168519010",
+          "author": "tmrdays (내일은 내일의 태양이 뜬다 :))",
+          "date": "2026-02-02",
+          "summary": "3살 아이와 함께라 마지막 날 롯데마트에서 꼭 살 것만 빠르게 샀습니다. 체리쉬 젤리(코코넛맛 등), 캐슈넛, G7 커피, 콜게이트 치약, 허니모어 꿀, 칠리소스, 마기 간장을 추천했어요. 약국에서 산 비판텐은 64,000동(한국 약 1만원)이었고, 길거리 생망고는 아이가 아주 잘 먹었대요(제휴 링크 고지).",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 롯데마트 쇼핑리스트 추천 내돈내산 과자 기내 반입 베트남 여행",
+          "url": "https://blog.naver.com/yepp0225/223993965337",
+          "author": "현정 (Daily hyunjung)",
+          "date": "2025-09-03",
+          "summary": "G7 커피, 칼치스 크래커, Ahh 치즈 과자, 필로우, 비나밋 잭프룻칩, 건망고, 탑젤리(10+1 묶음 약 42만동)를 추천했습니다. 컵 젤리는 위탁수하물, 봉지 젤리는 기내 반입이 된다고 해요. 현금·카드 모두 되고, 위생을 생각해 마트 구매를 권했습니다. 두 지점이 꽤 떨어져 있다고 적었어요. 주의: 글 끝의 '100ml 넘는 액체류는 기내 수하물로'는 잘못된 내용이니 액체류는 위탁수하물로 보내세요.",
+          "withKids": false
+        }
+      ]
+    },
+    {
+      "topic": "나트랑 Grab 이용 후기 · 캄란공항 새벽 도착 Grab",
+      "placeId": "grab",
+      "summary": "1) 2026년 핵심 경고: 캄란공항 건물 앞이 그랩 앱에서 '정차 금지 구역'으로 떠서 바로 부르기 어렵습니다. 공항 밖 왼쪽 택시 승강장 쪽으로 걸어가 호출해 성공한 사례(시내까지 382,720동, 44분)도 있고, 아예 안 잡혀 Xanh SM(그린 SM) 전기택시를 부른 사례도 있어요(공항 대기 직원이 바로 배차, 톨비 없음).\n2) 00:30 도착에 4살과 캐리어까지 있으면 사전 픽업을 예약하고, Xanh SM 앱을 백업으로 깔아 두는 것이 안전합니다. 호텔 픽업 예시는 4인승 40만동, 7인승 45만동이었어요. 새벽엔 할증이 붙을 수 있고, 입국과 짐 찾기에 착륙 후 30분~1시간은 걸린다고 보세요. 따라서 D2 계획의 01:30 그랩 이동은 00:30 도착보다 뒤에 두는 것이 맞습니다.\n3) 요금 감: 공항↔시내 30만~45만동(약 35km, 40~45분), 시내↔캄란 리조트 30만~50만동(약 40분), 시내 단거리는 첫 2km 약 22,000동, 5km 6만~8만동입니다.\n4) 사용 팁: 출국 전 앱을 설치하고 카드(트래블카드)를 등록하세요. 탈 때 차량번호와 기사를 확인하고, 짐이 많으면 7인승을 고르세요(4인승과 7~8천원 차이). 인드라이브·Xanh SM도 함께 깔아 두면 좋습니다. 카시트가 꼭 필요하면 사전 픽업을 예약할 때 미리 요청하라는 조언이 있어요. 주말 밤 야시장 주변은 그랩이 안 잡힌 사례가 있고, 친절한 기사의 카톡을 받아 돌아올 때 다시 부른 가족도 있습니다.",
+      "posts": [
+        {
+          "title": "[나트랑] 깜란 공항 그랩 안됨..",
+          "url": "https://blog.naver.com/yhanmoon/224395552417",
+          "author": "Bob (밥리의 찬밥, 더운밥)",
+          "date": "2026-08-31",
+          "summary": "깜란 공항에서 그랩이 잡히지 않자, 호객 택시가 6.6km 거리에 25만동을 불렀습니다. Green SM(Xanh SM) 앱으로 부르니 공항 대기 직원이 바로 배차해 117,000동에 갔어요. 현금·카드 모두 되고 톨비도 받지 않았습니다(공항 출차 통행료는 9,000동). 결론은 공항에선 그랩이 안 되니 그랩, 인드라이브, Green SM을 모두 깔아 가라는 것입니다.",
+          "withKids": false
+        },
+        {
+          "title": "나트랑 공항에서 시내 그랩 요금 깜란공항 그랩 가격 할인 방법",
+          "url": "https://blog.naver.com/bee9393/224412596476",
+          "author": "돌핀쑤 (돌핀쑤의 트립로그)",
+          "date": "2026-09-23",
+          "summary": "공항 앞은 앱에서 '정차 금지 구역'으로 떠서, 공항 밖 왼쪽 택시 승강장 쪽으로 이동해 기사와 만났습니다(흥정하려는 택시 기사가 많음). 공항에서 시내까지 36.5km, 44분, 382,720동이었어요. 같은 작성자의 다른 글(2026-09-14, bee9393/224406337175)에는 탑승 위치 혼선으로 기사가 못 찾아 고생했다며 가족여행이면 사전 픽업을 권하는 내용이 있습니다(두 글 모두 제휴 링크 포함).",
+          "withKids": false
+        },
+        {
+          "title": "나트랑 깜란 공항에서 시내 이동 방법 택시비 픽업 그랩 비교",
+          "url": "https://blog.naver.com/hojusana2/224392223863",
+          "author": "놀다온아미 (놀다온아미의 애싣고 ZIP.밖)",
+          "date": "2026-08-27",
+          "summary": "아이 둘과 캐리어를 가진 가족의 정리 글입니다. 공항에서 시내까지 약 35km, 40분이고, 새벽 1시쯤 도착하면 입국과 짐 찾기로 1시 반~2시에 나오게 돼요. 새벽엔 할증도 있어 아이 동반이면 사전 픽업과 7인승(4인승과 7~8천원 차이)을 권했습니다. 카시트가 꼭 필요하면 사전 픽업에 미리 요청하라고 해요. 캄란 리조트는 공항에서 10~15분이라고 합니다(제휴 링크 포함).",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 그랩 사용법｜ 실제 요금가격부터 호출 방법",
+          "url": "https://blog.naver.com/mongssi9/224377559094",
+          "author": "몽씨 (몽씨의 중앙아시아 자연여행)",
+          "date": "2026-08-13",
+          "summary": "GrabCar 4인승은 첫 2km 약 22,000동, 이후 1km당 약 12,000동입니다. 5km는 6만~8만동, 10km는 12만동 안팎이에요. 카드를 등록하면 현금 없이 결제되고, 차량번호를 꼭 확인하라고 합니다. 새벽 공항 도착 때는 그랩을 바로 잡기 어려웠다며 공항은 사전 픽업, 시내 이동은 그랩을 추천했어요.",
+          "withKids": false
+        },
+        {
+          "title": "아기와 나트랑 여행 준비 - 숙소 공항픽업 레스참 / 깜란 아미아나 / 알마리조트 굿바이패키지 가격 정보",
+          "url": "https://blog.naver.com/seongvmin/223886981625",
+          "author": "쫌진 (shasha & roro)",
+          "date": "2025-06-03",
+          "summary": "밤 11시쯤 도착해 시내 레스참 호텔까지 약 30~40분 걸리는 일정입니다. 호텔 픽업은 4인승 40만동, 7인승 45만동이었고, 유모차와 짐 때문에 7인승을 골랐어요. 그랩·인드라이브 7인승은 30만동도 가능하다고 적었고, 시내에서 깜란 리조트까지는 그랩 기사가 30만동을 제시했대요. 밤 비행기 전엔 알마리조트 굿바이패키지(14~22시, 석식·샌딩 포함)를 이용했습니다.",
+          "withKids": true
+        },
+        {
+          "title": "나트랑 모벤픽리조트 디럭스룸 씨뷰 숙박 솔직후기",
+          "url": "https://blog.naver.com/smurfshouse/223916433561",
+          "author": "개구쟁이파파 (개구쟁이파파! 어디가?)",
+          "date": "2025-06-30",
+          "summary": "나트랑 시내에서 깜란 모벤픽까지 그랩 요금이 40만~50만동이었습니다(D4 시내→캄란 이동 참고). 아이 동반 가족이 대부분인 리조트이고, 체크인 리셉션이 작아 14시 정각엔 지연될 수 있으며 1박당 디파짓은 200만동이었어요(야놀자 협찬 글).",
+          "withKids": true
+        }
+      ]
+    },
+    {
+      "topic": "나트랑 10월 날씨·우기 여행 후기",
+      "placeId": "",
+      "summary": "1) 10월 초(9월 말~10월 초)는 우기 초입입니다. 2023·2024년 이 시기 후기는 '종일 장마가 아니라 가끔 비가 쏟아졌다 개고, 낮엔 뙤약볕'이었어요. 비는 주로 밤이나 새벽에 왔고, 한국 8월보다 덜 습하며 밤엔 선선했다고 합니다. 현지 거주자도 9~10월 우기 초중반을 가장 추천하는 시기로 꼽았어요.\n2) 10월 중순 이후로는 비가 잦아질 수 있습니다. 2022년 10월 10일 무렵 4살 가족은 비 때문에 관광지를 거의 못 갔고, 2025년 10월 말엔 태풍 영향으로 폭우가 이어졌어요. 우기엔 파도가 갑자기 커져(아이가 파도에 넘어진 사례) 해변 물놀이는 각별히 조심해야 하고, 비 오는 날 수영장 물이 차가워 수영을 못 했다는 후기도 있습니다.\n3) 같은 날에도 동네마다 비가 오고 개는 것이 달랐다는 현지 거주자의 글이 있습니다. 판랑·빈원더스 같은 야외 일정은 전날이나 당일 예보를 보고 날짜를 바꿀 수 있게 여유 있게 두세요.\n4) 준비물은 3단 우산, 우비(비 올 때 필수), 얇은 가디건이나 셔츠(햇볕·냉방 대비), 일광화상 연고(현지 약국이 저렴)입니다. 비 오는 날 대안으로는 머드온천(비 올 때 강추), 마사지, 쇼핑이 있었어요.",
+      "posts": [
+        {
+          "title": "나트랑 10월 초 날씨, 옷차림_우기지만 해가 쨍쨍! 나짱 여행 5박 6일",
+          "url": "https://blog.naver.com/janghj317/223603660586",
+          "author": "이그저 (내가 좋아하는 이것 그것 저것)",
+          "date": "2024-10-02",
+          "summary": "2024년 9/29~10/4(이번 일정과 거의 같은 시기) 부부 여행 중 현지에서 쓴 글입니다. 뙤약볕에 약간 습하고 바람이 많이 불었어요. 1~2일은 늦은 오후에 잠깐 구름이 낀 것 말고는 쨍쨍했고, 3일 새벽에 비가 온 뒤 3~4일은 비가 오다 개기를 반복했습니다. 한국 8월보다 덜 습하고 밤엔 시원했으며, 작은 3단 우산과 얇은 가디건, 현지 약국의 화상연고(비판텐 65,000동)를 추천했어요.",
+          "withKids": false
+        },
+        {
+          "title": "나트랑 4박5일 경비 준비물도 챙기자",
+          "url": "https://blog.naver.com/myhouse5738/223263354366",
+          "author": "역시빵마미",
+          "date": "2023-11-13",
+          "summary": "두 돌이 지난 아이가 있는 4인 가족이 2023년 추석 연휴 직후 10월 초에 캄란 알마리조트에 다녀왔습니다. 우기인데도 날씨가 매우 좋았고, 낮엔 너무 덥지 않았으며 비는 주로 밤에 내렸대요. 마지막 날 저녁 수영 중 비가 와 조금 추웠던 것 말고는 좋아서, 가장 좋은 시기로 '9월 말~10월 초'를 꼽았습니다. 밤 비행기 날엔 1박을 더 잡아 23시 반까지 방에서 쉬었다고 해요.",
+          "withKids": true
+        },
+        {
+          "title": "베트남 나트랑 자유여행 4살 아이랑 10월 4박5일 여행(w.우기)",
+          "url": "https://blog.naver.com/hyuny127/222907090867",
+          "author": "짱아짱짱 (＠짱아월드)",
+          "date": "2022-10-22",
+          "summary": "2022년 10월 10일 무렵 4살과 다녀왔는데 비가 자주, 많이 와서 관광지는 거의 못 갔습니다. 비 오는 날엔 수영장 물이 차가워 수영을 못 했고, 담시장에서 우산 없이 폭우를 만나 우비·우산은 필수라고 해요. 탑바 머드온천은 비 올 때 강추했어요. 공항엔 그랩이 못 온다는 소문에 픽업을 예약했고, 시내에서 모벤픽까지 택시는 40만동, 40분이었습니다. 캄란 바다는 파도가 커서 아이가 넘어지기도 했대요.",
+          "withKids": true
+        },
+        {
+          "title": "비 오는 나트랑 10월, 11월 날씨 리포트☔ 비 많이 오네요. 우기 여행 전 필수 체크!",
+          "url": "https://blog.naver.com/bsu04/224054143917",
+          "author": "쎄오 (냐짱사는쎄오)",
+          "date": "2025-10-26",
+          "summary": "나트랑 거주자의 리포트입니다. 2025년 10월 말 태풍 영향으로 폭우가 이어져 맑은 날이 드물었어요. 작성자가 사는 곳에 비가 와도 시내는 맑은 식으로 동네마다 날씨가 달랐다고 합니다. 파도가 갑자기 크게 밀려들 수 있어 해변은 멀리서 보는 정도로, 아이 동반 가족은 각별히 조심하라고 했어요. 가장 추천하는 시기는 9~10월 우기 초중반이라고 합니다.",
+          "withKids": false
+        },
+        {
+          "title": "나트랑 10월 11월 날씨 예보 초중순말 기온과 여행 정보",
+          "url": "https://blog.naver.com/beome-/224421216667",
+          "author": "여행자 바미",
+          "date": "2026-09-23",
+          "summary": "실제 여행 후기가 아니라 예보를 정리한 정보 글이고, 날짜별 비 예보는 근거가 불분명해 참고만 하세요. 10월 평균은 낮 최고 30도, 밤 최저 24도, 강수일수 약 12일이에요. 초순은 30~32도로 덥고 소나기나 강한 비가 지나가는 날이 있어 우산이 필요하다고 해요. 방수 재킷·우비와 냉방에 대비한 얇은 셔츠를 권했고, 공항↔시내 그랩·택시는 35만~45만동이라고 적었어요.",
+          "withKids": false
+        }
+      ]
+    }
+  ]
+}
