@@ -8,6 +8,7 @@ const EXCHANGE = exchange;
 import type { FoodSpot } from "@/lib/guideTypes";
 import { toggleSouvenir } from "@/lib/trip";
 import type { TripState } from "@/lib/types";
+import { dishPhoto, groupPhoto, Photo } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card, ProgressBar } from "./ui";
 
@@ -45,6 +46,11 @@ export function FoodSection() {
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {FOOD.mustTry.map((d, i) => (
             <div key={`${d.dish}-${i}`} className={`${card} p-4`}>
+              {dishPhoto(d.dish) && (
+                <div className="mb-3">
+                  <Photo photo={dishPhoto(d.dish)} alt={d.dish} className="aspect-[4/3]" />
+                </div>
+              )}
               <p className="text-[17px] font-bold tracking-tight">{d.dish}</p>
               <p className="mt-1 text-[14px] text-ink-2">{d.desc}</p>
               <p className="mt-2 text-[14px] text-primary-ink">🧒 {d.kidOk}</p>
@@ -150,6 +156,11 @@ export function SouvenirSection({
         const items = SOUVENIR.items.filter((i) => i.group === g);
         return (
           <section key={g} className={`${card} px-4 pt-4 pb-2 md:px-5`}>
+            {groupPhoto(g) && (
+              <div className="mb-3">
+                <Photo photo={groupPhoto(g)} alt={g} className="aspect-[21/9]" />
+              </div>
+            )}
             <h3 className="mb-1 text-[18px] font-bold tracking-tight">{g}</h3>
             <ul>
               {items.map((it, i) => {
@@ -212,6 +223,11 @@ export function ExchangeSection() {
   return (
     <div className="space-y-4">
       <section className={`${card} p-5 md:p-6`}>
+        {groupPhoto("__exchange__") && (
+          <div className="mb-4">
+            <Photo photo={groupPhoto("__exchange__")} alt="베트남 동 지폐" className="aspect-[21/9]" />
+          </div>
+        )}
         <p className="text-[15px] font-semibold text-ink-3">금은방 환전 평균 ({x.asOf})</p>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           <div className="rounded-2xl bg-surface-2 p-4">

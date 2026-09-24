@@ -17,13 +17,15 @@ const loadStaysTab = () => import("./StaysTab");
 const loadToursShopsTab = () => import("./ToursShopsTab");
 const loadReviewsTab = () => import("./ReviewsTab");
 const loadWeather = () => import("./WeatherSection");
+const loadAsk = () => import("./AskSection");
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
 const ReviewsTab = dynamic(loadReviewsTab, { loading: () => <TabLoading /> });
 const WeatherSection = dynamic(loadWeather, { loading: () => <TabLoading /> });
+const AskSection = dynamic(loadAsk, { loading: () => <TabLoading /> });
 
-type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "weather" | "reviews" | "checklist" | "info";
+type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "weather" | "ai" | "reviews" | "checklist" | "info";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "overview", label: "홈" },
@@ -32,6 +34,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "stays", label: "숙소" },
   { id: "tours", label: "투어·쇼핑" },
   { id: "weather", label: "날씨" },
+  { id: "ai", label: "AI 질문" },
   { id: "reviews", label: "후기" },
   { id: "checklist", label: "준비물" },
   { id: "info", label: "정보·메모" },
@@ -80,6 +83,7 @@ const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 먹거리 · 기념품 · 아이 옷 · 환전" },
   { id: "weather", emoji: "🌦️", label: "날씨", desc: "실시간 예보 · 작년·10년 날씨 · Plan B" },
+  { id: "ai", emoji: "🤖", label: "AI에게 물어보기", desc: "우리 일정 기반 답변 · 웹 검색 · 토큰 사용량" },
   { id: "reviews", emoji: "📝", label: "후기", desc: "블로그 후기 요약" },
   { id: "checklist", emoji: "✅", label: "준비물", desc: "챙길 것 체크리스트" },
   { id: "info", emoji: "🗒️", label: "정보·메모", desc: "항공편 · 메모 · 백업" },
@@ -242,6 +246,7 @@ export default function PlannerApp() {
         {tab === "stays" && <StaysTab state={state} update={update} />}
         {tab === "tours" && <ToursShopsTab state={state} update={update} />}
         {tab === "weather" && <WeatherSection />}
+        {tab === "ai" && <AskSection />}
         {tab === "reviews" && <ReviewsTab />}
         {tab === "checklist" && <ChecklistTab state={state} update={update} />}
         {tab === "info" && <InfoTab state={state} update={update} />}

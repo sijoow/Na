@@ -1,15 +1,24 @@
 "use client";
 
+import { useState } from "react";
 import { GUIDE, STAY_AREAS } from "@/data/guide";
 import type { StayArea, StayOption } from "@/lib/guideTypes";
 import { chooseStay } from "@/lib/trip";
 import type { TripState } from "@/lib/types";
+import { Photo, stayPhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card } from "./ui";
 
 interface Props {
   state: TripState;
   update: (fn: (s: TripState) => TripState) => void;
+}
+
+/** 구글 이미지 검색 (조식·객실 사진을 복사하지 않고 바로 보기) */
+function imageSearch(o: StayOption, extra: string) {
+  const area = o.area === "resort" || o.area === "arrival" ? "Cam Ranh" : "Nha Trang";
+  const q = `${o.localName.split(" (")[0]} ${area} ${extra}`.trim();
+  return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
 }
 
 const AREAS: StayArea[] = ["arrival", "city", "island", "resort"];
@@ -182,11 +191,19 @@ function StayCard({
   selected: boolean;
   onChoose: () => void;
 }) {
+  const [open, setOpen] = useState(false);
+  // 조식 설명의 첫 문장만 요약으로 (★ 평가나 운영시간이 보통 맨 앞)
+  const breakfastLine = o.breakfastDetail ? o.breakfastDetail.split("\n")[0].slice(0, 90) : "";
   return (
     <article
       id={`stay-${o.id}`}
       className={`${card} p-5 md:p-6 ${selected ? "ring-2 ring-primary" : ""}`}
     >
+      {stayPhoto(o.id) && (
+        <div className="mb-4">
+          <Photo photo={stayPhoto(o.id)} alt={o.name} />
+        </div>
+      )}
       {/* 폰: 평점은 이름 아래 줄로, 태블릿/PC: 오른쪽 */}
       <div className="flex flex-col gap-1.5 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
         <div className="min-w-0">
@@ -211,80 +228,106 @@ function StayCard({
 
       {o.verdict && <p className="mt-4 text-[15px] leading-relaxed font-medium text-ink">{o.verdict}</p>}
 
-      {o.breakfastDetail && (
-        <div className="mt-4 rounded-2xl bg-primary-soft p-4">
-          <p className="text-[14px] font-bold text-primary-ink">🍳 조식 (아이 기준)</p>
-          <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink">{o.breakfastDetail}</p>
-        </div>
+      {breakfastLine && (
+        <p className="mt-3 rounded-2xl bg-primary-soft px-4 py-3 text-[14px] leading-relaxed text-ink">
+          <b className="text-primary-ink">🍳 조식</b> {breakfastLine}
+        </p>
       )}
 
-      <dl className="mt-4 space-y-2 text-[14px]">
-        <Info label="아이">{o.kids}</Info>
-        <Info label="위치">{o.location}</Info>
-        {o.lateCheckout && <Info label="레이트 체크아웃">{o.lateCheckout}</Info>}
-      </dl>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="press mt-4 flex min-h-11 w-full items-center justify-center gap-1 rounded-2xl border border-line text-[15px] font-semibold text-ink-2"
+      >
+        {open ? "접기 ▲" : "자세히 보기 (조식·아이·위치·장단점·가격·후기) ▼"}
+      </button>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <div>
-          <p className="mb-1 text-[13px] font-bold text-[#03b26c]">좋아요</p>
-          <ul className="space-y-1 text-[14px] text-ink-2">
-            {o.pros.map((p, i) => (
-              <li key={i}>· {p}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="mb-1 text-[13px] font-bold text-danger">아쉬워요</p>
-          <ul className="space-y-1 text-[14px] text-ink-2">
-            {o.cons.map((c, i) => (
-              <li key={i}>· {c}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      {open && (
+        <>
+        {o.breakfastDetail && (
+          <div className="mt-4 rounded-2xl bg-primary-soft p-4">
+            <p className="text-[14px] font-bold text-primary-ink">🍳 조식 (아이 기준)</p>
+            <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink">{o.breakfastDetail}</p>
+          </div>
+        )}
 
-      {o.periodPrices.length > 0 && (
-        <div className="mt-5">
-          <p className="mb-2 text-[14px] font-bold text-ink-2">기간별 금액대</p>
-          {/* 폰: 기간 / 금액 / 메모를 위아래로 쌓기 */}
-          <table className="w-full text-[14px] max-sm:block">
-            <tbody className="max-sm:block">
-              {o.periodPrices.map((r, i) => (
-                <tr key={`${r.period}-${i}`} className="border-t border-line max-sm:block max-sm:py-2.5">
-                  <td className="py-2 pr-2 text-ink-3 max-sm:block max-sm:p-0 max-sm:text-[13px]">{r.period}</td>
-                  <td className="py-2 pr-2 font-semibold tabular-nums max-sm:block max-sm:p-0 max-sm:text-[15px]">
-                    {r.perNight}
-                  </td>
-                  <td className="py-2 text-[13px] text-ink-3 max-sm:block max-sm:p-0 max-sm:empty:hidden">{r.note}</td>
-                </tr>
+        <dl className="mt-4 space-y-2 text-[14px]">
+          <Info label="아이">{o.kids}</Info>
+          <Info label="위치">{o.location}</Info>
+          {o.lateCheckout && <Info label="레이트 체크아웃">{o.lateCheckout}</Info>}
+        </dl>
+
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div>
+            <p className="mb-1 text-[13px] font-bold text-[#03b26c]">좋아요</p>
+            <ul className="space-y-1 text-[14px] text-ink-2">
+              {o.pros.map((p, i) => (
+                <li key={i}>· {p}</li>
               ))}
-            </tbody>
-          </table>
+            </ul>
+          </div>
+          <div>
+            <p className="mb-1 text-[13px] font-bold text-danger">아쉬워요</p>
+            <ul className="space-y-1 text-[14px] text-ink-2">
+              {o.cons.map((c, i) => (
+                <li key={i}>· {c}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-      )}
 
-      {o.priceDetail && (
-        <details className="mt-5 rounded-2xl bg-surface-2 p-4">
-          <summary className="cursor-pointer text-[14px] font-bold text-ink-2">가격 상세 (출처·검증 메모)</summary>
-          <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{o.priceDetail}</p>
-        </details>
-      )}
+        {o.periodPrices.length > 0 && (
+          <div className="mt-5">
+            <p className="mb-2 text-[14px] font-bold text-ink-2">기간별 금액대</p>
+            {/* 폰: 기간 / 금액 / 메모를 위아래로 쌓기 */}
+            <table className="w-full text-[14px] max-sm:block">
+              <tbody className="max-sm:block">
+                {o.periodPrices.map((r, i) => (
+                  <tr key={`${r.period}-${i}`} className="border-t border-line max-sm:block max-sm:py-2.5">
+                    <td className="py-2 pr-2 text-ink-3 max-sm:block max-sm:p-0 max-sm:text-[13px]">{r.period}</td>
+                    <td className="py-2 pr-2 font-semibold tabular-nums max-sm:block max-sm:p-0 max-sm:text-[15px]">
+                      {r.perNight}
+                    </td>
+                    <td className="py-2 text-[13px] text-ink-3 max-sm:block max-sm:p-0 max-sm:empty:hidden">{r.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
 
-      {o.blogPosts.length > 0 && (
-        <div className="mt-5">
-          <p className="mb-1 text-[14px] font-bold text-ink-2">블로그 후기</p>
-          <ul className="-mx-3">
-            {o.blogPosts.map((p, i) => (
-              <BlogPostRow key={`${p.url}-${i}`} post={p} />
-            ))}
-          </ul>
-        </div>
+        {o.priceDetail && (
+          <details className="mt-5 rounded-2xl bg-surface-2 p-4">
+            <summary className="cursor-pointer text-[14px] font-bold text-ink-2">가격 상세 (출처·검증 메모)</summary>
+            <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{o.priceDetail}</p>
+          </details>
+        )}
+
+        {o.blogPosts.length > 0 && (
+          <div className="mt-5">
+            <p className="mb-1 text-[14px] font-bold text-ink-2">블로그 후기</p>
+            <ul className="-mx-3">
+              {o.blogPosts.map((p, i) => (
+                <BlogPostRow key={`${p.url}-${i}`} post={p} />
+              ))}
+            </ul>
+          </div>
+        )}
+
+        </>
       )}
 
       <div className="mt-5 flex flex-wrap gap-2">
         <button type="button" className={selected ? btn.soft : btn.primary} onClick={onChoose}>
           {selected ? "✓ 선택됨 (취소)" : "이 숙소로 선택"}
         </button>
+        <a className={btn.soft} href={imageSearch(o, "breakfast buffet")} target="_blank" rel="noopener noreferrer">
+          🍳 조식 사진 보기
+        </a>
+        <a className={btn.secondary} href={imageSearch(o, "")} target="_blank" rel="noopener noreferrer">
+          📷 숙소 사진 더 보기
+        </a>
         {o.links.map((l, i) => (
           <a key={`${l.url}-${i}`} className={btn.secondary} href={l.url} target="_blank" rel="noopener noreferrer">
             {l.label} ↗

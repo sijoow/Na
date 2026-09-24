@@ -141,6 +141,11 @@ export default function WeatherSection() {
       <LiveForecast />
 
       <section className={`${card} p-5 md:p-6`}>
+        <p className="text-[15px] font-semibold text-ink-3">📈 2026년 10월 예상 날씨 (계절 전망)</p>
+        <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line text-ink-2 break-words">{events.outlook2026}</p>
+      </section>
+
+      <section className={`${card} p-5 md:p-6`}>
         <p className="text-[15px] font-semibold text-ink-3">작년(2025) 같은 기간 나트랑 실제 날씨</p>
         <ul className="mt-2 divide-y divide-line">
           {nhaTrang2025.map((d) => (
@@ -204,10 +209,6 @@ export default function WeatherSection() {
         <p className="mt-3 text-[14px] leading-relaxed whitespace-pre-line text-ink-2">{events.planB}</p>
       </details>
 
-      <details className={`${card} p-5 md:p-6`}>
-        <summary className="cursor-pointer text-[16px] font-bold">📈 2026년 10월 전망 (엘니뇨)</summary>
-        <p className="mt-3 text-[14px] leading-relaxed whitespace-pre-line text-ink-2 break-words">{events.outlook2026}</p>
-      </details>
 
       {events.blogExperiences.length > 0 && (
         <section className={`${card} px-2 py-4 md:px-3`}>

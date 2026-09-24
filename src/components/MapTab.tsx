@@ -7,6 +7,7 @@ import { formatShort } from "@/lib/date";
 import type { Leg, Place } from "@/lib/guideTypes";
 import type { TripState } from "@/lib/types";
 import type { MapPath } from "./MapView";
+import { Photo, placePhoto } from "./Photo";
 import { btn, card } from "./ui";
 
 // Leaflet은 브라우저 전용 → 서버 렌더링 없이 불러온다
@@ -149,6 +150,9 @@ export default function MapTab({ state }: Props) {
         <div className="min-w-0 space-y-4">
           {selectedPlace && (
             <section className={`${card} p-5`}>
+              <div className="mb-3">
+                <Photo photo={placePhoto(selectedPlace.id)} alt={selectedPlace.name} />
+              </div>
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <h3 className="text-[19px] font-bold tracking-tight">{selectedPlace.name}</h3>
@@ -296,6 +300,9 @@ export default function MapTab({ state }: Props) {
               }}
               className={`${card} press p-5 text-left`}
             >
+              <div className="mb-3">
+                <Photo photo={placePhoto(p.id)} alt={p.name} link={false} />
+              </div>
               <p className="text-[16px] font-bold">{p.name}</p>
               <p className="text-[13px] text-ink-3">{p.localName}</p>
               {p.note && <p className="mt-1.5 line-clamp-3 text-[14px] text-ink-2">{p.note}</p>}

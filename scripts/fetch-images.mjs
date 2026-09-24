@@ -110,6 +110,23 @@ for (const d of food.mustTry) {
   save();
   console.log("✓ 음식", d.dish, "|", hit.license);
 }
+// 투어 대표 사진 (장소 사진이 없거나 특정 장소가 아닌 투어용)
+const ACTIVITY_Q = {
+  "phan-rang-desert": ["Nam Cuong sand dunes Ninh Thuan", "Nam Cương", "Ninh Thuận sand dune", "Phan Rang dunes", "sand dunes Vietnam"],
+  "i-resort-mud": ["mud bath Vietnam", "Tháp Bà hot spring mud", "mud bath resort", "hot spring mud bath"],
+  massage: ["Vietnamese spa massage", "foot massage Vietnam", "spa massage", "Thai massage spa"],
+  "hopping-tour": ["Nha Trang bay islands boat", "Hon Mun island", "Nha Trang boat tour", "Nha Trang islands"],
+};
+out.activities ??= {};
+for (const [id, qs] of Object.entries(ACTIVITY_Q)) {
+  if (out.activities[id]) continue;
+  const hit = await pick(qs);
+  if (!hit) { console.log("✗ 투어", id); continue; }
+  const url = await upload(`tour-${id}.jpg`, hit);
+  out.activities[id] = { url, credit: hit.credit, license: hit.license, source: hit.source, query: hit.query };
+  save();
+  console.log("✓ 투어", id, "|", hit.license, "|", hit.query);
+}
 save();
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`완료: 장소 ${Object.keys(out.places).length}/${mapGuide.places.length}, 음식 ${Object.keys(out.dishes).length}/${food.mustTry.length}`);

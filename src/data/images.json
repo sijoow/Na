@@ -48,7 +48,278 @@
       "credit": "Huangdan2060",
       "license": "CC0",
       "source": "https://commons.wikimedia.org/wiki/File:Seaside_buildings_scenery_in_Nha_Trang_in_November_2017,_picture2.jpg"
+    },
+    "cam-ranh-resort-area": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-cam-ranh-resort-area.jpg",
+      "credit": "SP4 James S. Sayles",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:POL_dump_located_at_south_beach_Cam_Ranh_Bay.jpg"
+    },
+    "pho-hong": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-pho-hong.jpg",
+      "credit": "Bùi Thụy Đào Nguyên",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%E1%BB%9D_bi%E1%BB%83n_%E1%BB%9F_Nha_Trang.jpg"
+    },
+    "kuukuu-seafood-buffet": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-kuukuu-seafood-buffet.jpg",
+      "credit": "Simon Harriyott from Uckfield, England",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seafood_buffet_(5515503611).jpg"
     }
   },
-  "dishes": {}
+  "dishes": {
+    "소고기 쌀국수 (Phở bò)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-pho-bo.jpg",
+      "credit": "Kritzolina",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ph%E1%BB%9F_b%C3%B2_in_a_German_restaurant_02.jpg"
+    },
+    "어묵 쌀국수 분짜까·분까 (Bún chả cá / Bún cá)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-bun-cha-ca-bun-ca.jpg",
+      "credit": "Phương Huy (thảo luận)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%BAn_ch%E1%BA%A3_c%C3%A1,_th%C3%A1ng_8_n%C4%83m_2018.JPG"
+    },
+    "넴느엉 (Nem nướng)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-nem-nuong.jpg",
+      "credit": "Baoothersks",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nem_n%C6%B0%E1%BB%9Bng_by_Baoothersks.jpg"
+    },
+    "반쎄오 (Bánh xèo)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-banh-xeo.jpg",
+      "credit": "Kent Wang from Austin, TX",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_x%C3%A8o_1.jpg"
+    },
+    "반미 (Bánh mì)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-banh-mi.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Special_Baguette_(B%C3%A1nh_m%C3%AC)_-_Banh_Mi_Ancient_Saigon_2024-12-20.jpg"
+    },
+    "분짜 (Bún chả)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-bun-cha.jpg",
+      "credit": "Larry",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%BAn_ch%E1%BA%A3_H%C3%A0ng_M%C3%A0nh.jpg"
+    },
+    "반깐 (Bánh căn)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-banh-can.jpg",
+      "credit": "Saigon Time",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_c%C4%83n_in_phan_rang,_vietnam.jpg"
+    },
+    "해산물 구이·찜 (Tôm nướng, Tôm hùm, Sò điệp nướng mỡ hành)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-tom-nuong-tom-hum-so-diep-nuong-mo-hanh.jpg",
+      "credit": "Fumikas Sagisavas",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dried_shrimp_(penaeus_chinensis).jpg"
+    },
+    "계란볶음밥·모닝글로리 (Cơm chiên trứng / Rau muống xào tỏi)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-com-chien-trung-rau-muong-xao-toi.jpg",
+      "credit": "Phương Huy (thảo luận)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:C%C6%A1m_tr%E1%BB%A9ng_chi%C3%AAn_t%E1%BA%A1i_s%C3%A2n_bay_Ph%C3%BA_B%C3%A0i_(th%C3%A1ng_9_n%C4%83m_2018)_(1).jpg"
+    },
+    "조개·생선죽 (Cháo nghêu / Cháo cá)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-chao-ngheu-chao-ca.jpg",
+      "credit": "Lê Huỳnh Bộ",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Con_ngh%C3%AAu.jpg"
+    },
+    "연유커피·박씨우 (Cà phê sữa đá / Bạc xỉu)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-ca-phe-sua-da-bac-xiu.jpg",
+      "credit": "Clarin",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Ca_Phe_Sua_Da.jpg"
+    },
+    "망고·열대과일·생과일주스 (Xoài, Măng cụt, Thanh long / Sinh tố)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-xoai-mang-cut-thanh-long-sinh-to.jpg",
+      "credit": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oriental_garden_lizard_(Calotes_versicolor)_in_a_mango_tree_in_Laos.jpg"
+    },
+    "아보카도 아이스크림 (Kem bơ)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-kem-bo.jpg",
+      "credit": "Raimond Spekking",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Buttercreme_in_einer_Glassch%C3%BCssel-8493.jpg"
+    }
+  },
+  "activities": {
+    "phan-rang-desert": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-phan-rang-desert.jpg",
+      "credit": "xue siyang (df45086)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:K976%E6%AC%A1%E9%80%9A%E8%BF%87_-_panoramio.jpg",
+      "query": "Nam Cương"
+    },
+    "i-resort-mud": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-i-resort-mud.jpg",
+      "credit": "MerPerle",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:TO%C3%80N_C%E1%BA%A2NH_KHU_T%E1%BA%AEM_B%C3%99N.jpg",
+      "query": "mud bath Vietnam"
+    },
+    "massage": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-massage.jpg",
+      "credit": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spa_massage_parlor_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg",
+      "query": "Vietnamese spa massage"
+    },
+    "hopping-tour": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-hopping-tour.jpg",
+      "credit": "National Archives USN 1124179 photo by Photographer's Mate First Class R.D. Corb",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:USN_1124179.jpg",
+      "query": "Nha Trang bay islands boat"
+    }
+  },
+  "stays": {
+    "arr-movenpick-resort-cam-ranh": {
+      "url": "https://movenpickresortcamranh.com/wp-content/uploads/2026/04/MVPCR_Lobby-Inside-1.jpg",
+      "credit": "movenpickresortcamranh.com",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://movenpickresortcamranh.com/offers/fully-flexible-rate/",
+      "kind": "official"
+    },
+    "arr-selectum-noa-resort-cam-ranh": {
+      "url": "https://selectumnoaresort.com/wp-content/uploads/2020/01/bannerfb.jpg",
+      "credit": "selectumnoaresort.com",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://selectumnoaresort.com/",
+      "kind": "official"
+    },
+    "arr-radisson-blu-resort-cam-ranh": {
+      "url": "https://iigo.vn/storage/kim-my/blu.webp",
+      "credit": "iigo.vn",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://iigo.vn/en/radisson-blu-cam-ranh-resort",
+      "kind": "official"
+    },
+    "arr-alma-resort-cam-ranh": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/stay-arr-alma-resort-cam-ranh.jpg",
+      "credit": "Alma Resort",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alma_Resort_Cam_Ranh.jpg",
+      "kind": "commons"
+    },
+    "arr-the-empyrean-cam-ranh": {
+      "url": "https://theempyreancamranhresort.com/Uploads/StaticPages/Home.jpg",
+      "credit": "theempyreancamranhresort.com",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://theempyreancamranhresort.com",
+      "kind": "official"
+    },
+    "intercontinental-nha-trang": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/stay-intercontinental-nha-trang.jpg",
+      "credit": "InterContinental Nha Trang",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:InterContinental_Nha_Trang.jpg",
+      "kind": "commons"
+    },
+    "vinpearl-empire": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/stay-vinpearl-empire.jpg",
+      "credit": "Xuanphuocle",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vinpearl_Condotel_Empire,_l%E1%BB%99c_th%E1%BB%8D,_nha_trang,_kh%C3%A1nh_h%C3%B2a.jpg",
+      "kind": "commons"
+    },
+    "movenpick-cam-ranh": {
+      "url": "https://movenpickresortcamranh.com/wp-content/uploads/2026/04/MVPCR_Lobby-Inside-1.jpg",
+      "credit": "movenpickresortcamranh.com",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://movenpickresortcamranh.com/offers/fully-flexible-rate/",
+      "kind": "official"
+    },
+    "alma-cam-ranh": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/stay-alma-cam-ranh.jpg",
+      "credit": "Alma Resort",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alma_Resort_Cam_Ranh.jpg",
+      "kind": "commons"
+    },
+    "radisson-blu-cam-ranh": {
+      "url": "https://iigo.vn/storage/kim-my/blu.webp",
+      "credit": "iigo.vn",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://iigo.vn/en/radisson-blu-cam-ranh-resort",
+      "kind": "official"
+    },
+    "selectum-noa": {
+      "url": "https://selectumnoaresort.com/wp-content/uploads/2020/01/bannerfb.jpg",
+      "credit": "selectumnoaresort.com",
+      "license": "호텔 공식 사이트 이미지",
+      "source": "https://selectumnoaresort.com/",
+      "kind": "official"
+    },
+    "sheraton-nha-trang": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/stay-sheraton-nha-trang.jpg",
+      "credit": "Bún bòa",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sheraton_Nha_Trang.jpg",
+      "kind": "commons"
+    }
+  },
+  "souvenirGroups": {
+    "커피·차": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-0.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnamese_Hot_Drip_Coffee_-_The_Big_Bowl.jpg",
+      "kind": "commons"
+    },
+    "과자·간식": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-1.jpg",
+      "credit": "Another Believer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Portland_Night_Market_sign,_2025.jpg",
+      "kind": "commons"
+    },
+    "견과·건과일": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-2.jpg",
+      "credit": "Lalsing Vanya Valavi from Dhadgaon (Akrani), Nandurbar",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Heap_of_Sun-dried_mango_slices.jpg",
+      "kind": "commons"
+    },
+    "소스·라면·식재료": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-3.jpg",
+      "credit": "Acecook Vietnam",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:HaoHaologo.png",
+      "kind": "commons"
+    },
+    "생활·뷰티": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-4.jpg",
+      "credit": "Thomas Angermann",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zendium_toothpaste_tubes.jpg",
+      "kind": "commons"
+    },
+    "아이용": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-5.jpg",
+      "credit": "Jason M. C., Han",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Food_Series_(Home-made)_of_Mooncake_(Mid-autumn)_Festival_-_1st._Snacks_Table.jpg",
+      "kind": "commons"
+    },
+    "기타": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-6.jpg",
+      "credit": "WiNG",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saigon_Central_Post_Office_Souvenir_Shop.jpg",
+      "kind": "commons"
+    },
+    "__exchange__": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/exchange.jpg",
+      "credit": "National Bank of Vietnam / State Bank of Vietnam",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnam_5000_Dong_1953_Averse.jpg",
+      "kind": "commons"
+    }
+  }
 }
