@@ -14,6 +14,15 @@ interface Props {
   update: (fn: (s: TripState) => TripState) => void;
 }
 
+/** 긴 설명의 첫 문장만 (문장 중간에서 끊기지 않게) */
+function summarizeLine(text: string, max = 70): string {
+  const first = text.split("\n")[0].trim();
+  const sentence = first.match(/^.*?[.。](?=\s|$)/)?.[0] ?? first;
+  if (sentence.length <= max) return sentence;
+  const cut = sentence.slice(0, max);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), 40))}…`;
+}
+
 /** 구글 이미지 검색 (조식·객실 사진을 복사하지 않고 바로 보기) */
 function imageSearch(o: StayOption, extra: string) {
   const area = o.area === "resort" || o.area === "arrival" ? "Cam Ranh" : "Nha Trang";
@@ -55,9 +64,10 @@ export default function StaysTab({ state, update }: Props) {
   return (
     <div className="space-y-8">
       {GUIDE.staysNote && (
-        <p className="rounded-2xl bg-surface px-5 py-4 text-[14px] leading-relaxed whitespace-pre-line text-ink-3">
-          💡 {GUIDE.staysNote}
-        </p>
+        <details className="rounded-2xl bg-surface px-5 py-4">
+          <summary className="cursor-pointer text-[14px] font-bold text-ink-2">💡 가격 안내 (언제·어디서 조회한 가격인지)</summary>
+          <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line text-ink-3">{GUIDE.staysNote}</p>
+        </details>
       )}
 
       {AREAS.map((area) => {
@@ -109,6 +119,16 @@ export default function StaysTab({ state, update }: Props) {
                       >
                         {isChosen ? "✓" : (o.rank ?? "·")}
                       </span>
+                      {stayPhoto(o.id) && (
+                        // eslint-disable-next-line @next/next/no-img-element -- 목록용 작은 썸네일
+                        <img
+                          src={stayPhoto(o.id)!.url}
+                          alt=""
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                          className="h-12 w-16 shrink-0 rounded-xl object-cover"
+                        />
+                      )}
                       <span className="min-w-0 flex-1">
                         <span className="block text-[16px] leading-snug font-bold">
                           <span className="sr-only">
@@ -193,7 +213,9 @@ function StayCard({
 }) {
   const [open, setOpen] = useState(false);
   // 조식 설명의 첫 문장만 요약으로 (★ 평가나 운영시간이 보통 맨 앞)
-  const breakfastLine = o.breakfastDetail ? o.breakfastDetail.split("\n")[0].slice(0, 90) : "";
+  const breakfastLine = summarizeLine(o.breakfastDetail);
+  // '1박 총액 …'처럼 박 수가 이미 들어 있으면 앞에 또 붙이지 않는다
+  const totalText = /박|총액/.test(o.total) ? o.total : `${nights}박 ${o.total}`;
   return (
     <article
       id={`stay-${o.id}`}
@@ -222,7 +244,7 @@ function StayCard({
         <p className="text-[13px] font-semibold text-ink-3">우리 날짜 기준</p>
         <p className="mt-0.5 text-[22px] font-bold tracking-tight">{o.perNight}</p>
         <p className="text-[14px] text-ink-2">
-          {nights}박 {o.total} · 조식 {o.breakfast}
+          {totalText} · 조식 {o.breakfast}
         </p>
       </div>
 

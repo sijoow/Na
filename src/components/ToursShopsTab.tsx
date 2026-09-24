@@ -148,7 +148,21 @@ function ActivityCard({ activity: a }: { activity: ActivityInfo }) {
       </div>
       <div className="mt-3 rounded-2xl bg-surface-2 p-4">
         <p className="text-[13px] font-semibold text-ink-3">우리 가족 (성인 2 + 4살) 예상</p>
-        <p className="mt-0.5 text-[20px] font-bold tracking-tight">{a.priceSummary}</p>
+        {(() => {
+          const [head, ...rest] = a.priceSummary.split(" / ");
+          return (
+            <>
+              <p className="mt-0.5 text-[18px] leading-snug font-bold tracking-tight">{head}</p>
+              {rest.length > 0 && (
+                <ul className="mt-2 space-y-1 text-[14px] leading-snug text-ink-2">
+                  {rest.map((r, i) => (
+                    <li key={i}>· {r}</li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })()}
       </div>
 
       {a.recommendation && (

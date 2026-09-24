@@ -12,8 +12,11 @@ export const SOUVENIR: SouvenirGuide = foodSouvenir.souvenir as SouvenirGuide;
 
 /** 조사 원문처럼 긴 가격 설명을 표용 한 줄로 줄이고, 원문은 priceDetail 로 보관 */
 function firstClause(text: string, max = 40): string {
-  const t = text.replace(/^\[[^\]]*\]\s*/, "").trim();
-  const cut = t.search(/\s\(|\.\s|\[/);
+  const t = text
+    .replace(/^\[[^\]]*\]\s*/, "")
+    .replace(/^\d박\s*총액\s*/, "")
+    .trim();
+  const cut = t.search(/\s?\(|\.\s|\[/);
   const head = (cut > 0 ? t.slice(0, cut) : t).trim();
   return head.length > max ? `${head.slice(0, max)}…` : head;
 }

@@ -21,6 +21,31 @@ const IMG = images as unknown as {
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
 export const dishPhoto = (dish: string) => IMG.dishes?.[dish];
+
+// 가게 이름·메뉴에 이 단어가 있으면 그 음식 사진을 '대표 메뉴 사진'으로 보여준다
+const DISH_KEYWORDS: [string[], string][] = [
+  [["어묵", "하이까", "분까", "Bún cá"], "어묵 쌀국수"],
+  [["분짜"], "분짜 ("],
+  [["쌀국수", "퍼", "Phở"], "소고기 쌀국수"],
+  [["넴느엉", "Nem"], "넴느엉"],
+  [["반쎄오", "Bánh xèo"], "반쎄오"],
+  [["반미", "Bánh mì"], "반미"],
+  [["반깐", "Bánh căn"], "반깐"],
+  [["해산물", "새우", "랍스터", "조개", "seafood", "Hải sản"], "해산물 구이"],
+  [["아보카도"], "아보카도"],
+  [["과일", "망고", "주스"], "망고"],
+  [["커피", "카페", "Cà phê"], "연유커피"],
+  [["볶음밥", "한식", "죽"], "계란볶음밥"],
+];
+export function menuPhoto(text: string): PhotoInfo | undefined {
+  for (const [words, dishPrefix] of DISH_KEYWORDS) {
+    if (words.some((w) => text.includes(w))) {
+      const key = Object.keys(IMG.dishes ?? {}).find((k) => k.startsWith(dishPrefix));
+      if (key) return IMG.dishes![key];
+    }
+  }
+  return undefined;
+}
 export const activityPhoto = (id: string) => IMG.activities?.[id];
 export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
@@ -35,7 +60,10 @@ export function Photo({
   alt,
   className = "aspect-[16/9]",
   link = true,
+  note,
 }: {
+  /** 캡션 앞에 붙일 설명 (예: '대표 메뉴 사진') */
+  note?: string;
   photo: PhotoInfo | undefined;
   alt: string;
   className?: string;
@@ -44,7 +72,8 @@ export function Photo({
 }) {
   if (!photo) return null;
   const caption =
-    photo.kind === "official" ? `사진 출처: ${photo.credit}` : `사진: ${photo.credit} · ${photo.license}`;
+    (note ? `${note} · ` : "") +
+    (photo.kind === "official" ? `사진 출처: ${photo.credit}` : `사진: ${photo.credit} · ${photo.license}`);
   return (
     <figure className="overflow-hidden rounded-2xl bg-surface-2">
       <img

@@ -8,7 +8,7 @@ const EXCHANGE = exchange;
 import type { FoodSpot } from "@/lib/guideTypes";
 import { toggleSouvenir } from "@/lib/trip";
 import type { TripState } from "@/lib/types";
-import { dishPhoto, groupPhoto, Photo } from "./Photo";
+import { dishPhoto, groupPhoto, menuPhoto, Photo } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card, ProgressBar } from "./ui";
 
@@ -25,6 +25,80 @@ const FOOD_KIND: Record<string, string> = {
   "resort-area": "🏝️ 관광지 안 식사",
 };
 
+// ── 긴 요약글을 한눈에 보이게: ①②③ 번호로 나누기 ─────────────────────────
+const CIRCLED = "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳";
+
+function splitNumbered(text: string): string[] {
+  return text
+    .split(new RegExp(`(?=[${CIRCLED}])`))
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+/** '① D2 10/4 …' 처럼 날짜별 항목인지 */
+function isDayItem(item: string): boolean {
+  return /^[①-⑳]?\s*D\d/.test(item);
+}
+
+function NumberedList({ items, small = false }: { items: string[]; small?: boolean }) {
+  return (
+    <ol className="mt-2">
+      {items.map((raw, i) => {
+        const num = CIRCLED.includes(raw[0]) ? CIRCLED.indexOf(raw[0]) + 1 : i + 1;
+        const body = CIRCLED.includes(raw[0]) ? raw.slice(1).trim() : raw;
+        const colon = body.indexOf(":");
+        const head = colon > 0 && colon < 30 ? body.slice(0, colon) : "";
+        const rest = head ? body.slice(colon + 1).trim() : body;
+        return (
+          <li key={i} className="flex gap-3 border-t border-line py-3 first:border-0">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-soft text-[12px] font-bold text-primary-ink">
+              {num}
+            </span>
+            <span className={`min-w-0 leading-relaxed ${small ? "text-[14px] text-ink-2" : "text-[15px] text-ink"}`}>
+              {head && <b className="mb-0.5 block text-[15px] text-ink">{head}</b>}
+              {rest}
+            </span>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+/** 기념품 요약: TOP10은 태그로, 나머지(동선·예산·주의)는 접기 */
+function SouvenirSummary({ text }: { text: string }) {
+  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
+  const topLine = lines.find((l) => l.startsWith("필수"));
+  const top = topLine ? splitNumbered(topLine.replace(/^필수\s*TOP\s*10\s*[:：]\s*/i, "")) : [];
+  const rest = lines.filter((l) => l !== topLine);
+  return (
+    <div className="space-y-3">
+      {top.length > 0 && (
+        <div>
+          <p className="mb-2 text-[14px] font-bold text-ink-2">필수 TOP{top.length}</p>
+          <div className="flex flex-wrap gap-2">
+            {top.map((t, i) => (
+              <span key={i} className="rounded-full bg-surface-2 px-3 py-1.5 text-[14px] font-medium text-ink">
+                {t.replace(new RegExp(`^[${CIRCLED}]\\s*`), "")}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {rest.length > 0 && (
+        <details className="rounded-2xl bg-surface-2 p-4">
+          <summary className="cursor-pointer text-[14px] font-bold text-ink-2">🧭 쇼핑 동선 · 예산 · 주의</summary>
+          <ul className="mt-2 space-y-2 text-[14px] leading-relaxed text-ink-2">
+            {rest.map((l, i) => (
+              <li key={i}>{l}</li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </div>
+  );
+}
+
 function mapUrl(name: string, lat: number | null, lng: number | null) {
   return lat !== null && lng !== null
     ? `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
@@ -37,7 +111,13 @@ export function FoodSection() {
       {FOOD.summary && (
         <section className={`${card} p-5 md:p-6`}>
           <p className="text-[15px] font-semibold text-ink-3">날짜별 먹거리 동선</p>
-          <p className="mt-2 text-[15px] leading-relaxed whitespace-pre-line text-ink">{FOOD.summary}</p>
+          <NumberedList items={splitNumbered(FOOD.summary).filter(isDayItem)} />
+          {splitNumbered(FOOD.summary).some((t) => !isDayItem(t)) && (
+            <details className="mt-3 rounded-2xl bg-surface-2 p-4">
+              <summary className="cursor-pointer text-[14px] font-bold text-ink-2">💡 아이랑 식사 팁 · 주문 요령</summary>
+              <NumberedList items={splitNumbered(FOOD.summary).filter((t) => !isDayItem(t))} small />
+            </details>
+          )}
         </section>
       )}
 
@@ -76,8 +156,14 @@ export function FoodSection() {
 
 function FoodSpotCard({ spot: s }: { spot: FoodSpot }) {
   const [open, setOpen] = useState(false);
+  const photo = menuPhoto(`${s.name} ${s.menu}`);
   return (
     <article className={`${card} p-5`}>
+      {photo && (
+        <div className="mb-3">
+          <Photo photo={photo} alt={s.name} className="aspect-[2/1]" note="대표 메뉴 사진 (가게 사진 아님)" />
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold">
         <span className="text-ink-3">{FOOD_KIND[s.kind] ?? s.kind}</span>
         {s.nearDay && (
@@ -140,9 +226,7 @@ export function SouvenirSection({
           </div>
         </div>
         <ProgressBar value={total ? Math.round((done / total) * 100) : 0} />
-        {SOUVENIR.summary && (
-          <p className="text-[15px] leading-relaxed whitespace-pre-line text-ink-2">{SOUVENIR.summary}</p>
-        )}
+        {SOUVENIR.summary && <SouvenirSummary text={SOUVENIR.summary} />}
       </section>
 
       {SOUVENIR.customs && (
