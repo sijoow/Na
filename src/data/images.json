@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-09-24",
+  "places": {
+    "cam-ranh-airport": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-cam-ranh-airport.jpg",
+      "credit": "Ed Crystal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cam_Ranh_International_Airport_Terminal_2.jpg"
+    },
+    "city-hotel-area": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-city-hotel-area.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nha_Trang-Tran_Phu.JPG"
+    },
+    "dam-market": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-dam-market.jpg",
+      "credit": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dam_Market_Nha_Trang_2.jpg"
+    },
+    "nha-trang-cathedral": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-nha-trang-cathedral.jpg",
+      "credit": "Leonid",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nha_Trang,_Vietnam_-_53120927853.jpg"
+    },
+    "night-market": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-night-market.jpg",
+      "credit": "The Erica Chang",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nha_Trang_night_market_-_panoramio.jpg"
+    },
+    "po-nagar": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-po-nagar.jpg",
+      "credit": "RG72",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Templo_Po_Nagar_13.jpg"
+    },
+    "vinwonders-pier": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-vinwonders-pier.jpg",
+      "credit": "Андрей Бобровский",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vinpearl_Nha_Trang_cable_car_-_panoramio_(176).jpg"
+    },
+    "vinwonders": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-vinwonders.jpg",
+      "credit": "Huangdan2060",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seaside_buildings_scenery_in_Nha_Trang_in_November_2017,_picture2.jpg"
+    }
+  },
+  "dishes": {}
+}
