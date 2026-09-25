@@ -21,6 +21,8 @@ const loadReviewsTab = () => import("./ReviewsTab");
 const loadWeather = () => import("./WeatherSection");
 const loadAsk = () => import("./AskSection");
 const loadRanking = () => import("./RankingTab");
+const loadFood = () => import("./FoodTab");
+const loadSpa = () => import("./SpaSection");
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
@@ -28,8 +30,10 @@ const ReviewsTab = dynamic(loadReviewsTab, { loading: () => <TabLoading /> });
 const WeatherSection = dynamic(loadWeather, { loading: () => <TabLoading /> });
 const AskSection = dynamic(loadAsk, { loading: () => <TabLoading /> });
 const RankingTab = dynamic(loadRanking, { loading: () => <TabLoading /> });
+const FoodTab = dynamic(loadFood, { loading: () => <TabLoading /> });
+const SpaSection = dynamic(loadSpa, { loading: () => <TabLoading /> });
 
-type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
+type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "food" | "spa" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "overview", label: "홈" },
@@ -37,6 +41,8 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "map", label: "지도·이동" },
   { id: "stays", label: "숙소" },
   { id: "tours", label: "투어·쇼핑" },
+  { id: "food", label: "맛집" },
+  { id: "spa", label: "마사지" },
   { id: "weather", label: "날씨" },
   { id: "ai", label: "AI 질문" },
   { id: "reviews", label: "후기" },
@@ -86,13 +92,15 @@ const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 
 // '더보기' 바텀시트에 크게 보여줄 탭
 const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
-  { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 먹거리 · 기념품 · 아이 옷 · 환전" },
+  { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 기념품 · 아이 옷 · 환전" },
+  { id: "food", emoji: "🍜", label: "맛집", desc: "한국인이 많이 가는 맛집 · 꼭 먹어볼 음식" },
+  { id: "spa", emoji: "💆", label: "마사지·스파", desc: "아이랑 같이 받는 가족 마사지 · 출국 전 샤워" },
   { id: "weather", emoji: "🌦️", label: "날씨", desc: "실시간 예보 · 작년·10년 날씨 · Plan B" },
   { id: "ai", emoji: "🤖", label: "AI에게 물어보기", desc: "우리 일정 기반 답변 · 웹 검색 · 토큰 사용량" },
   { id: "reviews", emoji: "📝", label: "후기", desc: "블로그 후기 요약" },
   { id: "checklist", emoji: "✅", label: "준비물", desc: "챙길 것 체크리스트" },
   { id: "info", emoji: "🗒️", label: "정보·메모", desc: "항공편 · 메모 · 백업" },
-  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "시내 호텔 조식 기준 순위 · 장단점 · 후기" },
+  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "시내 호텔 접근성·호텔 상태 기준 순위 · 장단점" },
 ];
 
 // 오늘 날짜는 브라우저에서만 계산한다 (서버 렌더링 때는 null → 하이드레이션 불일치 없음)
@@ -282,6 +290,8 @@ export default function PlannerApp() {
         {tab === "map" && <MapTab state={state} />}
         {tab === "stays" && <StaysTab state={state} update={update} />}
         {tab === "tours" && <ToursShopsTab state={state} update={update} />}
+        {tab === "food" && <FoodTab />}
+        {tab === "spa" && <SpaSection />}
         {tab === "weather" && <WeatherSection />}
         {tab === "ai" && <AskSection />}
         {tab === "rank" && <RankingTab />}

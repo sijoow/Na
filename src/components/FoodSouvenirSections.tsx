@@ -123,7 +123,7 @@ export function FoodSection() {
 
       <section>
         <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">꼭 먹어볼 음식</h3>
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {FOOD.mustTry.map((d, i) => (
             <div key={`${d.dish}-${i}`} className={`${card} p-4`}>
               {dishPhoto(d.dish) && (
@@ -144,7 +144,7 @@ export function FoodSection() {
 
       <section>
         <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">가게</h3>
-        <div className="grid items-start gap-3 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-2">
           {FOOD.spots.map((s) => (
             <FoodSpotCard key={s.id} spot={s} />
           ))}
@@ -282,7 +282,7 @@ export function SouvenirSection({
       {SOUVENIR.places.length > 0 && (
         <section>
           <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">어디서 사나요</h3>
-          <div className="grid items-start gap-3 lg:grid-cols-2">
+          <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-2">
             {SOUVENIR.places.map((p, i) => (
               <div key={`${p.name}-${i}`} className={`${card} p-5`}>
                 <p className="text-[18px] font-bold tracking-tight">{p.name}</p>
@@ -332,7 +332,7 @@ export function ExchangeSection() {
         <b className="text-danger">⚠️ 꼭 확인</b> {x.warning}
       </p>
 
-      <div className="grid items-start gap-3 lg:grid-cols-3">
+      <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-3">
         {x.shops.map((s) => (
           <section key={s.name} className={`${card} p-5`}>
             <p className="text-[18px] font-bold tracking-tight">{s.name}</p>

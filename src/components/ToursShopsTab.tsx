@@ -4,10 +4,9 @@ import { useState } from "react";
 import { GUIDE } from "@/data/guide";
 import type { ActivityInfo, PriceRow, ShopInfo, ShopKind } from "@/lib/guideTypes";
 import type { TripState } from "@/lib/types";
-import { ExchangeSection, FoodSection, SouvenirSection } from "./FoodSouvenirSections";
+import { ExchangeSection, SouvenirSection } from "./FoodSouvenirSections";
 import { activityPhoto, Photo, placePhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
-import SpaSection from "./SpaSection";
 import { btn, card } from "./ui";
 
 const SHOP_KIND: Record<ShopKind, string> = {
@@ -19,7 +18,7 @@ const SHOP_KIND: Record<ShopKind, string> = {
   street: "🚶 거리 상점",
 };
 
-type Section = "tours" | "spa" | "food" | "souvenir" | "shops" | "exchange";
+type Section = "tours" | "souvenir" | "shops" | "exchange";
 
 export default function ToursShopsTab({
   state,
@@ -37,8 +36,6 @@ export default function ToursShopsTab({
         {(
           [
             ["tours", "🎟️ 투어"],
-            ["spa", "💆 마사지"],
-            ["food", "🍜 먹거리"],
             ["souvenir", "🛍️ 기념품"],
             ["shops", "👕 아이 옷"],
             ["exchange", "💱 환전"],
@@ -76,8 +73,6 @@ export default function ToursShopsTab({
           </>
         ))}
 
-      {section === "spa" && <SpaSection />}
-      {section === "food" && <FoodSection />}
       {section === "souvenir" && <SouvenirSection state={state} update={update} />}
       {section === "exchange" && <ExchangeSection />}
 

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { getPlan, planDaysFor, PLANS } from "@/lib/plans";
 import { getDayProgress, percent, type Progress } from "@/lib/trip";
 import type { Flight, PlanId, TripState } from "@/lib/types";
-import { dayPhoto, heroPhoto, placePhoto, stayPhoto, type PhotoInfo } from "./Photo";
+import { activityPhoto, dayPhoto, dishPhoto, heroPhoto, placePhoto, stayPhoto, type PhotoInfo } from "./Photo";
 import { btn, card } from "./ui";
 
 interface Props {
@@ -19,11 +19,13 @@ interface Props {
   onGo: (tab: GoTab) => void;
 }
 
-export type GoTab = "stays" | "tours" | "map" | "weather" | "schedule";
+export type GoTab = "stays" | "tours" | "food" | "spa" | "map" | "weather" | "schedule";
 
 const SHORTCUTS: { tab: GoTab; label: string; desc: string; photo: () => PhotoInfo | undefined }[] = [
   { tab: "stays", label: "숙소", desc: "플랜 A·B·C 비교", photo: () => stayPhoto("movenpick-cam-ranh") ?? placePhoto("cam-ranh-resort-area") },
-  { tab: "tours", label: "투어·먹거리", desc: "가격·예약·맛집", photo: () => placePhoto("vinwonders") },
+  { tab: "tours", label: "투어·쇼핑", desc: "가격·예약", photo: () => placePhoto("vinwonders") },
+  { tab: "food", label: "맛집", desc: "한국인 인기 맛집", photo: () => dishPhoto("소고기 쌀국수 (Phở bò)") ?? placePhoto("pho-hong") },
+  { tab: "spa", label: "마사지", desc: "아이랑 가족 마사지", photo: () => activityPhoto("massage") },
   { tab: "map", label: "지도·이동", desc: "Grab 요금·경로", photo: () => placePhoto("po-nagar") },
   { tab: "weather", label: "날씨", desc: "실시간 예보", photo: () => placePhoto("city-hotel-area") },
   { tab: "schedule", label: "일정", desc: "날짜별 할 일", photo: () => placePhoto("dam-market") },
@@ -96,7 +98,7 @@ export default function OverviewTab({ state, status, progress, todayDayId, onOpe
       {/* 사진 바로가기 */}
       <section>
         <h2 className="mb-2.5 px-1 text-[19px] font-bold tracking-tight">여행 준비</h2>
-        <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 no-scrollbar md:mx-0 md:grid md:grid-cols-5 md:px-0">
+        <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 no-scrollbar md:mx-0 md:grid md:grid-cols-4 md:px-0 xl:grid-cols-7">
           {SHORTCUTS.map((s) => {
             const photo = s.photo();
             return (
