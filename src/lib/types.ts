@@ -63,6 +63,9 @@ export interface StayChoices {
   resort: string | null;
 }
 
+/** 숙소 동선 플랜: A 공항0.5박+시내2박+캄란3박 / B 시내3박+캄란3박 / C 캄란6박 */
+export type PlanId = "A" | "B" | "C";
+
 export interface TripState {
   version: 1;
   tripTitle: string;
@@ -77,6 +80,10 @@ export interface TripState {
   stayChoices?: StayChoices;
   /** 기념품 쇼핑리스트에서 산 항목 (상품명) — 예전 파일에는 없을 수 있음 */
   boughtSouvenirs?: string[];
+  /** 지금 적용 중인 플랜 (없으면 A) */
+  planId?: PlanId;
+  /** 다른 플랜으로 바꿀 때 보관해 둔 그 플랜의 일정 (다시 돌아오면 복원) */
+  planDays?: Partial<Record<PlanId, Day[]>>;
 }
 
 /** 일정 항목 추가/수정 폼에서 다루는 값 */

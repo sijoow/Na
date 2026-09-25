@@ -50,6 +50,34 @@ function checkRecord(value: unknown, path: string): Rec {
   return value;
 }
 
+/** 날짜별 일정 배열 검증 (현재 일정과 플랜별 보관 일정에 같이 사용) */
+function checkDays(value: unknown, basePath: string): void {
+  const dayIds = new Set<string>();
+  const itemIds = new Set<string>();
+  const days = checkArray(value, basePath);
+  if (days.length === 0) fail(basePath, "하루 이상 있어야 해요");
+  days.forEach((raw, i) => {
+    const path = `${basePath}[${i}]`;
+    const d = checkRecord(raw, path);
+    checkId(d, path, dayIds);
+    if (!isDateString(d.date)) fail(`${path}.date`, "'YYYY-MM-DD' 형식");
+    checkString(d, "title", path);
+    checkString(d, "lodging", path);
+    checkArray(d.items, `${path}.items`).forEach((rawItem, j) => {
+      const itemPath = `${path}.items[${j}]`;
+      const item = checkRecord(rawItem, itemPath);
+      checkId(item, itemPath, itemIds);
+      checkTime(item, "time", itemPath);
+      checkString(item, "title", itemPath);
+      checkString(item, "memo", itemPath);
+      if (!isCategory(item.category)) {
+        fail(`${itemPath}.category`, "sightseeing / food / activity / rest / move / shopping / etc 중 하나");
+      }
+      if (typeof item.done !== "boolean") fail(`${itemPath}.done`, "true 또는 false");
+    });
+  });
+}
+
 function assertTripState(value: unknown): asserts value is TripState {
   const root = checkRecord(value, "최상위");
   if (root.version !== 1) fail("version", "숫자 1");
@@ -70,33 +98,18 @@ function assertTripState(value: unknown): asserts value is TripState {
     checkTime(f, "arriveTime", path);
   });
 
-  const dayIds = new Set<string>();
-  const itemIds = new Set<string>();
-  const days = checkArray(root.days, "days");
-  if (days.length === 0) fail("days", "하루 이상 있어야 해요");
-  days.forEach((raw, i) => {
-    const path = `days[${i}]`;
-    const d = checkRecord(raw, path);
-    checkId(d, path, dayIds);
-    if (!isDateString(d.date)) fail(`${path}.date`, "'YYYY-MM-DD' 형식");
-    checkString(d, "title", path);
-    checkString(d, "lodging", path);
-    checkArray(d.items, `${path}.items`).forEach((rawItem, j) => {
-      const itemPath = `${path}.items[${j}]`;
-      const item = checkRecord(rawItem, itemPath);
-      checkId(item, itemPath, itemIds);
-      checkTime(item, "time", itemPath);
-      checkString(item, "title", itemPath);
-      checkString(item, "memo", itemPath);
-      if (!isCategory(item.category)) {
-        fail(
-          `${itemPath}.category`,
-          "sightseeing / food / activity / rest / move / shopping / etc 중 하나",
-        );
-      }
-      if (typeof item.done !== "boolean") fail(`${itemPath}.done`, "true 또는 false");
-    });
-  });
+  checkDays(root.days, "days");
+
+  if (root.planId !== undefined && !["A", "B", "C"].includes(root.planId as string)) {
+    fail("planId", "'A' / 'B' / 'C' 중 하나");
+  }
+  if (root.planDays !== undefined) {
+    const pd = checkRecord(root.planDays, "planDays");
+    for (const [key, value] of Object.entries(pd)) {
+      if (!["A", "B", "C"].includes(key)) fail(`planDays.${key}`, "키는 A / B / C");
+      if (value !== undefined) checkDays(value, `planDays.${key}`);
+    }
+  }
 
   if (root.stayChoices !== undefined) {
     const sc = checkRecord(root.stayChoices, "stayChoices");

@@ -14,7 +14,7 @@ export const btn = {
   icon: "press inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg text-ink-3 active:bg-surface-2 disabled:opacity-25",
 };
 
-export const card = "rounded-3xl bg-surface";
+export const card = "rounded-3xl bg-surface shadow-[var(--shadow-card)]";
 
 export function SectionTitle({ children, right }: { children: ReactNode; right?: ReactNode }) {
   return (

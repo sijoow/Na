@@ -1,4 +1,4 @@
-import type { Category, ChecklistItem, Day, Flight, PlanItem, TripState } from "./types";
+import type { Category, ChecklistItem, Day, Flight, PlanId, PlanItem, TripState } from "./types";
 
 // 초안 데이터. ID는 결정적인 문자열(d1, d1-i1, f-out, c-1 …)을 사용한다.
 // data/trip.json 이 없을 때 이 초안으로 파일을 만든다.
@@ -194,10 +194,92 @@ export const SEED_NOTES = [
   "- 10월은 우기 시작: 날씨 보고 일정 교체",
 ].join("\n");
 
-/** 초안 상태를 매번 새 객체로 만들어 반환한다. */
-export function createSeedState(): TripState {
-  const days: Day[] = SEED_DAYS.map((day, dayIndex) => {
-    const dayId = `d${dayIndex + 1}`;
+// ── 플랜별 일정 (A는 위 SEED_DAYS 그대로, B·C는 달라지는 날만 덮어씀) ──────────────
+const ARRIVE_ITEMS: SeedItem[] = [
+  ["00:30", "캄란공항 도착 · 입국심사", "move", "현지시간 (한국보다 2시간 느림)"],
+];
+
+const PLAN_OVERRIDES: Record<PlanId, Record<string, Partial<SeedDay>>> = {
+  A: {},
+  // B: 시내 3박 + 캄란 3박 (이동 1번) — 새벽에 시내로 바로
+  B: {
+    "2026-10-03": { lodging: "시내 호텔 (10/3부터 3박 · 새벽 도착 미리 알리기)" },
+    "2026-10-04": {
+      title: "새벽 도착 → 시내 호텔 & 담시장",
+      lodging: "시내 호텔",
+      items: [
+        ...ARRIVE_ITEMS,
+        ["01:00", "Grab으로 시내 호텔 이동 (약 40분)", "move", "7인승 · 심야라 요금 높을 수 있음 · 호텔 픽업 있으면 이용"],
+        ["02:00", "호텔 체크인 · 취침", "rest", "10/3 날짜로 예약 · 새벽 도착 미리 알리기"],
+        ["09:30", "늦잠 · 호텔 조식", "food"],
+        ["11:00", "호텔 수영장", "rest"],
+        ["13:00", "점심 — 쌀국수", "food"],
+        ["14:00", "낮잠", "rest"],
+        ["15:00", "나트랑 대성당 (돌성당)", "sightseeing", "일요일은 11:00~16:30만 개방 · 어깨·무릎 가리는 옷"],
+        ["15:40", "담시장 구경", "shopping", "16~17시부터 가게 닫기 시작 · 흥정 필수 · 아이 손 꼭 잡기"],
+        ["18:00", "해변 산책 & 이른 저녁", "food"],
+        ["19:30", "야시장 구경", "shopping"],
+      ],
+    },
+  },
+  // C: 캄란 리조트 6박 (이동 0번) — 시내 관광은 Grab 왕복
+  C: {
+    "2026-10-03": { lodging: "캄란 리조트 (10/3부터 6박 · 새벽 도착 미리 알리기)" },
+    "2026-10-04": {
+      title: "새벽 도착 · 리조트 → 오후 시내",
+      lodging: "캄란 리조트",
+      items: [
+        ...ARRIVE_ITEMS,
+        ["01:00", "리조트로 이동 (10~15분)", "move", "리조트 픽업 있으면 이용 · 없으면 Grab 7인승"],
+        ["01:30", "리조트 체크인 · 취침", "rest", "10/3 날짜로 예약 · 새벽 도착 미리 알리기"],
+        ["09:30", "늦잠 · 리조트 조식", "food"],
+        ["10:30", "키즈클럽 · 수영장", "activity"],
+        ["12:30", "점심", "food"],
+        ["13:50", "Grab으로 시내 이동 (약 40분)", "move", "차에서 아이 낮잠 · 7인승"],
+        ["15:00", "나트랑 대성당 (돌성당)", "sightseeing", "일요일은 11:00~16:30만 개방"],
+        ["15:40", "담시장 구경", "shopping", "16~17시부터 가게 닫기 시작"],
+        ["18:00", "해변 산책 & 이른 저녁", "food"],
+        ["19:30", "야시장 구경", "shopping"],
+        ["20:40", "리조트 복귀 (약 40분)", "move"],
+      ],
+    },
+    "2026-10-05": {
+      title: "빈원더스 (리조트에서 왕복)",
+      lodging: "캄란 리조트",
+      items: [
+        ["08:00", "리조트 조식", "food"],
+        ["09:00", "Grab으로 빈원더스 케이블카역 (약 30~35분)", "move", "아이 키 재 두기 · 100cm 미만 무료"],
+        ["10:00", "아쿠아리움 · 키즈존", "activity"],
+        ["12:00", "점심 (빈원더스 안)", "food"],
+        ["13:30", "워터파크", "activity", "래시가드 · 아이 튜브"],
+        ["17:00", "케이블카로 나와서 리조트 복귀 (약 35분)", "move"],
+        ["18:30", "리조트 저녁", "food"],
+      ],
+    },
+    "2026-10-06": {
+      title: "포나가르 참탑 · 머드온천 (리조트에서 왕복)",
+      lodging: "캄란 리조트",
+      items: [
+        ["08:00", "리조트 조식", "food"],
+        ["08:50", "Grab으로 포나가르 참탑 (약 50분)", "move", "시내 북쪽이라 가장 멂 · 7인승"],
+        ["10:00", "포나가르 참탑 (짧게)", "sightseeing"],
+        ["11:00", "머드온천 (아이리조트)", "activity", "머드탕은 15시까지 · 유아풀 있음 · 수건 / 여벌 옷"],
+        ["13:00", "점심 (온천 안)", "food"],
+        ["15:00", "리조트 복귀 (약 50~60분)", "move", "차에서 아이 낮잠"],
+        ["16:30", "리조트 수영장", "rest"],
+        ["19:00", "리조트 저녁", "food"],
+      ],
+    },
+  },
+};
+
+function toDays(plan: PlanId): Day[] {
+  const prefix = plan === "A" ? "" : `${plan.toLowerCase()}-`;
+  return SEED_DAYS.map((base, dayIndex) => {
+    const day = { ...base, ...PLAN_OVERRIDES[plan][base.date] };
+    // C 는 10/4~10/8 숙소가 모두 캄란 리조트
+    if (plan === "C" && day.date >= "2026-10-04" && day.date <= "2026-10-08") day.lodging = "캄란 리조트";
+    const dayId = `${prefix}d${dayIndex + 1}`;
     const items: PlanItem[] = day.items.map(([time, title, category, memo], itemIndex) => ({
       id: `${dayId}-i${itemIndex + 1}`,
       time,
@@ -208,6 +290,16 @@ export function createSeedState(): TripState {
     }));
     return { id: dayId, date: day.date, title: day.title, lodging: day.lodging, items };
   });
+}
+
+/** 플랜의 초안 일정 (새 객체) */
+export function createPlanDays(plan: PlanId): Day[] {
+  return toDays(plan);
+}
+
+/** 초안 상태를 매번 새 객체로 만들어 반환한다. */
+export function createSeedState(): TripState {
+  const days: Day[] = toDays("A");
 
   let n = 0;
   const checklist: ChecklistItem[] = SEED_CHECKLIST.flatMap(([group, texts]) =>

@@ -3,7 +3,9 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { getTripStatus, isWithinTrip, toDateString } from "@/lib/date";
+import { getPlan, switchPlanState } from "@/lib/plans";
 import { getItemProgress } from "@/lib/trip";
+import type { PlanId } from "@/lib/types";
 import { useTripSync, type SaveStatus } from "@/lib/useTripSync";
 import ChecklistTab from "./ChecklistTab";
 import InfoTab from "./InfoTab";
@@ -185,6 +187,15 @@ export default function PlannerApp() {
   const inMore = MORE_TABS.some((t) => t.id === tab);
   const checklistLeft = state.checklist.filter((c) => !c.checked).length;
 
+  // 플랜 전환 (홈의 플랜별 일정 미리보기에서) — 숙소 데이터는 누를 때만 불러온다
+  const switchPlan = async (id: PlanId) => {
+    const target = getPlan(id);
+    if (!window.confirm(`${target.name}(으)로 일정을 바꿀까요?
+지금 일정은 따로 보관돼서, 다시 돌아오면 그대로 복원돼요.`)) return;
+    const { GUIDE } = await import("@/data/guide");
+    update((s) => switchPlanState(s, id, GUIDE.stays));
+  };
+
   const openDay = (dayId: string) => {
     setPickedDayId(dayId);
     setTab("schedule");
@@ -231,6 +242,8 @@ export default function PlannerApp() {
             progress={progress}
             todayDayId={todayDay?.id ?? null}
             onOpenDay={openDay}
+            onSwitchPlan={switchPlan}
+            onGo={(t) => setTab(t)}
           />
         )}
         {tab === "schedule" && (

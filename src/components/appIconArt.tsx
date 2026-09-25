@@ -1,7 +1,7 @@
 // 앱 아이콘 그림 (app/icon.tsx, app/apple-icon.tsx 가 ImageResponse 로 PNG 를 만든다)
 // 파란 배경 + 흰 야자수 + 물결. 이모지 대신 SVG 로 그려서 빌드 때 외부 다운로드가 없다.
 
-export const ICON_BLUE = "#3182f6";
+export const ICON_BLUE = "#0a8ea0";
 
 interface Props {
   /** 아이콘 한 변 픽셀 */

@@ -96,3 +96,34 @@ export function Photo({
     </figure>
   );
 }
+
+// 일정 제목에 이 단어가 있으면 그 장소/투어 사진을 날짜 카드 대표 사진으로
+const DAY_KEYWORDS: [string, () => PhotoInfo | undefined][] = [
+  ["빈원더스", () => IMG.places?.["vinwonders"]],
+  ["사막", () => IMG.activities?.["phan-rang-desert"]],
+  ["머드", () => IMG.activities?.["i-resort-mud"]],
+  ["포나가르", () => IMG.places?.["po-nagar"]],
+  ["대성당", () => IMG.places?.["nha-trang-cathedral"]],
+  ["담시장", () => IMG.places?.["dam-market"]],
+  ["야시장", () => IMG.places?.["night-market"]],
+  ["리조트", () => IMG.places?.["cam-ranh-resort-area"]],
+  ["해변", () => IMG.places?.["city-hotel-area"]],
+  ["출국", () => IMG.places?.["cam-ranh-airport"]],
+  ["귀국", () => IMG.places?.["cam-ranh-airport"]],
+];
+
+/** 날짜 카드용 대표 사진: 제목 → 일정 순서로 키워드를 찾아 첫 번째 사진 */
+export function dayPhoto(title: string, itemTitles: string[]): PhotoInfo | undefined {
+  for (const text of [title, ...itemTitles]) {
+    for (const [word, get] of DAY_KEYWORDS) {
+      if (text.includes(word)) {
+        const p = get();
+        if (p) return p;
+      }
+    }
+  }
+  return undefined;
+}
+
+/** 배경용 대표 사진 (홈 상단) */
+export const heroPhoto = () => IMG.places?.["city-hotel-area"] ?? IMG.places?.["vinwonders"];

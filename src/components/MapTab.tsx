@@ -21,7 +21,7 @@ const MapView = dynamic(() => import("./MapView"), {
 const LEG_BTN =
   "max-sm:min-h-14 max-sm:flex-col max-sm:gap-0.5 max-sm:px-1 max-sm:text-[13px] sm:min-h-10 sm:px-3 sm:text-[14px]";
 
-const DAY_COLORS = ["#3182f6", "#f04452", "#03b26c", "#ff9f00", "#8b5cf6", "#00b8d9", "#e5487d", "#6b7684"];
+const DAY_COLORS = ["#0a8ea0", "#f04452", "#03b26c", "#ff9f00", "#8b5cf6", "#00b8d9", "#e5487d", "#6b7684"];
 
 /** 동 금액을 '9만' '33.5만' '200만' 처럼 */
 function fmtVnd(n: number): string {

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { GUIDE, STAY_AREAS } from "@/data/guide";
+import { GUIDE } from "@/data/guide";
+import { getPlan, PLANS, switchPlanState, type PlanArea } from "@/lib/plans";
 import type { StayArea, StayOption } from "@/lib/guideTypes";
 import { chooseStay } from "@/lib/trip";
-import type { TripState } from "@/lib/types";
+import type { PlanId, TripState } from "@/lib/types";
 import { Photo, stayPhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card } from "./ui";
@@ -30,8 +31,6 @@ function imageSearch(o: StayOption, extra: string) {
   return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
 }
 
-const AREAS: StayArea[] = ["arrival", "city", "island", "resort"];
-
 export default function StaysTab({ state, update }: Props) {
   const choices: Record<StayArea, string | null> = {
     arrival: state.stayChoices?.arrival ?? null,
@@ -48,8 +47,20 @@ export default function StaysTab({ state, update }: Props) {
     );
   }
 
+  const plan = getPlan(state.planId);
+  const areaConf = (area: StayArea): PlanArea => plan.areas.find((a) => a.area === area)!;
+
+  const switchPlan = (id: PlanId) => {
+    if (id === plan.id) return;
+    const next = getPlan(id);
+    if (!window.confirm(`${next.name}(으)로 일정을 바꿀까요?
+지금 일정은 따로 보관돼서, 다시 돌아오면 그대로 복원돼요.`)) return;
+    update((s) => switchPlanState(s, id, GUIDE.stays));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const choose = (area: StayArea, option: StayOption | null) => {
-    const conf = STAY_AREAS[area];
+    const conf = areaConf(area);
     update((s) => {
       let next = chooseStay(s, area, option?.id ?? null, option ? option.name : conf.defaultLabel, conf.nights);
       // 시내 2박과 섬 2박은 같은 날짜라 둘 중 하나만 선택
@@ -70,8 +81,10 @@ export default function StaysTab({ state, update }: Props) {
         </details>
       )}
 
-      {AREAS.map((area) => {
-        const conf = STAY_AREAS[area];
+      <PlanPicker current={plan.id} onPick={switchPlan} />
+
+      {plan.areas.map(({ area }) => {
+        const conf = areaConf(area);
         const options = GUIDE.stays
           .filter((o) => o.area === area)
           .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
@@ -367,5 +380,62 @@ function Info({ label, children }: { label: string; children: React.ReactNode })
       <dt className="font-semibold text-ink-3 max-sm:text-[13px] sm:w-24 sm:shrink-0">{label}</dt>
       <dd className="min-w-0 text-ink-2 max-sm:text-[15px]">{children}</dd>
     </div>
+  );
+}
+
+function PlanPicker({ current, onPick }: { current: PlanId; onPick: (id: PlanId) => void }) {
+  return (
+    <section className="space-y-3">
+      <div className="px-1">
+        <h2 className="text-[22px] font-bold tracking-tight">숙소 동선 플랜</h2>
+        <p className="text-[15px] text-ink-2">숙소는 최대 3곳. 플랜을 고르면 일정과 아래 숙소 구간이 그 플랜으로 바뀌어요.</p>
+      </div>
+      <div className="grid gap-3 lg:grid-cols-3">
+        {PLANS.map((p) => {
+          const active = p.id === current;
+          return (
+            <article key={p.id} className={`${card} flex flex-col p-5 ${active ? "ring-2 ring-primary" : ""}`}>
+              <div className="flex items-center justify-between gap-2">
+                <span className={`rounded-lg px-2 py-1 text-[13px] font-bold ${active ? "bg-primary text-on-primary" : "bg-primary-soft text-primary-ink"}`}>
+                  {active ? `✓ 지금 플랜 ${p.id}` : `플랜 ${p.id}`}
+                </span>
+                <span className="text-[13px] font-semibold text-ink-3">
+                  숙소 {p.stays.length}곳 · 이동 {p.moves}번
+                </span>
+              </div>
+              <h3 className="mt-2 text-[18px] leading-snug font-bold tracking-tight">{p.tagline}</h3>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {p.stays.map((st) => (
+                  <span key={st} className="rounded-full bg-surface-2 px-2.5 py-1 text-[13px] font-medium text-ink-2">
+                    🏨 {st}
+                  </span>
+                ))}
+              </div>
+              <ul className="mt-3 space-y-1 text-[14px] text-ink-2">
+                {p.pros.map((t) => (
+                  <li key={t}>
+                    <span className="text-[#03b26c]">✓</span> {t}
+                  </li>
+                ))}
+                {p.cons.map((t) => (
+                  <li key={t}>
+                    <span className="text-danger">–</span> {t}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-[13px] text-ink-3">{p.extra}</p>
+              <button
+                type="button"
+                className={`${active ? btn.secondary : btn.primary} mt-4`}
+                disabled={active}
+                onClick={() => onPick(p.id)}
+              >
+                {active ? "지금 이 플랜이에요" : "이 플랜으로 바꾸기"}
+              </button>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 }

@@ -18,6 +18,7 @@ import {
   updateItem,
 } from "@/lib/trip";
 import type { Day, PlanItem, PlanItemInput, TripState } from "@/lib/types";
+import { dayPhoto } from "./Photo";
 import { btn, card, Modal } from "./ui";
 
 interface Props {
@@ -112,7 +113,15 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
       </nav>
 
       <section className="min-w-0 space-y-4">
-        <div className={`${card} space-y-3 p-5 md:p-6`}>
+        <div className={`${card} overflow-hidden`}>
+          {(() => {
+            const photo = dayPhoto(day.title, day.items.map((i) => i.title));
+            return photo ? (
+              // eslint-disable-next-line @next/next/no-img-element -- 날짜 대표 사진 배너
+              <img src={photo.url} alt="" referrerPolicy="no-referrer" className="h-36 w-full object-cover md:h-44" />
+            ) : null;
+          })()}
+        <div className="space-y-3 p-5 md:p-6">
           <p className="text-[15px] font-bold text-primary-ink">
             D{dayIndex + 1} · {formatLong(day.date)}
             {day.id === todayDayId && " · 오늘"}
@@ -161,13 +170,14 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
             </button>
           </div>
         </div>
+        </div>
 
         {day.items.length === 0 ? (
           <div className={`${card} p-10 text-center text-ink-3`}>
             아직 일정이 없어요. &lsquo;+ 일정 추가&rsquo;를 눌러 보세요.
           </div>
         ) : (
-          <ul className={`${card} divide-y divide-line px-2 md:px-3`}>
+          <ul className={`${card} px-2 pt-4 pb-1 md:px-4`}>
             {day.items.map((item, i) => (
               <ItemRow
                 key={item.id}
@@ -322,43 +332,42 @@ function ItemRow({
 }) {
   const meta = CATEGORY_META[item.category];
   return (
-    <li className={`flex items-start gap-1 py-2.5 md:gap-3 md:py-4 ${item.done ? "opacity-50" : ""}`}>
-      <label className="flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center">
-        <input
-          type="checkbox"
-          checked={item.done}
-          onChange={onToggle}
-          aria-label={`${item.title} 완료`}
+    <li className={`relative flex items-stretch gap-2 md:gap-3 ${item.done ? "opacity-55" : ""}`}>
+      {/* 시간 */}
+      <span className="w-12 shrink-0 pt-3 text-right text-[15px] font-bold tabular-nums text-ink md:w-14 md:text-[16px]">
+        {item.time || "--:--"}
+      </span>
+      {/* 타임라인: 선 + 완료 체크(점) */}
+      <span className="relative flex w-8 shrink-0 justify-center">
+        <span
+          className={`absolute w-0.5 bg-line ${isFirst ? "top-5" : "top-0"} ${isLast ? "h-5" : "bottom-0"}`}
+          aria-hidden
         />
-      </label>
-      {/* 내용을 누르면 바로 수정 (폰에서는 연필 버튼 대신) */}
+        <label className="relative z-10 mt-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-surface">
+          <input type="checkbox" checked={item.done} onChange={onToggle} aria-label={`${item.title} 완료`} />
+        </label>
+      </span>
+      {/* 내용 (누르면 수정) */}
       <button
         type="button"
         onClick={onEdit}
-        className="min-w-0 flex-1 rounded-xl px-1 py-1 text-left active:bg-surface-2"
+        className="mb-3 min-w-0 flex-1 rounded-2xl bg-surface-2 px-3.5 py-3 text-left active:bg-surface-3"
       >
-        <span className="flex flex-wrap items-center gap-2">
-          <span className="text-[16px] font-bold tabular-nums text-ink md:text-[17px]">
-            {item.time || "--:--"}
-          </span>
-          <span className={`rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
-            {meta.emoji} {meta.label}
-          </span>
+        <span className={`inline-block rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
+          {meta.emoji} {meta.label}
         </span>
         <span
-          className={`mt-1 block text-[17px] leading-snug font-semibold tracking-tight text-ink ${
+          className={`mt-1 block text-[16px] leading-snug font-semibold tracking-tight text-ink md:text-[17px] ${
             item.done ? "line-through" : ""
           }`}
         >
           {item.title}
         </span>
         {item.memo && (
-          <span className="mt-1 block text-[15px] leading-relaxed whitespace-pre-line text-ink-3 md:text-[14px]">
-            {item.memo}
-          </span>
+          <span className="mt-1 block text-[14px] leading-relaxed whitespace-pre-line text-ink-3">{item.memo}</span>
         )}
       </button>
-      <div className="flex shrink-0 gap-0.5">
+      <div className="flex shrink-0 gap-0.5 pt-1.5">
         <button type="button" className={`${btn.icon} max-sm:hidden`} onClick={onEdit} aria-label="수정">
           ✏️
         </button>
