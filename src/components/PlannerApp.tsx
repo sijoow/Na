@@ -20,14 +20,16 @@ const loadToursShopsTab = () => import("./ToursShopsTab");
 const loadReviewsTab = () => import("./ReviewsTab");
 const loadWeather = () => import("./WeatherSection");
 const loadAsk = () => import("./AskSection");
+const loadRanking = () => import("./RankingTab");
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
 const ReviewsTab = dynamic(loadReviewsTab, { loading: () => <TabLoading /> });
 const WeatherSection = dynamic(loadWeather, { loading: () => <TabLoading /> });
 const AskSection = dynamic(loadAsk, { loading: () => <TabLoading /> });
+const RankingTab = dynamic(loadRanking, { loading: () => <TabLoading /> });
 
-type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "weather" | "ai" | "reviews" | "checklist" | "info";
+type Tab = "overview" | "schedule" | "map" | "stays" | "tours" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "overview", label: "홈" },
@@ -40,6 +42,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "reviews", label: "후기" },
   { id: "checklist", label: "준비물" },
   { id: "info", label: "정보·메모" },
+  { id: "rank", label: "호텔 순위" },
 ];
 
 // 폰 하단 탭바: 자주 쓰는 4개 + 더보기
@@ -89,6 +92,7 @@ const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "reviews", emoji: "📝", label: "후기", desc: "블로그 후기 요약" },
   { id: "checklist", emoji: "✅", label: "준비물", desc: "챙길 것 체크리스트" },
   { id: "info", emoji: "🗒️", label: "정보·메모", desc: "항공편 · 메모 · 백업" },
+  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "시내 호텔 조식 기준 순위 · 장단점 · 후기" },
 ];
 
 // 오늘 날짜는 브라우저에서만 계산한다 (서버 렌더링 때는 null → 하이드레이션 불일치 없음)
@@ -280,6 +284,7 @@ export default function PlannerApp() {
         {tab === "tours" && <ToursShopsTab state={state} update={update} />}
         {tab === "weather" && <WeatherSection />}
         {tab === "ai" && <AskSection />}
+        {tab === "rank" && <RankingTab />}
         {tab === "reviews" && <ReviewsTab />}
         {tab === "checklist" && <ChecklistTab state={state} update={update} />}
         {tab === "info" && <InfoTab state={state} update={update} />}
