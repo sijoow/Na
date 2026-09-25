@@ -24,22 +24,38 @@ interface RankedHotel {
   links: { label: string; url: string }[];
   blogPosts: BlogPost[];
   verdict: string;
+  scores: Record<Criterion, number>;
+  scoreNotes: Record<Criterion, string>;
 }
 
-// 순위: 아이 기준 조식 점수가 높은 순 (같으면 입력 순서)
-const HOTELS = (ranking.hotels as RankedHotel[])
-  .map((h, i) => ({ h, i }))
-  .sort((a, b) => b.h.breakfastScore - a.h.breakfastScore || a.i - b.i)
-  .map(({ h }) => h);
+type Criterion = "access" | "condition" | "breakfast" | "price" | "kids";
+type SortKey = "total" | Criterion;
+
+const WEIGHTS = ranking.weights as Record<Criterion, number>;
+const CRITERIA: { key: Criterion; label: string; icon: string }[] = [
+  { key: "access", label: "접근성·위치", icon: "📍" },
+  { key: "condition", label: "호텔 상태", icon: "🏨" },
+  { key: "breakfast", label: "조식", icon: "🍳" },
+  { key: "price", label: "가격", icon: "💰" },
+  { key: "kids", label: "아이 시설", icon: "🧒" },
+];
+const totalScore = (h: RankedHotel) =>
+  CRITERIA.reduce((sum, c) => sum + (h.scores?.[c.key] ?? 0) * (WEIGHTS[c.key] ?? 0), 0);
+
+const ALL = ranking.hotels as unknown as RankedHotel[];
+function sortHotels(key: SortKey): RankedHotel[] {
+  const val = (h: RankedHotel) => (key === "total" ? totalScore(h) : h.scores[key]);
+  // 동점이면 종합 점수 순
+  return [...ALL].sort((a, b) => val(b) - val(a) || totalScore(b) - totalScore(a));
+}
 const PENDING = ranking.pending as string[];
 
-function Stars({ score }: { score: number }) {
+function ScoreBadge({ value, label }: { value: number; label?: string }) {
   return (
-    <span className="inline-flex items-center gap-1 whitespace-nowrap text-[14px] font-bold text-accent" aria-label={`조식 ${score}점 / 5점`}>
-      {"★".repeat(Math.floor(score))}
-      {score % 1 >= 0.5 ? "½" : ""}
-      <span className="text-ink-4">{"★".repeat(5 - Math.ceil(score))}</span>
-      <span className="ml-0.5 text-ink-2">{score}</span>
+    <span className="inline-flex shrink-0 items-baseline gap-1 rounded-xl bg-accent-soft px-2.5 py-1 font-bold whitespace-nowrap text-accent">
+      {label && <span className="text-[12px]">{label}</span>}
+      <span className="text-[17px] tabular-nums">{value.toFixed(value % 1 === 0 ? 0 : 2)}</span>
+      <span className="text-[11px] text-ink-3">/5</span>
     </span>
   );
 }
@@ -50,15 +66,35 @@ function imageSearch(h: RankedHotel, extra: string) {
 }
 
 export default function RankingTab() {
+  const [sortKey, setSortKey] = useState<SortKey>("total");
+  const HOTELS = sortHotels(sortKey);
   return (
     <div className="space-y-5">
       <section className={`${card} p-5 md:p-6`}>
         <p className="text-[15px] font-semibold text-ink-3">나트랑 시내 호텔 순위</p>
-        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">4살 아이 조식 기준 추천 순위</h2>
+        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">접근성·호텔 상태 중심 추천 순위</h2>
         <p className="mt-2 text-[14px] leading-relaxed text-ink-2">
-          네이버 블로그 후기와 예약 사이트 평점을 토대로 조식(아이 메뉴·한식·혼잡도)을 가장 크게 반영했어요. 가격은 아고다
-          실시간 조회(2026-09-25, 성인 2 + 4세, 조식 포함) 기준 참고가예요.
+          블로그 후기와 예약 사이트 평점을 토대로 항목별 5점 만점으로 매겼어요. 종합 점수 비중은{" "}
+          {CRITERIA.map((c) => `${c.label} ${Math.round((WEIGHTS[c.key] ?? 0) * 100)}%`).join(" · ")}예요. 가격은
+          2026-09-25 예약 사이트 조회 기준 참고가예요.
         </p>
+        <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1 no-scrollbar">
+          {([["total", "🏆 종합"], ...CRITERIA.map((c) => [c.key, `${c.icon} ${c.label}`])] as [SortKey, string][]).map(
+            ([key, label]) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setSortKey(key)}
+                aria-pressed={sortKey === key}
+                className={`press min-h-10 shrink-0 rounded-full px-3.5 text-[14px] font-semibold whitespace-nowrap ${
+                  sortKey === key ? "bg-ink text-page" : "bg-surface-2 text-ink-2"
+                }`}
+              >
+                {label}
+              </button>
+            ),
+          )}
+        </div>
         {PENDING.length > 0 && (
           <p className="mt-3 rounded-2xl bg-accent-soft px-4 py-3 text-[14px] font-semibold text-accent">
             🔄 조사 중: {PENDING.join(" · ")} — 끝나면 순위에 합쳐져요
@@ -83,7 +119,7 @@ export default function RankingTab() {
                   <span className="block truncate text-[16px] font-bold">{h.name}</span>
                   <span className="mt-0.5 block text-[13px] text-ink-3">{h.perNight}</span>
                 </span>
-                <Stars score={h.breakfastScore} />
+                <ScoreBadge value={sortKey === "total" ? totalScore(h) : h.scores[sortKey]} />
               </a>
             </li>
           ))}
@@ -107,7 +143,7 @@ function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number }) {
         <span className={`rounded-lg px-2 py-1 text-[13px] font-bold ${rank === 1 ? "bg-accent text-white" : "bg-primary-soft text-primary-ink"}`}>
           {rank}위
         </span>
-        <Stars score={h.breakfastScore} />
+        <ScoreBadge value={totalScore(h)} label="종합" />
       </div>
       <h3 className="mt-2 text-[20px] leading-snug font-bold tracking-tight">{h.name}</h3>
       <p className="text-[13px] text-ink-3">{h.localName}</p>
@@ -118,6 +154,23 @@ function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number }) {
         <p className="mt-0.5 text-[14px] text-ink-2">{h.total}</p>
         <p className="mt-0.5 text-[13px] text-ink-3">조식: {h.breakfast}</p>
       </div>
+
+      <ul className="mt-3 space-y-2">
+        {CRITERIA.map((c) => (
+          <li key={c.key}>
+            <div className="flex items-center gap-2 text-[13px]">
+              <span className="w-24 shrink-0 font-semibold text-ink-2">
+                {c.icon} {c.label}
+              </span>
+              <span className="h-2 flex-1 overflow-hidden rounded-full bg-surface-2">
+                <span className="block h-full rounded-full bg-primary" style={{ width: `${(h.scores[c.key] / 5) * 100}%` }} />
+              </span>
+              <span className="w-7 shrink-0 text-right font-bold tabular-nums">{h.scores[c.key]}</span>
+            </div>
+            <p className="mt-0.5 pl-[6.5rem] text-[12px] leading-snug text-ink-3 max-sm:pl-0">{h.scoreNotes[c.key]}</p>
+          </li>
+        ))}
+      </ul>
 
       <p className="mt-3 text-[15px] leading-relaxed font-medium text-ink">{h.verdict}</p>
 
