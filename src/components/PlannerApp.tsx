@@ -205,8 +205,28 @@ export default function PlannerApp() {
     <div className="min-h-dvh">
       <header className="sticky top-0 z-30 bg-page/90 pt-[env(safe-area-inset-top)] backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-5 md:h-auto md:px-8 md:pt-4 md:pb-1">
-          <h1 className="min-w-0 flex-1 truncate text-[19px] font-bold tracking-tight md:text-2xl">
-            {state.tripTitle}
+          {/* 로고: 누르면 홈으로 */}
+          <h1 className="min-w-0 flex-1">
+            <button
+              type="button"
+              onClick={() => {
+                setTab("overview");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="press flex min-w-0 items-center gap-2.5 rounded-xl py-1 pr-2 text-left"
+              aria-label="홈으로"
+            >
+              <VietnamFlag className="h-6 w-9 shrink-0 rounded-[5px] shadow-sm md:h-7 md:w-[42px]" />
+              <span className="min-w-0">
+                <span className="block truncate text-[18px] leading-tight font-extrabold tracking-tight md:text-[22px]">
+                  <span className="text-primary">나트랑</span> 여행기
+                </span>
+                <span className="block truncate text-[12px] leading-tight font-medium text-ink-3 md:text-[13px]">
+                  {state.tripTitle.match(/\d+박\s*\d+일/)?.[0] ?? state.tripTitle} ·{" "}
+                  {state.startDate.slice(5).replace("-", ".")} – {state.endDate.slice(5).replace("-", ".")} · {state.travelers}
+                </span>
+              </span>
+            </button>
           </h1>
           <SaveIndicator status={sync.saveStatus} error={sync.saveError} onRetry={sync.retrySave} />
         </div>
@@ -457,5 +477,18 @@ function LoadingSkeleton() {
         ))}
       </div>
     </div>
+  );
+}
+
+/** 베트남 국기 (이모지 🇻🇳 는 윈도우에서 'VN' 글자로 보일 수 있어 직접 그림) */
+function VietnamFlag({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 30 20" className={className} role="img" aria-label="베트남 국기">
+      <rect width="30" height="20" fill="#DA251D" />
+      <polygon
+        fill="#FFFF00"
+        points="15,4 16.41,8.06 20.71,8.15 17.28,10.74 18.53,14.85 15,12.4 11.47,14.85 12.72,10.74 9.29,8.15 13.59,8.06"
+      />
+    </svg>
   );
 }
