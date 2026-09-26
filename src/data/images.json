@@ -321,5 +321,199 @@
       "source": "https://commons.wikimedia.org/wiki/File:Vietnam_5000_Dong_1953_Averse.jpg",
       "kind": "commons"
     }
+  },
+  "restaurants": {
+    "an-thoi": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-an-thoi.jpg",
+      "credit": "Martin Lewison from Forest Hills, NY, U.S.A.",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99t_%C4%91%C4%A9a_b%C3%A1nh_x%C3%A8o.jpg",
+      "kind": "dish",
+      "caption": "반쎄오 (대표 메뉴 예시, 다낭에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "moc-seafood-nhatrang": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-moc-seafood-nhatrang.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:T%C3%B4m_n%C6%B0%E1%BB%9Bng_Phan_X%C3%ADch_Long,_n%C4%83m_2017_(1).jpg",
+      "kind": "dish",
+      "caption": "타이거새우 구이 (대표 메뉴 예시, 호찌민 식당에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "banh-mi-phan": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-banh-mi-phan.jpg",
+      "credit": "源義信",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2023-12-10_Coffee_and_b%C3%A1nh_m%C3%AC_in_Saigon.jpg",
+      "kind": "dish",
+      "caption": "반미와 연유커피 (대표 메뉴 예시, 호찌민에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "xom-moi-garden": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-xom-moi-garden.jpg",
+      "credit": "ASM~viwiki (vi.wikipedia)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_x%C3%A8o_nh%C3%A2n_M%E1%BB%B1c,_Nha_Trang.jpg",
+      "kind": "dish",
+      "caption": "오징어 반쎄오 (대표 메뉴 '갑오징어 새우 반쎄오' 예시, 나트랑에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "la-nha": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-la-nha.jpg",
+      "credit": "Phương Huy",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Qu%C3%A1n_ph%E1%BB%9F_Trang_%E1%BB%9F_T%C3%A2n_Qu%C3%BD_ng2th9n2022_(ph%E1%BB%9F_l%C3%B2ng_b%C3%B2_v%C3%A0_th%E1%BB%8Bt_b%C3%B2).jpg",
+      "kind": "dish",
+      "caption": "소 내장 쌀국수(퍼 롱 보). 대표 메뉴 '매운 소곱창 쌀국수'를 보여 주는 예시이며 이 가게 사진이 아님. 라냐 것은 빨갛고 얼큰한 국물임"
+    },
+    "cccp-coffee": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-cccp-coffee.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnamese_Salted_Coffee_%26_Xin_chao%27s_coconut_Coffee_-_Xin_Chao,_Eastbourne_2026-08-14.jpg",
+      "kind": "dish",
+      "caption": "코코넛 커피(오른쪽, 왼쪽은 소금커피). 대표 메뉴를 보여 주는 예시이며 영국의 베트남 카페에서 찍은 사진이라 이 가게 사진이 아님"
+    },
+    "anh-oi": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-anh-oi.jpg",
+      "credit": "Phương Huy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%E1%BB%AFa_%C4%83n_s%C3%A1ng_t%E1%BA%A1i_Qu%C3%A1n_%C4%90%C3%B4i_D%C3%A9p_%E1%BB%9F_Q1_(t%C3%B4_ph%E1%BB%9F_th%E1%BB%91_%C4%91%C3%A1_%C4%91%C3%B4ng_tr%C3%B9ng_h%E1%BA%A1_th%E1%BA%A3o_v%C3%A0_c%C3%A0_ph%C3%AA_s%E1%BB%AFa_n%C3%B3ng)_(1).jpg",
+      "kind": "dish",
+      "caption": "돌솥 쌀국수(퍼 토다). 대표 메뉴 '돌솥 왕갈비 쌀국수'와 같은 돌솥 스타일을 보여 주는 예시이며 이 가게 사진이 아님. 사진은 갈비 대신 동충하초가 들어간 버전"
+    },
+    "madam-phuong": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-madam-phuong.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_x%C3%A8o_v%E1%BB%89a_h%C3%A8_%E1%BB%9F_%C4%91%C6%B0%E1%BB%9Dng_K%C3%AAnh_N%C6%B0%E1%BB%9Bc_%C4%90en_(1).jpg",
+      "kind": "dish",
+      "caption": "반쎄오 (대표 메뉴 예시, 호찌민 길거리 가게에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "chao-mao": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-chao-mao.jpg",
+      "credit": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mi_Quang_1A_Danang.jpg",
+      "kind": "dish",
+      "caption": "미꽝 (Mì Quảng, 대표 메뉴 예시: 다낭에서 찍은 사진이며 이 가게 사진 아님)"
+    },
+    "pizza-4ps-sheraton": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-pizza-4ps-sheraton.jpg",
+      "credit": "إيان",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pizza_burrata.jpg",
+      "kind": "dish",
+      "caption": "부라타 마르게리타 피자 (대표 메뉴 예시: 이탈리아 토리노에서 찍은 사진이며 이 가게 사진 아님)"
+    },
+    "pho-hanh-phuc": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-pho-hanh-phuc.jpg",
+      "credit": "Zenyrgarden",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pho_in_rock_bowl.jpg",
+      "kind": "dish",
+      "caption": "돌솥(뚝배기) 쌀국수 (Phở thố đá, 대표 메뉴 예시: 이 가게 사진 아님)"
+    },
+    "chuon-chuon-kim": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-chuon-chuon-kim.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:S%C6%B0%E1%BB%9Dn_non_kho.jpg",
+      "kind": "dish",
+      "caption": "베트남식 돼지갈비 조림 (Sườn non kho, 대표 메뉴 예시: 이 가게 사진 아님)"
+    },
+    "vinh-xanh-seafood": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-vinh-xanh-seafood.jpg",
+      "credit": "Phương Huy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%E1%BB%AFa_c%C6%A1m_nh%C3%A0_Mheo_ng19th2n2021_(d%C4%A9a_%E1%BB%91c_m%C3%B3ng_tay_x%C3%A0o_rau_mu%E1%BB%91ng)_(2).jpg",
+      "kind": "dish",
+      "caption": "맛조개 모닝글로리 볶음 (대표 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "fruit-shop-65": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-fruit-shop-65.jpg",
+      "credit": "Bonneaue",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mangosteen_Basket.jpg",
+      "kind": "dish",
+      "caption": "망고스틴 바구니 (대표 과일 예시, 이 가게 사진 아님)"
+    },
+    "em-oi-cam-ranh": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-em-oi-cam-ranh.jpg",
+      "credit": "Codename5281",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ph%E1%BB%9F_b%C3%B2,_C%E1%BA%A7u_Gi%E1%BA%A5y,_H%C3%A0_N%E1%BB%99i.jpg",
+      "kind": "dish",
+      "caption": "소고기 쌀국수 (대표 메뉴 예시, 하노이에서 찍은 사진, 이 가게 사진 아님)"
+    },
+    "thao-tien-seafood": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-thao-tien-seafood.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:T%C3%B4m_n%C6%B0%E1%BB%9Bng_sn_2012_(4).JPG",
+      "kind": "dish",
+      "caption": "새우 꼬치구이 (대표 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "lang-chai-cam-lam": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-lang-chai-cam-lam.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%BB%90c_m%C3%B3ng_tay_Nha_Trang.jpg",
+      "kind": "dish",
+      "caption": "맛조개(옥몽따이) — 대표 메뉴 '맛조개 모닝글로리 볶음'의 재료 예시, 나트랑에서 촬영 (이 가게 사진 아님)"
+    },
+    "jj-seafood": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-jj-seafood.jpg",
+      "credit": "jetsun",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:L%E1%BB%99c_Th%E1%BB%8D,_NHA_Trang,_Khanh_Hoa_Province,_Vietnam_-_panoramio_(3).jpg",
+      "kind": "dish",
+      "caption": "활 랍스터(크레이피시) — 대표 메뉴 재료 예시, 나트랑 해변 해산물 노점에서 촬영 (이 가게 사진 아님)"
+    },
+    "bun-ca-hai-ca": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-bun-ca-hai-ca.jpg",
+      "credit": "Everyday English",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bun_cha_ca.jpg",
+      "kind": "dish",
+      "caption": "분짜까(생선어묵 쌀국수) — 대표 메뉴 예시, 다낭에서 촬영 (이 가게 사진 아님)"
+    },
+    "tom79": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-tom79.jpg",
+      "credit": "jetsun",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:L%E1%BB%99c_Th%E1%BB%8D,_NHA_Trang,_Khanh_Hoa_Province,_Vietnam_-_panoramio_(2).jpg",
+      "kind": "dish",
+      "caption": "게·랍스터·조개 해산물 모둠 — 콤보 메뉴 느낌의 예시, 나트랑에서 촬영 (이 가게 사진 아님)"
+    },
+    "spoon-camranh": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-spoon-camranh.jpg",
+      "credit": "Junho Jung (Flickr)",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korea-Paju-Bossam-Steamed_port_with_vegetable_wraps-01.jpg",
+      "kind": "dish",
+      "caption": "보쌈 (대표 메뉴 예시, 이 가게 사진 아님 · 한국 파주에서 찍은 사진)"
+    },
+    "cong-caphe": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-cong-caphe.jpg",
+      "credit": "Phan Minh Tuấn",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ph%E1%BB%91_Trung_Ho%C3%A0,_H%C3%A0_N%E1%BB%99i_001.JPG",
+      "kind": "shop",
+      "caption": "콩카페 하노이 쭝화점 외관 (같은 체인의 다른 지점, 나트랑 매장 아님)"
+    },
+    "goguryeo-korean": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-goguryeo-korean.jpg",
+      "credit": "이동원",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samgyeopsal_table.jpg",
+      "kind": "dish",
+      "caption": "삼겹살 불판 한상 (대표 메뉴 예시, 이 가게 사진 아님 · 한국에서 찍은 사진)"
+    },
+    "nem-nuong-dang-van-quyen": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-nem-nuong-dang-van-quyen.jpg",
+      "credit": "Phương Huy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_h%E1%BB%8Fi_nem_n%C6%B0%E1%BB%9Bng_%C4%83n_v%E1%BB%9Bi_b%C3%A1nh_tr%C3%A1ng_th%C3%A1ng_6_n%C4%83m_2018_(1).jpg",
+      "kind": "dish",
+      "caption": "넴느엉과 라이스페이퍼·채소 한상 (대표 메뉴 예시, 이 가게 사진 아님 · 베트남에서 찍은 사진)"
+    }
   }
 }

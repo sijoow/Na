@@ -162,6 +162,12 @@ function RestaurantCard({ r }: { r: Restaurant }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const photo = restaurantPhoto(r.id);
   const menuCount = r.menu?.sections.reduce((n, s) => n + s.items.length, 0) ?? 0;
+  // 메뉴판이 있으면 대표 메뉴를 메뉴판의 인기 메뉴에서 가져와 가격을 맞춘다
+  const menuPicks = (r.menu?.sections ?? [])
+    .flatMap((s) => s.items)
+    .filter((m) => m.pick)
+    .map((m) => ({ dish: m.vi ? `${m.ko} (${m.vi})` : m.ko, price: m.krw ? `${m.price} (${m.krw})` : m.price, note: m.note }));
+  const topPicks = menuPicks.length > 0 ? menuPicks : r.mustOrder;
   return (
     <article className={`${card} p-5 md:p-6`}>
       {photo && (
@@ -187,11 +193,11 @@ function RestaurantCard({ r }: { r: Restaurant }) {
 
       <p className="mt-3 text-[15px] leading-relaxed text-ink">{r.whyPopular}</p>
 
-      {r.mustOrder.length > 0 && (
+      {topPicks.length > 0 && (
         <div className="mt-3 rounded-2xl bg-surface-2 p-4">
           <p className="text-[13px] font-semibold text-ink-3">한국인들이 주로 시키는 메뉴</p>
           <ul className="mt-1 space-y-1">
-            {r.mustOrder.slice(0, 3).map((m, i) => (
+            {topPicks.slice(0, 3).map((m, i) => (
               <li key={`${m.dish}-${i}`} className="flex flex-wrap items-baseline justify-between gap-x-3 text-[15px]">
                 <span className="font-semibold">{m.dish}</span>
                 <span className="text-[14px] text-ink-2 tabular-nums">{m.price}</span>
@@ -235,7 +241,7 @@ function RestaurantCard({ r }: { r: Restaurant }) {
 
       {open && (
         <div className="mt-4 space-y-3 text-[14px] leading-relaxed">
-          {r.mustOrder.length > 0 && (
+          {!r.menu && r.mustOrder.length > 0 && (
             <ul className="divide-y divide-line">
               {r.mustOrder.map((m, i) => (
                 <li key={`${m.dish}-${i}`} className="py-2">
@@ -309,10 +315,8 @@ function RestaurantCard({ r }: { r: Restaurant }) {
 function MenuBoard({ menu }: { menu: Menu }) {
   return (
     <div className="mt-3 rounded-2xl border border-line bg-surface-2 p-4">
-      <div className="flex items-baseline justify-between gap-2">
-        <p className="text-[15px] font-extrabold tracking-tight">📋 메뉴판</p>
-        <p className="text-[12px] text-ink-3">{menu.asOf} 기준</p>
-      </div>
+      <p className="text-[15px] font-extrabold tracking-tight">📋 메뉴판</p>
+      <p className="mt-0.5 text-[12px] text-ink-3">{menu.asOf}</p>
       <p className="mt-1 text-[12px] text-ink-3">👍 한국인 인기 · 🧒 아이 추천</p>
       {menu.sections.map((sec, si) => (
         <div key={`${sec.title}-${si}`} className="mt-3">
