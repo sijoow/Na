@@ -47,7 +47,8 @@ const FILTERS: [Filter, string][] = [
   ["camranh", "🏝️ 캄란"],
   ["departure", "✈️ 출국 전 샤워"],
 ];
-const isDeparture = (s: SpaShop) => s.tags.some((t) => /샤워|공항/.test(t));
+// 출국 전: 공항 드랍 + 샤워가 둘 다 되는 곳
+const isDeparture = (s: SpaShop) => s.tags.some((t) => t.startsWith("✈️")) && s.tags.some((t) => t.startsWith("🚿"));
 
 function mapUrl(s: SpaShop) {
   return s.lat !== null && s.lng !== null
@@ -74,7 +75,13 @@ export default function SpaSection() {
       <section className={`${card} p-5 md:p-6`}>
         <p className="text-[15px] font-semibold text-ink-3">가족 마사지·스파 추천</p>
         <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">4살 아이와 같이 받을 수 있는 곳</h2>
-        {data.summary && <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{data.summary}</p>}
+        {data.summary && (
+          <ul className="mt-3 space-y-2.5 rounded-2xl bg-primary-soft p-4 text-[14px] leading-relaxed text-ink">
+            {data.summary.split("\n").map((line, i) => (
+              <li key={i}>{line}</li>
+            ))}
+          </ul>
+        )}
         <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1 no-scrollbar">
           {FILTERS.map(([key, label]) => (
             <button
@@ -147,7 +154,7 @@ function SpaCard({ shop: s }: { shop: SpaShop }) {
       </div>
 
       <p className="mt-3 text-[15px] leading-relaxed text-ink">{s.whyRecommend}</p>
-      <p className="mt-2 text-[14px] leading-relaxed text-ink-2">
+      <p className={`mt-2 text-[14px] leading-relaxed text-ink-2 ${open ? "" : "line-clamp-3"}`}>
         <b className="text-ink">🧒 아이</b> {s.kids}
       </p>
 

@@ -28,7 +28,9 @@ export default function ToursShopsTab({
   update: (fn: (s: TripState) => TripState) => void;
 }) {
   const [section, setSection] = useState<Section>("tours");
-  const { activities, activitiesNote, shops, shoppingSummary } = GUIDE;
+  const { activitiesNote, shops, shoppingSummary } = GUIDE;
+  // 마사지는 따로 '마사지·스파' 탭에서 보여 준다
+  const activities = GUIDE.activities.filter((a) => a.id !== "massage");
 
   return (
     <div className="space-y-4">
