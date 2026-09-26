@@ -1144,5 +1144,92 @@
     "breakfast": 0.15,
     "price": 0.1,
     "kids": 0.1
+  },
+  "finalists": {
+    "source": "아고다 찜 목록 \"2026 나트랑 / 나짱\" (2026-09-26 캡처)",
+    "dates": "10/3~10/8 · 객실 1개 · 성인 2명 + 아동 1명 · 모두 조식 포함 · 세금 포함",
+    "items": [
+      {
+        "id": "regalia-gold-hotel",
+        "agoda": "8.9 (24,759)",
+        "stars": 5,
+        "room": "스위트",
+        "size": "38㎡",
+        "beds": "킹베드 1",
+        "view": "씨뷰(부분)",
+        "nights": 5,
+        "price": 537945,
+        "cancel": "환불 불가 (낮은 요금)",
+        "cancelBy": null
+      },
+      {
+        "id": "diamond-bay-hotel-nha-trang",
+        "agoda": "8.7 (5,658)",
+        "stars": 5,
+        "room": "그랜드 디럭스 더블",
+        "size": "35㎡",
+        "beds": "킹베드 1",
+        "view": "씨뷰(부분)",
+        "nights": 5,
+        "price": 319940,
+        "cancel": "9/27 전까지 무료 취소",
+        "cancelBy": "2026-09-27",
+        "alt": "그랜드 로얄 오션뷰 더블 40㎡ · ₩355,470 (취소 조건 표시 없음)"
+      },
+      {
+        "id": "vinpearl-beachfront-nha-trang",
+        "agoda": "8.9 (9,896)",
+        "stars": 5,
+        "room": "스튜디오 트윈룸",
+        "size": "41㎡",
+        "beds": "싱글베드 2",
+        "view": "시티뷰",
+        "nights": 5,
+        "price": 570015,
+        "cancel": "9/29 전까지 무료 취소 · 선예약 후지불",
+        "cancelBy": "2026-09-29"
+      },
+      {
+        "id": "the-empyrean-nha-trang",
+        "agoda": "8.4 (2,497)",
+        "stars": 5,
+        "room": "디럭스 트윈 오션뷰",
+        "size": "41㎡",
+        "beds": "싱글베드 2",
+        "view": "오션뷰",
+        "nights": 5,
+        "price": 425101,
+        "cancel": "환불 불가 (낮은 요금)",
+        "cancelBy": null
+      },
+      {
+        "id": "four-points-by-sheraton-nha-trang",
+        "agoda": "8.9 (363)",
+        "stars": 4,
+        "room": "디럭스룸 (킹 1, 도시 전망)",
+        "size": "31㎡",
+        "beds": "킹베드 1 (최대 성인 3)",
+        "view": "시티뷰",
+        "nights": 3,
+        "price": 443809,
+        "cancel": "9/30 전까지 무료 취소 · 선예약 후지불",
+        "cancelBy": "2026-09-30",
+        "note": "찜 날짜가 10/3~10/6 3박이에요"
+      },
+      {
+        "id": "starcity-bayfront-nha-trang",
+        "agoda": "8.9 (6,175)",
+        "stars": 5,
+        "room": "스타 스위트룸",
+        "size": "62㎡",
+        "beds": "킹베드 1",
+        "view": "오션뷰",
+        "nights": 5,
+        "price": 538229,
+        "cancel": "10/1 전까지 무료 취소 · 선예약 후지불",
+        "cancelBy": "2026-10-01",
+        "note": "아고다가 표시한 이 날짜 최저가 상품"
+      }
+    ]
   }
 }

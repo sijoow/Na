@@ -105,10 +105,18 @@ function mapUrl(name: string, lat: number | null, lng: number | null) {
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} Nha Trang`)}`;
 }
 
-export function FoodSection() {
+/** compact: 맛집 탭에서 새 '한국인 맛집' 목록 아래에 붙일 때 — 날짜별 동선은 빼고 예전 가게 목록은 접어 둔다 */
+export function FoodSection({ compact = false }: { compact?: boolean }) {
+  const spots = (
+    <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-2">
+      {FOOD.spots.map((s) => (
+        <FoodSpotCard key={s.id} spot={s} />
+      ))}
+    </div>
+  );
   return (
     <div className="space-y-5">
-      {FOOD.summary && (
+      {!compact && FOOD.summary && (
         <section className={`${card} p-5 md:p-6`}>
           <p className="text-[15px] font-semibold text-ink-3">날짜별 먹거리 동선</p>
           <NumberedList items={splitNumbered(FOOD.summary).filter(isDayItem)} />
@@ -142,14 +150,19 @@ export function FoodSection() {
         </div>
       </section>
 
-      <section>
-        <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">가게</h3>
-        <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-2">
-          {FOOD.spots.map((s) => (
-            <FoodSpotCard key={s.id} spot={s} />
-          ))}
-        </div>
-      </section>
+      {compact ? (
+        <details className={`${card} px-5 py-4`}>
+          <summary className="cursor-pointer text-[15px] font-bold text-ink-2">
+            예전에 조사한 가게 {FOOD.spots.length}곳 (퍼홍·반깐97·루이지애나·할머니 반쎄오 등)
+          </summary>
+          <div className="mt-4">{spots}</div>
+        </details>
+      ) : (
+        <section>
+          <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">가게</h3>
+          {spots}
+        </section>
+      )}
     </div>
   );
 }

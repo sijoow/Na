@@ -83,7 +83,13 @@ export default function FoodTab() {
           <section className={`${card} p-5 md:p-6`}>
             <p className="text-[15px] font-semibold text-ink-3">나트랑 맛집</p>
             <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">한국인들이 많이 가는 맛집</h2>
-            {data.summary && <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{data.summary}</p>}
+            {data.summary && (
+              <ul className="mt-3 space-y-2.5 rounded-2xl bg-primary-soft p-4 text-[14px] leading-relaxed text-ink">
+                {data.summary.split("\n").map((line, i) => (
+                  <li key={i}>{line}</li>
+                ))}
+              </ul>
+            )}
             <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1 no-scrollbar">
               {FILTERS.map((f) => (
                 <button
@@ -124,7 +130,7 @@ export default function FoodTab() {
         </>
       )}
 
-      <FoodSection />
+      <FoodSection compact={LIST.length > 0} />
     </div>
   );
 }
@@ -165,7 +171,7 @@ function RestaurantCard({ r }: { r: Restaurant }) {
           <b className="text-ink">📅 언제</b> {r.bestFor}
         </p>
       )}
-      <p className="mt-1 text-[14px] leading-relaxed text-ink-2">
+      <p className={`mt-1 text-[14px] leading-relaxed text-ink-2 ${open ? "" : "line-clamp-3"}`}>
         <b className="text-ink">🧒 아이</b> {r.kidFriendly}
       </p>
 

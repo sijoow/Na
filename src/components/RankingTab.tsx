@@ -42,13 +42,38 @@ const CRITERIA: { key: Criterion; label: string; icon: string }[] = [
 const totalScore = (h: RankedHotel) =>
   CRITERIA.reduce((sum, c) => sum + (h.scores?.[c.key] ?? 0) * (WEIGHTS[c.key] ?? 0), 0);
 
+// 사용자가 아고다 찜 목록으로 정한 최종 후보 (찜한 객실·날짜·가격)
+interface Finalist {
+  id: string;
+  agoda: string;
+  stars: number;
+  room: string;
+  size: string;
+  beds: string;
+  view: string;
+  nights: number;
+  price: number;
+  cancel: string;
+  cancelBy: string | null;
+  alt?: string;
+  note?: string;
+}
+const FINALISTS = (ranking.finalists?.items ?? []) as Finalist[];
+const FINAL = new Map(FINALISTS.map((f) => [f.id, f]));
+
 const ALL = ranking.hotels as unknown as RankedHotel[];
-function sortHotels(key: SortKey): RankedHotel[] {
+// 최종 후보가 있으면 그 호텔들만 순위에 넣고, 나머지는 아래에 접어 둔다
+const RANKED = FINAL.size > 0 ? ALL.filter((h) => FINAL.has(h.id)) : ALL;
+const DROPPED = FINAL.size > 0 ? ALL.filter((h) => !FINAL.has(h.id)) : [];
+function sortHotels(list: RankedHotel[], key: SortKey): RankedHotel[] {
   const val = (h: RankedHotel) => (key === "total" ? totalScore(h) : h.scores[key]);
   // 동점이면 종합 점수 순
-  return [...ALL].sort((a, b) => val(b) - val(a) || totalScore(b) - totalScore(a));
+  return [...list].sort((a, b) => val(b) - val(a) || totalScore(b) - totalScore(a));
 }
 const PENDING = ranking.pending as string[];
+
+const won = (n: number) => `₩${n.toLocaleString("ko-KR")}`;
+const perNight = (f: Finalist) => `1박 약 ${(f.price / f.nights / 10000).toFixed(1)}만원`;
 
 function ScoreBadge({ value, label }: { value: number; label?: string }) {
   return (
@@ -67,12 +92,14 @@ function imageSearch(h: RankedHotel, extra: string) {
 
 export default function RankingTab() {
   const [sortKey, setSortKey] = useState<SortKey>("total");
-  const HOTELS = sortHotels(sortKey);
+  const HOTELS = sortHotels(RANKED, sortKey);
   return (
     <div className="space-y-5">
       <section className={`${card} p-5 md:p-6`}>
         <p className="text-[15px] font-semibold text-ink-3">나트랑 시내 호텔 순위</p>
-        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">접근성·호텔 상태 중심 추천 순위</h2>
+        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">
+          {FINAL.size > 0 ? `최종 후보 ${FINAL.size}곳 비교 순위` : "접근성·호텔 상태 중심 추천 순위"}
+        </h2>
         <p className="mt-2 text-[14px] leading-relaxed text-ink-2">
           블로그 후기와 예약 사이트 평점을 토대로 항목별 5점 만점으로 매겼어요. 종합 점수 비중은{" "}
           {CRITERIA.map((c) => `${c.label} ${Math.round((WEIGHTS[c.key] ?? 0) * 100)}%`).join(" · ")}예요. 가격은
@@ -117,7 +144,11 @@ export default function RankingTab() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[16px] font-bold">{h.name}</span>
-                  <span className="mt-0.5 block text-[13px] text-ink-3">{h.perNight}</span>
+                  {FINAL.has(h.id) ? (
+                    <FinalLine f={FINAL.get(h.id)!} />
+                  ) : (
+                    <span className="mt-0.5 block text-[13px] text-ink-3">{h.perNight}</span>
+                  )}
                 </span>
                 <ScoreBadge value={sortKey === "total" ? totalScore(h) : h.scores[sortKey]} />
               </a>
@@ -131,29 +162,91 @@ export default function RankingTab() {
           <HotelCard key={h.id} hotel={h} rank={i + 1} />
         ))}
       </div>
+
+      {DROPPED.length > 0 && (
+        <details className={`${card} px-5 py-4`}>
+          <summary className="cursor-pointer text-[15px] font-bold text-ink-2">
+            찜 목록에서 뺀 호텔 {DROPPED.length}곳 ({DROPPED.map((h) => h.name.split(" (")[0]).join(" · ")})
+          </summary>
+          <div className="mt-4 grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
+            {sortHotels(DROPPED, "total").map((h) => (
+              <HotelCard key={h.id} hotel={h} rank={null} />
+            ))}
+          </div>
+        </details>
+      )}
     </div>
   );
 }
 
-function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number }) {
+// 최종 후보 한 줄 요약: 찜한 객실 · 박수·총액 · 취소 조건 (아고다 찜 기준)
+function FinalLine({ f }: { f: Finalist }) {
+  const refundable = f.cancelBy !== null;
+  return (
+    <>
+      <span className="mt-0.5 block text-[13px] text-ink-3">
+        {f.room} · {f.nights}박 <b className="font-semibold text-ink-2 tabular-nums">{won(f.price)}</b> ({perNight(f)})
+      </span>
+      <span
+        className={`mt-1 inline-block rounded-md px-1.5 py-0.5 text-[12px] font-bold ${
+          refundable ? "bg-primary-soft text-primary-ink" : "bg-accent-soft text-accent"
+        }`}
+      >
+        {refundable ? `✓ ${f.cancel.split(" · ")[0]}` : `⚠️ ${f.cancel}`}
+      </span>
+    </>
+  );
+}
+
+// 호텔 카드 안의 '아고다 찜' 상자
+function FinalBox({ f }: { f: Finalist }) {
+  return (
+    <div className="mt-3 rounded-2xl border border-primary/30 bg-primary-soft p-4">
+      <p className="text-[13px] font-bold text-primary-ink">
+        💙 아고다 찜 · {ranking.finalists?.dates.split(" · ")[0]} ({f.nights}박)
+      </p>
+      <p className="mt-1 text-[16px] font-bold tracking-tight">
+        {f.room} <span className="text-[14px] font-medium text-ink-2">{f.size}</span>
+      </p>
+      <p className="text-[13px] text-ink-2">
+        {f.beds} · {f.view} · 조식 포함 · 아고다 {f.agoda}
+      </p>
+      <p className="mt-2 text-[18px] font-bold tracking-tight tabular-nums">
+        {won(f.price)} <span className="text-[13px] font-medium text-ink-3">{f.nights}박 세금 포함 · {perNight(f)}</span>
+      </p>
+      <p className={`mt-1 text-[13px] font-semibold ${f.cancelBy ? "text-primary-ink" : "text-accent"}`}>
+        {f.cancelBy ? "✓" : "⚠️"} {f.cancel}
+      </p>
+      {f.alt && <p className="mt-1 text-[13px] text-ink-3">다른 찜 객실: {f.alt}</p>}
+      {f.note && <p className="mt-1 text-[13px] text-ink-3">{f.note}</p>}
+    </div>
+  );
+}
+
+function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number | null }) {
   const [open, setOpen] = useState(false);
   return (
     <article id={`rank-${h.id}`} className={`${card} p-5 md:p-6 ${rank === 1 ? "ring-2 ring-accent" : ""}`}>
       <div className="flex items-center justify-between gap-2">
         <span className={`rounded-lg px-2 py-1 text-[13px] font-bold ${rank === 1 ? "bg-accent text-white" : "bg-primary-soft text-primary-ink"}`}>
-          {rank}위
+          {rank === null ? "후보 제외" : `${rank}위`}
         </span>
         <ScoreBadge value={totalScore(h)} label="종합" />
       </div>
       <h3 className="mt-2 text-[20px] leading-snug font-bold tracking-tight">{h.name}</h3>
       <p className="text-[13px] text-ink-3">{h.localName}</p>
       <p className="mt-1 text-[13px] font-medium text-ink-2">{h.rating}</p>
+      {FINAL.has(h.id) && <FinalBox f={FINAL.get(h.id)!} />}
 
-      <div className="mt-3 rounded-2xl bg-surface-2 p-4">
-        <p className="text-[18px] font-bold tracking-tight">{h.perNight}</p>
-        <p className="mt-0.5 text-[14px] text-ink-2">{h.total}</p>
-        <p className="mt-0.5 text-[13px] text-ink-3">조식: {h.breakfast}</p>
-      </div>
+      {FINAL.has(h.id) ? (
+        <p className="mt-2 text-[13px] text-ink-3">🍳 조식: {h.breakfast}</p>
+      ) : (
+        <div className="mt-3 rounded-2xl bg-surface-2 p-4">
+          <p className="text-[18px] font-bold tracking-tight">{h.perNight}</p>
+          <p className="mt-0.5 text-[14px] text-ink-2">{h.total}</p>
+          <p className="mt-0.5 text-[13px] text-ink-3">조식: {h.breakfast}</p>
+        </div>
+      )}
 
       <ul className="mt-3 space-y-2">
         {CRITERIA.map((c) => (
