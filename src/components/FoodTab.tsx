@@ -4,10 +4,31 @@ import { useState } from "react";
 import data from "@/data/restaurants.json";
 import type { BlogPost } from "@/lib/guideTypes";
 import { FoodSection } from "./FoodSouvenirSections";
+import { Photo, restaurantPhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card } from "./ui";
 
 type Category = "pho" | "vietnamese" | "seafood" | "bbq" | "street" | "korean" | "cafe" | "dessert" | "western";
+
+// 메뉴판: 블로그 메뉴판 사진을 복사하지 않고 메뉴 이름·가격(사실 정보)만 모아 다시 그린다
+interface MenuItem {
+  ko: string;
+  vi: string;
+  price: string;
+  krw: string;
+  note: string;
+  /** 한국인들이 많이 시키는 메뉴 */
+  pick: boolean;
+  /** 4살 아이가 먹기 좋은 메뉴 */
+  kid: boolean;
+}
+interface Menu {
+  asOf: string;
+  sections: { title: string; items: MenuItem[] }[];
+  notes: string;
+  photoLinks: { label: string; url: string }[];
+  sources: string[];
+}
 
 interface Restaurant {
   id: string;
@@ -34,6 +55,7 @@ interface Restaurant {
   pros: string[];
   cons: string[];
   blogPosts: BlogPost[];
+  menu?: Menu;
 }
 
 const LIST = [...(data.restaurants as Restaurant[])].sort((a, b) => a.rank - b.rank);
@@ -137,8 +159,21 @@ export default function FoodTab() {
 
 function RestaurantCard({ r }: { r: Restaurant }) {
   const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const photo = restaurantPhoto(r.id);
+  const menuCount = r.menu?.sections.reduce((n, s) => n + s.items.length, 0) ?? 0;
   return (
     <article className={`${card} p-5 md:p-6`}>
+      {photo && (
+        <div className="mb-4">
+          <Photo
+            photo={photo}
+            alt={r.name}
+            className="aspect-[2/1]"
+            note={photo.kind === "shop" ? photo.caption : (photo.caption ?? "대표 메뉴 예시 (이 가게 사진 아님)")}
+          />
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold">
         <span className={`rounded-lg px-2 py-0.5 ${r.rank <= 3 ? "bg-accent text-white" : "bg-primary-soft text-primary-ink"}`}>
           {r.rank}위
@@ -174,6 +209,20 @@ function RestaurantCard({ r }: { r: Restaurant }) {
       <p className={`mt-1 text-[14px] leading-relaxed text-ink-2 ${open ? "" : "line-clamp-3"}`}>
         <b className="text-ink">🧒 아이</b> {r.kidFriendly}
       </p>
+
+      {r.menu && menuCount > 0 && (
+        <>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            className="press mt-4 flex min-h-11 w-full items-center justify-center rounded-2xl bg-ink text-[15px] font-semibold text-page"
+          >
+            {menuOpen ? "메뉴판 접기 ▲" : `📋 메뉴판 보기 (${menuCount}개) ▼`}
+          </button>
+          {menuOpen && <MenuBoard menu={r.menu} />}
+        </>
+      )}
 
       <button
         type="button"
@@ -253,5 +302,55 @@ function RestaurantCard({ r }: { r: Restaurant }) {
         </a>
       </div>
     </article>
+  );
+}
+
+// 앱 안에서 다시 그린 메뉴판 (가격은 조사 시점 기준)
+function MenuBoard({ menu }: { menu: Menu }) {
+  return (
+    <div className="mt-3 rounded-2xl border border-line bg-surface-2 p-4">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-[15px] font-extrabold tracking-tight">📋 메뉴판</p>
+        <p className="text-[12px] text-ink-3">{menu.asOf} 기준</p>
+      </div>
+      <p className="mt-1 text-[12px] text-ink-3">👍 한국인 인기 · 🧒 아이 추천</p>
+      {menu.sections.map((sec, si) => (
+        <div key={`${sec.title}-${si}`} className="mt-3">
+          <p className="border-b border-line pb-1 text-[13px] font-bold text-primary-ink">{sec.title}</p>
+          <ul>
+            {sec.items.map((m, i) => (
+              <li key={`${m.ko}-${i}`} className="border-b border-dashed border-line py-2 last:border-0">
+                <div className="flex items-baseline gap-2">
+                  <span className="min-w-0 flex-1 text-[15px] font-semibold">
+                    {m.ko}
+                    {m.pick && <span className="ml-1 text-[12px]">👍</span>}
+                    {m.kid && <span className="ml-0.5 text-[12px]">🧒</span>}
+                  </span>
+                  <span className="shrink-0 text-right text-[14px] font-bold tabular-nums">{m.price}</span>
+                </div>
+                <div className="flex items-baseline gap-2 text-[12px] text-ink-3">
+                  <span className="min-w-0 flex-1">{m.vi}</span>
+                  {m.krw && <span className="shrink-0 tabular-nums">{m.krw}</span>}
+                </div>
+                {m.note && <p className="mt-0.5 text-[12px] leading-snug text-ink-2">{m.note}</p>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      {menu.notes && <p className="mt-3 rounded-xl bg-surface p-3 text-[13px] leading-relaxed text-ink-2">💡 {menu.notes}</p>}
+      {menu.photoLinks.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {menu.photoLinks.map((l, i) => (
+            <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" className={btn.secondary}>
+              📷 {l.label} ↗
+            </a>
+          ))}
+        </div>
+      )}
+      <p className="mt-2 text-[11px] text-ink-4">
+        실제 메뉴판 사진은 위 링크(블로그·구글맵)에서 볼 수 있어요. 가격은 현장에서 바뀔 수 있어요.
+      </p>
+    </div>
   );
 }

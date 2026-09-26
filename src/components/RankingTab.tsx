@@ -26,6 +26,16 @@ interface RankedHotel {
   verdict: string;
   scores: Record<Criterion, number>;
   scoreNotes: Record<Criterion, string>;
+  // 최종 후보 재조사(찜한 날짜·객실 기준)에서 채워지는 값
+  alert?: string;
+  roomReview?: string;
+  childPolicy?: string;
+  priceCompare?: { channel: string; room: string; dates: string; price: string; breakfast: string; cancel: string; source: string }[];
+  priceVerdict?: string;
+  cancellation?: string;
+  lateArrival?: string;
+  recentIssues?: string;
+  breakfastUpdate?: string;
 }
 
 type Criterion = "access" | "condition" | "breakfast" | "price" | "kids";
@@ -79,7 +89,7 @@ function ScoreBadge({ value, label }: { value: number; label?: string }) {
   return (
     <span className="inline-flex shrink-0 items-baseline gap-1 rounded-xl bg-accent-soft px-2.5 py-1 font-bold whitespace-nowrap text-accent">
       {label && <span className="text-[12px]">{label}</span>}
-      <span className="text-[17px] tabular-nums">{value.toFixed(value % 1 === 0 ? 0 : 2)}</span>
+      <span className="text-[17px] tabular-nums">{Number.isInteger(value) ? value.toFixed(1) : value.toFixed(2).replace(/0$/, "")}</span>
       <span className="text-[11px] text-ink-3">/5</span>
     </span>
   );
@@ -102,8 +112,10 @@ export default function RankingTab() {
         </h2>
         <p className="mt-2 text-[14px] leading-relaxed text-ink-2">
           블로그 후기와 예약 사이트 평점을 토대로 항목별 5점 만점으로 매겼어요. 종합 점수 비중은{" "}
-          {CRITERIA.map((c) => `${c.label} ${Math.round((WEIGHTS[c.key] ?? 0) * 100)}%`).join(" · ")}예요. 가격은
-          2026-09-25 예약 사이트 조회 기준 참고가예요.
+          {CRITERIA.map((c) => `${c.label} ${Math.round((WEIGHTS[c.key] ?? 0) * 100)}%`).join(" · ")}예요.{" "}
+          {FINAL.size > 0
+            ? `가격·객실은 아고다 찜 목록 기준이고, ${ranking.finalists?.updatedAt ?? ""} 같은 날짜로 다시 조사했어요.`
+            : "가격은 2026-09-25 예약 사이트 조회 기준 참고가예요."}
         </p>
         <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1 no-scrollbar">
           {([["total", "🏆 종합"], ...CRITERIA.map((c) => [c.key, `${c.icon} ${c.label}`])] as [SortKey, string][]).map(
@@ -122,6 +134,26 @@ export default function RankingTab() {
             ),
           )}
         </div>
+        {ranking.finalists?.recommendation && (
+          <div className="mt-3 rounded-2xl bg-primary-soft p-4">
+            <p className="text-[14px] font-bold text-primary-ink">👍 이 날짜·객실 기준 추천</p>
+            <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink">
+              {ranking.finalists.recommendation}
+            </p>
+          </div>
+        )}
+        {ranking.finalists?.deadlines && (
+          <details className="mt-2 rounded-2xl bg-accent-soft px-4 py-3">
+            <summary className="cursor-pointer text-[14px] font-bold text-accent">📅 무료 취소 마감일 · 언제 결정할지</summary>
+            <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line text-ink">{ranking.finalists.deadlines}</p>
+          </details>
+        )}
+        {ranking.finalists?.caveats && (
+          <details className="mt-2 rounded-2xl bg-surface-2 px-4 py-3">
+            <summary className="cursor-pointer text-[14px] font-bold text-ink-2">💡 가격 비교의 한계 · 예약 전 확인할 것</summary>
+            <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line text-ink-2">{ranking.finalists.caveats}</p>
+          </details>
+        )}
         {PENDING.length > 0 && (
           <p className="mt-3 rounded-2xl bg-accent-soft px-4 py-3 text-[14px] font-semibold text-accent">
             🔄 조사 중: {PENDING.join(" · ")} — 끝나면 순위에 합쳐져요
@@ -237,6 +269,11 @@ function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number | null
       <p className="text-[13px] text-ink-3">{h.localName}</p>
       <p className="mt-1 text-[13px] font-medium text-ink-2">{h.rating}</p>
       {FINAL.has(h.id) && <FinalBox f={FINAL.get(h.id)!} />}
+      {h.alert && (
+        <p className="mt-3 rounded-2xl bg-accent-soft p-3.5 text-[14px] leading-relaxed font-medium text-ink">
+          <b className="text-accent">⚠️ 예약 전 확인</b> {h.alert}
+        </p>
+      )}
 
       {FINAL.has(h.id) ? (
         <p className="mt-2 text-[13px] text-ink-3">🍳 조식: {h.breakfast}</p>
@@ -297,18 +334,39 @@ function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number | null
 
       {open && (
         <div className="mt-4 space-y-3 text-[14px] leading-relaxed">
+          {h.roomReview && <InfoBlock title="🛏️ 찜한 객실 실제 후기" body={h.roomReview} />}
+          {h.childPolicy && <InfoBlock title="🧒 4살 숙박·조식 규정" body={h.childPolicy} />}
           <div className="rounded-2xl bg-primary-soft p-4">
             <p className="font-bold text-primary-ink">🍳 조식 (아이 기준)</p>
-            <p className="mt-1 whitespace-pre-line text-ink">{h.breakfastDetail}</p>
+            <p className="mt-1 whitespace-pre-line text-ink">{h.breakfastUpdate || h.breakfastDetail}</p>
           </div>
+          {h.priceCompare && h.priceCompare.length > 0 && (
+            <div>
+              <p className="mb-1 font-bold text-ink">💰 같은 날짜 가격 비교</p>
+              {h.priceVerdict && <p className="mb-2 text-ink-2">{h.priceVerdict}</p>}
+              <ul className="divide-y divide-line rounded-2xl border border-line">
+                {h.priceCompare.map((c, i) => (
+                  <li key={`${c.channel}-${i}`} className="px-3 py-2">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                      <span className="font-semibold">{c.channel}</span>
+                      <span className="text-[13px] font-bold tabular-nums">{c.price}</span>
+                    </div>
+                    <p className="text-[12px] text-ink-3">
+                      {c.room} · {c.dates} · 조식 {c.breakfast} · {c.cancel}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {h.cancellation && <InfoBlock title="↩️ 취소 규정" body={h.cancellation} />}
+          <InfoBlock title="🕑 새벽 입실·체크아웃·짐보관" body={h.lateArrival || h.lateCheckout} />
+          {h.recentIssues && <InfoBlock title="⚠️ 2026년 최근 이슈" body={h.recentIssues} />}
           <p>
             <b className="text-ink">🧒 아이 시설</b> <span className="text-ink-2">{h.kids}</span>
           </p>
           <p>
             <b className="text-ink">📍 위치</b> <span className="text-ink-2">{h.location}</span>
-          </p>
-          <p>
-            <b className="text-ink">🕑 체크인·새벽 입실</b> <span className="text-ink-2">{h.lateCheckout}</span>
           </p>
           {h.blogPosts.length > 0 && (
             <div>
@@ -337,5 +395,14 @@ function HotelCard({ hotel: h, rank }: { hotel: RankedHotel; rank: number | null
         ))}
       </div>
     </article>
+  );
+}
+
+function InfoBlock({ title, body }: { title: string; body: string }) {
+  return (
+    <div>
+      <p className="font-bold text-ink">{title}</p>
+      <p className="mt-0.5 whitespace-pre-line text-ink-2">{body}</p>
+    </div>
   );
 }

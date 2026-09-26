@@ -7,6 +7,8 @@ export interface PhotoInfo {
   license: string;
   source: string;
   kind?: string;
+  /** 사진 설명 (예: "반쎄오 (대표 메뉴 예시, 이 가게 사진 아님)") */
+  caption?: string;
 }
 
 type PhotoMap = Record<string, PhotoInfo>;
@@ -17,6 +19,7 @@ const IMG = images as unknown as {
   activities?: PhotoMap;
   stays?: PhotoMap;
   souvenirGroups?: PhotoMap;
+  restaurants?: PhotoMap;
 };
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
@@ -49,6 +52,7 @@ export function menuPhoto(text: string): PhotoInfo | undefined {
 export const activityPhoto = (id: string) => IMG.activities?.[id];
 export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
+export const restaurantPhoto = (id: string) => IMG.restaurants?.[id];
 
 /**
  * 사진 + 출처 표시.
