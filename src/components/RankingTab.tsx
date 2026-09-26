@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ranking from "@/data/cityRanking.json";
 import type { BlogPost } from "@/lib/guideTypes";
+import LegStays from "./LegStays";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card } from "./ui";
 
@@ -100,7 +101,38 @@ function imageSearch(h: RankedHotel, extra: string) {
   return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(q)}`;
 }
 
+type View = "legs" | "candidates";
+
 export default function RankingTab() {
+  const [view, setView] = useState<View>("legs");
+  return (
+    <div className="space-y-4">
+      <div className="flex rounded-2xl bg-surface-3/60 p-1">
+        {(
+          [
+            ["legs", "🧭 구간별 숙소"],
+            ["candidates", "🏆 1차 후보 순위"],
+          ] as const
+        ).map(([id, label]) => (
+          <button
+            key={id}
+            type="button"
+            onClick={() => setView(id)}
+            aria-pressed={view === id}
+            className={`press min-h-11 flex-1 rounded-xl px-3 text-[15px] font-bold whitespace-nowrap ${
+              view === id ? "bg-surface text-ink shadow-sm" : "text-ink-3"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      {view === "legs" ? <LegStays /> : <CandidatesView />}
+    </div>
+  );
+}
+
+function CandidatesView() {
   const [sortKey, setSortKey] = useState<SortKey>("total");
   const HOTELS = sortHotels(RANKED, sortKey);
   return (

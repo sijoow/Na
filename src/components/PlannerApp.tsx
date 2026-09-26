@@ -100,7 +100,7 @@ const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "reviews", emoji: "📝", label: "후기", desc: "블로그 후기 요약" },
   { id: "checklist", emoji: "✅", label: "준비물", desc: "챙길 것 체크리스트" },
   { id: "info", emoji: "🗒️", label: "정보·메모", desc: "항공편 · 메모 · 백업" },
-  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "시내 호텔 접근성·호텔 상태 기준 순위 · 장단점" },
+  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "구간별 숙소 비교 (걸어서 가산점) · 1차 후보 순위" },
 ];
 
 // 오늘 날짜는 브라우저에서만 계산한다 (서버 렌더링 때는 null → 하이드레이션 불일치 없음)
