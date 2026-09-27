@@ -3,6 +3,7 @@
 import { CATEGORY_META } from "@/lib/categories";
 import { formatPeriod, formatShort, type TripStatus } from "@/lib/date";
 import { getPlan } from "@/lib/plans";
+import BookingsCard from "./BookingsCard";
 import { getDayProgress, percent, type Progress } from "@/lib/trip";
 import type { Flight, TripState } from "@/lib/types";
 import { activityPhoto, dayPhoto, dishPhoto, heroPhoto, placePhoto, stayPhoto, type PhotoInfo } from "./Photo";
@@ -15,6 +16,7 @@ interface Props {
   todayDayId: string | null;
   onOpenDay: (dayId: string) => void;
   onGo: (tab: GoTab) => void;
+  update: (fn: (s: TripState) => TripState) => void;
 }
 
 export type GoTab = "stays" | "tours" | "food" | "spa" | "map" | "weather" | "schedule";
@@ -46,7 +48,7 @@ function heroText(status: TripStatus | null): { small: string; big: string } {
   }
 }
 
-export default function OverviewTab({ state, status, progress, todayDayId, onOpenDay, onGo }: Props) {
+export default function OverviewTab({ state, status, progress, todayDayId, onOpenDay, onGo, update }: Props) {
   const hero = { ...heroText(status), photo: heroPhoto() };
   const days = state.days;
   const plan = getPlan(state.planId);
@@ -88,6 +90,9 @@ export default function OverviewTab({ state, status, progress, todayDayId, onOpe
           </p>
         )}
       </section>
+
+      {/* 출발 전에 예약할 것 (여행이 시작되면 숨김) */}
+      {(!status || status.kind === "before" || status.kind === "dday") && <BookingsCard state={state} update={update} />}
 
       {/* 사진 바로가기 */}
       <section>

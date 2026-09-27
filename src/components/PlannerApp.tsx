@@ -264,6 +264,7 @@ export default function PlannerApp() {
             todayDayId={todayDay?.id ?? null}
             onOpenDay={openDay}
             onGo={(t) => setTab(t)}
+            update={update}
           />
         )}
         {tab === "schedule" && (
