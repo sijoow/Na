@@ -2,12 +2,11 @@
 
 import { CATEGORY_META } from "@/lib/categories";
 import { formatPeriod, formatShort, type TripStatus } from "@/lib/date";
-import { useState } from "react";
-import { getPlan, planDaysFor, PLANS } from "@/lib/plans";
+import { getPlan } from "@/lib/plans";
 import { getDayProgress, percent, type Progress } from "@/lib/trip";
-import type { Flight, PlanId, TripState } from "@/lib/types";
+import type { Flight, TripState } from "@/lib/types";
 import { activityPhoto, dayPhoto, dishPhoto, heroPhoto, placePhoto, stayPhoto, type PhotoInfo } from "./Photo";
-import { btn, card } from "./ui";
+import { card } from "./ui";
 
 interface Props {
   state: TripState;
@@ -15,14 +14,13 @@ interface Props {
   progress: Progress;
   todayDayId: string | null;
   onOpenDay: (dayId: string) => void;
-  onSwitchPlan: (id: PlanId) => void;
   onGo: (tab: GoTab) => void;
 }
 
 export type GoTab = "stays" | "tours" | "food" | "spa" | "map" | "weather" | "schedule";
 
 const SHORTCUTS: { tab: GoTab; label: string; desc: string; photo: () => PhotoInfo | undefined }[] = [
-  { tab: "stays", label: "숙소", desc: "플랜 A·B·C 비교", photo: () => stayPhoto("movenpick-cam-ranh") ?? placePhoto("cam-ranh-resort-area") },
+  { tab: "stays", label: "숙소", desc: "확정 숙소 3곳", photo: () => stayPhoto("movenpick-cam-ranh") ?? placePhoto("cam-ranh-resort-area") },
   { tab: "tours", label: "투어·쇼핑", desc: "가격·예약", photo: () => placePhoto("vinwonders") },
   { tab: "food", label: "맛집", desc: "한국인 인기 맛집", photo: () => dishPhoto("소고기 쌀국수 (Phở bò)") ?? placePhoto("pho-hong") },
   { tab: "spa", label: "마사지", desc: "아이랑 가족 마사지", photo: () => activityPhoto("massage") },
@@ -48,14 +46,10 @@ function heroText(status: TripStatus | null): { small: string; big: string } {
   }
 }
 
-export default function OverviewTab({ state, status, progress, todayDayId, onOpenDay, onSwitchPlan, onGo }: Props) {
+export default function OverviewTab({ state, status, progress, todayDayId, onOpenDay, onGo }: Props) {
   const hero = { ...heroText(status), photo: heroPhoto() };
-  const currentPlan = state.planId ?? "A";
-  const [picked, setPicked] = useState<PlanId | null>(null);
-  const viewPlan = picked ?? currentPlan;
-  const preview = viewPlan !== currentPlan;
-  const days = planDaysFor(state, viewPlan);
-  const plan = getPlan(viewPlan);
+  const days = state.days;
+  const plan = getPlan(state.planId);
   return (
     <div className="space-y-5">
       {/* 대표 사진 히어로 */}
@@ -138,53 +132,21 @@ export default function OverviewTab({ state, status, progress, todayDayId, onOpe
 
       <div className="flex flex-wrap items-end justify-between gap-2 px-1 pt-3 md:pt-4">
         <h2 className="text-xl font-bold tracking-tight">날짜별 일정</h2>
-        <span className="text-[13px] text-ink-3">지금 적용: 플랜 {currentPlan}</span>
       </div>
 
-      {/* 플랜별 일정 비교 */}
-      <div className="grid grid-cols-4 gap-1 rounded-2xl bg-surface-3/60 p-1" role="tablist" aria-label="플랜별 일정">
-        {PLANS.map((p) => (
-          <button
-            key={p.id}
-            type="button"
-            role="tab"
-            aria-selected={viewPlan === p.id}
-            onClick={() => setPicked(p.id)}
-            className={`press min-h-12 rounded-xl px-2 text-center ${viewPlan === p.id ? "bg-surface shadow-sm" : ""}`}
-          >
-            <span className={`block text-[15px] font-bold ${viewPlan === p.id ? "text-ink" : "text-ink-3"}`}>
-              플랜 {p.id}
-              {p.id === currentPlan && " ✓"}
-            </span>
-            <span className="block text-[12px] text-ink-3">
-              {p.confirmed ? "✅ 확정" : `숙소 ${p.stays.length}곳`}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      <div className={`rounded-2xl px-4 py-3 ${preview ? "bg-primary-soft" : "bg-surface"}`}>
+      <div className="rounded-2xl bg-surface px-4 py-3">
         <p className="text-[15px] font-bold text-ink">{plan.tagline}</p>
         <p className="mt-0.5 text-[14px] text-ink-2">🏨 {plan.stays.join(" → ")}</p>
-        {preview && (
-          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-            <span className="text-[13px] text-primary-ink">미리보기예요 · 지금 적용된 플랜은 {currentPlan}예요</span>
-            <button type="button" className={`${btn.primary} min-h-10 px-4 text-[14px]`} onClick={() => onSwitchPlan(viewPlan)}>
-              플랜 {viewPlan}로 바꾸기
-            </button>
-          </div>
-        )}
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-4">
         {days.map((day, index) => {
           const { done, total } = getDayProgress(day);
-          const isToday = !preview && day.id === todayDayId;
+          const isToday = day.id === todayDayId;
           return (
             <button
               key={day.id}
               type="button"
-              disabled={preview}
               onClick={() => onOpenDay(day.id)}
               className={`${card} press flex flex-col overflow-hidden text-left ${
                 isToday ? "ring-2 ring-primary" : ""

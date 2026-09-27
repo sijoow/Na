@@ -13,11 +13,19 @@ export const PLACE_EMOJI: Record<PlaceKind, string> = {
   activity: "🎢",
   food: "🍜",
   pier: "⛴️",
+  spa: "💆",
 };
 
 export interface MapPath {
   color: string;
   points: [number, number][];
+}
+
+/** 반경 표시 (예: 호텔에서 걸어서 10분 거리) */
+export interface MapCircle {
+  center: [number, number];
+  radiusM: number;
+  color: string;
 }
 
 interface Props {
@@ -27,12 +35,13 @@ interface Props {
   paths: MapPath[];
   selectedPlaceId: string | null;
   onSelectPlace: (id: string) => void;
+  circles?: MapCircle[];
 }
 
 type LeafletModule = typeof import("leaflet");
 
 // Leaflet은 window를 쓰므로 브라우저에서만 불러온다 (서버 렌더링 때 import 금지)
-export default function MapView({ places, highlightIds, paths, selectedPlaceId, onSelectPlace }: Props) {
+export default function MapView({ places, highlightIds, paths, selectedPlaceId, onSelectPlace, circles }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const layerRef = useRef<LayerGroup | null>(null);
@@ -73,6 +82,10 @@ export default function MapView({ places, highlightIds, paths, selectedPlaceId, 
     const highlight = new Set(highlightIds);
     const focusAll = highlight.size === 0;
 
+    for (const c of circles ?? []) {
+      L.circle(c.center, { radius: c.radiusM, color: c.color, weight: 2, fillOpacity: 0.08, dashArray: "6 6" }).addTo(layer);
+    }
+
     for (const path of paths) {
       if (path.points.length < 2) continue;
       L.polyline(path.points, { color: path.color, weight: 4, opacity: 0.85, dashArray: "8 8" }).addTo(layer);
@@ -102,7 +115,7 @@ export default function MapView({ places, highlightIds, paths, selectedPlaceId, 
       .map((p) => [p.lat, p.lng] as [number, number]);
     if (focusPoints.length === 1) map.setView(focusPoints[0], 14);
     else if (focusPoints.length > 1) map.fitBounds(focusPoints, { padding: [40, 40], maxZoom: 15 });
-  }, [leaflet, places, highlightIds, paths, selectedPlaceId, onSelectPlace]);
+  }, [leaflet, places, highlightIds, paths, selectedPlaceId, onSelectPlace, circles]);
 
   return (
     <div

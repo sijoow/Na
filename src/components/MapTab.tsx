@@ -7,6 +7,7 @@ import { formatShort } from "@/lib/date";
 import type { Leg, Place } from "@/lib/guideTypes";
 import type { TripState } from "@/lib/types";
 import type { MapPath } from "./MapView";
+import NearbyMap from "./NearbyMap";
 import { Photo, placePhoto } from "./Photo";
 import { btn, card } from "./ui";
 
@@ -48,6 +49,35 @@ interface Props {
 }
 
 export default function MapTab({ state }: Props) {
+  const [view, setView] = useState<"nearby" | "routes">("nearby");
+  return (
+    <div className="space-y-4">
+      <div className="flex rounded-2xl bg-surface-3/60 p-1">
+        {(
+          [
+            ["nearby", "📍 날짜별 동선 체크"],
+            ["routes", "🗺️ 날짜별 이동"],
+          ] as const
+        ).map(([id, label]) => (
+          <button
+            key={id}
+            type="button"
+            onClick={() => setView(id)}
+            aria-pressed={view === id}
+            className={`press min-h-11 flex-1 rounded-xl px-2 text-[14px] font-bold whitespace-nowrap ${
+              view === id ? "bg-surface text-ink shadow-sm" : "text-ink-3"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      {view === "nearby" ? <NearbyMap state={state} /> : <RoutesView state={state} />}
+    </div>
+  );
+}
+
+function RoutesView({ state }: Props) {
   const { places, legs, grabTips, exchangeRate, vinwondersAccess, blogTopics } = GUIDE;
   const placeById = useMemo(() => new Map(places.map((p) => [p.id, p])), [places]);
   const dayKeys = state.days.map((_, i) => `D${i + 1}`);

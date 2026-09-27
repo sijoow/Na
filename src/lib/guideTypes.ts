@@ -9,7 +9,8 @@ export type PlaceKind =
   | "shopping"
   | "activity"
   | "food"
-  | "pier";
+  | "pier"
+  | "spa";
 
 export interface Place {
   id: string;

@@ -152,6 +152,8 @@ export default function FoodTab() {
         </>
       )}
 
+      <SheratonMeals />
+
       <FoodSection compact={LIST.length > 0} />
     </div>
   );
@@ -356,5 +358,48 @@ function MenuBoard({ menu }: { menu: Menu }) {
         실제 메뉴판 사진은 위 링크(블로그·구글맵)에서 볼 수 있어요. 가격은 현장에서 바뀔 수 있어요.
       </p>
     </div>
+  );
+}
+
+// 쉐라톤은 조식을 안 먹어서 10/8 저녁 ~ 10/9 저녁 끼니를 밖에서 — 날짜·시간별 1순위와 대안
+function SheratonMeals() {
+  const { note, mealPlan, spots } = data.nearSheraton;
+  if (mealPlan.length === 0) return null;
+  return (
+    <section className={`${card} p-5 md:p-6`}>
+      <p className="text-[15px] font-semibold text-ink-3">🏨 쉐라톤에서 먹을 곳</p>
+      <h2 className="mt-1 text-[20px] leading-snug font-bold tracking-tight">10/8 저녁 ~ 10/9 저녁 끼니 계획</h2>
+      <p className="mt-1 text-[13px] text-ink-3">{note} 지도 탭 → 날짜별 동선 체크에서 위치와 거리를 볼 수 있어요.</p>
+      <ol className="mt-3 space-y-3">
+        {mealPlan.map((m, i) => (
+          <li key={i} className="rounded-2xl bg-surface-2 p-4">
+            <p className="text-[13px] font-bold text-accent">
+              {m.date} · {m.time} · {m.meal}
+            </p>
+            <p className="mt-1 text-[14px] leading-relaxed text-ink">
+              <b>1순위</b> {m.pick}
+            </p>
+            <p className="mt-1 text-[13px] leading-relaxed text-ink-2">
+              <b>대안</b> {m.backup}
+            </p>
+          </li>
+        ))}
+      </ol>
+      <details className="mt-3 rounded-2xl border border-line px-4 py-3">
+        <summary className="cursor-pointer text-[14px] font-bold text-ink-2">새로 찾은 쉐라톤 근처 식당 {spots.length}곳 자세히</summary>
+        <ul className="mt-2 divide-y divide-line">
+          {spots.map((sp) => (
+            <li key={sp.id} className="py-2.5 text-[13px] leading-relaxed">
+              <p className="text-[15px] font-bold text-ink">
+                {sp.name} <span className="text-[12px] font-semibold text-primary-ink">{sp.meal} · {sp.walk}</span>
+              </p>
+              <p className="text-ink-3">🕑 {sp.opens}</p>
+              <p className="text-ink-2">🍽️ {sp.menu} · {sp.price}</p>
+              <p className="text-ink-2">🧒 {sp.kid}</p>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </section>
   );
 }
