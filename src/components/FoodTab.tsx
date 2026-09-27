@@ -152,6 +152,8 @@ export default function FoodTab() {
         </>
       )}
 
+      <RadissonDelivery />
+
       <SheratonMeals />
 
       <FoodSection compact={LIST.length > 0} />
@@ -399,6 +401,60 @@ function SheratonMeals() {
             </li>
           ))}
         </ul>
+      </details>
+    </section>
+  );
+}
+
+// 래디슨 블루 캄란(10/6·10/7) 저녁 배달 — 배달K 앱 / 카톡 / 룸서비스, 한국인 인기 메뉴 (2026-09-27 조사·검증)
+function RadissonDelivery() {
+  const d = data.radissonDelivery;
+  if (!d) return null;
+  return (
+    <section className={`${card} p-5 md:p-6`}>
+      <p className="text-[15px] font-semibold text-ink-3">🛵 래디슨에서 저녁 배달</p>
+      <h2 className="mt-1 text-[20px] leading-snug font-bold tracking-tight">10/6·10/7 저녁은 방에서 시켜 먹기</h2>
+      <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{d.answer}</p>
+
+      <p className="mt-4 text-[15px] font-bold">주문 방법 순위</p>
+      <ol className="mt-2 space-y-2">
+        {d.ranking.map((r) => (
+          <li key={r.rank} className="rounded-2xl bg-surface-2 p-3 text-[13px] leading-relaxed">
+            <p className="text-[15px] font-bold text-ink">
+              {r.rank}. {r.name}
+            </p>
+            <p className="mt-0.5 text-ink-2">{r.why}</p>
+            <p className="mt-1 text-ink-2">
+              <b className="text-ink">📱 이렇게</b> {r.how}
+            </p>
+            <p className="mt-1 text-ink-3">{r.contact}</p>
+          </li>
+        ))}
+      </ol>
+
+      <p className="mt-4 text-[15px] font-bold">한국인이 많이 시키는 메뉴</p>
+      <ul className="mt-2 divide-y divide-line">
+        {d.topMenus.map((m) => (
+          <li key={m.menu} className="py-2.5 text-[13px] leading-relaxed">
+            <p className="text-[15px] font-semibold text-ink">{m.menu}</p>
+            <p className="text-ink-3">{m.where}</p>
+            <p className="text-ink-2">💰 {m.price}</p>
+            <p className="text-primary-ink">🧒 {m.kid}</p>
+          </li>
+        ))}
+      </ul>
+
+      <details className="mt-3 rounded-2xl bg-accent-soft px-4 py-3">
+        <summary className="cursor-pointer text-[14px] font-bold text-accent">📝 주문 순서 (출발 전 준비부터)</summary>
+        <ol className="mt-2 space-y-1.5 text-[13px] leading-relaxed text-ink">
+          {d.steps.map((st, i) => (
+            <li key={i}>{st}</li>
+          ))}
+        </ol>
+      </details>
+      <details className="mt-2 rounded-2xl bg-surface-2 px-4 py-3">
+        <summary className="cursor-pointer text-[14px] font-bold text-ink-2">🏨 리조트 규정 (받는 곳 · 외부 음식)</summary>
+        <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{d.resortRules}</p>
       </details>
     </section>
   );

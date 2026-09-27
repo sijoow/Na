@@ -31,20 +31,6 @@
       "source": "https://cafe.naver.com/zzop/3632749 (공식 안내 이미지: 가격·일정·포함/불포함·유의사항·유류비 공지) · https://cafe.naver.com/zzop/3308543 (예약 방법 이미지) · 투어신청 게시판 실제 신청글과 스텝 댓글 https://cafe.naver.com/zzop/4263155, https://cafe.naver.com/zzop/4262253 (2026-09-26~27 작성) · https://staynmore.com/ticket/detail.php?seq=110 (옵션가·취소규정) — 모두 2026-09-27 조회"
     },
     {
-      "id": "marvella-arrival",
-      "cat": "호텔",
-      "scope": "plan",
-      "due": "2026-09-29",
-      "check": "9/29 베스트웨스턴 새벽 도착 메일 (노쇼 처리 금지)",
-      "name": "베스트웨스턴 — 10/4 새벽 도착 알림 메일 (노쇼 방지)",
-      "need": "필수",
-      "when": "10/4(일) 02:00~02:30 체크인 (예약은 10/3부터 3박)",
-      "how": "이메일 rsvn@bwpremiermarvella.com (공식 사이트 표기), 전화 +84 258 730 6666 (공식 사이트 전화 링크)",
-      "deadline": "9/29(화)까지 보내고 10/2(금)까지 답장을 받아 두세요. 답장이 없으면 10/2에 전화하세요. 아고다 조건은 도착 7일 이내 취소 시 1박 요금, 노쇼는 100%예요.",
-      "details": "영문 메일로 보내세요. 예약번호/예약 사이트, 여권 영문 이름, 10/3 체크인·10/6 체크아웃 3박, 성인 2 + 만 4세 아이 1을 적어요. 핵심 문장은 'Our flight 7C2303 lands at Cam Ranh at 00:30 on Oct 4, so we will arrive around 02:00–02:30 on Oct 4. Please hold the room and do not mark us as no-show.'예요. 같은 메일에 침대 구성(셋이 잘 수 있게), 고층·조용한 방, 아이 조식 규정(5세 이하 무료인지)도 물어보세요. 호텔 공항 픽업을 쓸 생각이면 7인승 야간 요금도 물어보세요. 앱 자료에는 4인승 야간 40만동(2026-09 블로그)으로만 있고, 7인승 요금은 확인하지 못했어요. 프런트는 24시간이에요. 받은 답장은 캡처해 오프라인으로 저장해 두세요.",
-      "source": "https://www.bwpremiermarvella.com/ (rsvn@ 메일, tel 842587306666) · 앱 legStays.json(아고다 취소 조건·24시간 프런트, 2026-09-27) — 2026-09-27 조회"
-    },
-    {
       "id": "marvella-checkout",
       "cat": "호텔",
       "scope": "plan",
@@ -57,6 +43,20 @@
       "deadline": "메일은 9/29까지 보내고, 프런트 재확인은 10/5 저녁(빈원더스에서 돌아온 뒤)에 해요.",
       "details": "공식 레스토랑 페이지 기준 조식은 매일 06:00~10:00(Marvellous)이라 06:00 조식은 가능해요. 메일에 'We check out at 06:45 on Oct 6 for an early tour. Please confirm breakfast opens at 06:00 (or prepare a breakfast box if not).'를 넣으세요. 10/5 저녁에 미니바·부대비용을 먼저 정산하고 보증금 환불 방식도 확인하면, 06:45 체크아웃이 5분 안에 끝나요. 후기에 조식 시간 엘리베이터가 혼잡하다는 말이 있으니 05:55쯤 내려가세요.",
       "source": "https://www.bwpremiermarvella.com/marvellous-restaurant ('Daily breakfast from 6:00 - 10:00') · 앱 legStays.json(엘리베이터 혼잡 후기) — 2026-09-27 조회"
+    },
+    {
+      "id": "marvella-arrival",
+      "cat": "호텔",
+      "scope": "plan",
+      "due": "2026-09-29",
+      "check": "9/29 베스트웨스턴 새벽 도착 메일 (노쇼 처리 금지)",
+      "name": "베스트웨스턴 — 10/4 새벽 도착 알림 메일 (노쇼 방지)",
+      "need": "필수",
+      "when": "10/4(일) 02:00~02:30 체크인 (예약은 10/3부터 3박)",
+      "how": "이메일 rsvn@bwpremiermarvella.com (공식 사이트 표기), 전화 +84 258 730 6666 (공식 사이트 전화 링크)",
+      "deadline": "9/29(화)까지 보내고 10/2(금)까지 답장을 받아 두세요. 답장이 없으면 10/2에 전화하세요. 아고다 조건은 도착 7일 이내 취소 시 1박 요금, 노쇼는 100%예요.",
+      "details": "영문 메일로 보내세요. 예약번호/예약 사이트, 여권 영문 이름, 10/3 체크인·10/6 체크아웃 3박, 성인 2 + 만 4세 아이 1을 적어요. 핵심 문장은 'Our flight 7C2303 lands at Cam Ranh at 00:30 on Oct 4, so we will arrive around 02:00–02:30 on Oct 4. Please hold the room and do not mark us as no-show.'예요. 같은 메일에 침대 구성(셋이 잘 수 있게), 고층·조용한 방, 아이 조식 규정(5세 이하 무료인지)도 물어보세요. 호텔 공항 픽업을 쓸 생각이면 7인승 야간 요금도 물어보세요. 앱 자료에는 4인승 야간 40만동(2026-09 블로그)으로만 있고, 7인승 요금은 확인하지 못했어요. 프런트는 24시간이에요. 받은 답장은 캡처해 오프라인으로 저장해 두세요.",
+      "source": "https://www.bwpremiermarvella.com/ (rsvn@ 메일, tel 842587306666) · 앱 legStays.json(아고다 취소 조건·24시간 프런트, 2026-09-27) — 2026-09-27 조회"
     },
     {
       "id": "hill-spa",
@@ -73,18 +73,18 @@
       "source": "https://hillspa.kr/ (공식: 2인 이상 90분↑ 공항 픽업 or 샌딩 무료·최대 16인승·카톡 20%·당일 짐보관/개별 샤워, 카톡 링크 pf.kakao.com/_jxkUgn) · https://blog.naver.com/gpwjdrhd/224421236660 (2026-09-23, 쉐라톤 샌딩·셋이 한 방) · https://blog.naver.com/kmy900504/224393913738 (2026-08-29, 1회 무료·시내 무료 픽드랍) · https://blog.naver.com/kiwimint7/224421281008 (2026-09-23, 호텔 로비 택시 픽업) · 앱 spas.json(메뉴가·전화, 2026-09-26) — 2026-09-27 조회"
     },
     {
-      "id": "pizza-4ps",
-      "cat": "식당",
+      "id": "esim",
+      "cat": "준비",
       "scope": "plan",
       "due": "2026-10-01",
-      "check": "10/1 피자포피스 10/8 18:00 예약",
-      "name": "피자포피스 쉐라톤점 (Pizza 4P's Sheraton Nha Trang)",
-      "need": "강력 권장",
-      "when": "10/8(목) 18:00 저녁 (1순위) · 쉐라톤 1층",
-      "how": "공식 온라인 예약 booking.pizza4ps.com (지점 'Sheraton Nha Trang' 선택). 같은 예약은 TableCheck(tablecheck.com/en/shops/pizza-4ps-nt-nha-trang/reserve)나 구글맵 '예약'으로도 할 수 있습니다. 전화는 1900 6043입니다. 아기의자·좌석 요청은 페이스북 메신저 m.me/Pizza4Ps로 보내라고 TableCheck 안내에 적혀 있습니다.",
-      "deadline": "10/1(수)까지, 가능하면 오늘(9/27) 바로 하세요. 하루이틀 전 예약으로 충분했다는 후기(2026-09-18)가 있지만 연휴 주간이고 호텔 1층 매장입니다.",
-      "details": "알려줄 것: 10/8 18:00, 성인 2명 + 만 4세 1명, 아기의자(하이체어), 실내 에어컨석. 영업은 매일 11:00~22:30이고 라스트오더는 22:00입니다. 예약 없이 가면 입구 QR로 대기를 접수하는데, 1시간 기다린 사례(2026-08)가 있습니다. 아기의자와 아기 식기를 세팅해 줍니다(2026-08-19). 카드 수수료는 없고 음식 부가세 8%가 별도입니다. 추가요금 공지는 9/1·9/2(베트남 국경일)뿐이라 10/8에는 해당하지 않습니다. 만석이면 AB센트럴스퀘어점이 대안입니다. 취소·노쇼 규정은 공개 페이지에서 확인하지 못했습니다.",
-      "source": "https://pizza4ps.com/vn/location/942/ (2026-09-27 조회) · https://www.tablecheck.com/en/pizza-4ps-nt-nha-trang/reserve/landing (2026-09-27 조회) · https://blog.naver.com/sirii_/224382481140 (2026-08-19) · https://blog.naver.com/my_table1123/224422903246 (2026-09-26) · 앱 restaurants.json (2026-09-26 조사)"
+      "check": "10/1 eSIM 주문",
+      "name": "eSIM(또는 유심) — 베트남 데이터",
+      "need": "필수",
+      "when": "10/4 00:30 도착 직후부터 10/10 출국까지 (그랩 호출, 힐스파·투어 기사 카톡 연락에 필요)",
+      "how": "국내 오픈마켓이나 eSIM 판매처에서 베트남 무제한 7~8일 상품(비엣텔·비나폰망)을 사요. QR로 설치하고, 실물 유심은 택배나 인천공항에서 받아요.",
+      "deadline": "10/1(목)까지 주문하세요. eSIM은 10/2~10/3에 집 와이파이에서 설치하고 데이터 활성화 방법(도착 후 켜기)을 확인하세요. 실물 유심을 택배로 받으려면 9/29까지 주문해요.",
+      "details": "먼저 폰이 eSIM을 지원하는지 보세요. 아이폰 XR 이상, 갤럭시 S23 이상·Z 폴드4/플립4 이상이에요. 한국 유심은 그대로 두고(은행 문자 인증용) eSIM을 데이터 회선으로 쓰는 듀얼 설정을 하세요. 기간은 10/4~10/10을 덮어야 해요. 부모 두 폰 모두 넣는 게 안전해요. 2026년 3월부터 베트남 현지 유심은 생체인증이 의무라, 새벽 공항에서 사는 건 피하세요. eSIM은 3박 4일 무제한이 약 9천원대예요(2026-04 가이드).",
+      "source": "https://vietnamguide.co.kr/%EB%B2%A0%ED%8A%B8%EB%82%A8-%EC%9C%A0%EC%8B%AC-%EA%B5%AC%EC%9E%85-%EC%A0%95%EB%A6%AC/ (2026-04-17 업데이트: 지원 기종·가격·수령 방법·생체인증) — 2026-09-27 조회"
     },
     {
       "id": "xom-moi",
@@ -101,18 +101,18 @@
       "source": "https://pf.kakao.com/_xdVQxnG (2026-09-27 검색 확인) · https://blog.naver.com/dgd0106/224402662328 (2026-09-17) · https://blog.naver.com/singsing_vv/224422242234 (2026-09-25) · 앱 restaurants.json (2026-09-26 조사)"
     },
     {
-      "id": "esim",
-      "cat": "준비",
+      "id": "pizza-4ps",
+      "cat": "식당",
       "scope": "plan",
       "due": "2026-10-01",
-      "check": "10/1 eSIM 주문",
-      "name": "eSIM(또는 유심) — 베트남 데이터",
-      "need": "필수",
-      "when": "10/4 00:30 도착 직후부터 10/10 출국까지 (그랩 호출, 힐스파·투어 기사 카톡 연락에 필요)",
-      "how": "국내 오픈마켓이나 eSIM 판매처에서 베트남 무제한 7~8일 상품(비엣텔·비나폰망)을 사요. QR로 설치하고, 실물 유심은 택배나 인천공항에서 받아요.",
-      "deadline": "10/1(목)까지 주문하세요. eSIM은 10/2~10/3에 집 와이파이에서 설치하고 데이터 활성화 방법(도착 후 켜기)을 확인하세요. 실물 유심을 택배로 받으려면 9/29까지 주문해요.",
-      "details": "먼저 폰이 eSIM을 지원하는지 보세요. 아이폰 XR 이상, 갤럭시 S23 이상·Z 폴드4/플립4 이상이에요. 한국 유심은 그대로 두고(은행 문자 인증용) eSIM을 데이터 회선으로 쓰는 듀얼 설정을 하세요. 기간은 10/4~10/10을 덮어야 해요. 부모 두 폰 모두 넣는 게 안전해요. 2026년 3월부터 베트남 현지 유심은 생체인증이 의무라, 새벽 공항에서 사는 건 피하세요. eSIM은 3박 4일 무제한이 약 9천원대예요(2026-04 가이드).",
-      "source": "https://vietnamguide.co.kr/%EB%B2%A0%ED%8A%B8%EB%82%A8-%EC%9C%A0%EC%8B%AC-%EA%B5%AC%EC%9E%85-%EC%A0%95%EB%A6%AC/ (2026-04-17 업데이트: 지원 기종·가격·수령 방법·생체인증) — 2026-09-27 조회"
+      "check": "10/1 피자포피스 10/8 18:00 예약",
+      "name": "피자포피스 쉐라톤점 (Pizza 4P's Sheraton Nha Trang)",
+      "need": "강력 권장",
+      "when": "10/8(목) 18:00 저녁 (1순위) · 쉐라톤 1층",
+      "how": "공식 온라인 예약 booking.pizza4ps.com (지점 'Sheraton Nha Trang' 선택). 같은 예약은 TableCheck(tablecheck.com/en/shops/pizza-4ps-nt-nha-trang/reserve)나 구글맵 '예약'으로도 할 수 있습니다. 전화는 1900 6043입니다. 아기의자·좌석 요청은 페이스북 메신저 m.me/Pizza4Ps로 보내라고 TableCheck 안내에 적혀 있습니다.",
+      "deadline": "10/1(수)까지, 가능하면 오늘(9/27) 바로 하세요. 하루이틀 전 예약으로 충분했다는 후기(2026-09-18)가 있지만 연휴 주간이고 호텔 1층 매장입니다.",
+      "details": "알려줄 것: 10/8 18:00, 성인 2명 + 만 4세 1명, 아기의자(하이체어), 실내 에어컨석. 영업은 매일 11:00~22:30이고 라스트오더는 22:00입니다. 예약 없이 가면 입구 QR로 대기를 접수하는데, 1시간 기다린 사례(2026-08)가 있습니다. 아기의자와 아기 식기를 세팅해 줍니다(2026-08-19). 카드 수수료는 없고 음식 부가세 8%가 별도입니다. 추가요금 공지는 9/1·9/2(베트남 국경일)뿐이라 10/8에는 해당하지 않습니다. 만석이면 AB센트럴스퀘어점이 대안입니다. 취소·노쇼 규정은 공개 페이지에서 확인하지 못했습니다.",
+      "source": "https://pizza4ps.com/vn/location/942/ (2026-09-27 조회) · https://www.tablecheck.com/en/pizza-4ps-nt-nha-trang/reserve/landing (2026-09-27 조회) · https://blog.naver.com/sirii_/224382481140 (2026-08-19) · https://blog.naver.com/my_table1123/224422903246 (2026-09-26) · 앱 restaurants.json (2026-09-26 조사)"
     },
     {
       "id": "chao-mao",
@@ -129,32 +129,32 @@
       "source": "https://www.instagram.com/chaomao.vn/ (2026-09-27 검색) · https://blog.naver.com/lyr5622/224422298372 (2026-09-25) · https://blog.naver.com/trip_fitness/224405350996 (2026-09-08) · 앱 restaurants.json (2026-09-26 조사)"
     },
     {
-      "id": "radisson-early",
-      "cat": "호텔",
+      "id": "delivery-k",
+      "cat": "준비",
       "scope": "plan",
       "due": "2026-10-02",
-      "check": "10/2 래디슨 얼리 체크인·짐 보관 메일",
-      "name": "래디슨 블루 캄란 — 10/6 13:15 도착, 얼리 체크인·짐 보관 요청",
-      "need": "강력 권장",
-      "when": "10/6(화) 13:15 도착 (정규 체크인 15:00)",
-      "how": "이메일 reservations.rcrb@radisson.com (예약 담당), info-radissonblucamranh@radisson.com (일반), 전화 +84 258 3993 666",
-      "deadline": "10/2(금)까지 보내고 출국 전에 답장을 받아 두세요. 답장이 없으면 10/5에 다시 보내요.",
-      "details": "예약번호, 10/6~10/8 2박, 성인 2 + 만 4세(기존 침대 사용)를 적어요. 'We will arrive around 13:15 on Oct 6 by private car from Phan Rang. We would appreciate early check-in if available; if not, please store our luggage (3 suitcases + stroller) and let us use the pool/water park until check-in.'라고 요청하세요. 얼리 체크인은 객실 사정에 따르고 추가 요금이 붙을 수 있어요(요금 확인 불가). 체크인이 늦어질 때를 대비해 수영복과 아이 여벌옷은 작은 가방에 따로 챙기세요. 레인포레스트 워터파크 키즈 슬라이드는 키 90cm 이상, 09:30~17:30이에요.",
-      "source": "https://house.com.vn/radisson-blu-resort-cam-ranh/ (reservations.rcrb@ / info-@ / +84 258 3993666) · https://nhatrang-travel.com/ho-tro-cskh/danh-sach-doanh-nghiep-du-lich-co-phuong-an-an-toan/radisson-blu-resort-cam-ranh.html (info-@) · 앱 legStays.json(체크인 15:00, 아동 규정) — 2026-09-27 조회"
+      "check": "10/2 배달K 앱 설치·카카오 가입 (래디슨 주소 저장, 본스치킨·스푼 찜)",
+      "name": "배달K 앱 (래디슨 저녁 배달)",
+      "need": "권장",
+      "when": "10/6·10/7 저녁 래디슨에서 배달",
+      "how": "App Store·Google Play에서 '배달K' 설치 → 카카오톡 가입 → 주소 'Radisson Blu Resort Cam Ranh' 저장. 카톡 채널 '깜란spoon'(pf.kakao.com/_jxkHJG), '나트랑 고마워 본스치킨(하엘이네)'(pf.kakao.com/_LxgYxkb)도 추가",
+      "deadline": "출발 전 (10/2까지)",
+      "details": "오토바이가 로비까지 못 들어와서 리조트 정문(경비실)에서 받아요. 결제는 대부분 만나서 베트남 동 현금 — 소액권 약 150만동 준비. 한 번에 한 가게만 주문돼요. 17:00~17:30에 주문하면 비·연휴 피크를 피할 수 있어요.",
+      "source": "배달K 앱·래디슨 투숙객 후기 (2026-09-27 조사·검증)"
     },
     {
-      "id": "sheraton-request",
-      "cat": "호텔",
+      "id": "grab",
+      "cat": "준비",
       "scope": "plan",
       "due": "2026-10-02",
-      "check": "10/2 쉐라톤 짐 보관·침대가드 메일",
-      "name": "쉐라톤 나트랑 — 체크인 전 짐 보관·침대가드·아이 등록 확인",
-      "need": "권장",
-      "when": "10/8(목) 13:30 도착·짐 보관 → 15:00 체크인 / 10/9(금) 19:10 퇴실(2박이라 10/10 12시까지 방을 쓸 수 있어요)",
-      "how": "이메일 reservations.nhatrang@sheraton.com, 전화 +84 258 3880 000",
-      "deadline": "10/2(금)까지 보내요. 침대가드는 당일 재고에 따라 달라지니 체크인할 때 다시 요청하세요.",
-      "details": "예약번호, 10/8~10/10 2박, 조식 불포함, 성인 2 + 만 4세를 적어요. ① 예약에 아이가 등록돼 있는지 확인하세요. 아고다는 4살을 3번째 성인으로 계산하는 경우가 있어, 성인 2 요금으로 잡았다면 아이 숙박 규정을 확인해야 해요. ② 'We arrive around 13:30 on Oct 8. Please store our luggage until check-in (early check-in if available).' ③ 'Please prepare a bed guard (bed rail) for our 4-year-old.' 몽키트래블 호텔 정보에 '침대가드: 가능, 체크인 당일 호텔 사정에 따라 제공 불가할 수 있음'으로 나와 있어요. ④ 체크인 15:00, 체크아웃 12:00이고 보증금은 1박당 100만동이에요(몽키트래블 표기). 10/9에는 19:10에 나가니 레이트 체크아웃은 필요 없어요. 6층 풀과 키즈클럽(09~19시 무료)은 예약할 필요가 없어요.",
-      "source": "https://www.cnnpartners.com/hotels/sheraton-nha-trang-hotel-spa (reservations.nhatrang@sheraton.com, +84 258 3880 000) · https://www.monkeytravel.com/vn/ko/hotel/nhatrang/nhatrangcitycenter/product/product_detail.php?product_id=1076762246 (체크인/아웃·디파짓·침대가드) · 앱 legStays.json(아고다 4세 성인 계산) — 2026-09-27 조회"
+      "check": "10/2 그랩 가입·카드 등록 (현장은 현금 결제 추천)",
+      "name": "그랩(Grab) 앱 설치·가입·결제 설정",
+      "need": "필수",
+      "when": "10/4 새벽 공항 이동부터 매일 시내 이동, 10/8 래디슨→쉐라톤, 10/9 공항 대안까지",
+      "how": "앱스토어·플레이스토어에서 Grab을 설치해요. 한국 휴대폰 번호로 SMS 인증을 하고, 결제 수단(카드)과 현금 옵션을 설정해요.",
+      "deadline": "10/2(금)까지 한국에서 가입과 카드 등록을 끝내세요. 한국 번호로 문자가 와야 하고, 카드 인증도 국내에서 하는 게 편해요.",
+      "details": "① 부모 둘 다 설치하고 가입해요. ② 카드는 트래블월렛이나 트래블로그 같은 트래블카드를 등록해 두세요. 다만 베트남 그랩은 해외 발급 카드에 4% 수수료를 붙인다는 보고(트립어드바이저 포럼)가 있어서, 공항처럼 큰 금액은 '현금(Cash)'으로 바꾸고 동 소액권을 준비하세요. ③ 한국 카드를 등록할 때 원화 결제(DCC)로 잡혀 오류가 나는 경우가 있어요. 해외원화결제 차단을 켜 두세요. ④ 7인승은 앱에서 '6 chỗ'나 7인승 옵션으로 나와요. 캐리어가 있는 날(10/4, 10/8)은 이걸 고르세요. ⑤ 공항에서는 출발지를 '도착층'으로 두고, 기둥 번호를 채팅으로 알려 주세요.",
+      "source": "https://www.tripadvisor.com/ShowTopic-g293921-i8432-k14716612-Grab_Vietnam_now_charging_a_4_foreign_payment_fee-Vietnam.html (4% 수수료 보고) · https://logaz.co.kr/%EA%B7%B8%EB%9E%A9-grab-%EC%9D%B4%EC%9A%A9-%EB%B0%A9%EB%B2%95-1%ED%83%84-%EA%B7%B8%EB%9E%A9-%EA%B0%80%EC%9E%85%EB%B6%80%ED%84%B0-%ED%95%9C%EA%B5%AD%EC%97%90%EC%84%9C-%EC%8B%A0%EC%9A%A9%EC%B9%B4/ (한국에서 가입·카드 등록 권장) · 앱 mapGuide.json·legStays.json(픽업존·고정요금) — 2026-09-27 조회"
     },
     {
       "id": "insurance",
@@ -171,18 +171,32 @@
       "source": "https://toss.im/tossfeed/article/traveling-budget-5 ('해외 출국 후에는 해외여행자 보험에 가입할 수 없어요') · https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=894&ccfNo=2&cciNo=2&cnpClsNo=2 (가입 경로·고지 의무) · https://cafe.naver.com/zzop/3632749 (투어 보험 불포함) — 2026-09-27 조회"
     },
     {
-      "id": "grab",
-      "cat": "준비",
+      "id": "sheraton-request",
+      "cat": "호텔",
       "scope": "plan",
       "due": "2026-10-02",
-      "check": "10/2 그랩 가입·카드 등록 (현장은 현금 결제 추천)",
-      "name": "그랩(Grab) 앱 설치·가입·결제 설정",
-      "need": "필수",
-      "when": "10/4 새벽 공항 이동부터 매일 시내 이동, 10/8 래디슨→쉐라톤, 10/9 공항 대안까지",
-      "how": "앱스토어·플레이스토어에서 Grab을 설치해요. 한국 휴대폰 번호로 SMS 인증을 하고, 결제 수단(카드)과 현금 옵션을 설정해요.",
-      "deadline": "10/2(금)까지 한국에서 가입과 카드 등록을 끝내세요. 한국 번호로 문자가 와야 하고, 카드 인증도 국내에서 하는 게 편해요.",
-      "details": "① 부모 둘 다 설치하고 가입해요. ② 카드는 트래블월렛이나 트래블로그 같은 트래블카드를 등록해 두세요. 다만 베트남 그랩은 해외 발급 카드에 4% 수수료를 붙인다는 보고(트립어드바이저 포럼)가 있어서, 공항처럼 큰 금액은 '현금(Cash)'으로 바꾸고 동 소액권을 준비하세요. ③ 한국 카드를 등록할 때 원화 결제(DCC)로 잡혀 오류가 나는 경우가 있어요. 해외원화결제 차단을 켜 두세요. ④ 7인승은 앱에서 '6 chỗ'나 7인승 옵션으로 나와요. 캐리어가 있는 날(10/4, 10/8)은 이걸 고르세요. ⑤ 공항에서는 출발지를 '도착층'으로 두고, 기둥 번호를 채팅으로 알려 주세요.",
-      "source": "https://www.tripadvisor.com/ShowTopic-g293921-i8432-k14716612-Grab_Vietnam_now_charging_a_4_foreign_payment_fee-Vietnam.html (4% 수수료 보고) · https://logaz.co.kr/%EA%B7%B8%EB%9E%A9-grab-%EC%9D%B4%EC%9A%A9-%EB%B0%A9%EB%B2%95-1%ED%83%84-%EA%B7%B8%EB%9E%A9-%EA%B0%80%EC%9E%85%EB%B6%80%ED%84%B0-%ED%95%9C%EA%B5%AD%EC%97%90%EC%84%9C-%EC%8B%A0%EC%9A%A9%EC%B9%B4/ (한국에서 가입·카드 등록 권장) · 앱 mapGuide.json·legStays.json(픽업존·고정요금) — 2026-09-27 조회"
+      "check": "10/2 쉐라톤 짐 보관·침대가드 메일",
+      "name": "쉐라톤 나트랑 — 체크인 전 짐 보관·침대가드·아이 등록 확인",
+      "need": "권장",
+      "when": "10/8(목) 13:30 도착·짐 보관 → 15:00 체크인 / 10/9(금) 19:10 퇴실(2박이라 10/10 12시까지 방을 쓸 수 있어요)",
+      "how": "이메일 reservations.nhatrang@sheraton.com, 전화 +84 258 3880 000",
+      "deadline": "10/2(금)까지 보내요. 침대가드는 당일 재고에 따라 달라지니 체크인할 때 다시 요청하세요.",
+      "details": "예약번호, 10/8~10/10 2박, 조식 불포함, 성인 2 + 만 4세를 적어요. ① 예약에 아이가 등록돼 있는지 확인하세요. 아고다는 4살을 3번째 성인으로 계산하는 경우가 있어, 성인 2 요금으로 잡았다면 아이 숙박 규정을 확인해야 해요. ② 'We arrive around 13:30 on Oct 8. Please store our luggage until check-in (early check-in if available).' ③ 'Please prepare a bed guard (bed rail) for our 4-year-old.' 몽키트래블 호텔 정보에 '침대가드: 가능, 체크인 당일 호텔 사정에 따라 제공 불가할 수 있음'으로 나와 있어요. ④ 체크인 15:00, 체크아웃 12:00이고 보증금은 1박당 100만동이에요(몽키트래블 표기). 10/9에는 19:10에 나가니 레이트 체크아웃은 필요 없어요. 6층 풀과 키즈클럽(09~19시 무료)은 예약할 필요가 없어요.",
+      "source": "https://www.cnnpartners.com/hotels/sheraton-nha-trang-hotel-spa (reservations.nhatrang@sheraton.com, +84 258 3880 000) · https://www.monkeytravel.com/vn/ko/hotel/nhatrang/nhatrangcitycenter/product/product_detail.php?product_id=1076762246 (체크인/아웃·디파짓·침대가드) · 앱 legStays.json(아고다 4세 성인 계산) — 2026-09-27 조회"
+    },
+    {
+      "id": "radisson-early",
+      "cat": "호텔",
+      "scope": "plan",
+      "due": "2026-10-02",
+      "check": "10/2 래디슨 얼리 체크인·짐 보관 메일",
+      "name": "래디슨 블루 캄란 — 10/6 13:15 도착, 얼리 체크인·짐 보관 요청",
+      "need": "강력 권장",
+      "when": "10/6(화) 13:15 도착 (정규 체크인 15:00)",
+      "how": "이메일 reservations.rcrb@radisson.com (예약 담당), info-radissonblucamranh@radisson.com (일반), 전화 +84 258 3993 666",
+      "deadline": "10/2(금)까지 보내고 출국 전에 답장을 받아 두세요. 답장이 없으면 10/5에 다시 보내요.",
+      "details": "예약번호, 10/6~10/8 2박, 성인 2 + 만 4세(기존 침대 사용)를 적어요. 'We will arrive around 13:15 on Oct 6 by private car from Phan Rang. We would appreciate early check-in if available; if not, please store our luggage (3 suitcases + stroller) and let us use the pool/water park until check-in.'라고 요청하세요. 얼리 체크인은 객실 사정에 따르고 추가 요금이 붙을 수 있어요(요금 확인 불가). 체크인이 늦어질 때를 대비해 수영복과 아이 여벌옷은 작은 가방에 따로 챙기세요. 레인포레스트 워터파크 키즈 슬라이드는 키 90cm 이상, 09:30~17:30이에요.",
+      "source": "https://house.com.vn/radisson-blu-resort-cam-ranh/ (reservations.rcrb@ / info-@ / +84 258 3993666) · https://nhatrang-travel.com/ho-tro-cskh/danh-sach-doanh-nghiep-du-lich-co-phuong-an-an-toan/radisson-blu-resort-cam-ranh.html (info-@) · 앱 legStays.json(체크인 15:00, 아동 규정) — 2026-09-27 조회"
     },
     {
       "id": "airport-pickup",
