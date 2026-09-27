@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { GUIDE } from "@/data/guide";
 import { getPlan, PLANS, switchPlanState, type PlanArea } from "@/lib/plans";
+import ConfirmedStays from "./ConfirmedStays";
 import type { StayArea, StayOption } from "@/lib/guideTypes";
 import { chooseStay } from "@/lib/trip";
 import type { PlanId, TripState } from "@/lib/types";
@@ -82,6 +83,8 @@ export default function StaysTab({ state, update }: Props) {
       )}
 
       <PlanPicker current={plan.id} onPick={switchPlan} />
+
+      {plan.confirmed && <ConfirmedStays stays={plan.confirmed} />}
 
       {plan.areas.map(({ area }) => {
         const conf = areaConf(area);
@@ -390,7 +393,7 @@ function PlanPicker({ current, onPick }: { current: PlanId; onPick: (id: PlanId)
         <h2 className="text-[22px] font-bold tracking-tight">숙소 동선 플랜</h2>
         <p className="text-[15px] text-ink-2">숙소는 최대 3곳. 플랜을 고르면 일정과 아래 숙소 구간이 그 플랜으로 바뀌어요.</p>
       </div>
-      <div className="grid gap-3 lg:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {PLANS.map((p) => {
           const active = p.id === current;
           return (

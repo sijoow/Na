@@ -141,8 +141,8 @@ export default function OverviewTab({ state, status, progress, todayDayId, onOpe
         <span className="text-[13px] text-ink-3">지금 적용: 플랜 {currentPlan}</span>
       </div>
 
-      {/* 플랜 A/B/C 일정 비교 */}
-      <div className="grid grid-cols-3 gap-1 rounded-2xl bg-surface-3/60 p-1" role="tablist" aria-label="플랜별 일정">
+      {/* 플랜별 일정 비교 */}
+      <div className="grid grid-cols-4 gap-1 rounded-2xl bg-surface-3/60 p-1" role="tablist" aria-label="플랜별 일정">
         {PLANS.map((p) => (
           <button
             key={p.id}
@@ -157,7 +157,7 @@ export default function OverviewTab({ state, status, progress, todayDayId, onOpe
               {p.id === currentPlan && " ✓"}
             </span>
             <span className="block text-[12px] text-ink-3">
-              숙소 {p.stays.length}곳 · 이동 {p.moves}번
+              {p.confirmed ? "✅ 확정" : `숙소 ${p.stays.length}곳`}
             </span>
           </button>
         ))}

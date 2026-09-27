@@ -50,10 +50,10 @@
       "source": "https://commons.wikimedia.org/wiki/File:Seaside_buildings_scenery_in_Nha_Trang_in_November_2017,_picture2.jpg"
     },
     "cam-ranh-resort-area": {
-      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-cam-ranh-resort-area.jpg",
-      "credit": "SP4 James S. Sayles",
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-cam-ranh-bai-dai.jpg",
+      "credit": "Bolyvn at vi.wikipedia",
       "license": "Public domain",
-      "source": "https://commons.wikimedia.org/wiki/File:POL_dump_located_at_south_beach_Cam_Ranh_Bay.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A3i_D%C3%A0i,_Cam_L%C3%A2m,_Kh%C3%A1nh_H%C3%B2a,_Vi%E1%BB%87t_Nam.jpg"
     },
     "pho-hong": {
       "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-pho-hong.jpg",
@@ -66,6 +66,12 @@
       "credit": "Simon Harriyott from Uckfield, England",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Seafood_buffet_(5515503611).jpg"
+    },
+    "radisson-blu-cam-ranh": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/place-radisson-blu-cam-ranh.jpg",
+      "credit": "Martin Lewison from Forest Hills, NY, U.S.A.",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Radisson_Blu_Resort_Cam_Ranh_(49358105547).jpg"
     }
   },
   "dishes": {
@@ -136,25 +142,25 @@
       "source": "https://commons.wikimedia.org/wiki/File:Ca_Phe_Sua_Da.jpg"
     },
     "망고·열대과일·생과일주스 (Xoài, Măng cụt, Thanh long / Sinh tố)": {
-      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-xoai-mang-cut-thanh-long-sinh-to.jpg",
-      "credit": "Basile Morin",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Oriental_garden_lizard_(Calotes_versicolor)_in_a_mango_tree_in_Laos.jpg"
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-mango-xoai-cat.jpg",
+      "credit": "Hungda",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Xo%C3%A0i_c%C3%A1t_H%C3%B2a_L%E1%BB%99c.JPG"
     },
     "아보카도 아이스크림 (Kem bơ)": {
-      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-kem-bo.jpg",
-      "credit": "Raimond Spekking",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Buttercreme_in_einer_Glassch%C3%BCssel-8493.jpg"
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dish-kem-bo-sinh-to-bo.jpg",
+      "credit": "Hoangkid (thảo luận)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sinh_t%E1%BB%91_b%C6%A1.jpg"
     }
   },
   "activities": {
     "phan-rang-desert": {
-      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-phan-rang-desert.jpg",
-      "credit": "xue siyang (df45086)",
-      "license": "CC BY-SA 3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:K976%E6%AC%A1%E9%80%9A%E8%BF%87_-_panoramio.jpg",
-      "query": "Nam Cương"
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-phan-rang-desert-nam-cuong.jpg",
+      "credit": "Transson",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%93i_c%C3%A1t_Nam_C%C6%B0%C6%A1ng.jpg",
+      "query": "Đồi cát Nam Cương"
     },
     "i-resort-mud": {
       "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/tour-i-resort-mud.jpg",
@@ -273,11 +279,10 @@
       "kind": "commons"
     },
     "과자·간식": {
-      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-1.jpg",
-      "credit": "Another Believer",
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-banh-dua-nuong.jpg",
+      "credit": "Lê Huỳnh Bộ",
       "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Portland_Night_Market_sign,_2025.jpg",
-      "kind": "commons"
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_d%E1%BB%ABa_n%C6%B0%E1%BB%9Bng.jpg"
     },
     "견과·건과일": {
       "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-2.jpg",

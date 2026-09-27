@@ -64,7 +64,7 @@ export interface StayChoices {
 }
 
 /** 숙소 동선 플랜: A 공항0.5박+시내2박+캄란3박 / B 시내3박+캄란3박 / C 캄란6박 */
-export type PlanId = "A" | "B" | "C";
+export type PlanId = "A" | "B" | "C" | "D";
 
 export interface TripState {
   version: 1;

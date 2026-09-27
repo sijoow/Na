@@ -12,6 +12,8 @@ interface RouteStep {
   dates: string;
   status: "확정" | "비교 중";
   pick?: string;
+  /** 예약을 마친 숙소 이름 */
+  hotel?: string;
 }
 interface PairHotel {
   id: string;
@@ -99,10 +101,13 @@ export default function LegStays() {
     <div className="space-y-5">
       <section className={`${card} p-5 md:p-6`}>
         <p className="text-[15px] font-semibold text-ink-3">우리 숙소 동선</p>
-        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">구간별로 가장 좋은 숙소</h2>
+        <h2 className="mt-1 text-[22px] leading-snug font-bold tracking-tight">
+          {data.confirmedAt ? "✅ 숙소 확정" : "구간별로 가장 좋은 숙소"}
+        </h2>
         <p className="mt-2 text-[14px] leading-relaxed text-ink-2">
           구간마다 중요한 곳(담시장·사막투어 / 롯데마트·담시장·마사지)에 <b>걸어서 갈 수 있으면 가산점</b>을 주고, 호텔 상태·아이
           시설과 함께 매겼어요. {data.updatedAt} 조사·검증 기준이에요.
+          {data.confirmedAt && " 아래 비교는 숙소를 고를 때 참고한 자료예요."}
         </p>
         <ol className="mt-4 space-y-2">
           {ROUTE.map((s) => (
@@ -113,7 +118,10 @@ export default function LegStays() {
               <span className="min-w-0 flex-1">
                 <span className="block text-[15px] font-bold">{s.place}</span>
                 <span className="block text-[13px] text-ink-3">{s.dates}</span>
-                {s.pick && <span className="mt-0.5 block text-[13px] font-semibold text-primary-ink">👍 추천: {s.pick}</span>}
+                {s.hotel && <span className="mt-0.5 block text-[14px] font-bold text-primary-ink">🏨 {s.hotel}</span>}
+                {!s.hotel && s.pick && (
+                  <span className="mt-0.5 block text-[13px] font-semibold text-primary-ink">👍 추천: {s.pick}</span>
+                )}
               </span>
               <span
                 className={`shrink-0 rounded-md px-1.5 py-0.5 text-[12px] font-bold ${

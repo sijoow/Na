@@ -100,13 +100,13 @@ function assertTripState(value: unknown): asserts value is TripState {
 
   checkDays(root.days, "days");
 
-  if (root.planId !== undefined && !["A", "B", "C"].includes(root.planId as string)) {
-    fail("planId", "'A' / 'B' / 'C' 중 하나");
+  if (root.planId !== undefined && !["A", "B", "C", "D"].includes(root.planId as string)) {
+    fail("planId", "'A' / 'B' / 'C' / 'D' 중 하나");
   }
   if (root.planDays !== undefined) {
     const pd = checkRecord(root.planDays, "planDays");
     for (const [key, value] of Object.entries(pd)) {
-      if (!["A", "B", "C"].includes(key)) fail(`planDays.${key}`, "키는 A / B / C");
+      if (!["A", "B", "C", "D"].includes(key)) fail(`planDays.${key}`, "키는 A / B / C / D");
       if (value !== undefined) checkDays(value, `planDays.${key}`);
     }
   }

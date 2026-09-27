@@ -110,6 +110,7 @@ const DAY_KEYWORDS: [string, () => PhotoInfo | undefined][] = [
   ["대성당", () => IMG.places?.["nha-trang-cathedral"]],
   ["담시장", () => IMG.places?.["dam-market"]],
   ["야시장", () => IMG.places?.["night-market"]],
+  ["래디슨", () => IMG.places?.["radisson-blu-cam-ranh"]],
   ["리조트", () => IMG.places?.["cam-ranh-resort-area"]],
   ["해변", () => IMG.places?.["city-hotel-area"]],
   ["출국", () => IMG.places?.["cam-ranh-airport"]],
