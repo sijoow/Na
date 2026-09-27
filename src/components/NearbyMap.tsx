@@ -41,14 +41,16 @@ interface Spot {
 const HOTELS = (getPlan("D").confirmed ?? []).map((h) => ({
   ...h,
   id: `hotel-${h.leg}`,
-  short: h.name.includes("래디슨") ? "래디슨 블루" : h.name.includes("쉐라톤") ? "쉐라톤" : "마벨라",
+  short: h.name.includes("래디슨") ? "래디슨 블루" : h.name.includes("쉐라톤") ? "쉐라톤" : "베스트웨스턴",
   area: (h.name.includes("래디슨") ? "camranh" : "city") as Area,
 }));
 type Hotel = (typeof HOTELS)[number];
 
 /** 그날 숙소 칸 이름으로 호텔 찾기 (플랜 D 확정 숙소) */
+// 그날 숙소 칸 이름으로 호텔 찾기 (예전 이름 '마벨라'로 적힌 일정도 인식)
+const HOTEL_WORDS: Record<string, string[]> = { "①": ["베스트", "마벨라"], "②": ["래디슨"], "③": ["쉐라톤"] };
 function hotelForDay(day: Day): Hotel | undefined {
-  return HOTELS.find((h) => day.lodging.includes(h.short.split(" ")[0]));
+  return HOTELS.find((h) => (HOTEL_WORDS[h.leg] ?? [h.short]).some((w) => day.lodging.includes(w)));
 }
 
 // 일정 제목에 이 단어가 있으면 그 장소를 그날 지도에 표시

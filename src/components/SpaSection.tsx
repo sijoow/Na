@@ -105,6 +105,8 @@ export default function SpaSection() {
         )}
       </section>
 
+      {data.deals && <DealsSummary />}
+
       {list.length === 0 ? (
         <div className={`${card} p-8 text-center text-ink-3`}>이 조건에 맞는 곳이 없어요.</div>
       ) : (
@@ -169,6 +171,7 @@ function SpaCard({ shop: s }: { shop: SpaShop }) {
 
       {open && (
         <div className="mt-4 space-y-3 text-[14px] leading-relaxed">
+          {DEALS[s.id] && <ShopDeals deal={DEALS[s.id]} />}
           {s.menu.length > 0 && (
             <div>
               <p className="mb-1 font-bold text-ink-2">메뉴·가격</p>
@@ -248,5 +251,84 @@ function SpaCard({ shop: s }: { shop: SpaShop }) {
         </a>
       </div>
     </article>
+  );
+}
+
+// ── 예약 경로별 가격·혜택 (카톡 사전예약·해피아워·마이리얼트립·구글리뷰 등, 2026-09-27 조사·검증) ──
+interface DealChannel {
+  channel: string;
+  discount: string;
+  familyTotal: string;
+  conditions: string;
+  source: string;
+}
+interface ShopDeal {
+  name: string;
+  area: string;
+  channels: DealChannel[];
+  freeTransfer: string;
+  bestWay: string;
+}
+const DEALS = (data.deals?.shops ?? {}) as Record<string, ShopDeal>;
+
+function DealsSummary() {
+  const [copied, setCopied] = useState(false);
+  const deals = data.deals;
+  if (!deals) return null;
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(deals.message);
+      setCopied(true);
+    } catch {
+      window.prompt("아래 문구를 복사하세요", deals.message);
+    }
+  };
+  return (
+    <section className={`${card} p-5 md:p-6`}>
+      <p className="text-[15px] font-semibold text-ink-3">💸 어디서 예약하면 싸고 편할까</p>
+      <h2 className="mt-1 text-[20px] leading-snug font-bold tracking-tight">예약 경로별 가격·혜택 비교 결과</h2>
+      <div className="mt-3 rounded-2xl bg-primary-soft p-4">
+        <p className="text-[14px] font-bold text-primary-ink">10/9 쉐라톤 → 마사지 → 공항</p>
+        <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink">{deals.pick109}</p>
+      </div>
+      <div className="mt-2 rounded-2xl bg-surface-2 p-4">
+        <p className="text-[14px] font-bold text-ink-2">캄란 (래디슨에서, 선택)</p>
+        <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink-2">{deals.pickCamRanh}</p>
+      </div>
+      <details className="mt-2 rounded-2xl border border-line px-4 py-3">
+        <summary className="cursor-pointer text-[14px] font-bold text-ink-2">📱 카톡 예약 문구 (복사해서 보내기)</summary>
+        <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{deals.message}</p>
+        <button type="button" onClick={copy} className="press mt-2 min-h-10 rounded-xl bg-ink px-4 text-[14px] font-semibold text-page">
+          {copied ? "복사했어요 ✓" : "문구 복사"}
+        </button>
+      </details>
+      <p className="mt-2 text-[12px] text-ink-4">샵마다 경로별 가격은 아래 카드의 &lsquo;자세히 보기&rsquo;에 있어요. ({deals.updatedAt} 조사·검증)</p>
+    </section>
+  );
+}
+
+function ShopDeals({ deal }: { deal: ShopDeal }) {
+  return (
+    <div className="rounded-2xl bg-primary-soft p-4">
+      <p className="font-bold text-primary-ink">💸 예약 경로별 가격·혜택</p>
+      <p className="mt-1 text-ink">{deal.bestWay}</p>
+      <ul className="mt-2 divide-y divide-primary/20">
+        {deal.channels.map((c, i) => (
+          <li key={`${c.channel}-${i}`} className="py-2 text-[13px]">
+            <p className="font-bold text-ink">{c.channel}</p>
+            <p className="text-ink-2">
+              <b>혜택</b> {c.discount}
+            </p>
+            <p className="text-ink-2">
+              <b>우리 가족 총액</b> {c.familyTotal}
+            </p>
+            <p className="text-ink-3">{c.conditions}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-1 text-[13px] text-ink-2">
+        <b>🚐 무료 픽업·샌딩</b> {deal.freeTransfer}
+      </p>
+    </div>
   );
 }
