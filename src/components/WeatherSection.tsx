@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import resort from "@/data/resortWeather.json";
 import weather from "@/data/weather.json";
 import { BlogPostRow } from "./ReviewsTab";
 import { card } from "./ui";
@@ -138,6 +139,8 @@ export default function WeatherSection() {
         </p>
       </section>
 
+      <ResortOutlook />
+
       <LiveForecast />
 
       <section className={`${card} p-5 md:p-6`}>
@@ -223,5 +226,36 @@ export default function WeatherSection() {
 
       <p className="px-1 text-[12px] leading-relaxed text-ink-4 break-words">출처: {stats.source}</p>
     </div>
+  );
+}
+
+// 리조트 기간(10/6~10/8 캄란) 비 전망 — 과거 기후 통계 + 예보 모델 + 태풍 전망을 교차 검증한 결과
+function ResortOutlook() {
+  return (
+    <section className={`${card} p-5 md:p-6`}>
+      <p className="text-[15px] font-semibold text-ink-3">🏝️ 리조트 기간 (10/6~10/8, 캄란) 비 전망</p>
+      <p className="mt-2 text-[15px] leading-relaxed whitespace-pre-line text-ink">{resort.answer}</p>
+      <ul className="mt-3 space-y-2">
+        {resort.byDay.map((d) => (
+          <li key={d.date} className="rounded-2xl bg-surface-2 p-4">
+            <p className="text-[14px] font-bold text-ink">{d.date}</p>
+            <p className="mt-1 text-[13px] leading-relaxed text-ink-3">{d.outlook}</p>
+            <p className="mt-1.5 text-[14px] leading-relaxed text-ink-2">
+              <b className="text-primary-ink">👉 이렇게</b> {d.plan}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <details className="mt-3 rounded-2xl border border-line px-4 py-3">
+        <summary className="cursor-pointer text-[14px] font-bold text-ink-2">📅 언제 다시 확인할지 · 태풍 전망</summary>
+        <ul className="mt-2 space-y-1.5 text-[13px] leading-relaxed text-ink-2">
+          {resort.checkpoints.map((c, i) => (
+            <li key={i}>· {c}</li>
+          ))}
+        </ul>
+        <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-3">🌀 {resort.typhoon}</p>
+      </details>
+      <p className="mt-2 text-[12px] text-ink-4">{resort.updatedAt} 기준 · 9~11일 뒤 예보라 참고용이에요.</p>
+    </section>
   );
 }
