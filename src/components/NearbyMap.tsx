@@ -147,7 +147,9 @@ function planSpots(day: Day): Spot[] {
       out.push({ ...s, kind: "plan", note: item.title, time: item.time });
     }
   }
-  return out;
+  // 그날 공항 이동을 호텔 픽업·샌딩으로 예약했으면 공항 항목에도 표시 (그랩 요금 대신)
+  const pickup = day.items.find((it) => /호텔 픽업|샌딩으로/.test(it.title));
+  return out.map((s) => (s.id === "plan-cam-ranh-airport" && pickup ? { ...s, note: `${s.note} · ${pickup.title}` } : s));
 }
 
 function distanceM(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
@@ -319,7 +321,9 @@ export default function NearbyMap({ state }: { state: TripState }) {
             const walk = w <= WALK_LIMIT_MIN;
             const km = roadKm(s.m);
             const fareText =
-              s.id === "plan-cam-ranh-airport"
+              s.id === "plan-cam-ranh-airport" && /픽업|샌딩/.test(s.note)
+                ? "예약한 픽업·샌딩 차량"
+                : s.id === "plan-cam-ranh-airport"
                 ? `그랩 7인승 공항 고정요금 ${formatFare(estimateAirport(7, s.time !== undefined && s.time < "06:00"))}`
                 : s.id === "plan-nam-cuong-dunes"
                   ? "사막투어 차량 (투어 요금에 포함)"
