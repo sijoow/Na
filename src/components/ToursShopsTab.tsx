@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { GUIDE } from "@/data/guide";
-import type { ActivityInfo, PriceRow, ShopInfo, ShopKind } from "@/lib/guideTypes";
+import type { ActivityInfo, AddOn, CopyText, PriceRow, ShopInfo, ShopKind } from "@/lib/guideTypes";
 import type { TripState } from "@/lib/types";
 import { ExchangeSection, SouvenirSection } from "./FoodSouvenirSections";
 import { activityPhoto, Photo, placePhoto } from "./Photo";
@@ -16,6 +16,7 @@ const SHOP_KIND: Record<ShopKind, string> = {
   mart: "🛒 마트",
   "night-market": "🌙 야시장",
   street: "🚶 거리 상점",
+  fruit: "🥭 과일가게",
 };
 
 type Section = "tours" | "souvenir" | "shops" | "exchange";
@@ -28,7 +29,9 @@ export default function ToursShopsTab({
   update: (fn: (s: TripState) => TripState) => void;
 }) {
   const [section, setSection] = useState<Section>("tours");
-  const { activitiesNote, shops, shoppingSummary } = GUIDE;
+  const { activitiesNote, shoppingSummary } = GUIDE;
+  // 과일가게는 맛집 탭의 과일 가이드에서 보여 준다
+  const shops = GUIDE.shops.filter((s) => s.kind !== "fruit");
   // 마사지는 따로 '마사지·스파' 탭에서 보여 준다
   const activities = GUIDE.activities.filter((a) => a.id !== "massage");
 
@@ -128,7 +131,7 @@ function PriceTable({ rows }: { rows: PriceRow[] }) {
   );
 }
 
-function ActivityCard({ activity: a }: { activity: ActivityInfo }) {
+export function ActivityCard({ activity: a }: { activity: ActivityInfo }) {
   const [showPosts, setShowPosts] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
   return (
@@ -171,6 +174,8 @@ function ActivityCard({ activity: a }: { activity: ActivityInfo }) {
           <p className="mt-1 text-[14px] leading-relaxed whitespace-pre-line text-ink">{a.recommendation}</p>
         </div>
       )}
+      {a.howTo && a.howTo.length > 0 && <HowToBox title="📱 예약 방법" steps={a.howTo} texts={a.messages ?? []} />}
+      {a.addOns && a.addOns.length > 0 && <AddOnList addOns={a.addOns} />}
       {a.kidTips && (
         <p className="mt-3 text-[14px] leading-relaxed whitespace-pre-line text-ink-2">
           <b className="text-ink">🧒 4살 아이 팁</b> {a.kidTips}
@@ -244,7 +249,78 @@ function ActivityCard({ activity: a }: { activity: ActivityInfo }) {
   );
 }
 
-function ShopCard({ shop: s }: { shop: ShopInfo }) {
+/** 접어 둔 문구 + 복사 버튼 (카톡·신청서에 그대로 붙여 넣기) */
+function CopyBlock({ label, text }: CopyText) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <details className="mt-3 rounded-xl bg-surface px-3 py-2">
+      <summary className="cursor-pointer text-[14px] font-bold text-ink-2">{label}</summary>
+      <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{text}</p>
+      <button
+        type="button"
+        onClick={async () => {
+          try {
+            await navigator.clipboard.writeText(text);
+            setCopied(true);
+          } catch {
+            window.prompt("아래 문구를 복사하세요", text);
+          }
+        }}
+        className="press mt-2 min-h-10 rounded-xl bg-ink px-4 text-[14px] font-semibold text-page"
+      >
+        {copied ? "복사했어요 ✓" : "문구 복사"}
+      </button>
+    </details>
+  );
+}
+
+/** 주문·예약 방법 (순서) + 복사해서 보낼 문구 */
+function HowToBox({ title, steps, texts }: { title: string; steps: string[]; texts: CopyText[] }) {
+  return (
+    <div className="mt-3 rounded-2xl bg-accent-soft p-4">
+      <p className="text-[15px] font-bold text-accent">{title}</p>
+      <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-[14px] leading-relaxed text-ink">
+        {steps.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {texts.map((t) => (
+        <CopyBlock key={t.label} {...t} />
+      ))}
+    </div>
+  );
+}
+
+/** 투어에 같이 묶어서 갈 수 있는 곳 — 넣으면 늘어나는 시간과 4살 기준 한 줄 */
+function AddOnList({ addOns }: { addOns: AddOn[] }) {
+  return (
+    <div className="mt-3 rounded-2xl bg-surface-2 p-4">
+      <p className="text-[15px] font-bold text-ink">🧩 사막이랑 같이 묶이는 곳</p>
+      <ul className="mt-1 divide-y divide-line">
+        {addOns.map((x) => (
+          <li key={x.name} className="py-2.5">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+              <span className="text-[15px] font-semibold text-ink">{x.name}</span>
+              <span className="text-[14px] font-bold text-primary-ink tabular-nums">{x.extra}</span>
+            </div>
+            <p className="text-[12px] text-ink-3">
+              {x.localName} · {x.fee}
+            </p>
+            <p className="mt-1 text-[14px] leading-relaxed text-ink-2">{x.what}</p>
+            <p className="mt-0.5 text-[14px] leading-relaxed text-ink-2">
+              <b className="text-ink">🧒</b> {x.kid}
+            </p>
+            <a href={x.source} target="_blank" rel="noopener noreferrer" className="text-[12px] text-ink-4 underline">
+              출처
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function ShopCard({ shop: s }: { shop: ShopInfo }) {
   const [showPosts, setShowPosts] = useState(false);
   const mapUrl =
     s.lat !== null && s.lng !== null
@@ -260,6 +336,51 @@ function ShopCard({ shop: s }: { shop: ShopInfo }) {
       <p className="text-[13px] text-ink-3">
         {s.localName} · {s.hours}
       </p>
+
+      {/* 맨 위: 품목별 흥정 목표가 → 흥정할 때 쓰는 말 */}
+      {s.quickPrices && s.quickPrices.length > 0 && (
+        <div className="mt-3 rounded-2xl bg-primary-soft p-4">
+          <p className="text-[15px] font-bold text-primary-ink">{s.quickTitle ?? "가격 한눈에"}</p>
+          <ul className="mt-1 divide-y divide-line">
+            {s.quickPrices.map((q) => (
+              <li key={q.item} className="py-2">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                  <span className="text-[15px] font-semibold text-ink">{q.item}</span>
+                  <span className="text-[15px] font-bold text-primary-ink tabular-nums">{q.target}</span>
+                </div>
+                <p className="mt-0.5 text-[12px] leading-snug text-ink-3">
+                  시세 {q.price}
+                  {q.note && ` · ${q.note}`}
+                </p>
+              </li>
+            ))}
+          </ul>
+          {s.quickNote && <p className="mt-2 text-[13px] leading-relaxed text-ink-2">{s.quickNote}</p>}
+        </div>
+      )}
+      {s.phrases && s.phrases.length > 0 && (
+        <div className="mt-3 rounded-2xl bg-surface-2 p-4">
+          <p className="text-[15px] font-bold text-ink">🗣️ {s.kind === "fruit" ? "과일 살 때 쓰는 말" : "흥정할 때 쓰는 말"}</p>
+          <ol className="mt-2 space-y-2.5">
+            {s.phrases.map((p) => (
+              <li key={p.vi}>
+                <p className="text-[16px] leading-snug font-bold text-ink">{p.say}</p>
+                <p className="text-[13px] leading-snug font-semibold text-primary-ink">{p.vi}</p>
+                <p className="text-[13px] leading-snug text-ink-2">{p.ko}</p>
+              </li>
+            ))}
+          </ol>
+          {s.phraseNote && <p className="mt-3 text-[13px] leading-relaxed text-ink-2">💡 {s.phraseNote}</p>}
+        </div>
+      )}
+      {s.howTo && s.howTo.length > 0 && (
+        <HowToBox
+          title="📱 주문 방법"
+          steps={s.howTo}
+          texts={s.messages ?? (s.message ? [{ label: "💬 카톡 주문 문구 (복사해서 보내기)", text: s.message }] : [])}
+        />
+      )}
+
       <p className="mt-3 text-[15px] leading-relaxed text-ink">{s.what}</p>
 
       {s.priceTable.length > 0 && (

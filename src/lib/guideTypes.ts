@@ -146,9 +146,50 @@ export interface ActivityInfo {
   recommendation: string;
   kidTips: string;
   blogPosts: BlogPost[];
+  /** 1순위 업체 예약 방법 — 순서대로 */
+  howTo?: string[];
+  /** 신청서·카톡에 그대로 붙여 넣을 문구 */
+  messages?: CopyText[];
+  /** 투어에 같이 묶어서 갈 수 있는 곳 */
+  addOns?: AddOn[];
 }
 
-export type ShopKind = "market" | "mall" | "brand-store" | "mart" | "night-market" | "street";
+export interface CopyText {
+  label: string;
+  text: string;
+}
+
+export interface AddOn {
+  name: string;
+  localName: string;
+  what: string;
+  fee: string;
+  /** 넣으면 늘어나는 시간 */
+  extra: string;
+  kid: string;
+  source: string;
+}
+
+export type ShopKind = "market" | "mall" | "brand-store" | "mart" | "night-market" | "street" | "fruit";
+
+/** 카드 맨 위 '가격 한눈에' 한 줄 — 흥정 목표가 */
+export interface QuickPrice {
+  item: string;
+  /** 흥정 목표가 (원화 병기) */
+  target: string;
+  /** 시세 (블로그 실구매가·부르는 값) */
+  price: string;
+  note: string;
+}
+
+/** 흥정할 때 쓰는 말 */
+export interface Phrase {
+  /** 한글로 적은 발음 */
+  say: string;
+  vi: string;
+  /** 뜻 · 언제 쓰는지 */
+  ko: string;
+}
 
 export interface ShopInfo {
   id: string;
@@ -164,6 +205,18 @@ export interface ShopInfo {
   tips: string;
   nearDay: string;
   blogPosts: BlogPost[];
+  /** 카드 맨 위 가격 요약 (담시장 아이 옷 등) */
+  quickTitle?: string;
+  quickPrices?: QuickPrice[];
+  quickNote?: string;
+  phrases?: Phrase[];
+  phraseNote?: string;
+  /** 주문·예약 방법 (배달 가게 등) — 순서대로 */
+  howTo?: string[];
+  /** 카톡에 그대로 보낼 주문 문구 */
+  message?: string;
+  /** 주문 문구가 날짜별로 여러 개일 때 (있으면 message 대신) */
+  messages?: CopyText[];
 }
 
 export interface MustTryDish {

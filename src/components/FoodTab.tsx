@@ -4,6 +4,7 @@ import { useState } from "react";
 import data from "@/data/restaurants.json";
 import type { BlogPost } from "@/lib/guideTypes";
 import { FoodSection } from "./FoodSouvenirSections";
+import FruitSection from "./FruitSection";
 import { Photo, restaurantPhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
 import { btn, card } from "./ui";
@@ -30,7 +31,7 @@ interface Menu {
   sources: string[];
 }
 
-interface Restaurant {
+export interface Restaurant {
   id: string;
   rank: number;
   name: string;
@@ -96,6 +97,8 @@ export default function FoodTab() {
   const list = LIST.filter(match);
   return (
     <div className="space-y-5">
+      <FruitSection />
+
       {LIST.length === 0 ? (
         <div className={`${card} p-10 text-center text-ink-3`}>
           한국인들이 많이 가는 맛집을 조사하고 있어요. 조사가 끝나면 여기에 표시돼요.
@@ -161,7 +164,7 @@ export default function FoodTab() {
   );
 }
 
-function RestaurantCard({ r }: { r: Restaurant }) {
+export function RestaurantCard({ r }: { r: Restaurant }) {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const photo = restaurantPhoto(r.id);
@@ -407,7 +410,7 @@ function SheratonMeals() {
 }
 
 // 래디슨 블루 캄란(10/6·10/7) 저녁 배달 — 배달K 앱 / 카톡 / 룸서비스, 한국인 인기 메뉴 (2026-09-27 조사·검증)
-function RadissonDelivery() {
+export function RadissonDelivery() {
   const d = data.radissonDelivery;
   if (!d) return null;
   return (

@@ -8,7 +8,7 @@ import { btn, card } from "./ui";
 
 type SpaArea = "city" | "camranh" | "other";
 
-interface SpaShop {
+export interface SpaShop {
   id: string;
   rank: number;
   name: string;
@@ -35,6 +35,24 @@ interface SpaShop {
   bestFor: string;
   latestReviewDate: string;
   blogPosts: BlogPost[];
+  /** 마사지 후보 샵만 — 카드 맨 위의 가격 정책 · 예약 방법 */
+  policy?: SpaPolicy;
+}
+
+interface PolicyRow {
+  label: string;
+  text: string;
+}
+interface SpaPolicy {
+  price: PolicyRow[];
+  book: PolicyRow[];
+}
+
+/** 일정의 마사지 칸에서 볼 때: 그 날짜의 우리 예약 요약과 카톡 문구 (lib/spaSlots) */
+export interface SpaSlotInfo {
+  when: string;
+  total: string;
+  message?: string;
 }
 
 const SHOPS = [...(data.shops as SpaShop[])].sort((a, b) => a.rank - b.rank);
@@ -125,7 +143,7 @@ export default function SpaSection() {
   );
 }
 
-function SpaCard({ shop: s }: { shop: SpaShop }) {
+export function SpaCard({ shop: s, slot }: { shop: SpaShop; slot?: SpaSlotInfo }) {
   const [open, setOpen] = useState(false);
   return (
     <article className={`${card} p-5 md:p-6 ${s.rank === 1 ? "ring-2 ring-accent" : ""}`}>
@@ -139,6 +157,8 @@ function SpaCard({ shop: s }: { shop: SpaShop }) {
       <h3 className="mt-1.5 text-[20px] leading-snug font-bold tracking-tight md:text-[21px]">{s.name}</h3>
       <p className="text-[13px] text-ink-3">{s.localName}</p>
       {s.rating && <p className="mt-1 text-[13px] font-medium text-ink-2">⭐ {s.rating}</p>}
+
+      {(slot || s.policy) && <SpaPlanBox slot={slot} policy={s.policy} />}
 
       {s.tags.length > 0 && (
         <ul className="mt-3 flex flex-wrap gap-1.5">
@@ -251,6 +271,58 @@ function SpaCard({ shop: s }: { shop: SpaShop }) {
         </a>
       </div>
     </article>
+  );
+}
+
+// 마사지 후보 샵: (일정에서 볼 때) 우리 예약 → 가격 정책 → 예약 방법 → (일정에서 볼 때) 카톡 문구 복사
+function SpaPlanBox({ slot, policy }: { slot?: SpaSlotInfo; policy?: SpaPolicy }) {
+  const [copied, setCopied] = useState(false);
+  const copy = async (message: string) => {
+    try {
+      await navigator.clipboard.writeText(message);
+      setCopied(true);
+    } catch {
+      window.prompt("아래 문구를 복사하세요", message);
+    }
+  };
+  const rows = (title: string, list: PolicyRow[]) => (
+    <div className="rounded-2xl bg-surface-2 p-4">
+      <p className="text-[15px] font-bold text-ink">{title}</p>
+      <dl className="mt-2 space-y-2 text-[14px] leading-relaxed">
+        {list.map((r) => (
+          <div key={r.label}>
+            <dt className="text-[13px] font-bold text-primary-ink">{r.label}</dt>
+            <dd className="text-ink-2">{r.text}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+  return (
+    <div className="mt-3 space-y-3">
+      {slot && (
+        <div className="rounded-2xl bg-accent-soft p-4">
+          <p className="text-[13px] font-bold text-accent">📌 우리 일정에서</p>
+          <p className="mt-1 text-[15px] leading-snug font-bold text-ink">{slot.when}</p>
+          <p className="mt-1 text-[15px] leading-snug font-bold text-primary-ink">예상 {slot.total}</p>
+        </div>
+      )}
+      {policy && rows("💸 가격 정책", policy.price)}
+      {policy && rows("📱 예약 방법", policy.book)}
+      {slot?.message && (
+        <details className="rounded-2xl border border-line px-4 py-3">
+          <summary className="cursor-pointer text-[14px] font-bold text-ink-2">💬 카톡 예약 문구 (복사해서 보내기)</summary>
+          <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-2">{slot.message}</p>
+          <button
+            type="button"
+            onClick={() => slot.message && copy(slot.message)}
+            className="press mt-2 min-h-10 rounded-xl bg-ink px-4 text-[14px] font-semibold text-page"
+          >
+            {copied ? "복사했어요 ✓" : "문구 복사"}
+          </button>
+        </details>
+      )}
+    </div>
   );
 }
 

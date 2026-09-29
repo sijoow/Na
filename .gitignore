@@ -44,3 +44,6 @@ next-env.d.ts
 
 # 개발 서버 로그
 dev.log
+
+# 로컬 일정 백업 파일
+data/*.backup-*.json

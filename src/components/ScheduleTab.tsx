@@ -1,25 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CATEGORIES, CATEGORY_META } from "@/lib/categories";
+import { CATEGORY_META } from "@/lib/categories";
 import { formatLong, formatShort } from "@/lib/date";
-import { newId } from "@/lib/id";
-import {
-  addItem,
-  createPlanItem,
-  deleteItem,
-  getDayProgress,
-  moveItemToDay,
-  reorderItem,
-  sortDayByTime,
-  swapDays,
-  toggleItemDone,
-  updateDay,
-  updateItem,
-} from "@/lib/trip";
-import type { Day, PlanItem, PlanItemInput, TripState } from "@/lib/types";
+import { linkDayPlaces, type PlaceLink } from "@/lib/placeMatch";
+import { applyChoice, choiceForItem, type ChoiceOption, type ChoiceSlot } from "@/lib/choiceSlots";
+import { getDayProgress, toggleItemDone } from "@/lib/trip";
+import type { Day, PlanItem, TripState } from "@/lib/types";
+import PlaceInfo from "./PlaceInfo";
 import { dayPhoto } from "./Photo";
-import { btn, card, Modal } from "./ui";
+import ChoiceTabs from "./ChoiceTabs";
+import { card } from "./ui";
+
+// 확정 일정표 — "파워J는 일정을 수시로 바꾸지 않는다, 정해 놓고 간다".
+// 일정은 대화로 정해서 data/trip.json 에 넣고, 여기서는 보기 · 완료 체크 · 장소 정보 · 길찾기만 한다.
+// 예외: 마사지 가게·식당 칸은 미리 짜 둔 후보 중에서 탭으로 골라 바꿀 수 있다 (lib/choiceSlots).
 
 interface Props {
   state: TripState;
@@ -29,16 +24,7 @@ interface Props {
   update: (fn: (s: TripState) => TripState) => void;
 }
 
-type Dialog =
-  | { kind: "add" }
-  | { kind: "edit"; item: PlanItem }
-  | { kind: "more"; item: PlanItem }
-  | { kind: "swap" }
-  | null;
-
 export default function ScheduleTab({ state, day, todayDayId, onSelectDay, update }: Props) {
-  const [dialog, setDialog] = useState<Dialog>(null);
-  const close = () => setDialog(null);
   const chipsRef = useRef<HTMLElement>(null);
 
   // 폰: 고른 날짜 칩이 가운데 오도록 칩 줄을 옆으로 스크롤
@@ -49,7 +35,8 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
     box.scrollTo({ left: chip.offsetLeft - (box.clientWidth - chip.offsetWidth) / 2, behavior: "smooth" });
   }, [day.id]);
   const dayIndex = state.days.findIndex((d) => d.id === day.id);
-  const otherDays = state.days.filter((d) => d.id !== day.id);
+  // 장소 정보·길찾기 버튼은 하루 안에서 겹치지 않게 (이동엔 길찾기, 처음 방문엔 정보)
+  const links = linkDayPlaces(day.items);
 
   return (
     <div className="md:grid md:grid-cols-[260px_minmax(0,1fr)] md:gap-6">
@@ -121,61 +108,24 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
               <img src={photo.url} alt="" referrerPolicy="no-referrer" className="h-36 w-full object-cover md:h-44" />
             ) : null;
           })()}
-        <div className="space-y-3 p-5 md:p-6">
-          <p className="text-[15px] font-bold text-primary-ink">
-            D{dayIndex + 1} · {formatLong(day.date)}
-            {day.id === todayDayId && " · 오늘"}
-          </p>
-          <label className="block">
-            <span className="sr-only">이 날의 제목</span>
-            <input
-              value={day.title}
-              onChange={(e) => update((s) => updateDay(s, day.id, { title: e.target.value }))}
-              placeholder="이 날의 제목"
-              className="w-full !bg-transparent !px-0 text-[24px] font-bold tracking-tight focus:!border-transparent"
-            />
-          </label>
-          <label className="flex items-center gap-2">
-            <span className="shrink-0 text-[15px] font-semibold text-ink-3">🏨 숙소</span>
-            <input
-              value={day.lodging}
-              onChange={(e) => update((s) => updateDay(s, day.id, { lodging: e.target.value }))}
-              placeholder="숙소"
-              className="w-full"
-            />
-          </label>
-          {/* 폰: 추가 버튼은 한 줄 가득, 나머지 둘은 반씩 */}
-          <div className="grid grid-cols-2 gap-2 pt-1 sm:flex sm:flex-wrap">
-            <button
-              type="button"
-              className={`${btn.primary} col-span-2`}
-              onClick={() => setDialog({ kind: "add" })}
-            >
-              + 일정 추가
-            </button>
-            <button
-              type="button"
-              className={`${btn.secondary} max-sm:px-2 max-sm:text-[14px]`}
-              onClick={() => update((s) => sortDayByTime(s, day.id))}
-              disabled={day.items.length < 2}
-            >
-              🕘 시간순 정렬
-            </button>
-            <button
-              type="button"
-              className={`${btn.soft} max-sm:px-2 max-sm:text-[14px]`}
-              onClick={() => setDialog({ kind: "swap" })}
-            >
-              🔁 다른 날과 바꾸기
-            </button>
+          <div className="space-y-2 p-5 md:p-6">
+            <p className="text-[15px] font-bold text-primary-ink">
+              D{dayIndex + 1} · {formatLong(day.date)}
+              {day.id === todayDayId && " · 오늘"}
+            </p>
+            <h2 className="text-[24px] leading-snug font-bold tracking-tight">{day.title || "(제목 없음)"}</h2>
+            <p className="flex gap-2 text-[15px]">
+              <span className="shrink-0 font-semibold text-ink-3">🏨 숙소</span>
+              <span className="text-ink">{day.lodging || "-"}</span>
+            </p>
+            <p className="pt-1 text-[13px] leading-relaxed text-ink-3">
+              🔒 확정 일정이에요. 장소가 있는 일정은 누르면 정보가 펼쳐지고, 🧭 길찾기는 지금 위치에서 출발해요.
+            </p>
           </div>
-        </div>
         </div>
 
         {day.items.length === 0 ? (
-          <div className={`${card} p-10 text-center text-ink-3`}>
-            아직 일정이 없어요. &lsquo;+ 일정 추가&rsquo;를 눌러 보세요.
-          </div>
+          <div className={`${card} p-10 text-center text-ink-3`}>아직 정해진 일정이 없어요.</div>
         ) : (
           <ul className={`${card} px-2 pt-4 pb-1 md:px-4`}>
             {day.items.map((item, i) => (
@@ -184,131 +134,15 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
                 item={item}
                 isFirst={i === 0}
                 isLast={i === day.items.length - 1}
+                link={links.get(item.id)}
+                choice={choiceForItem(day.date, item)}
+                onPick={(slot, option) => update((s) => applyChoice(s, slot, option))}
                 onToggle={() => update((s) => toggleItemDone(s, day.id, item.id))}
-                onEdit={() => setDialog({ kind: "edit", item })}
-                onMove={(dir) => update((s) => reorderItem(s, day.id, item.id, dir))}
-                onMore={() => setDialog({ kind: "more", item })}
               />
             ))}
           </ul>
         )}
       </section>
-
-      {dialog?.kind === "add" && (
-        <ItemFormDialog
-          title="일정 추가"
-          onClose={close}
-          onSubmit={(input) => {
-            update((s) => addItem(s, day.id, createPlanItem(newId(), input)));
-            close();
-          }}
-        />
-      )}
-      {dialog?.kind === "edit" && (
-        <ItemFormDialog
-          title="일정 수정"
-          initial={dialog.item}
-          onClose={close}
-          onSubmit={(input) => {
-            update((s) =>
-              updateItem(s, day.id, dialog.item.id, {
-                time: input.time,
-                title: input.title.trim(),
-                memo: input.memo.trim(),
-                category: input.category,
-              }),
-            );
-            close();
-          }}
-        />
-      )}
-      {dialog?.kind === "more" && (
-        <Modal title={dialog.item.title} onClose={close}>
-          <div className="space-y-5">
-            <button
-              type="button"
-              className={`${btn.soft} w-full`}
-              onClick={() => setDialog({ kind: "edit", item: dialog.item })}
-            >
-              ✏️ 수정하기
-            </button>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                className={`${btn.secondary} flex-1`}
-                onClick={() => update((s) => reorderItem(s, day.id, dialog.item.id, -1))}
-              >
-                ▲ 위로
-              </button>
-              <button
-                type="button"
-                className={`${btn.secondary} flex-1`}
-                onClick={() => update((s) => reorderItem(s, day.id, dialog.item.id, 1))}
-              >
-                ▼ 아래로
-              </button>
-            </div>
-            <div>
-              <p className="mb-2 text-[15px] font-semibold text-ink-3">다른 날로 옮기기</p>
-              <div className="grid grid-cols-2 gap-2">
-                {otherDays.map((d) => (
-                  <button
-                    key={d.id}
-                    type="button"
-                    className={`${btn.secondary} justify-start text-left`}
-                    onClick={() => {
-                      update((s) => moveItemToDay(s, day.id, dialog.item.id, d.id));
-                      close();
-                    }}
-                  >
-                    D{state.days.indexOf(d) + 1} {formatShort(d.date)}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button
-              type="button"
-              className={`${btn.danger} w-full`}
-              onClick={() => {
-                if (window.confirm(`'${dialog.item.title}' 일정을 삭제할까요?`)) {
-                  update((s) => deleteItem(s, day.id, dialog.item.id));
-                  close();
-                }
-              }}
-            >
-              🗑️ 삭제
-            </button>
-          </div>
-        </Modal>
-      )}
-      {dialog?.kind === "swap" && (
-        <Modal title="다른 날과 일정 바꾸기" onClose={close}>
-          <p className="mb-4 text-[15px] text-ink-2">
-            제목과 일정만 서로 바뀌어요. 날짜와 숙소는 그대로예요.
-          </p>
-          <div className="space-y-2">
-            {otherDays.map((d) => (
-              <button
-                key={d.id}
-                type="button"
-                className={`${btn.secondary} w-full justify-start text-left`}
-                onClick={() => {
-                  const label = `D${state.days.indexOf(d) + 1} ${formatShort(d.date)}`;
-                  if (window.confirm(`${label} '${d.title}' 와(과) 일정을 바꿀까요?`)) {
-                    update((s) => swapDays(s, day.id, d.id));
-                    close();
-                  }
-                }}
-              >
-                <span className="shrink-0 font-bold text-primary-ink">
-                  D{state.days.indexOf(d) + 1} {formatShort(d.date)}
-                </span>
-                <span className="truncate">{d.title}</span>
-              </button>
-            ))}
-          </div>
-        </Modal>
-      )}
     </div>
   );
 }
@@ -317,20 +151,52 @@ function ItemRow({
   item,
   isFirst,
   isLast,
+  link,
+  choice,
+  onPick,
   onToggle,
-  onEdit,
-  onMove,
-  onMore,
 }: {
   item: PlanItem;
   isFirst: boolean;
   isLast: boolean;
+  link: PlaceLink | undefined;
+  /** 이 일정이 고르는 칸(마사지 가게·식당)의 대표 일정이면 그 칸과 지금 들어간 후보 */
+  choice: { slot: ChoiceSlot; currentId: string } | null;
+  onPick: (slot: ChoiceSlot, option: ChoiceOption) => void;
   onToggle: () => void;
-  onEdit: () => void;
-  onMove: (dir: -1 | 1) => void;
-  onMore: () => void;
 }) {
   const meta = CATEGORY_META[item.category];
+  const place = link?.place ?? null;
+  const route = link?.route ?? null;
+  const canOpen = link?.info === true || choice !== null;
+  const [open, setOpen] = useState(false);
+  // 처음 펼칠 때 만들고, 접을 때는 남겨 둬야 닫히는 애니메이션이 보인다
+  const [loaded, setLoaded] = useState(false);
+  const toggle = () => {
+    setOpen((v) => !v);
+    setLoaded(true);
+  };
+  const hasBar = route !== null || canOpen;
+
+  const body = (
+    <>
+      <span className={`inline-block rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
+        {meta.emoji} {meta.label}
+      </span>
+      <span
+        className={`mt-1 block text-[16px] leading-snug font-semibold tracking-tight text-ink md:text-[17px] ${
+          item.done ? "line-through" : ""
+        }`}
+      >
+        {item.title}
+      </span>
+      {item.memo && (
+        <span className="mt-1 block text-[14px] leading-relaxed whitespace-pre-line text-ink-3">{item.memo}</span>
+      )}
+    </>
+  );
+  const bodyClass = `block w-full px-3.5 text-left ${hasBar ? "pt-3 pb-2" : "py-3"}`;
+
   return (
     <li className={`relative flex items-stretch gap-2 md:gap-3 ${item.done ? "opacity-55" : ""}`}>
       {/* 시간 */}
@@ -347,165 +213,68 @@ function ItemRow({
           <input type="checkbox" checked={item.done} onChange={onToggle} aria-label={`${item.title} 완료`} />
         </label>
       </span>
-      {/* 내용 (누르면 수정) */}
-      <button
-        type="button"
-        onClick={onEdit}
-        className="mb-3 min-w-0 flex-1 rounded-2xl bg-surface-2 px-3.5 py-3 text-left active:bg-surface-3"
-      >
-        <span className={`inline-block rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
-          {meta.emoji} {meta.label}
-        </span>
-        <span
-          className={`mt-1 block text-[16px] leading-snug font-semibold tracking-tight text-ink md:text-[17px] ${
-            item.done ? "line-through" : ""
-          }`}
-        >
-          {item.title}
-        </span>
-        {item.memo && (
-          <span className="mt-1 block text-[14px] leading-relaxed whitespace-pre-line text-ink-3">{item.memo}</span>
+      {/* 내용 — 장소가 있으면 누를 때 정보가 아래로 펼쳐진다 */}
+      <div className="mb-3 min-w-0 flex-1 overflow-hidden rounded-2xl bg-surface-2">
+        {canOpen ? (
+          <button type="button" onClick={toggle} aria-expanded={open} className={`${bodyClass} active:bg-surface-3`}>
+            {body}
+          </button>
+        ) : (
+          <div className={bodyClass}>{body}</div>
         )}
-      </button>
-      <div className="flex shrink-0 gap-0.5 pt-1.5">
-        <button type="button" className={`${btn.icon} max-sm:hidden`} onClick={onEdit} aria-label="수정">
-          ✏️
-        </button>
-        <button
-          type="button"
-          className={`${btn.icon} max-sm:hidden`}
-          onClick={() => onMove(-1)}
-          disabled={isFirst}
-          aria-label="위로"
-        >
-          ▲
-        </button>
-        <button
-          type="button"
-          className={`${btn.icon} max-sm:hidden`}
-          onClick={() => onMove(1)}
-          disabled={isLast}
-          aria-label="아래로"
-        >
-          ▼
-        </button>
-        <button type="button" className={btn.icon} onClick={onMore} aria-label={`${item.title} 더보기`}>
-          ⋯
-        </button>
+        {hasBar && (
+          <div className="flex flex-wrap gap-2 px-3.5 pb-3">
+            {route && place && (
+              <a
+                href={route}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="press inline-flex min-h-9 max-w-full items-center gap-1 rounded-full bg-primary-soft px-3 text-[13px] font-bold text-primary-ink"
+              >
+                <span aria-hidden>🧭</span>
+                <span className="truncate">{place.name.replace(/\s*\(.*$/, "")} 길찾기</span>
+              </a>
+            )}
+            {canOpen && (
+              <button
+                type="button"
+                onClick={toggle}
+                aria-expanded={open}
+                className="press inline-flex min-h-9 items-center rounded-full bg-surface px-3 text-[13px] font-semibold text-ink-2"
+              >
+                {open
+                  ? "접기 ▲"
+                  : choice
+                    ? `${choice.slot.noun} 비교 · 고르기 (${choice.slot.options.length}${choice.slot.unit ?? "곳"}) ▼`
+                    : "정보 보기 ▼"}
+              </button>
+            )}
+          </div>
+        )}
+        {canOpen && (
+          <div
+            className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+              open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            }`}
+          >
+            <div className="min-h-0 overflow-hidden">
+              {loaded && (
+                <div className="px-2 pb-2">
+                  {choice ? (
+                    <ChoiceTabs
+                      slot={choice.slot}
+                      currentId={choice.currentId}
+                      onPick={(option) => onPick(choice.slot, option)}
+                    />
+                  ) : (
+                    place && <PlaceInfo place={place} />
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </li>
-  );
-}
-
-function ItemFormDialog({
-  title,
-  initial,
-  onClose,
-  onSubmit,
-}: {
-  title: string;
-  initial?: PlanItem;
-  onClose: () => void;
-  onSubmit: (input: PlanItemInput) => void;
-}) {
-  const [form, setForm] = useState<PlanItemInput>({
-    time: initial?.time ?? "",
-    title: initial?.title ?? "",
-    memo: initial?.memo ?? "",
-    category: initial?.category ?? "sightseeing",
-  });
-  const canSave = form.title.trim().length > 0;
-  const submit = () => {
-    if (canSave) onSubmit({ ...form, time: form.time.slice(0, 5) });
-  };
-
-  return (
-    <Modal
-      title={title}
-      onClose={onClose}
-      footer={
-        <>
-          <button type="button" className={btn.secondary} onClick={onClose}>
-            취소
-          </button>
-          <button type="button" className={btn.primary} onClick={submit} disabled={!canSave}>
-            저장
-          </button>
-        </>
-      }
-    >
-      <form
-        className="space-y-4"
-        onSubmit={(e) => {
-          e.preventDefault();
-          submit();
-        }}
-      >
-        <div className="flex gap-3">
-          <label className="block w-36 shrink-0">
-            <span className="mb-1.5 block text-[14px] font-semibold text-ink-3">시간</span>
-            <input
-              type="time"
-              value={form.time}
-              onChange={(e) => setForm({ ...form, time: e.target.value })}
-              className="w-full"
-            />
-          </label>
-          <label className="block min-w-0 flex-1">
-            <span className="mb-1.5 block text-[14px] font-semibold text-ink-3">제목</span>
-            <input
-              value={form.title}
-              onChange={(e) => setForm({ ...form, title: e.target.value })}
-              placeholder="예: 빈원더스"
-              className="w-full"
-              autoFocus
-            />
-          </label>
-        </div>
-        {form.time && (
-          <button
-            type="button"
-            className="text-[14px] font-medium text-ink-3 underline"
-            onClick={() => setForm({ ...form, time: "" })}
-          >
-            시간 지우기
-          </button>
-        )}
-        <fieldset>
-          <legend className="mb-1.5 text-[14px] font-semibold text-ink-3">분류</legend>
-          <div className="grid grid-cols-4 gap-2">
-            {CATEGORIES.map((c) => {
-              const meta = CATEGORY_META[c];
-              const selected = form.category === c;
-              // 폰: 이모지 위·이름 아래로 모든 칸 모양을 맞춤 ('액티비티'처럼 긴 이름도 한 줄)
-              return (
-                <button
-                  key={c}
-                  type="button"
-                  onClick={() => setForm({ ...form, category: c })}
-                  aria-pressed={selected}
-                  className={`press flex min-h-14 flex-col items-center justify-center gap-0.5 rounded-2xl px-1 text-[14px] font-bold sm:min-h-12 sm:flex-row sm:gap-1 ${
-                    selected ? `${meta.chipClass} ring-2 ${meta.ringClass}` : "bg-surface-2 text-ink-3"
-                  }`}
-                >
-                  <span aria-hidden>{meta.emoji}</span>
-                  <span className="whitespace-nowrap">{meta.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        </fieldset>
-        <label className="block">
-          <span className="mb-1.5 block text-[14px] font-semibold text-ink-3">메모</span>
-          <textarea
-            value={form.memo}
-            onChange={(e) => setForm({ ...form, memo: e.target.value })}
-            rows={3}
-            placeholder="준비물, 예약번호, 주의할 점 등"
-            className="w-full"
-          />
-        </label>
-      </form>
-    </Modal>
   );
 }
