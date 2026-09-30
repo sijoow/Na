@@ -34,7 +34,7 @@ const NEED_STYLE: Record<string, string> = {
   "강력 권장": "bg-accent-soft text-accent",
   권장: "bg-surface-2 text-ink-2",
 };
-const CAT_EMOJI: Record<string, string> = { 식당: "🍽️", 투어: "🏜️", 마사지: "💆", 호텔: "🏨", 교통: "🚕", 준비: "🧳" };
+const CAT_EMOJI: Record<string, string> = { 식당: "🍽️", 투어: "🏜️", 마사지: "💆", 네일: "💅", 호텔: "🏨", 교통: "🚕", 준비: "🧳" };
 
 export default function BookingsCard({
   state,

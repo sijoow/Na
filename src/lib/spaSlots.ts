@@ -2,7 +2,7 @@
 // 후보마다 그 가게로 갔을 때의 이동·마사지·샤워 일정을 미리 짜 두고, 고르면 그 칸의 일정을 통째로 바꿔요.
 // 거리·그랩 요금은 좌표와 앱 요금표(lib/fare)로 계산했고, 가격은 spas.json 조사(2026-09-26~27) 기준이에요.
 
-import type { ChoiceOption, ChoiceSlot } from "./choiceSlots";
+import type { ChoiceOption, ChoiceSlot, SlotItem } from "./choiceSlots";
 
 // ── 후보 샵 기본 정보 (탭 이름 · 그랩 목적지 · 코스 · 총액 · 메모) ──
 interface Shop {
@@ -266,8 +266,152 @@ const CAMRANH_NAP: ChoiceSlot = {
   ],
 };
 
+// ── 10/4(일) 오전 엄마 혼자 네일 — 아빠·아이는 그동안 31층 수영장 → 샤워, 12:20 점심은 셋이 같이 ──
+// 모두 일요일 오전에 여는 곳(구글 지도 2026-09-30 조회). 그랩은 베스트웨스턴 ↔ 가게 도로 거리(OSRM)로 앱 요금표 계산.
+// '안 가기'는 원래 오전 일정(수영장 → 샤워)으로 되돌린다.
+const POOL = { time: "10:15", title: "베스트웨스턴 31층 인피니티풀 (아이 구역)", memo: "그늘 없음 → 래시가드 · 모자 · 선크림 · 11:30까지만" };
+const GET_READY = { time: "11:30", title: "샤워 · 외출 준비", memo: "유모차 · 물 · 모자 · 선크림 · 담시장은 현금(동) · 마사지 뒤 갈아입힐 아이 옷 1벌(오일)" };
+
+interface NailShop {
+  spaId: string;
+  tab: string;
+  name: string;
+  /** 그랩 목적지 */
+  dest: string;
+  go: [number, string];
+  back: [number, string];
+  /** 네일이 끝나고 호텔로 출발하는 시각 */
+  done: string;
+  course: string;
+  memo: string;
+  total: string;
+  channel: string;
+  /** 카톡에 더 물어볼 것 */
+  ask: string[];
+  /** 가는 길을 그랩 대신 가게 픽업으로 */
+  pickup?: string;
+}
+
+const NAIL_SHOPS: NailShop[] = [
+  {
+    spaId: "white-spa-nail-nhatrang",
+    tab: "화이트",
+    name: "화이트 스파 앤 네일",
+    dest: "White Spa & Nail, 75 Lê Đại Hành",
+    go: [10, "5.8만~8.3만동"],
+    back: [8, "4.1만~6.3만동"],
+    done: "11:35",
+    course: "손 아트 무제한 젤",
+    memo: "10:00~22:00 · 10시가 첫 타임인데 제일 먼저 차요(2026-09-13) · 손 아트 무제한 55만동(팁 포함) · 한국에서 한 젤 제거는 새로 받으면 2만동 · 구글 4.9 (3,583) · 한국인 블로그 추천 1위 · 캐릭터도 붓으로 직접 그려줘요 · 현금·원화 이체·카드·달러",
+    total: "손 아트 무제한 55만동 (약 2.9만원, 팁 포함) + 그랩 왕복 약 10만~15만동 · 예약금 10만동 원화 선입금(최종 금액에서 차감)",
+    channel: "카톡 채널 '나트랑화이트스파앤네일'",
+    ask: ["- 오픈 첫 타임(10:00)으로 부탁드려요.", "- 예약금 입금 계좌 알려 주세요."],
+  },
+  {
+    spaId: "luna-spa-nail-nhatrang",
+    tab: "루나",
+    name: "루나 스파 & 네일",
+    dest: "LUNA SPA & NAIL, 06 Ngô Đức Kế",
+    go: [10, "6만~8.5만동"],
+    back: [8, "4.3만~6.5만동"],
+    done: "11:20",
+    course: "손 디자인 젤",
+    memo: "09:00~22:00 · 손 디자인 젤 52만동(팁 포함, 리뷰 쓰면 10% 할인) · 디자인 젤 70분 안에 끝나고 3주 유지 후기(2026-08) · 구글 4.9 (4,428) · 한국어 매니저 · 추천 글 중 원고료 글이 섞여 있어요",
+    total: "손 디자인 젤 52만동 (약 2.7만원, 팁 포함 · 리뷰 10% 할인이면 약 47만동) + 무료 픽업이 안 되면 그랩 왕복 약 10만~15만동",
+    channel: "카톡 채널 '나트랑 마사지 루나스파&네일'",
+    ask: ["- 베스트웨스턴 나트랑(102B Trần Phú)에서 09:40 무료 픽업이 되나요? 네일만 받아도 되는지 알려 주세요.", "- 끝나고 호텔까지 드랍도 되는지 궁금해요."],
+    pickup: "루나 무료 호텔 픽업 (안 되면 그랩 약 10분)",
+  },
+  {
+    spaId: "niena-nails-nhatrang",
+    tab: "니에나",
+    name: "니에나 네일",
+    dest: "Niena Nails, 114A Trịnh Phong",
+    go: [9, "5.5만~8만동"],
+    back: [7, "3.9만~6만동"],
+    done: "11:35",
+    course: "손 젤 아트 (디자인은 인스타 niena_nails에서 골라 갈게요)",
+    memo: "09:00~18:30 · 구글 4.9 (7,869) 시내 네일샵 중 리뷰 최다 · '3대 네일' · 메뉴판 없이 디자인을 고르면 가격을 불러요(아트 1인 약 5.8만원 사례, 2026-07) · 예약금 없음, 전날 확인 연락 · 손님끼리 붙어 앉아 붐비는 분위기(2026-09)",
+    total: "디자인별 가격 — 아트 1인 약 5.8만원 사례(2026-07) · 예약금 없음 + 그랩 왕복 약 9.5만~14만동",
+    channel: "카톡 채널 'Niena Nail 니에나 네일'",
+    ask: ["- 디자인 사진은 미리 보내 드릴게요. 대략 가격 알려 주세요."],
+  },
+  {
+    spaId: "mango-spa-nail-nhatrang",
+    tab: "망고",
+    name: "망고스파앤네일",
+    dest: "Mango Spa & Nail, 17 Tô Hiến Thành",
+    go: [10, "6.6만~9.1만동"],
+    back: [8, "4.1만~6.4만동"],
+    done: "11:10",
+    course: "손 젤 + 아트 부분",
+    memo: "09:00~22:00 (네일 첫 예약 09:00) · 손·발 세트도 30분~1시간이라 가장 빨라요(2026-09) · 손젤 55만 + 아트 부분 10만동, 네일 30% 할인이면 약 45.5만동 · 동·달러 현금 · 담당자에 따라 품질이 달라요(2026-09)",
+    total: "손젤 + 아트 부분 65만동 → 네일 30% 할인이면 약 45.5만동 (약 2.4만원) + 그랩 왕복 약 11만~16만동",
+    channel: "카톡 (채널명 확인 못 함 — '망고스파' 검색)",
+    ask: ["- 네일 30% 할인이나 베나자 회원 할인이 되는지 알려 주세요."],
+  },
+];
+
+const byTime = (items: SlotItem[]) => items.sort((a, b) => a.time.localeCompare(b.time));
+
+const nailOption = (s: NailShop): ChoiceOption => ({
+  id: s.spaId,
+  card: { kind: "spa", id: s.spaId },
+  tab: s.tab,
+  when: `10/4(일) 09:40 엄마 혼자 출발 → 10:00 ${s.course.replace(/ \(.*\)$/, "")} → ${s.done} 호텔로 · 아빠·아이는 31층 수영장 → 샤워 · 12:20 점심은 셋이 같이`,
+  total: s.total,
+  message: [
+    `[10/4 ${s.name} 예약용 · ${s.channel}]`,
+    "안녕하세요, 네일 예약하고 싶어요.",
+    "- 날짜/시간: 10월 4일(일) 10:00",
+    "- 이름: ○○○ (영문)",
+    `- 인원·시술: 성인 1명 ${s.course}`,
+    "- 12시 전에 끝나야 해요. 얼마나 걸릴지 알려 주세요.",
+    ...s.ask,
+    "최종 금액과 결제 방법 알려 주세요. 감사합니다!",
+  ].join("\n"),
+  items: byTime([
+    {
+      time: "09:40",
+      title: `엄마 → ${s.name} · ${s.pickup ?? `그랩 4인승 (약 ${s.go[0]}분)`}`,
+      category: "move",
+      memo: `엄마 혼자 · 그랩 목적지: ${s.dest} · 약 ${s.go[1]} · 조식은 09:15에 먼저`,
+    },
+    { time: "10:00", title: `엄마 네일 — ${s.name} (엄마 혼자 · ${s.course.replace(/ \(.*\)$/, "")})`, category: "rest", memo: s.memo },
+    { time: POOL.time, title: `아빠·아이 — ${POOL.title}`, category: "rest", memo: `${POOL.memo} · 엄마는 네일 중` },
+    { time: GET_READY.time, title: `아빠·아이 ${GET_READY.title}`, category: "etc", memo: GET_READY.memo },
+    {
+      time: s.done,
+      title: `엄마 ${s.name} → 베스트웨스턴 · 그랩 4인승 (약 ${s.back[0]}분)`,
+      category: "move",
+      memo: `약 ${s.back[1]} · 12:20 셋이 같이 점심 출발 · 늦어지면 아빠·아이가 먼저 가고 엄마는 네일샵에서 점심 식당으로 바로 (시내라 그랩 5분 안팎)`,
+    },
+  ]),
+});
+
+const MOM_NAIL: ChoiceSlot = {
+  date: "2026-10-04",
+  from: "09:30",
+  to: "12:00",
+  noun: "네일샵",
+  options: [
+    ...NAIL_SHOPS.map(nailOption),
+    {
+      id: "no-nail",
+      tab: "안 가기",
+      when: "10/4(일) 10:15 셋이 같이 31층 수영장 → 11:30 샤워·외출 준비 (원래 일정)",
+      total: "0동",
+      items: [
+        { ...POOL, category: "rest" },
+        { ...GET_READY, category: "etc" },
+      ],
+    },
+  ],
+};
+
 // 10/5(월)은 빈원더스에 오래 있고 낮잠을 건너뛰기로 해서 마사지 칸이 없어요
 export const SPA_SLOTS: ChoiceSlot[] = [
+  MOM_NAIL,
   { date: "2026-10-04", from: "14:40", to: "16:30", noun: "마사지 가게", options: SHOPS.map(sunday) },
   CAMRANH_NAP,
   // 10/9 출국 전: 무료 공항 샌딩이 되는 곳만 (힐스파 2인 90분↑ 1회, 궁스파 로얄 2인↑)
