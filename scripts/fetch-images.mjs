@@ -4,8 +4,10 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
+import { fileURLToPath } from "node:url";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")), "..");
+// 폴더 이름에 공백이 있어도 되도록 fileURLToPath 로 푼다 (예: "Yogibo Design")
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const env = Object.fromEntries(
   fs.readFileSync(path.join(root, ".env"), "utf8").split(/\r?\n/)
     .filter((l) => /^[A-Z0-9_]+=/.test(l))

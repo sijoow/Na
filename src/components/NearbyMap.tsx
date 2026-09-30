@@ -55,7 +55,6 @@ function hotelForDay(day: Day): Hotel | undefined {
 
 // 일정 제목에 이 단어가 있으면 그 장소를 그날 지도에 표시
 const PLAN_KEYWORDS: [string, string][] = [
-  ["대성당", "nha-trang-cathedral"],
   ["담시장", "dam-market"],
   ["야시장", "night-market"],
   ["빈원더스", "vinwonders-pier"],
@@ -118,7 +117,7 @@ function planSpots(day: Day): Spot[] {
   const seen = new Set<string>();
   const out: Spot[] = [];
   for (const item of day.items) {
-    // 괄호 안(예: "대성당 도보 5분")은 곁들인 설명이라 빼고 찾는다
+    // 괄호 안(예: "담시장 도보 5분")은 곁들인 설명이라 빼고 찾는다
     const title = item.title.replace(/\([^)]*\)/g, "");
     for (const [word, placeId] of PLAN_KEYWORDS) {
       if (!title.includes(word) || seen.has(placeId)) continue;

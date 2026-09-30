@@ -20,6 +20,8 @@ const IMG = images as unknown as {
   stays?: PhotoMap;
   souvenirGroups?: PhotoMap;
   restaurants?: PhotoMap;
+  /** 사막투어 브리핑 사진 (지프·썰매·묶이는 곳) */
+  desert?: PhotoMap;
 };
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
@@ -53,6 +55,7 @@ export const activityPhoto = (id: string) => IMG.activities?.[id];
 export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
 export const restaurantPhoto = (id: string) => IMG.restaurants?.[id];
+export const desertPhoto = (id?: string) => (id ? IMG.desert?.[id] : undefined);
 
 /**
  * 사진 + 출처 표시.
@@ -107,7 +110,6 @@ const DAY_KEYWORDS: [string, () => PhotoInfo | undefined][] = [
   ["사막", () => IMG.activities?.["phan-rang-desert"]],
   ["머드", () => IMG.activities?.["i-resort-mud"]],
   ["포나가르", () => IMG.places?.["po-nagar"]],
-  ["대성당", () => IMG.places?.["nha-trang-cathedral"]],
   ["담시장", () => IMG.places?.["dam-market"]],
   ["야시장", () => IMG.places?.["night-market"]],
   ["래디슨", () => IMG.places?.["radisson-blu-cam-ranh"]],

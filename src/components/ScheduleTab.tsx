@@ -127,7 +127,7 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
         {day.items.length === 0 ? (
           <div className={`${card} p-10 text-center text-ink-3`}>아직 정해진 일정이 없어요.</div>
         ) : (
-          <ul className={`${card} px-2.5 pt-2.5 pb-0.5 md:px-4 md:pt-4 md:pb-1`}>
+          <ul className={`${card} px-2 pt-4 pb-1 md:px-4`}>
             {day.items.map((item, i) => (
               <ItemRow
                 key={item.id}
@@ -178,12 +178,22 @@ function ItemRow({
   };
   const hasBar = route !== null || canOpen;
 
-  const time = item.time || "--:--";
-  const doneBox = <input type="checkbox" checked={item.done} onChange={onToggle} aria-label={`${item.title} 완료`} />;
+  const chip = (
+    <span className={`inline-block rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
+      {meta.emoji} {meta.label}
+    </span>
+  );
+  const check = (
+    <label className="relative z-10 flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-surface">
+      <input type="checkbox" checked={item.done} onChange={onToggle} aria-label={`${item.title} 완료`} />
+    </label>
+  );
   const body = (
     <>
+      {/* 분류 칩은 모바일에선 카드 위 시간 줄에 */}
+      <span className="hidden md:inline">{chip}</span>
       <span
-        className={`block text-[16px] leading-snug font-semibold tracking-tight text-ink md:text-[17px] ${
+        className={`block text-[16px] leading-snug font-semibold tracking-tight text-ink md:mt-1 md:text-[17px] ${
           item.done ? "line-through" : ""
         }`}
       >
@@ -194,34 +204,29 @@ function ItemRow({
       )}
     </>
   );
-  const bodyClass = `block w-full px-3.5 pt-1 text-left ${hasBar ? "pb-2" : "pb-3"}`;
+  const bodyClass = `block w-full px-3.5 text-left ${hasBar ? "pt-3 pb-2" : "py-3"}`;
 
   return (
-    <li className={`relative flex items-stretch gap-3 ${item.done ? "opacity-55" : ""}`}>
-      {/* 넓은 화면: 왼쪽에 시간 + 타임라인(선 + 완료 체크). 폰에서는 카드 폭을 넓히려고 카드 안 첫 줄로 옮긴다 */}
+    <li className={`relative md:flex md:items-stretch md:gap-3 ${item.done ? "opacity-55" : ""}`}>
+      {/* 모바일: 완료 체크 · 시간 · 분류를 카드 위 한 줄에 — 카드가 화면 너비를 다 쓴다 */}
+      <div className="flex items-center gap-2 pb-1.5 md:hidden">
+        {check}
+        <span className="text-[17px] font-bold tabular-nums text-ink">{item.time || "--:--"}</span>
+        {chip}
+      </div>
+      {/* PC: 왼쪽 시간 + 타임라인(선 + 완료 체크) */}
       <span className="hidden w-14 shrink-0 pt-3 text-right text-[16px] font-bold tabular-nums text-ink md:block">
-        {time}
+        {item.time || "--:--"}
       </span>
       <span className="relative hidden w-8 shrink-0 justify-center md:flex">
         <span
           className={`absolute w-0.5 bg-line ${isFirst ? "top-5" : "top-0"} ${isLast ? "h-5" : "bottom-0"}`}
           aria-hidden
         />
-        <label className="relative z-10 mt-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-surface">
-          {doneBox}
-        </label>
+        <span className="mt-2">{check}</span>
       </span>
       {/* 내용 — 장소가 있으면 누를 때 정보가 아래로 펼쳐진다 */}
-      <div className="mb-2.5 min-w-0 flex-1 overflow-hidden rounded-2xl bg-surface-2 md:mb-3">
-        <div className="flex min-h-9 items-center gap-2 px-3.5 pt-2.5 md:pt-3">
-          <span className="text-[16px] font-extrabold tabular-nums text-ink md:hidden">{time}</span>
-          <span className={`rounded-md px-1.5 py-0.5 text-[12px] font-bold ${meta.chipClass}`}>
-            {meta.emoji} {meta.label}
-          </span>
-          <label className="-my-1.5 -mr-2 ml-auto flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center md:hidden">
-            {doneBox}
-          </label>
-        </div>
+      <div className="mb-4 min-w-0 overflow-hidden rounded-2xl bg-surface-2 md:mb-3 md:flex-1">
         {canOpen ? (
           <button type="button" onClick={toggle} aria-expanded={open} className={`${bodyClass} active:bg-surface-3`}>
             {body}

@@ -519,6 +519,104 @@
       "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_h%E1%BB%8Fi_nem_n%C6%B0%E1%BB%9Bng_%C4%83n_v%E1%BB%9Bi_b%C3%A1nh_tr%C3%A1ng_th%C3%A1ng_6_n%C4%83m_2018_(1).jpg",
       "kind": "dish",
       "caption": "넴느엉과 라이스페이퍼·채소 한상 (대표 메뉴 예시, 이 가게 사진 아님 · 베트남에서 찍은 사진)"
+    },
+    "radisson-sunrise": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-radisson-sunrise.jpg",
+      "credit": "Ceeseven",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bacon_Cheeseburger_with_French_Fries_on_plate.JPG",
+      "kind": "dish",
+      "caption": "치즈버거·감자튀김 (대표 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "song-seafood": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-song-seafood.jpg",
+      "credit": "Phương Huy (thảo luận)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Khoanh_m%E1%BB%B1c_chi%C3%AAn_gi%C3%B2n_t%E1%BA%A1i_Pizza_company_Nguy%E1%BB%85n_S%C6%A1n,_th%C3%A1ng_8_n%C4%83m_2018_(1).jpg",
+      "kind": "dish",
+      "caption": "오징어튀김 (2인 세트 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "pizza-king-cam-lam": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-pizza-king-cam-lam.jpg",
+      "credit": "Shisma",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Margherita_pizza_on_plate.jpg",
+      "kind": "dish",
+      "caption": "마르게리타 피자 (대표 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "xom-bien-seafood": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-xom-bien-seafood.jpg",
+      "credit": "Jpatokal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Live_seafood_tanks_in_Danang.jpg",
+      "kind": "dish",
+      "caption": "해산물 수조 (다낭 식당 예시, 이 가게 사진 아님)"
+    },
+    "xoai-bbq": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-xoai-bbq.jpg",
+      "credit": "나무늘보하루~",
+      "license": "CC BY 2.0 kr",
+      "source": "https://commons.wikimedia.org/wiki/File:S%C6%B0%E1%BB%9Dn_n%C6%B0%E1%BB%9Bng.jpg",
+      "kind": "dish",
+      "caption": "숯불 돼지갈비 구이 (대표 메뉴 예시, 이 가게 사진 아님)"
+    },
+    "banh-xeo-co-tuyet": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/food-banh-xeo-co-tuyet.jpg",
+      "credit": "VeeWin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Banh-xeo,-roving-street-vendor,-Quy-Nhon,-Vietnam.jpg",
+      "kind": "dish",
+      "caption": "길거리 반쎄오 (꾸이년 노점 예시, 이 가게 사진 아님)"
+    }
+  },
+  "desert": {
+    "jeep-tracks": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-jeep-tracks.jpg",
+      "credit": "Erwin Verbruggen from Amsterdam, The Netherlands",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_Sand_Dunes_(14614693572).jpg",
+      "kind": "scene",
+      "caption": "지프 바퀴 자국이 난 사구 (무이네 백사구 예시, 판랑 남끄엉 아님)"
+    },
+    "sled-parent": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-sled-parent.jpg",
+      "credit": "Great Sand Dunes National Park and Preserve",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ranger_Patrick_Sand_Sledding_with_Daughter_(12659796373).jpg",
+      "kind": "scene",
+      "caption": "어른이 아이를 안고 타는 모래썰매 (미국 그레이트샌드듄스 예시)"
+    },
+    "dune-walk": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-dune-walk.jpg",
+      "credit": "choi kwangmo",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:20180411M%C5%A9i_N%C3%A9_%C4%90%E1%BB%93i_C%C3%A1t_Tr%E1%BA%AFng_White_Sand_Dunes_Kim_Euncheol.jpg",
+      "kind": "scene",
+      "caption": "모래 언덕 오르막 — 발이 빠져서 아이는 안고 올라가요 (무이네 백사구 예시)"
+    },
+    "sheep": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-sheep.jpg",
+      "credit": "Đông Sơn, vi:User:Bùi Thụy Đào Nguyên",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ch%C4%83n_nu%C3%B4i_C%E1%BB%ABu_%E1%BB%9F_Ninh_Thu%E1%BA%ADn.JPG",
+      "kind": "scene",
+      "caption": "닌투언의 양 방목 (양떼목장 예시)"
+    },
+    "po-klong-garai": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-po-klong-garai.jpg",
+      "credit": "Lam Tr Th",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_Po_Klong_Garai_Phan_Rang_-_panoramio.jpg",
+      "kind": "scene",
+      "caption": "포클롱가라이 참탑 (판랑)"
+    },
+    "da-chong": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/desert-da-chong.jpg",
+      "credit": "Windrain",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:N%C3%BAi_%C4%91%C3%A1_Ch%E1%BB%93ng,_Ninh_Thu%E1%BA%ADn.jpg",
+      "kind": "scene",
+      "caption": "다총산 — 쭝선사가 있는 바위산 (칸하이, 판랑 북동쪽)"
     }
   }
 }

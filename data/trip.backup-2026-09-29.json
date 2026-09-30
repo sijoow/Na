@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "tripTitle": "나트랑 6박 8일",
+  "travelers": "3명 (아이 1명 · 4살)",
+  "startDate": "2026-10-03",
+  "endDate": "2026-10-10",
+  "flights": [
+    {
+      "id": "f-out",
+      "direction": "출국",
+      "airline": "제주항공",
+      "flightNo": "7C2303",
+      "departDate": "2026-10-03",
+      "departTime": "21:25",
+      "from": "인천",
+      "arriveDate": "2026-10-04",
+      "arriveTime": "00:30",
+      "to": "캄란",
+      "memo": "도착은 현지시간·예상 (한국보다 2시간 느림) — e-티켓으로 확인"
+    },
+    {
+      "id": "f-in",
+      "direction": "귀국",
+      "airline": "제주항공",
+      "flightNo": "",
+      "departDate": "2026-10-10",
+      "departTime": "01:35",
+      "from": "캄란",
+      "arriveDate": "2026-10-10",
+      "arriveTime": "08:30",
+      "to": "인천",
+      "memo": "귀국편 편명 입력 · 도착시간 예상"
+    }
+  ],
+  "days": [
+    {
+      "id": "d1",
+      "date": "2026-10-03",
+      "title": "출국 — 저녁 비행기",
+      "lodging": "공항 근처 호텔 (새벽 도착 0.5박)",
+      "items": [
+        {
+          "id": "d1-i1",
+          "time": "18:00",
+          "title": "인천공항 도착 · 체크인",
+          "memo": "출발 2~3시간 전 도착 · 아이 여권 / 영문 가족관계증명서",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d1-i2",
+          "time": "21:25",
+          "title": "인천 출발 — 제주항공 7C2303",
+          "memo": "기내에서 아이 재우기 (잠옷 · 간식)",
+          "category": "move",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "date": "2026-10-04",
+      "title": "새벽 도착 → 시내 이동 & 담시장",
+      "lodging": "시내 호텔",
+      "items": [
+        {
+          "id": "d2-i1",
+          "time": "00:30",
+          "title": "캄란공항 도착 · 입국심사",
+          "memo": "현지시간 (한국보다 2시간 느림)",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d2-i2",
+          "time": "01:00",
+          "title": "공항 근처 호텔로 이동 (10~15분)",
+          "memo": "호텔 픽업 있으면 이용 · 없으면 Grab 7인승",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d2-i3",
+          "time": "01:30",
+          "title": "호텔 체크인 · 취침",
+          "memo": "10/3 날짜로 예약 · 새벽 도착 미리 알리기",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d2-i4",
+          "time": "09:00",
+          "title": "늦잠 · 호텔 조식",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d2-i5",
+          "time": "11:00",
+          "title": "체크아웃 → Grab으로 시내 이동 (약 40분)",
+          "memo": "7인승 추천",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d2-i6",
+          "time": "12:00",
+          "title": "시내 호텔에 짐 맡기기 · 점심 쌀국수",
+          "memo": "이른 체크인 가능하면 요청",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d2-i7",
+          "time": "14:00",
+          "title": "체크인 · 낮잠",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d2-i9",
+          "time": "15:00",
+          "title": "나트랑 대성당 (돌성당)",
+          "memo": "일요일은 11:00~16:30만 개방 · 어깨·무릎 가리는 옷 · 입장 무료(돈 받는 사람 무시)",
+          "category": "sightseeing",
+          "done": false
+        },
+        {
+          "id": "d2-i8",
+          "time": "15:40",
+          "title": "담시장 구경",
+          "memo": "16~17시부터 가게 닫기 시작 · 흥정 필수 · 아이 손 꼭 잡기",
+          "category": "shopping",
+          "done": false
+        },
+        {
+          "id": "d2-i10",
+          "time": "18:00",
+          "title": "해변 산책 & 이른 저녁",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d2-i11",
+          "time": "19:30",
+          "title": "야시장 구경",
+          "memo": "",
+          "category": "shopping",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "date": "2026-10-05",
+      "title": "빈원더스",
+      "lodging": "시내 호텔",
+      "items": [
+        {
+          "id": "d3-i1",
+          "time": "08:30",
+          "title": "호텔 조식",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d3-i2",
+          "time": "09:30",
+          "title": "빈원더스 이동",
+          "memo": "섬 이동 수단(배/케이블카) 운행 여부 · 아이 키 제한 확인",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d3-i3",
+          "time": "10:00",
+          "title": "아쿠아리움 · 키즈존",
+          "memo": "",
+          "category": "activity",
+          "done": false
+        },
+        {
+          "id": "d3-i4",
+          "time": "12:00",
+          "title": "점심 (빈원더스 안)",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d3-i5",
+          "time": "13:30",
+          "title": "워터파크",
+          "memo": "래시가드 · 아이 튜브",
+          "category": "activity",
+          "done": false
+        },
+        {
+          "id": "d3-i6",
+          "time": "17:00",
+          "title": "호텔 복귀",
+          "memo": "",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d3-i7",
+          "time": "18:30",
+          "title": "저녁",
+          "memo": "",
+          "category": "food",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "date": "2026-10-06",
+      "title": "포나가르 참탑 · 머드온천 → 캄란 리조트",
+      "lodging": "캄란 리조트",
+      "items": [
+        {
+          "id": "d4-i1",
+          "time": "09:00",
+          "title": "조식 · 체크아웃 (짐 맡기기)",
+          "memo": "",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d4-i2",
+          "time": "10:00",
+          "title": "포나가르 참탑 (짧게)",
+          "memo": "",
+          "category": "sightseeing",
+          "done": false
+        },
+        {
+          "id": "d4-i3",
+          "time": "11:00",
+          "title": "머드온천 (아이리조트)",
+          "memo": "유아풀 있음 · 아이는 짧게 · 수건 / 여벌 옷",
+          "category": "activity",
+          "done": false
+        },
+        {
+          "id": "d4-i4",
+          "time": "13:00",
+          "title": "점심 (온천 안)",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d4-i5",
+          "time": "15:00",
+          "title": "짐 찾아서 캄란 리조트로 이동",
+          "memo": "Grab 7인승 · 약 40~50분",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d4-i6",
+          "time": "16:30",
+          "title": "리조트 체크인 · 수영장",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d4-i7",
+          "time": "19:00",
+          "title": "리조트 저녁",
+          "memo": "",
+          "category": "food",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "date": "2026-10-07",
+      "title": "리조트 오전 · 판랑 사막투어 (선셋)",
+      "lodging": "캄란 리조트",
+      "items": [
+        {
+          "id": "d5-i1",
+          "time": "08:30",
+          "title": "조식",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d5-i2",
+          "time": "09:30",
+          "title": "키즈클럽 · 수영장",
+          "memo": "",
+          "category": "activity",
+          "done": false
+        },
+        {
+          "id": "d5-i3",
+          "time": "12:00",
+          "title": "점심",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d5-i4",
+          "time": "13:30",
+          "title": "판랑 사막투어 픽업 (리조트)",
+          "memo": "선셋 투어로 예약 · 캄란에서 판랑까지 차로 약 1시간 · 차에서 아이 낮잠",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d5-i5",
+          "time": "15:30",
+          "title": "판랑 사막 — 지프 · 모래썰매",
+          "memo": "선글라스 · 모자 · 물 · 모래 막는 긴 옷 / 아이 컨디션 따라 짧게",
+          "category": "activity",
+          "done": false
+        },
+        {
+          "id": "d5-i6",
+          "time": "17:30",
+          "title": "사막 선셋 감상",
+          "memo": "",
+          "category": "sightseeing",
+          "done": false
+        },
+        {
+          "id": "d5-i7",
+          "time": "19:30",
+          "title": "리조트 복귀 · 저녁",
+          "memo": "",
+          "category": "food",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "date": "2026-10-08",
+      "title": "리조트 & 롯데마트 쇼핑",
+      "lodging": "캄란 리조트",
+      "items": [
+        {
+          "id": "d6-i1",
+          "time": "08:30",
+          "title": "조식 · 수영",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d6-i2",
+          "time": "13:00",
+          "title": "점심 · 낮잠",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d6-i3",
+          "time": "15:30",
+          "title": "롯데마트 기념품 쇼핑",
+          "memo": "시내까지 Grab 약 40분",
+          "category": "shopping",
+          "done": false
+        },
+        {
+          "id": "d6-i4",
+          "time": "18:00",
+          "title": "시내에서 저녁 (해산물)",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d6-i5",
+          "time": "20:00",
+          "title": "리조트 복귀",
+          "memo": "",
+          "category": "move",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d7",
+      "date": "2026-10-09",
+      "title": "리조트 & 출국 준비",
+      "lodging": "기내 (야간 비행)",
+      "items": [
+        {
+          "id": "d7-i1",
+          "time": "08:30",
+          "title": "조식 · 수영",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d7-i2",
+          "time": "12:00",
+          "title": "점심",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d7-i3",
+          "time": "13:00",
+          "title": "낮잠 · 짐 정리",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d7-i4",
+          "time": "15:00",
+          "title": "마사지 (교대로)",
+          "memo": "",
+          "category": "rest",
+          "done": false
+        },
+        {
+          "id": "d7-i5",
+          "time": "17:30",
+          "title": "레이트 체크아웃",
+          "memo": "18시까지 미리 요청 · 안 되면 1박 추가 고려",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d7-i6",
+          "time": "18:00",
+          "title": "저녁",
+          "memo": "",
+          "category": "food",
+          "done": false
+        },
+        {
+          "id": "d7-i7",
+          "time": "22:00",
+          "title": "캄란공항 이동",
+          "memo": "리조트→공항 약 10~20분 · 출발 2.5~3시간 전 도착",
+          "category": "move",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "d8",
+      "date": "2026-10-10",
+      "title": "귀국",
+      "lodging": "-",
+      "items": [
+        {
+          "id": "d8-i1",
+          "time": "01:35",
+          "title": "캄란 출발 — 제주항공 귀국편",
+          "memo": "귀국편 편명 입력",
+          "category": "move",
+          "done": false
+        },
+        {
+          "id": "d8-i2",
+          "time": "08:30",
+          "title": "인천 도착 (예상)",
+          "memo": "",
+          "category": "move",
+          "done": false
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "id": "c-1",
+      "text": "여권 (유효기간 6개월 이상)",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-2",
+      "text": "아이 여권",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-3",
+      "text": "영문 가족관계증명서",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-4",
+      "text": "항공권 e-티켓",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-5",
+      "text": "숙소 바우처",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-6",
+      "text": "여행자보험",
+      "group": "서류",
+      "checked": false
+    },
+    {
+      "id": "c-7",
+      "text": "달러 현금 (현지 금은방 환전)",
+      "group": "돈",
+      "checked": false
+    },
+    {
+      "id": "c-8",
+      "text": "트래블카드",
+      "group": "돈",
+      "checked": false
+    },
+    {
+      "id": "c-9",
+      "text": "해열제 · 체온계",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-10",
+      "text": "아이 상비약",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-11",
+      "text": "아이용 선크림 · 모기기피제",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-12",
+      "text": "래시가드 · 튜브 / 구명조끼",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-13",
+      "text": "휴대용 유모차",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-14",
+      "text": "휴대용 카시트 (선택)",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-15",
+      "text": "간식 · 물티슈",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-16",
+      "text": "여벌 옷",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-17",
+      "text": "기내용 장난감 · 태블릿",
+      "group": "아이",
+      "checked": false
+    },
+    {
+      "id": "c-18",
+      "text": "우비 / 우산",
+      "group": "우기 대비",
+      "checked": false
+    },
+    {
+      "id": "c-19",
+      "text": "아쿠아슈즈",
+      "group": "우기 대비",
+      "checked": false
+    },
+    {
+      "id": "c-20",
+      "text": "방수팩",
+      "group": "우기 대비",
+      "checked": false
+    },
+    {
+      "id": "c-21",
+      "text": "충전기 · 보조배터리",
+      "group": "전자기기",
+      "checked": false
+    },
+    {
+      "id": "c-22",
+      "text": "유심 / eSIM",
+      "group": "전자기기",
+      "checked": false
+    },
+    {
+      "id": "c-23",
+      "text": "선크림",
+      "group": "생활",
+      "checked": false
+    },
+    {
+      "id": "c-24",
+      "text": "모기기피제",
+      "group": "생활",
+      "checked": false
+    },
+    {
+      "id": "c-25",
+      "text": "상비약",
+      "group": "생활",
+      "checked": false
+    },
+    {
+      "id": "c-26",
+      "text": "수영복",
+      "group": "생활",
+      "checked": false
+    },
+    {
+      "id": "c-27",
+      "text": "선글라스 · 모자 (사막투어)",
+      "group": "생활",
+      "checked": false
+    },
+    {
+      "id": "c-28",
+      "text": "Grab 설치",
+      "group": "앱",
+      "checked": false
+    },
+    {
+      "id": "c-29",
+      "text": "환율 계산기",
+      "group": "앱",
+      "checked": false
+    }
+  ],
+  "notes": "숙소 예약번호\n- 공항 근처 호텔 (10/3, 1박 · 새벽 입실):\n- 시내 호텔 (10/4~10/6, 2박):\n- 캄란 리조트 (10/6~10/9, 3박):\n\n팁\n- 이동은 Grab 7인승 (공항→시내 약 30~40만 동)\n- 환전: 한국에서 달러 → 현지 금은방에서 동\n- 아이는 생수만\n- 10월은 우기 시작: 날씨 보고 일정 교체"
+}

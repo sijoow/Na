@@ -240,12 +240,33 @@ function ResortOutlook() {
           <li key={d.date} className="rounded-2xl bg-surface-2 p-4">
             <p className="text-[14px] font-bold text-ink">{d.date}</p>
             <p className="mt-1 text-[13px] leading-relaxed text-ink-3">{d.outlook}</p>
+            {d.blocks && d.blocks.length > 0 && (
+              <ul className="mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+                {d.blocks.map((b) => {
+                  // 두 모델 중 높은 값 기준 — 30% 미만 맑음, 60% 미만 가끔, 그 이상 소나기
+                  const hi = Math.max(b.ecmwf, b.gfs);
+                  const tone = hi < 30 ? "bg-primary-soft text-primary-ink" : hi < 60 ? "bg-surface text-ink-2" : "bg-accent-soft text-ink";
+                  return (
+                    <li key={b.time} className={`rounded-xl px-2.5 py-1.5 text-[12px] leading-snug ${tone}`}>
+                      <span className="font-bold tabular-nums">
+                        {hi < 30 ? "☀️" : hi < 60 ? "⛅" : "🌦️"} {b.time}
+                      </span>{" "}
+                      {b.what}
+                      <span className="block tabular-nums">
+                        비 {b.ecmwf}% / {b.gfs}% · {b.mm}mm
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
             <p className="mt-1.5 text-[14px] leading-relaxed text-ink-2">
               <b className="text-primary-ink">👉 이렇게</b> {d.plan}
             </p>
           </li>
         ))}
       </ul>
+      {resort.blocksNote && <p className="mt-2 text-[12px] leading-relaxed text-ink-3">{resort.blocksNote}</p>}
       <details className="mt-3 rounded-2xl border border-line px-4 py-3">
         <summary className="cursor-pointer text-[14px] font-bold text-ink-2">📅 언제 다시 확인할지 · 태풍 전망</summary>
         <ul className="mt-2 space-y-1.5 text-[13px] leading-relaxed text-ink-2">
@@ -255,7 +276,9 @@ function ResortOutlook() {
         </ul>
         <p className="mt-2 text-[13px] leading-relaxed whitespace-pre-line text-ink-3">🌀 {resort.typhoon}</p>
       </details>
-      <p className="mt-2 text-[12px] text-ink-4">{resort.updatedAt} 기준 · 9~11일 뒤 예보라 참고용이에요.</p>
+      <p className="mt-2 text-[12px] text-ink-4">
+        {resort.updatedAt} 기준 · {resort.leadNote}
+      </p>
     </section>
   );
 }

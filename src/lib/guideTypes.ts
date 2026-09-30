@@ -168,6 +168,8 @@ export interface AddOn {
   extra: string;
   kid: string;
   source: string;
+  /** 사진 (images.json desert 묶음의 키) */
+  photo?: string;
 }
 
 export type ShopKind = "market" | "mall" | "brand-store" | "mart" | "night-market" | "street" | "fruit";

@@ -65,7 +65,13 @@ export default function MapView({ places, highlightIds, paths, selectedPlaceId, 
     });
     return () => {
       disposed = true;
-      mapRef.current?.remove();
+      // Leaflet 1.9의 remove()는 확대 애니메이션 종료 타이머(_onZoomTransitionEnd)를 취소하지 않는다.
+      // 확대 도중에 탭을 바꾸면 지워진 지도에서 타이머가 돌아 '_leaflet_pos' 오류가 나서, 끝난 것으로 표시해 둔다
+      const map = mapRef.current as (LeafletMap & { _animatingZoom?: boolean }) | null;
+      if (map) {
+        map._animatingZoom = false;
+        map.remove();
+      }
       mapRef.current = null;
       layerRef.current = null;
     };
@@ -113,8 +119,9 @@ export default function MapView({ places, highlightIds, paths, selectedPlaceId, 
     const focusPoints = places
       .filter((p) => focusAll || highlight.has(p.id))
       .map((p) => [p.lat, p.lng] as [number, number]);
-    if (focusPoints.length === 1) map.setView(focusPoints[0], 14);
-    else if (focusPoints.length > 1) map.fitBounds(focusPoints, { padding: [40, 40], maxZoom: 15 });
+    // 앱이 맞추는 화면은 애니메이션 없이 바로 (날짜를 빨리 바꾸거나 탭을 옮겨도 확대가 겹치지 않게)
+    if (focusPoints.length === 1) map.setView(focusPoints[0], 14, { animate: false });
+    else if (focusPoints.length > 1) map.fitBounds(focusPoints, { padding: [40, 40], maxZoom: 15, animate: false });
   }, [leaflet, places, highlightIds, paths, selectedPlaceId, onSelectPlace, circles]);
 
   return (

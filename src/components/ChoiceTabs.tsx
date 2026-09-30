@@ -85,11 +85,14 @@ export default function ChoiceTabs({
             <p className="mt-1 text-[15px] leading-snug font-bold text-ink">{option.when}</p>
             <p className="mt-1 text-[15px] leading-snug font-bold text-primary-ink">예상 {option.total}</p>
             <ul className="mt-2 space-y-1.5 text-[13px] leading-snug text-ink-2">
-              {option.items.map((it) => (
+              {option.items.map((it, idx) => (
                 <li key={`${it.time}-${it.title}`}>
                   <span className="font-semibold tabular-nums">{it.time}</span> {it.title}
-                  {/* 식사·관광 일정은 메뉴·영업시간·결제 메모까지 (앱 자료에 카드가 없는 가게도 여기서 비교) */}
-                  {it.category !== "move" && it.memo && <span className="mt-0.5 block text-[12px] text-ink-3">{it.memo}</span>}
+                  {/* 식사·관광 일정은 메뉴·영업시간·결제 메모까지 (앱 자료에 카드가 없는 가게도 여기서 비교).
+                      대표 일정이 이동이면(투어 업체 출발) 그 메모가 업체별 핵심이라 같이 보여 준다 */}
+                  {(it.category !== "move" || idx === option.mainIndex) && it.memo && (
+                    <span className="mt-0.5 block text-[12px] text-ink-3">{it.memo}</span>
+                  )}
                 </li>
               ))}
             </ul>

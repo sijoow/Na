@@ -88,7 +88,6 @@ const PLACE_KEYWORDS: [placeId: string, words: string[], routeVia?: string][] = 
   ["vinwonders-pier", ["케이블카역", "케이블카 탑승장"]],
   ["nam-cuong-dunes", ["사막", "Nam Cương"]],
   ["cam-ranh-airport", ["캄란국제공항", "캄란공항"]],
-  ["nha-trang-cathedral", ["대성당"]],
   ["po-nagar", ["포나가르"]],
 ];
 

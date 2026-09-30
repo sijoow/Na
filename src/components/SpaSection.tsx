@@ -37,6 +37,8 @@ export interface SpaShop {
   blogPosts: BlogPost[];
   /** 마사지 후보 샵만 — 카드 맨 위의 가격 정책 · 예약 방법 */
   policy?: SpaPolicy;
+  /** 네일 전문샵 — 마사지 목록에는 안 나오고 💅 네일아트 탭에만, 순위는 네일끼리 */
+  kind?: "nail";
 }
 
 interface PolicyRow {
@@ -58,15 +60,22 @@ export interface SpaSlotInfo {
 const SHOPS = [...(data.shops as SpaShop[])].sort((a, b) => a.rank - b.rank);
 const AREA_LABEL: Record<SpaArea, string> = { city: "🏙️ 시내", camranh: "🏝️ 캄란", other: "📍 기타" };
 
-type Filter = "all" | "city" | "camranh" | "departure";
+type Filter = "all" | "city" | "camranh" | "departure" | "nail";
 const FILTERS: [Filter, string][] = [
   ["all", "전체"],
   ["city", "🏙️ 시내"],
   ["camranh", "🏝️ 캄란"],
   ["departure", "✈️ 출국 전 샤워"],
+  ["nail", "💅 네일아트"],
 ];
 // 출국 전: 공항 드랍 + 샤워가 둘 다 되는 곳
 const isDeparture = (s: SpaShop) => s.tags.some((t) => t.startsWith("✈️")) && s.tags.some((t) => t.startsWith("🚿"));
+const isNailShop = (s: SpaShop) => s.kind === "nail";
+// 네일 탭: 네일 전문샵(네일 순위대로) + 네일이 괜찮은 스파(💅 칩)
+const matches = (s: SpaShop, f: Filter) =>
+  f === "nail"
+    ? isNailShop(s) || s.tags.some((t) => t.startsWith("💅"))
+    : !isNailShop(s) && (f === "all" || (f === "departure" ? isDeparture(s) : s.area === f));
 
 function mapUrl(s: SpaShop) {
   return s.lat !== null && s.lng !== null
@@ -74,7 +83,7 @@ function mapUrl(s: SpaShop) {
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${s.localName} Nha Trang`)}`;
 }
 const photoUrl = (s: SpaShop) =>
-  `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${s.localName} Nha Trang spa`)}`;
+  `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${s.localName} Nha Trang ${isNailShop(s) ? "nail" : "spa"}`)}`;
 
 export default function SpaSection() {
   const [filter, setFilter] = useState<Filter>("all");
@@ -85,8 +94,8 @@ export default function SpaSection() {
       </div>
     );
   }
-  const list = SHOPS.filter((s) =>
-    filter === "all" ? true : filter === "departure" ? isDeparture(s) : s.area === filter,
+  const list = SHOPS.filter((s) => matches(s, filter)).sort(
+    (a, b) => Number(isNailShop(b)) - Number(isNailShop(a)) || a.rank - b.rank,
   );
   return (
     <div className="space-y-4">
@@ -115,6 +124,13 @@ export default function SpaSection() {
             </button>
           ))}
         </div>
+        {filter === "nail" && (
+          <p className="mt-3 rounded-2xl bg-accent-soft p-4 text-[14px] leading-relaxed text-ink">
+            💅 엄마 젤아트 + 아이 키즈네일 기준이에요. 키즈네일은 모두 램프로 굳히는 젤이라 1~2주면 떨어져요.
+            수성·필오프 매니큐어인지는 어느 가게도 밝히지 않았고, 만 4살이 되는지는 오드리네일 깜란점만 메뉴에
+            적혀 있어요. 나머지는 카톡으로 &lsquo;만 4살, 키 100cm&rsquo;를 먼저 물어보세요.
+          </p>
+        )}
         {data.tips && (
           <details className="mt-3 rounded-2xl bg-surface-2 px-4 py-3">
             <summary className="cursor-pointer text-[14px] font-bold text-ink-2">💡 이용 팁 (팁 금액·예약·아이 주의점)</summary>
@@ -123,7 +139,7 @@ export default function SpaSection() {
         )}
       </section>
 
-      {data.deals && <DealsSummary />}
+      {data.deals && filter !== "nail" && <DealsSummary />}
 
       {list.length === 0 ? (
         <div className={`${card} p-8 text-center text-ink-3`}>이 조건에 맞는 곳이 없어요.</div>
@@ -149,7 +165,7 @@ export function SpaCard({ shop: s, slot }: { shop: SpaShop; slot?: SpaSlotInfo }
     <article className={`${card} p-5 md:p-6 ${s.rank === 1 ? "ring-2 ring-accent" : ""}`}>
       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold">
         <span className={`rounded-lg px-2 py-0.5 ${s.rank === 1 ? "bg-accent text-white" : "bg-primary-soft text-primary-ink"}`}>
-          추천 {s.rank}
+          {isNailShop(s) ? "💅 네일" : "추천"} {s.rank}
         </span>
         <span className="text-ink-3">{AREA_LABEL[s.area]}</span>
         {s.bestFor && <span className="min-w-0 text-ink-3">· {s.bestFor}</span>}

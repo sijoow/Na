@@ -19,9 +19,10 @@ interface Props {
   update: (fn: (s: TripState) => TripState) => void;
 }
 
-export type GoTab = "stays" | "tours" | "food" | "spa" | "map" | "weather" | "schedule";
+export type GoTab = "desert" | "stays" | "tours" | "food" | "spa" | "map" | "weather" | "schedule";
 
 const SHORTCUTS: { tab: GoTab; label: string; desc: string; photo: () => PhotoInfo | undefined }[] = [
+  { tab: "desert", label: "사막투어 예약", desc: "업체 비교·브리핑", photo: () => activityPhoto("phan-rang-desert") },
   { tab: "stays", label: "숙소", desc: "확정 숙소 3곳", photo: () => stayPhoto("movenpick-cam-ranh") ?? placePhoto("cam-ranh-resort-area") },
   { tab: "tours", label: "투어·쇼핑", desc: "가격·예약", photo: () => placePhoto("vinwonders") },
   { tab: "food", label: "맛집", desc: "한국인 인기 맛집", photo: () => dishPhoto("소고기 쌀국수 (Phở bò)") ?? placePhoto("pho-hong") },

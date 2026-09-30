@@ -39,17 +39,6 @@
       "source": "https://www.openstreetmap.org/relation/21159862 , https://blog.naver.com/mwehsh1/223971722186 , https://blog.naver.com/dpfladl651/224355099716"
     },
     {
-      "id": "nha-trang-cathedral",
-      "name": "나트랑 대성당 (산 성당)",
-      "localName": "Nhà thờ Chính tòa Nha Trang (Nhà thờ Núi / Nhà thờ Đá / Christ the King Cathedral)",
-      "kind": "sight",
-      "lat": 12.2467333,
-      "lng": 109.188137,
-      "address": "31A Thái Nguyên, Phường Nha Trang, Tỉnh Khánh Hòa",
-      "note": "[좌표 검증] OSM way 162818208(Christ the King Cathedral)과 일치해요. 회색 돌로 지은 고딕 성당이에요. 분홍색 '핑크성당'은 다낭·호치민 성당이에요. 입장은 무료예요. 입구에서 돈을 받는 사람은 무단 징수이니 내지 마세요(2025.3 기사). 10/4는 일요일이라 05:00~07:00, 11:00~16:30에만 열어요. 일요 미사는 05:00, 07:00, 09:30, 15:00, 16:30, 18:30이에요. 11:00~14:30 사이에 가세요. 어깨와 무릎을 가리는 옷을 입어야 해요.",
-      "source": "https://www.openstreetmap.org/way/162818208 , https://newlifetravel.vn/nha-tho-da-nha-trang/ , https://crystalbay.com/58-nha-tho-da-nha-trang-gio-le-va-nhung-dieu-can-biet-khi-tham-quan-n56378.html"
-    },
-    {
       "id": "night-market",
       "name": "나트랑 야시장",
       "localName": "Chợ đêm Nha Trang (Nha Trang Night Market)",
@@ -164,50 +153,26 @@
     {
       "day": "D2",
       "fromId": "cam-ranh-airport",
-      "toId": "cam-ranh-resort-area",
-      "distanceKm": 5.6,
-      "durationMin": 10,
-      "grabType": "GrabCar 7인승 (또는 호텔 픽업)",
-      "fareVndMin": 90000,
-      "fareVndMax": 220000,
-      "note": "새벽 01시경 공항 → 공항 근처 호텔(0.5박). 호텔 픽업이 있으면 그걸 쓰고, 없으면 Grab. 심야라 요금이 범위 위쪽일 수 있어요. 숙소가 정해지면 지도 위치가 그 호텔로 바뀌어요. (요금은 D7 공항 구간 조사값 기준)",
-      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://camranh.aero/vi/airport-guide/transport/parking , https://blog.naver.com/sjm2014/223355707936 , https://www.openstreetmap.org/way/854478990 , OSRM https://router.project-osrm.org"
-    },
-    {
-      "day": "D2",
-      "fromId": "cam-ranh-resort-area",
       "toId": "city-hotel-area",
-      "distanceKm": 31.5,
-      "durationMin": 40,
-      "grabType": "GrabCar 7인승",
-      "fareVndMin": 330000,
-      "fareVndMax": 500000,
-      "note": "오전 11시 체크아웃 후 시내로 (낮이라 심야 할증 없음). Grab 공식 '공항↔나트랑' 노선요금: 7인승 약 39만동, 4인승 약 34만동(VAT 포함, 2025.7~2026.12) + 플랫폼 수수료 5천~1.9만동. 해외 카드로 결제하면 4%가 더 붙어요. 공항 근처 호텔에서 출발하면 거리가 조금 짧아 요금이 약간 낮을 수 있어요.",
-      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://www.grab.com/vn/en/blog/grab-trien-khai-dich-vu-grabcar-theo-tuyen-bai-dai-nha-trang/ , https://blog.naver.com/dddd1233-/224388864118 , https://blog.naver.com/hyheo99/223353347878 , OSRM https://router.project-osrm.org"
+      "distanceKm": 37,
+      "durationMin": 45,
+      "grabType": "7인승 사전예약 픽업 (호텔 픽업 안 됨) / 그랩 7인승",
+      "fareVndMin": 360000,
+      "fareVndMax": 590000,
+      "note": "새벽 도착 후 7인승 사전예약 픽업(약 2.3만~3.1만원 선결제)으로 베스트웨스턴에 바로 가요. 호텔 픽업은 안 돼요. 그랩 7인승은 약 42만~50만동, 공항 공식 택시 7인승은 36만동 정찰가예요. 공항 근처 호텔 0.5박 계획은 뺐어요.",
+      "source": "OSRM https://router.project-osrm.org · 베스트웨스턴 공항 픽업 예약(사용자 확인)"
     },
     {
       "day": "D2",
       "fromId": "city-hotel-area",
-      "toId": "nha-trang-cathedral",
-      "distanceKm": 1.6,
-      "durationMin": 6,
-      "grabType": "GrabCar 4인승",
-      "fareVndMin": 32000,
-      "fareVndMax": 55000,
-      "note": "일요일(10/4)은 11:00~16:30만 개방 — 15시쯤 도착. [교정] 최소요금을 27,000동에서 32,000동으로 올렸어요. 숙소 앞 쩐푸 해변으로 돌아와 산책해요. 10/4 나트랑 일몰은 17:31쯤이에요(천문 계산값). OSRM은 1.61km예요.",
-      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
-    },
-    {
-      "day": "D2",
-      "fromId": "nha-trang-cathedral",
       "toId": "dam-market",
-      "distanceKm": 1.5,
-      "durationMin": 6,
+      "distanceKm": 2.5,
+      "durationMin": 8,
       "grabType": "GrabCar 4인승",
-      "fareVndMin": 32000,
-      "fareVndMax": 55000,
-      "note": "담시장은 16~17시부터 가게를 닫기 시작해요. [교정] 최소요금을 27,000동에서 32,000동으로 올렸어요(플랫폼 수수료 반영). 10/4는 일요일이라 성당은 05:00~07:00, 11:00~16:30에만 열어요. 15:00와 16:30에 미사가 있으니 11:00~14:30 사이에 도착하세요. 입장은 무료예요. 입구에서 돈을 받는 사람은 무단 징수예요. 어깨와 무릎을 가리는 옷을 입으세요. OSRM은 1.53km예요.",
-      "source": "https://newlifetravel.vn/nha-tho-da-nha-trang/ , https://crystalbay.com/58-nha-tho-da-nha-trang-gio-le-va-nhung-dieu-can-biet-khi-tham-quan-n56378.html , https://www.grab.com/vn/blog/driver/thongtindichvu/ , OSRM https://router.project-osrm.org"
+      "fareVndMin": 35000,
+      "fareVndMax": 65000,
+      "note": "베스트웨스턴에서 포한푹 점심(그랩 약 11분)을 먹고 담시장으로 가요(포한푹→담시장 그랩 약 7분). 담시장은 16~17시부터 가게를 닫기 시작해요. 대성당은 안 가기로 해서 뺐어요.",
+      "source": "https://www.grab.com/vn/blog/driver/thongtindichvu/ , https://blog.naver.com/dpfladl651/224355099716 , https://blog.naver.com/mwehsh1/223971722186 , OSRM https://router.project-osrm.org"
     },
     {
       "day": "D2",
@@ -717,9 +682,9 @@
       ]
     },
     {
-      "topic": "나트랑 야시장 · 나트랑 대성당",
+      "topic": "나트랑 야시장",
       "placeId": "night-market",
-      "summary": "1) 일정표의 '핑크성당'은 다낭·호치민 성당 이야기입니다. 나트랑 대성당은 언덕 위 회색 석조 네오고딕 성당이에요. 입장료는 없지만 입구에서 기부금(1인 1만동)을 요구한 사례가 있고, 5살과 둘러보는 데 약 16분이면 충분했다고 합니다.\n2) 2023년 후기 기준 주말 개방은 05:00~07:00, 11:00~16:30이고, 미사 중에는 내부 관람이 제한됩니다. D2(10/4)가 일요일이라 11:00~16:30 사이에 가는 것이 안전해요(현장 변동 가능). 성당 안은 유모차가 다니기 편하지만 나가는 길이 계단이라 유모차를 접어야 합니다.\n3) 야시장은 저녁 5시쯤 해변 쪽(탑쩜흐엉 맞은편)에 서는 작은 골목 규모입니다. 담시장과 물건이 겹치고 10~15% 비싸며, 사람이 몰리고 통풍이 안 돼 4살에겐 힘들다는 평이 많아요. 저녁 해변 산책 겸 짧게 둘러보고, 아이 손을 꼭 잡으세요. 유모차는 사실상 어렵습니다.\n4) 주말 밤 야시장 주변은 그랩이 아예 안 잡힌 사례가 있습니다. 대안으로 에어컨 되는 AB스퀘어몰 오락실, 야시장 입구 자전거 체험(10만동에서 5만동으로 흥정)을 즐긴 후기가 있어요.",
+      "summary": "1) 야시장은 저녁 5시쯤 해변 쪽(탑쩜흐엉 맞은편)에 서는 작은 골목 규모입니다. 담시장과 물건이 겹치고 10~15% 비싸며, 사람이 몰리고 통풍이 안 돼 4살에겐 힘들다는 평이 많아요. 저녁 해변 산책 겸 짧게 둘러보고, 아이 손을 꼭 잡으세요. 유모차는 사실상 어렵습니다.\n2) 주말 밤 야시장 주변은 그랩이 아예 안 잡힌 사례가 있습니다. 대안으로 에어컨 되는 AB스퀘어몰 오락실, 야시장 입구 자전거 체험(10만동에서 5만동으로 흥정)을 즐긴 후기가 있어요.",
       "posts": [
         {
           "title": "나트랑 야시장 솔직 비추 후기 (아이랑 가면 불지옥)",
@@ -751,22 +716,6 @@
           "author": "너와나무지개 (보석같은 하루의 기록)",
           "date": "2026-07-21",
           "summary": "8살과 3인 가족 여행입니다. 야시장은 저녁 5시부터 해변 탑쩜흐엉 맞은편에 서는 작은 골목 규모이고, 먹을 것은 철판 아이스크림 정도였어요. 코끼리바지를 흥정해 마트의 절반(약 5천원)에 샀다고 합니다. 저녁 전 시원한 AB스퀘어몰 오락실이 아이에게 인기였어요.",
-          "withKids": true
-        },
-        {
-          "title": "🇻🇳나트랑 대성당 Nha Tho Chanh Toa Kito Vua 5살 아이랑 입장료 방문시간 씀모이시장에서 걸어가기 등 상세정보",
-          "url": "https://blog.naver.com/ryuworld1117/223288261803",
-          "author": "러브류 (LOVE RYU❤️)",
-          "date": "2023-12-10",
-          "summary": "개방은 평일 05:00~17:00, 주말 05:00~07:00·11:00~16:30이고, 미사는 평일 2회(04:45·17:00), 주말 6회입니다. 미사 중엔 내부 관람이 제한돼요. 입장료는 없지만 입구에서 1인 1만동을 기부하라고 해 1만동만 냈대요. 안토이에서 씀모이시장을 거쳐 걸어서 10~15분입니다. 성당 안은 유모차가 다니기 편하지만 나가는 길이 계단이고, 5살과 관람에 16분 걸렸어요.",
-          "withKids": true
-        },
-        {
-          "title": "7살 아이랑 나트랑 여행 필수 코스: 아오자이 입고 대성당·포나가르·담시장 인생샷 찍은 B코스 스냅 내돈내산 후기",
-          "url": "https://blog.naver.com/piggomi/224404368297",
-          "author": "돼고미 (돼고미네 기록보관소)",
-          "date": "2026-09-08",
-          "summary": "캄란 알마리조트에서 베나자 셔틀로 시내에 나와, 아오자이 스냅(전용차, 3시간)으로 대성당, 포나가르, 담시장을 돌았습니다. 대성당은 1930년대 석조 고딕 양식으로 회색 돌벽과 스테인드글라스가 있는 언덕 위 성당이에요. 국경일 시즌이라 포나가르가 붐볐고, 아이 체력을 생각해 담시장에선 쇼핑 없이 시장 옆 골목에서 촬영만 했다고 해요.",
           "withKids": true
         }
       ]

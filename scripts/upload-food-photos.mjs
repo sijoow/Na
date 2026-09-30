@@ -1,12 +1,15 @@
 // 맛집 사진(위키미디어 공용 자유 라이선스)을 받아 Cafe24 FTP에 올리고 src/data/images.json 의 restaurants 에 기록한다.
 // 실행: node scripts/upload-food-photos.mjs <선택 목록.json>   (.env 의 CAFE24_* 사용)
-// 선택 목록: [{ id, kind: "shop"|"dish"|"reuse"|"none", thumbUrl, descriptionUrl, license, credit, caption, dishKey }]
+// 선택 목록: [{ id, kind: "shop"|"dish"|"reuse"|"none", thumbUrl, descriptionUrl, license, credit, caption, dishKey, group?, prefix? }]
+// group/prefix 를 주면 다른 묶음에도 쓴다 (예: group "desert", prefix "desert-" → images.desert[id], desert-<id>.jpg)
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
+import { fileURLToPath } from "node:url";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")), "..");
+// 폴더 이름에 공백이 있어도 되도록 fileURLToPath 로 푼다 (예: "Yogibo Design")
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const env = Object.fromEntries(
   fs.readFileSync(path.join(root, ".env"), "utf8").split(/\r?\n/)
     .filter((l) => /^[A-Z0-9_]+=/.test(l))
@@ -51,18 +54,20 @@ for (const p of picks) {
     console.log("✗ 라이선스·주소 확인 실패", p.id, p.license); continue;
   }
   const ext = (p.thumbUrl.match(/\.(jpe?g|png|webp)(?:$|\?)/i)?.[1] ?? "jpg").toLowerCase().replace("jpeg", "jpg");
-  const name = `food-${p.id}.${ext}`;
+  const group = p.group ?? "restaurants";
+  images[group] ??= {};
+  const name = `${p.prefix ?? "food-"}${p.id}.${ext}`;
   const file = path.join(tmp, name);
   try {
     await sleep(1200);
     await download(p.thumbUrl, file);
     execFileSync("curl", ["-s", "-S", "--max-time", "60", "--ftp-create-dirs", "-T", file,
       `ftp://${env.CAFE24_FTP_HOST}:${env.CAFE24_FTP_PORT}${DIR}${name}`, "--user", `${env.CAFE24_FTP_USER}:${env.CAFE24_FTP_PASS}`]);
-    images.restaurants[p.id] = {
+    images[group][p.id] = {
       url: `${PUBLIC}${name}`, credit: p.credit || "Wikimedia Commons", license: p.license,
       source: p.descriptionUrl, kind: p.kind, caption: p.caption,
     };
-    ok++; save(); console.log("✓", p.id, "|", p.kind, "|", p.license);
+    ok++; save(); console.log("✓", group, p.id, "|", p.kind, "|", p.license);
   } catch (e) {
     console.log("✗", p.id, e.message);
   }
