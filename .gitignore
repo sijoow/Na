@@ -44,3 +44,6 @@ next-env.d.ts
 
 # 개발 서버 로그
 dev.log
+
+# 구글 내 지도용 KML (npm run maps:export 로 다시 만듦)
+exports/
