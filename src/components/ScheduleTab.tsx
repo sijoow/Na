@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CATEGORY_META } from "@/lib/categories";
 import { formatLong, formatShort } from "@/lib/date";
+import { dayRoutes } from "@/lib/dayRoute";
 import { linkDayPlaces, type PlaceLink } from "@/lib/placeMatch";
 import { applyChoice, choiceForItem, type ChoiceOption, type ChoiceSlot } from "@/lib/choiceSlots";
 import { getDayProgress, toggleItemDone } from "@/lib/trip";
@@ -10,7 +11,7 @@ import type { Day, PlanItem, TripState } from "@/lib/types";
 import PlaceInfo from "./PlaceInfo";
 import { dayPhoto } from "./Photo";
 import ChoiceTabs from "./ChoiceTabs";
-import { card } from "./ui";
+import { btn, card } from "./ui";
 
 // 확정 일정표 — "파워J는 일정을 수시로 바꾸지 않는다, 정해 놓고 간다".
 // 일정은 대화로 정해서 data/trip.json 에 넣고, 여기서는 보기 · 완료 체크 · 장소 정보 · 길찾기만 한다.
@@ -35,6 +36,8 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
     box.scrollTo({ left: chip.offsetLeft - (box.clientWidth - chip.offsetWidth) / 2, behavior: "smooth" });
   }, [day.id]);
   const dayIndex = state.days.findIndex((d) => d.id === day.id);
+  // 그날 동선 — 전날 숙소에서 출발해 일정 순서대로 (구글 지도 경유지 9곳 넘으면 나눔)
+  const routes = dayRoutes(day, dayIndex > 0 ? state.days[dayIndex - 1].lodging : null);
   // 장소 정보·길찾기 버튼은 하루 안에서 겹치지 않게 (이동엔 길찾기, 처음 방문엔 정보)
   const links = linkDayPlaces(day.items);
 
@@ -118,6 +121,14 @@ export default function ScheduleTab({ state, day, todayDayId, onSelectDay, updat
               <span className="shrink-0 font-semibold text-ink-3">🏨 숙소</span>
               <span className="text-ink">{day.lodging || "-"}</span>
             </p>
+            {routes.map((r, i) => (
+              <div key={r.url} className="pt-1">
+                <a href={r.url} target="_blank" rel="noopener noreferrer" className={`${btn.soft} w-full`}>
+                  🗺️ {routes.length > 1 ? `동선 ${i + 1}/${routes.length}` : "오늘 동선"} 구글 지도로 열기 · {r.stops.length}곳
+                </a>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-ink-3">{r.stops.map((s) => s.name).join(" → ")}</p>
+              </div>
+            ))}
             <p className="pt-1 text-[13px] leading-relaxed text-ink-3">
               🔒 확정 일정이에요. 장소가 있는 일정은 누르면 정보가 펼쳐지고, 🧭 길찾기는 지금 위치에서 출발해요.
             </p>
