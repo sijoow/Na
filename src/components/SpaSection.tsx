@@ -127,8 +127,7 @@ export default function SpaSection() {
         {filter === "nail" && (
           <p className="mt-3 rounded-2xl bg-accent-soft p-4 text-[14px] leading-relaxed text-ink">
             💅 엄마 젤아트 + 아이 키즈네일 기준이에요. 키즈네일은 모두 램프로 굳히는 젤이라 1~2주면 떨어져요.
-            수성·필오프 매니큐어인지는 어느 가게도 밝히지 않았고, 만 4살이 되는지는 오드리네일 깜란점만 메뉴에
-            적혀 있어요. 나머지는 카톡으로 &lsquo;만 4살, 키 100cm&rsquo;를 먼저 물어보세요.
+            수성·필오프 매니큐어인지는 어느 가게도 밝히지 않았고, 나이는 오드리네일 깜란점만 메뉴에 &lsquo;4~9살&rsquo;로 적혀 있어요. 우리 아이는 만 3세(한국 나이 4살)라, 어느 가게든 카톡으로 &lsquo;만 3세, 키 101cm&rsquo;를 먼저 물어보세요.
           </p>
         )}
         {data.tips && (

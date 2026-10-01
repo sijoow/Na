@@ -93,6 +93,21 @@ interface Briefing {
   cases?: { title: string; steps: string[] }[];
   /** 10/5(월) 밤에 할 일 */
   nightBefore?: string[];
+  /** 현지 1·2위 최종 비교 */
+  faceoff?: FaceOff;
+}
+
+interface FaceOff {
+  title: string;
+  verdict: string;
+  reasons: string[];
+  caution: string[];
+  /** win: a(왼쪽) · b(오른쪽) · same */
+  rows: { item: string; a: string; b: string; win: "a" | "b" | "same" }[];
+  timing: string;
+  questions: string[];
+  extra: string[];
+  sources: string;
 }
 
 const B = data as Briefing;
@@ -144,6 +159,8 @@ export default function DesertTourTab({
           <p className="mt-2 text-[12px] text-ink-3">{B.status}</p>
         </div>
       </section>
+
+      {B.faceoff && <FaceOffSection f={B.faceoff} />}
 
       {/* 마감 */}
       <section className={`${card} p-5`}>
@@ -326,6 +343,50 @@ export default function DesertTourTab({
         {B.updatedAt} 기준 · {B.sources}
       </p>
     </div>
+  );
+}
+
+/** 현지 1·2위 최종 비교 — 항목마다 두 업체를 나란히, 앞서는 쪽을 표시 */
+function FaceOffSection({ f }: { f: FaceOff }) {
+  const cell = (on: boolean) => `rounded-xl p-2.5 text-[13px] leading-snug ${on ? "bg-primary-soft text-ink ring-1 ring-primary" : "bg-surface-2 text-ink-2"}`;
+  return (
+    <section className={`${card} p-5`}>
+      <h3 className="text-[17px] font-bold">{f.title}</h3>
+      <p className="mt-2 rounded-2xl bg-accent-soft p-3 text-[15px] leading-snug font-bold text-ink">👉 {f.verdict}</p>
+      <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-[14px] leading-relaxed text-ink">
+        {f.reasons.map((r) => (
+          <li key={r}>{r}</li>
+        ))}
+      </ol>
+      <div className="mt-4 grid grid-cols-2 gap-2 text-center text-[13px] font-bold text-ink-3">
+        <span>현지 코이팜</span>
+        <span>HT나트랑</span>
+      </div>
+      <ul className="mt-1 space-y-2.5">
+        {f.rows.map((r) => (
+          <li key={r.item}>
+            <p className="text-[13px] font-bold text-ink">
+              {r.item} {r.win === "same" ? <span className="font-normal text-ink-3">· 비슷</span> : null}
+            </p>
+            <div className="mt-1 grid grid-cols-2 gap-2">
+              <p className={cell(r.win === "a")}>{r.win === "a" && "✅ "}{r.a}</p>
+              <p className={cell(r.win === "b")}>{r.win === "b" && "✅ "}{r.b}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-[13px] leading-relaxed text-ink-2">🕖 {f.timing}</p>
+      <ul className="mt-3 space-y-1.5 rounded-2xl bg-surface-2 p-3 text-[13px] leading-relaxed text-ink">
+        {f.caution.map((c) => (
+          <li key={c}>⚠️ {c}</li>
+        ))}
+      </ul>
+      <CopyBlock
+        label="💬 확정 전에 두 업체에 보낼 질문 (복사)"
+        text={[...f.questions.map((q, i) => `${i + 1}. ${q}`), "", ...f.extra].join("\n")}
+      />
+      <p className="mt-2 text-[12px] leading-relaxed text-ink-4">{f.sources}</p>
+    </section>
   );
 }
 

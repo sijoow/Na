@@ -618,5 +618,39 @@
       "kind": "scene",
       "caption": "다총산 — 쭝선사가 있는 바위산 (칸하이, 판랑 북동쪽)"
     }
+  },
+  "kids": {
+    "capybara": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/kids-capybara.jpg",
+      "credit": "Clodomiro Esteves Junior",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Capivara(Hydrochoerus_hydrochaeris).jpg",
+      "kind": "scene",
+      "caption": "카피바라 가족 (예시 사진, 나트랑 아님)"
+    },
+    "oceanographic": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/kids-oceanographic.jpg",
+      "credit": "ktoshiyuki",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Nhatrang_Oceanographic_Institute.jpg",
+      "kind": "place",
+      "caption": "국립해양박물관 (해양학연구소) 건물"
+    },
+    "hon-chong": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/kids-hon-chong.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:H%C3%B2n_ch%E1%BB%93ng_Nha_Trang_n%C4%83m_2016_(7).jpg",
+      "kind": "place",
+      "caption": "혼쫑 바위"
+    },
+    "nail-example": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/kids-nail-example.jpg",
+      "credit": "Courtney Rhodes",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Swirly_purple_konad_nail_art.jpg",
+      "kind": "scene",
+      "caption": "네일아트 예시 (이 가게 아님)"
+    }
   }
 }

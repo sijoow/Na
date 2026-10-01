@@ -22,6 +22,8 @@ const loadRanking = () => import("./RankingTab");
 const loadFood = () => import("./FoodTab");
 const loadSpa = () => import("./SpaSection");
 const loadDesert = () => import("./DesertTourTab");
+const loadVinTickets = () => import("./VinWondersTicketTab");
+const loadKids = () => import("./KidsPlacesTab");
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
@@ -32,8 +34,10 @@ const RankingTab = dynamic(loadRanking, { loading: () => <TabLoading /> });
 const FoodTab = dynamic(loadFood, { loading: () => <TabLoading /> });
 const SpaSection = dynamic(loadSpa, { loading: () => <TabLoading /> });
 const DesertTourTab = dynamic(loadDesert, { loading: () => <TabLoading /> });
+const VinWondersTicketTab = dynamic(loadVinTickets, { loading: () => <TabLoading /> });
+const KidsPlacesTab = dynamic(loadKids, { loading: () => <TabLoading /> });
 
-type Tab = "overview" | "schedule" | "map" | "stays" | "desert" | "tours" | "food" | "spa" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
+type Tab = "overview" | "schedule" | "map" | "stays" | "desert" | "vintickets" | "kids" | "tours" | "food" | "spa" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "overview", label: "홈" },
@@ -41,6 +45,8 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "map", label: "지도·이동" },
   { id: "stays", label: "숙소" },
   { id: "desert", label: "사막투어 예약" },
+  { id: "vintickets", label: "빈원더스 티켓" },
+  { id: "kids", label: "아이랑 갈 곳" },
   { id: "tours", label: "투어·쇼핑" },
   { id: "food", label: "맛집" },
   { id: "spa", label: "마사지" },
@@ -94,6 +100,8 @@ const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 // '더보기' 바텀시트에 크게 보여줄 탭
 const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "desert", emoji: "🏜️", label: "사막투어 예약", desc: "10/6 판랑 사막 · 업체 비교 · 예약 브리핑" },
+  { id: "vintickets", emoji: "🎢", label: "빈원더스 티켓", desc: "10/5 구매처 비교 · 101cm 아이 표 · 현장 매표소" },
+  { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 10/5 대신 코스 · 엄마·아이 네일" },
   { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 기념품 · 아이 옷 · 환전" },
   { id: "food", emoji: "🍜", label: "맛집", desc: "한국인이 많이 가는 맛집 · 꼭 먹어볼 음식" },
   { id: "spa", emoji: "💆", label: "마사지·스파", desc: "아이랑 같이 받는 가족 마사지 · 출국 전 샤워" },
@@ -283,6 +291,8 @@ export default function PlannerApp() {
         {tab === "map" && <MapTab state={state} />}
         {tab === "stays" && <StaysTab />}
         {tab === "desert" && <DesertTourTab state={state} update={update} />}
+        {tab === "vintickets" && <VinWondersTicketTab state={state} update={update} />}
+        {tab === "kids" && <KidsPlacesTab onGo={(t) => setTab(t)} />}
         {tab === "tours" && <ToursShopsTab state={state} update={update} />}
         {tab === "food" && <FoodTab />}
         {tab === "spa" && <SpaSection />}

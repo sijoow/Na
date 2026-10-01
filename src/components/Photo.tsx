@@ -22,6 +22,8 @@ const IMG = images as unknown as {
   restaurants?: PhotoMap;
   /** 사막투어 브리핑 사진 (지프·썰매·묶이는 곳) */
   desert?: PhotoMap;
+  /** 아이랑 갈 곳 탭 사진 (카피바라·수족관·놀이터 예시 등) */
+  kids?: PhotoMap;
 };
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
@@ -56,6 +58,12 @@ export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
 export const restaurantPhoto = (id: string) => IMG.restaurants?.[id];
 export const desertPhoto = (id?: string) => (id ? IMG.desert?.[id] : undefined);
+/** 'kids:capybara', 'places:vinwonders'처럼 '묶음:키'로 적은 사진 찾기 (데이터 파일에서 여러 묶음을 섞어 쓸 때) */
+export function refPhoto(ref?: string): PhotoInfo | undefined {
+  const [group, id] = ref?.split(":") ?? [];
+  if (!group || !id) return undefined;
+  return (IMG as Record<string, PhotoMap | undefined>)[group]?.[id];
+}
 
 /**
  * 사진 + 출처 표시.
