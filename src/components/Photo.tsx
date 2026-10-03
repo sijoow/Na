@@ -24,6 +24,12 @@ const IMG = images as unknown as {
   desert?: PhotoMap;
   /** 아이랑 갈 곳 탭 사진 (카피바라·수족관·놀이터 예시 등) */
   kids?: PhotoMap;
+  /** 기념품 탭 품목별 사진 (foodSouvenir.json souvenir.items[].id) */
+  souvenirItems?: PhotoMap;
+  /** 약국 쇼핑 탭 사진 */
+  pharmacy?: PhotoMap;
+  /** 담시장 탭 사진 */
+  dam?: PhotoMap;
 };
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
@@ -56,6 +62,7 @@ export function menuPhoto(text: string): PhotoInfo | undefined {
 export const activityPhoto = (id: string) => IMG.activities?.[id];
 export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
+export const souvenirItemPhoto = (id: string) => IMG.souvenirItems?.[id];
 export const restaurantPhoto = (id: string) => IMG.restaurants?.[id];
 export const desertPhoto = (id?: string) => (id ? IMG.desert?.[id] : undefined);
 /** 'kids:capybara', 'places:vinwonders'처럼 '묶음:키'로 적은 사진 찾기 (데이터 파일에서 여러 묶음을 섞어 쓸 때) */

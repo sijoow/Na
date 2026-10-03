@@ -359,8 +359,8 @@
     }
   ],
   "nails": {
-    "title": "엄마·아이 네일 (10/4 오전)",
-    "intro": "10/4 일정의 '엄마·아이 네일' 칸에는 화이트가 들어가 있어요. 일정 탭에서 루나·망고로 바꿀 수 있어요. 아래 금액은 엄마 젤 + 아이 키즈네일 합계예요.",
+    "title": "엄마·아이 네일 (10/4 오후)",
+    "intro": "10/4 오후 3시 '엄마·아이 네일'은 화이트 스파 앤 네일로 예약을 확정했어요(엄마는 손·발, 아빠는 발각질). 아래 금액은 엄마 젤 + 아이 키즈네일 합계예요.",
     "examplePhoto": "kids:nail-example",
     "examplePhotoCaption": "네일아트 예시 사진 (이 가게 사진 아님)",
     "tips": [
@@ -378,14 +378,15 @@
         "price": "83만동 (약 4.3만원)",
         "priceDetail": "엄마 손 아트 무제한 55만동 + 아이 키즈젤(아트 포함) 28만동 · 팁 포함",
         "kids": "키즈젤(아트 포함) 28만동 · 두 명이 붙어 30~40분 · 산리오·하츄핑 스티커 · 나트랑에 있는 동안 벗겨지면 팁만 받고 다시 해줘요",
-        "booking": "카톡 채널 '나트랑화이트스파앤네일' · 예약금 10만동(원화 입금) · 10시 첫 타임이 먼저 차요",
+        "booking": "카톡 채널 '나트랑화이트네일' · 예약금 10만동(원화 입금) · 10시 첫 타임이 먼저 차요",
         "hours": "매일 10:00~22:00",
         "move": "그랩 약 11분 · 5.9만~8.4만동",
         "rating": "구글 4.9 (3,571)",
         "lat": 12.2389221,
         "lng": 109.1900139,
         "instagram": "https://www.instagram.com/white_spa_nail/",
-        "photoQuery": "White Spa & Nail Nha Trang nail"
+        "photoQuery": "White Spa & Nail Nha Trang nail",
+        "kakao": "https://pf.kakao.com/_NxkRcj/chat"
       },
       {
         "id": "luna",

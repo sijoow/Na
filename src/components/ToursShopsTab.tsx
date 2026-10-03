@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { GUIDE } from "@/data/guide";
 import type { ActivityInfo, PriceRow, ShopInfo, ShopKind } from "@/lib/guideTypes";
-import type { TripState } from "@/lib/types";
-import { ExchangeSection, SouvenirSection } from "./FoodSouvenirSections";
+import { ExchangeSection } from "./FoodSouvenirSections";
 import { AddOnList, HowToBox } from "./HowToBox";
 import { activityPhoto, Photo, placePhoto } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
@@ -20,15 +19,17 @@ const SHOP_KIND: Record<ShopKind, string> = {
   fruit: "🥭 과일가게",
 };
 
-type Section = "tours" | "souvenir" | "shops" | "exchange";
+type Section = "tours" | "shops" | "exchange";
+type GoTab = "dam" | "souvenir" | "pharmacy";
 
-export default function ToursShopsTab({
-  state,
-  update,
-}: {
-  state: TripState;
-  update: (fn: (s: TripState) => TripState) => void;
-}) {
+// 기념품·약국·담시장은 따로 탭으로 옮겼다 (사진·시세가 많아서)
+const MOVED: { tab: GoTab; label: string }[] = [
+  { tab: "dam", label: "🧺 담시장" },
+  { tab: "souvenir", label: "🎁 기념품" },
+  { tab: "pharmacy", label: "💊 약국 쇼핑" },
+];
+
+export default function ToursShopsTab({ onGo }: { onGo: (tab: GoTab) => void }) {
   const [section, setSection] = useState<Section>("tours");
   const { activitiesNote, shoppingSummary } = GUIDE;
   // 과일가게는 맛집 탭의 과일 가이드에서 보여 준다
@@ -38,11 +39,19 @@ export default function ToursShopsTab({
 
   return (
     <div className="space-y-4">
+      <div className={`${card} flex flex-wrap items-center gap-2 px-4 py-3`}>
+        <p className="w-full text-[14px] font-semibold text-ink-3 sm:w-auto sm:pr-1">쇼핑은 탭을 따로 만들었어요</p>
+        {MOVED.map((m) => (
+          <button key={m.tab} type="button" onClick={() => onGo(m.tab)} className={`${btn.soft} min-h-10 px-3.5 text-[14px]`}>
+            {m.label}
+          </button>
+        ))}
+      </div>
+
       <div className="flex max-w-full overflow-x-auto rounded-2xl bg-surface-3/60 p-1 no-scrollbar md:inline-flex">
         {(
           [
             ["tours", "🎟️ 투어"],
-            ["souvenir", "🛍️ 기념품"],
             ["shops", "👕 아이 옷"],
             ["exchange", "💱 환전"],
           ] as const
@@ -79,7 +88,6 @@ export default function ToursShopsTab({
           </>
         ))}
 
-      {section === "souvenir" && <SouvenirSection state={state} update={update} />}
       {section === "exchange" && <ExchangeSection />}
 
       {section === "shops" &&

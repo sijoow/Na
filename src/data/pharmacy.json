@@ -1,0 +1,855 @@
+{
+  "asOf": "2026-10-02",
+  "summary": "요즘 나트랑 약국 후기에서 가장 많이 사는 건 비판텐 밤, 스트렙실, 샤론파스, 비아핀이에요. 아이 있는 집은 비판텐 밤(신생아도 가능), 레모스 베이비(피카리딘 10%, 생후 6개월+), 일반 가루 스멕타(2세+)와 오레솔, 아이용 해열제 하파콜 정도면 충분해요. 3살 아이에겐 스트렙실(6세 미만 X), 샤론파스(12세 미만 의사 상담), 소펠·일반 레모스(DEET 10% 초과), 스멕타 고(15세+), 파나돌 엑스트라, 젠트리손·실크론 같은 스테로이드 복합연고는 쓰지 마세요. 한국어 되는 시내 약국(DS·안땀·티엔푸·하나)은 쉐라톤에서 걸어서 약 15분, 마르벨라에선 그랩이 편하고, 두 호텔 근처엔 파마시티(06:00~23:30)가 있어요. 깜란 리조트 쪽은 약국이 드물어서 시내에서 미리 사거나 하나약국 카톡 배달을 이용해요.",
+  "safety": [
+    "젠트리손(Gentrisone)과 실크론(Silkeron)은 스테로이드(베타메타손)+항진균제(클로트리마졸)+항생제(겐타마이신)가 섞인 연고예요. 베트남에서도 처방약이고, 아이는 피부로 흡수돼 부신 억제 같은 전신 부작용 위험이 커서 12세 미만 경험이 적다고 적혀 있어요. 스테로이드 — 아이에게 쓰지 말고 의사와 상담해요. 디프로손(Diprosone) 같은 베타메타손 연고도 마찬가지예요.",
+    "스트렙실은 6세 미만, 샤론파스는 12세 미만(30개월 미만은 금지), 타이거밤은 3세 미만, 볼타렌 에멀겔은 14세 미만, 파나돌 엑스트라는 12세 미만이 사용 대상이 아니에요(각 제품 라벨). 3살 아이에겐 주지 마세요.",
+    "모기 기피제는 성분과 농도를 봐요. 아이에겐 레모스 베이비(피카리딘 10%, 생후 6개월+), 소펠(DEET 13%)·일반 레모스(DEET 15%)는 한국 식약처 기준 12세 이상용이에요. 어른 손에 덜어 발라 줘요.",
+    "설사약은 일반 가루 스멕타(2세+)만 아이에게 쓰고, 짜 먹는 스멕타 고는 15세 이상용이에요. 설사 땐 오레솔을 물 200ml에 정확히 타서 먹여요.",
+    "하파콜·파나돌은 한국 타이레놀·챔프와 같은 아세트아미노펜이에요. 같은 성분끼리 겹쳐 먹이지 말고, 먹인 시간·약·양을 메모해요.",
+    "베트남 약국은 약사가 항생제(오구멘틴 등)를 처방전 없이 파는 경우가 있어요. 아이 고열이 이어지면 약국보다 소아과 진료가 먼저예요.",
+    "2026년 4월 베트남 의약품관리국이 아기용으로 팔던 다우짬 오일 'THERAPY 3M'과 'Kingphar 강황 크림'(20g, 미생물 기준 미달 로트)을 전국 회수했어요. 시장·노점 말고 정식 약국에서 사요.",
+    "멜라토닌은 한국에선 전문의약품 성분이에요. 아이에게 먹이지 말고 한국으로 가져오지도 마세요.",
+    "약은 원래 포장과 영수증을 함께 보관해요. 유통기한(EXP)도 꼭 확인해요."
+  ],
+  "chains": [
+    {
+      "name": "DS약국",
+      "local": "DS Pharmacy (Nhà thuốc DS), 27 Đống Đa, Nha Trang",
+      "what": "한국인 약사가 있는 시내 약국이에요. 한국어 가격표와 한국어 쇼핑 안내서가 있어요.",
+      "hours": "매일 08:00~22:00",
+      "payment": "카드·현금 모두 돼요.",
+      "tips": "카톡 DSPHARMACY로 예약 주문이 돼요. 베나자(VENAJA) 카드가 있으면 100만동 이상 3% 할인, 도깨비·베나자 후기 작성 시 5% 할인 사례가 있어요. 다른 약국보다 품목당 500~1,000원쯤 비싸고, 여행 카페의 DS 후기엔 협찬 글이 많다는 지적도 있어요. 쉐라톤에서 걸어서 약 15분(약 1.1km), 마르벨라에선 약 2.4km라 그랩이 편해요(OSM 도보 경로 추정).",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jjj723/224422752321",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jangrose5932/224420339618",
+          "date": "2026-09-22",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "안땀약국",
+      "local": "Nhà Thuốc An Tâm, 92B Hồng Bàng, Nha Trang",
+      "what": "GPP 인증 정식 약국이에요. 정찰제이고 거의 모든 제품에 한국어 이름·가격이 붙어 있어요.",
+      "hours": "매일 08:00~22:30",
+      "payment": "카드 결제 가능(5% 수수료 후기 있음), QR(GLN) 결제 가능해요.",
+      "tips": "증상별 한국어 안내가 있고 약사가 한국어를 어느 정도 해요. 카드 수수료가 붙으면 QR로 내는 게 나아요. 쉐라톤에서 걸어서 약 15분, 마르벨라에선 그랩 추천(OSM 도보 경로 추정).",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/iloveu30o0/224400078439",
+          "date": "2026-09-03",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "티엔푸약국",
+      "local": "99 Bạch Đằng, Nha Trang (반미판 맞은편으로 소개됨)",
+      "what": "작은 약국이지만 여러 후기에서 시내 최저가로 꼽혀요. 모든 제품에 가격표가 붙은 정찰제예요.",
+      "hours": "매일 08:00~21:00",
+      "payment": "카드 가능(2~3% 수수료), GLN QR은 수수료 없다는 후기가 있어요.",
+      "tips": "직원 소통은 주로 몸짓이에요. 사진을 보여주면 빨라요. 내부가 덥다는 후기가 있어요. 쉐라톤에서 걸어서 약 13분(약 1km).",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/finethankuandyou/224377740159",
+          "date": "2026-08-13",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jkl2009_/224323729232",
+          "date": "2026-06-22",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "하나약국",
+      "local": "Nha Trang Hana Pharmacy, 63B Trần Nguyên Hãn, Nha Trang",
+      "what": "한국어가 되는 약사·직원이 있고, 아이 약 상담 후기가 많은 약국이에요. 한국 해열제(챔프·타이레놀 등)도 대부분 있다고 해요.",
+      "hours": "월·화·목·금·토 08:00~20:00 (후기 기준, 수·일은 확인 필요)",
+      "payment": "후기에 별도 언급 없음 — 현금 준비 권장",
+      "tips": "카카오톡 ID nthana로 상담하고 깜란 리조트까지 배달받았다는 후기가 있어요. 아이 나이·몸무게를 확인하고 약을 골라줬다는 후기가 있어요. 열만으로는 항생제를 주기 어렵다고 했다는 후기도 있으니, 고열이 이어지면 소아과 진료가 먼저예요.",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/lolodiary_/224399615078",
+          "date": "2026-09-03",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/haessla1/224333798614",
+          "date": "2026-07-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "서울약국",
+      "local": "Seoul Pharmacy, Nha Trang 시내",
+      "what": "한국어가 통하는 약국이에요. 하트치약 같은 인기 품목 재고가 있을 때가 많아요.",
+      "hours": "",
+      "payment": "원화 계좌이체가 된다는 후기가 있어요.",
+      "tips": "배달k 앱으로 배달 주문이 돼요. 협찬 표시가 있는 후기도 섞여 있어요.",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/happy2500_/224384206327",
+          "date": "2026-08-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/haeonon00/224395735290",
+          "date": "2026-08-31",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/skoin0767/224354938516",
+          "date": "2026-07-23",
+          "sponsored": true
+        }
+      ]
+    },
+    {
+      "name": "어린이약국 (담시장 앞)",
+      "local": "NHÀ THUỐC CHO TRẺ EM (Pharmacy for Kids), Chợ Đầm 근처",
+      "what": "아동용 비상약이 잘 갖춰진 약국이에요. 한국어 소통이 어느 정도 돼요.",
+      "hours": "",
+      "payment": "계좌이체가 된다는 후기가 있어요.",
+      "tips": "담시장 쇼핑과 묶어 가기 좋아요. 베나자 제휴 할인 카드가 있어요.",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/smi1979/224401517496",
+          "date": "2026-09-05",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "파마시티",
+      "local": "Pharmacity — 84 Trần Phú (Lộc Thọ) / 28 Lý Tự Trọng / 2A Đinh Tiên Hoàng",
+      "what": "베트남 전국 체인 드럭스토어예요. 정찰제이고 가격표가 붙어 있어요.",
+      "hours": "나트랑 지점 06:00~23:30 (파마시티 공식 매장 API)",
+      "payment": "해외 결제 카드(트래블로그·트래블월렛 등) 사용 가능해요.",
+      "tips": "마르벨라(102B Trần Phú)에서 84 Trần Phú 지점까지 걸어서 약 1.1km·14분, 쉐라톤에서 28 Lý Tự Trọng·2A Đinh Tiên Hoàng 지점까지 약 0.6km·8분이에요(OSM 도보 경로). 깜란 바이다이 리조트 주변엔 지점이 없어요. 매장가가 한국인 단골 약국보다 비싼 경우가 있어요(예: 비판텐 밤 7.9만동). 영어가 안 통할 수 있어 제품 사진을 보여주세요.",
+      "sources": [
+        {
+          "url": "https://api-gateway.pharmacity.vn/oms/api/stores/find_nearby?lat=12.22493&lng=109.20087",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/he-thong-cua-hang/tinh-khanh-hoa/thanh-pho-nha-trang",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jpg06023/224373620140",
+          "date": "2026-08-10",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "롱쩌우",
+      "local": "Nhà thuốc FPT Long Châu — 나트랑 지점 예: 60 Ngô Gia Tự, 48-50 Quang Trung",
+      "what": "FPT 계열 대형 체인 약국이에요. 정찰제이고 의약품·연고 재고가 많아요.",
+      "hours": "지점마다 달라요(예: 07:00~22:00 지점 확인)",
+      "payment": "해외 결제 카드 사용 가능해요.",
+      "tips": "트란푸 해변도로엔 지점을 확인하지 못했어요. 쉐라톤에서 Quang Trung 지점이 가까운 편이에요(약 0.75km, 거리 추정). 공식 사이트가 접속 차단돼 지점 정보는 검색 결과 기준이에요.",
+      "sources": [
+        {
+          "url": "https://nhathuoclongchau.com.vn/he-thong-cua-hang/tinh-khanh-hoa",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/danimgil_nuri/224407573752",
+          "date": "2026-09-10",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "name": "안캉 (깜란)",
+      "local": "Nhà thuốc An Khang — 깜란 알마 리조트 근처",
+      "what": "모바일월드(TGDD) 계열 체인이에요. 깜란 지점에 '한국인이 많이 찾는 제품' 코너가 있어요.",
+      "hours": "",
+      "payment": "휴대폰으로 가격을 먼저 보여주고 종이 영수증을 줬다는 후기가 있어요.",
+      "tips": "진열대에 없는 제품(비아핀·스트렙실·볼타렌)은 사진을 보여주니 안쪽에서 꺼내줬어요. 비판텐 이치 릴리프는 6개 묶음으로만 팔았다는 후기가 있어요. 시내 최저가와 차이는 크지 않아서 깜란에 머물면 여기서 사는 게 교통비보다 나아요. 안캉 체인은 2025년 하노이 매장을 모두 닫는 등 매장을 줄이고 있어요.",
+      "sources": [
+        {
+          "url": "https://blog.naver.com/aribi1004/224369854334",
+          "date": "2026-08-06",
+          "sponsored": false
+        },
+        {
+          "url": "https://cafef.vn/an-khang-dong-cua-toan-bo-diem-ban-ha-noi-giac-mo-mo-2000-nha-thuoc-cua-the-gioi-di-dong-dang-o-dau-188250519150804836.chn",
+          "date": "2025-05-19",
+          "sponsored": false
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "연고·크림",
+    "목·기침",
+    "배탈·설사",
+    "열·통증",
+    "모기·벌레",
+    "오일·밤",
+    "약국 화장품"
+  ],
+  "items": [
+    {
+      "id": "bepanthen-balm",
+      "nameKo": "비판텐 밤",
+      "local": "Bepanthen Balm (Bayer) 30g",
+      "category": "연고·크림",
+      "what": "덱스판테놀 보습 밤으로 기저귀 발진, 건조하거나 튼 피부에 발라요.",
+      "price": "6.8만동 (30g)",
+      "kid": "신생아부터 쓸 수 있다고 나와 있어요(파마시티 제품 설명). 3살 아이 기저귀 발진·건조한 피부에 써도 돼요.",
+      "kidLevel": "ok",
+      "caution": "베트남 제품은 '밤(Balm)'이라 한국 비판텐 연고(일반의약품)와 첨가물이 조금 달라요. 상처가 깊거나 진물이 나면 병원에 가요.",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jjj723/224422752321",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/my_table1123/224428099837",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/aribi1004/224369854334",
+          "date": "2026-08-06",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "bepanthen-itch-relief",
+      "nameKo": "비판텐 이치 릴리프 크림",
+      "local": "Bepanthen Itch Relief Cream 20g",
+      "category": "연고·크림",
+      "what": "판테놀·세라마이드 크림으로 건조한 피부나 아토피성 가려움·붉은기를 진정시켜요.",
+      "price": "13.8만동 (20g)",
+      "kid": "스테로이드(코르티코이드)는 없지만, 아이에게 쓸 때는 의사와 상담하라고 적혀 있어요(파마시티 제품 설명).",
+      "kidLevel": "check",
+      "caution": "상처가 벌어진 피부엔 바르지 않아요. 깜란 안캉약국은 6개 묶음으로만 팔았다는 후기가 있어요.",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/aribi1004/224369854334",
+          "date": "2026-08-06",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jpg06023/224373620140",
+          "date": "2026-08-10",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/bepanthen-itch-relief-cream-tuyp-20g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "biafine",
+      "nameKo": "비아핀 (화상 연고)",
+      "local": "Biafine émulsion (trolamine, Janssen) 93g",
+      "category": "연고·크림",
+      "what": "트롤아민 에멀전으로 1~2도 화상·햇볕 화상, 감염 없는 피부 상처에 발라요.",
+      "price": "14만동 (93g)",
+      "kid": "베트남 표기상 생후 4주 미만 신생아의 열린 상처·넓은 상처·심한 화상에만 쓰지 말라고 돼 있어요. 3살 아이의 가벼운 햇볕 화상엔 쓸 수 있어요(파마시티).",
+      "kidLevel": "ok",
+      "caution": "감염된 상처엔 쓰지 않아요. 물집이 크거나 넓은 화상은 병원에 가요. 프로필렌글리콜·향료가 피부를 자극할 수 있다고 적혀 있어요.",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/iloveu30o0/224400078439",
+          "date": "2026-09-03",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/aribi1004/224369854334",
+          "date": "2026-08-06",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/biafine-hop-1-tuyp-93g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "dermatix-ultra",
+      "nameKo": "더마틱스 울트라 (흉터 젤)",
+      "local": "Dermatix Ultra (Menarini) 15g",
+      "category": "연고·크림",
+      "what": "실리콘 흉터 젤로 아문 상처·화상 흉터를 납작하고 옅게 하는 데 써요.",
+      "price": "31만동 (15g)",
+      "kid": "생후 6개월 이상 아이에게 쓸 수 있다고 나와 있고, 아이 전용 'Dermatix Ultra Kids'는 생후 3개월부터예요(파마시티).",
+      "kidLevel": "ok",
+      "caution": "벌어진 상처나 진물 나는 상처엔 쓰지 않아요. 상처가 다 아문 뒤에 써요.",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/treeeeeea/224382546001",
+          "date": "2026-08-18",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/hyunkyoungt/224320220052",
+          "date": "2026-06-18",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/dermatix-gel-ho-tro-lam-mo-seo-ultra-7gtuyp.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/dermatix-ultra-gel-tri-seo-cho-be-5gtuyp.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "differin",
+      "nameKo": "디페린 (여드름 연고)",
+      "local": "Differin 0.1% (adapalene, Galderma)",
+      "category": "연고·크림",
+      "what": "아다팔렌 0.1% 레티노이드로 좁쌀·면포성 여드름 치료에 써요.",
+      "price": "18만동 (1개, 용량 표기 없음)",
+      "kid": "아이용이 아니에요(여드름 치료제). 베트남에서도 처방이 필요한 약으로 분류돼 있고, 임신 중엔 쓰지 말라고 돼 있어요(파마시티).",
+      "kidLevel": "no",
+      "caution": "한국에선 전문의약품이에요. 햇볕 화상 입은 피부엔 바르지 않아요. 더 강한 트레티노인 젤(A-Ret)과 헷갈리지 마세요.",
+      "rx": true,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/iloveu30o0/224400078439",
+          "date": "2026-09-03",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jpg06023/224373620140",
+          "date": "2026-08-10",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/differin-cream-01-30g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://nedrug.mfds.go.kr/searchDrug",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "strepsils",
+      "nameKo": "스트렙실 (인후 정제)",
+      "local": "Strepsils (Reckitt) — Original / Honey Lemon / Orange Vit C / Cool / Maxpro",
+      "category": "목·기침",
+      "what": "목이 칼칼하거나 아플 때 녹여 먹는 항균 인후 정제예요. 맥스프로는 소염진통 성분(플루르비프로펜)이 들어 있어요.",
+      "price": "3.6만동 (1상자)",
+      "kid": "만 6세 미만에게는 쓰지 않아요(영국 제품설명서). 베트남 약국 설명에도 어린아이는 정제가 목에 걸릴 위험이 있다고 적혀 있어요. 3살 아이에겐 주지 마세요. 맥스프로는 12세 이상만 써요.",
+      "kidLevel": "no",
+      "caution": "맥스프로(소염진통제)와 일반 제품 포장이 비슷하니 구분해서 사요.",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/jjj723/224422752321",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/tiki0126/224420373018",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jpg06023/224373620140",
+          "date": "2026-08-10",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.medicines.org.uk/emc/product/5606/smpc",
+          "date": "2021-03-04",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "prospan",
+      "nameKo": "프로스판 시럽",
+      "local": "Prospan Siro (Engelhard) 100ml",
+      "category": "목·기침",
+      "what": "아이비잎(서양담쟁이) 추출물 시럽으로 가래 낀 기침을 완화해요.",
+      "price": "11만동 (100ml)",
+      "kid": "일반 프로스판 시럽은 6세 미만 1회 2.5ml, 하루 3번이에요(베트남 라벨). '프로스판 포르테(Forte)'는 6세 미만이면 의사 지시로만 먹여요. 포장이 비슷하니 꼭 일반형을 사요.",
+      "kidLevel": "check",
+      "caution": "과당 불내증이 있으면 먹으면 안 돼요(라벨).",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/znznel1/224385837357",
+          "date": "2026-08-21",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/esteoeste/224382198859",
+          "date": "2026-08-18",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/happy2500_/224384206327",
+          "date": "2026-08-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/siro-dieu-tri-viem-duong-ho-hap-kem-theo-ho-prospan-100ml.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "smecta",
+      "nameKo": "스멕타 (설사약 가루)",
+      "local": "Smecta (diosmectite 3g, Ipsen) 오렌지·바닐라 가루",
+      "category": "배탈·설사",
+      "what": "디오스멕타이트 가루로 급성 설사 때 장 점막을 덮어 보호해요.",
+      "price": "5,100동 (3g 1포)",
+      "kid": "일반 가루 스멕타는 만 2세 이상이에요. 처음 3일은 하루 4포, 다음 4일은 하루 2포이고, 꼭 오레솔(ORS)로 물·전해질을 같이 보충해요(베트남 라벨).",
+      "kidLevel": "check",
+      "caution": "짜 먹는 액상 '스멕타 고(Smecta Go)'는 15세 이상용이에요. 후기에 많이 나오는 '스멕타 고(13만동)' 말고 아이에겐 일반 가루 스멕타를 사요.",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://www.pharmacity.vn/smecta-hop-10-goi.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/thuoc-dieu-tri-tieu-chay-smecta-go-hop-12-goi.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/cjunyun/224413676130",
+          "date": "2026-09-16",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "oresol",
+      "nameKo": "오레솔 (수분보충 가루)",
+      "local": "Oresol 245 (DHG Pharma) 4.1g",
+      "category": "배탈·설사",
+      "what": "설사·구토·고열로 빠진 물과 전해질을 보충하는 가루예요.",
+      "price": "1,350동 (1포)",
+      "kid": "아이도 먹어요. 1포를 끓여 식힌 물 200ml에 정확히 타고, 탄 뒤 24시간 안에 조금씩 마셔요(베트남 라벨).",
+      "kidLevel": "ok",
+      "caution": "물 양을 꼭 지켜요. 주스·탄산음료에 타지 않아요. 탈수가 심해 보이면 바로 병원에 가요(라벨).",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://www.pharmacity.vn/thuoc-bu-nuoc-chat-dien-giai-bang-duong-uong-hieu-qua-oresol-245-20-goi-x-4-1g-hop.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/cjunyun/224413676130",
+          "date": "2026-09-16",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/iloveu30o0/224400078439",
+          "date": "2026-09-03",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "salonpas",
+      "nameKo": "샤론파스 (살론파스)",
+      "local": "Salonpas (Hisamitsu) 6.5×4.2cm 파스",
+      "category": "열·통증",
+      "what": "메틸살리실산·멘톨·캠퍼 파스로 어깨·허리 근육통에 붙여요.",
+      "price": "5.8만동 (40매) / 29만동 (200매)",
+      "kid": "만 12세 이상용이에요. 12세 미만은 의사 상담, 30개월 미만이나 열성경련·뇌전증 이력이 있는 아이는 사용 금지예요(베트남 라벨). 3살 아이에겐 붙이지 마세요.",
+      "kidLevel": "no",
+      "caution": "하루 3번, 7일을 넘기지 말고 한 장은 8시간 안에 떼요(라벨).",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/qkqhapfhda/224353967973",
+          "date": "2026-07-22",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/jjj723/224422752321",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/cao-dan-salonpas-2-bao-x-10-mieng-hop.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "panadol",
+      "nameKo": "파나돌 (성인용 진통제)",
+      "local": "Panadol / Panadol Extra (paracetamol 500mg + caffeine 65mg, GSK·Haleon)",
+      "category": "열·통증",
+      "what": "파라세타몰(아세트아미노펜) 해열진통제예요. 엑스트라는 카페인이 더 들어 있어요.",
+      "price": "24만동 (120정)",
+      "kid": "성인용이에요. 파나돌 엑스트라는 12세 미만에게 권장하지 않아요(베트남 라벨). 아이 해열제는 하파콜 같은 아이용으로 따로 사요.",
+      "kidLevel": "no",
+      "caution": "타이레놀과 같은 성분(아세트아미노펜)이라 함께 먹지 않아요. 한 판(10정)씩도 살 수 있어요.",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/panadol-extra-with-optizorb-hop-12-vi-x-10-vien.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "hapacol",
+      "nameKo": "하파콜 (아이 해열제 가루)",
+      "local": "Hapacol 150 / Hapacol 250 (DHG Pharma, paracetamol 발포 가루)",
+      "category": "열·통증",
+      "what": "아이용 파라세타몰(아세트아미노펜) 발포 가루로 열과 통증을 내려요.",
+      "price": "1,608동 (150mg 1포) / 2,000동 (250mg 1포)",
+      "kid": "아이용이에요. 1회 10~15mg/kg, 하루 최대 60mg/kg이고, 표기상 Hapacol 150은 1~3세, 250은 4~6세에 1포씩이에요. 3살 8개월이면 몸무게를 알려주고 약사와 골라요(베트남 라벨).",
+      "kidLevel": "ok",
+      "caution": "한국에서 가져온 타이레놀·챔프 같은 아세트아미노펜 해열제와 같은 성분이라 같이 또는 번갈아 먹이면 중복이에요. 열이 안 떨어지면 소아과 진료를 받아요.",
+      "rx": false,
+      "sources": [
+        {
+          "url": "https://www.pharmacity.vn/hapacol-150-hop-24-goi.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/hapacol-250-24-goi.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/lolodiary_/224399615078",
+          "date": "2026-09-03",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/smi1979/224401517496",
+          "date": "2026-09-05",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "remos",
+      "nameKo": "레모스 모기 기피제 (아이는 '레모스 베이비')",
+      "local": "Remos Baby Cream (Picaridin 10%) / Remos 라벤더·오렌지 (DEET 15%) — Rohto-Mentholatum Vietnam",
+      "category": "모기·벌레",
+      "what": "피부에 바르거나 뿌려 모기를 쫓는 베트남 로토 제품이에요.",
+      "price": "5.1만동 (레모스 베이비 크림)",
+      "kid": "아이에겐 '레모스 베이비(Remos Baby, 피카리딘 10%)'를 사요. 생후 6개월 이상 쓸 수 있어요(라벨). 일반 레모스(라벤더·오렌지향)는 DEET 15%라 베트남 라벨은 4세 이상이지만, 한국 식약처 기준(DEET 10% 초과는 12세 이상)으로는 아이용이 아니에요.",
+      "kidLevel": "check",
+      "caution": "어른 손에 덜어서 발라 주고, 아이 손·눈·입 주위엔 바르지 않아요(라벨·식약처).",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://www.pharmacity.vn/kem-chong-muoi-huong-khuynh-diep-remos-baby-70g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/kem-chong-muoi-huong-lavender-mentholatum-remos-70g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148931318",
+          "date": "2024-07-11",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/su96970/224212583657",
+          "date": "2026-03-11",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "soffell",
+      "nameKo": "소펠 모기 기피제",
+      "local": "Soffell (DEET 13%, Enesis Indonesia) 로션·스프레이",
+      "category": "모기·벌레",
+      "what": "동남아에서 많이 쓰는 DEET 모기 기피 로션·스프레이예요.",
+      "price": "4.3만동 (스프레이 80ml)",
+      "kid": "DEET 13% 제품이에요(파마시티 표기). 한국 식약처 기준 DEET 10% 초과는 12세 이상용이라 3살 아이에겐 쓰지 말고 어른만 써요.",
+      "kidLevel": "no",
+      "caution": "상처 난 피부엔 바르지 말라고 돼 있어요(라벨).",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/hrv0901/224420406772",
+          "date": "2026-09-23",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/xit-chong-muoi-huong-hoa-soffell-80ml.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/kem-chong-muoi-huong-cam-soffell-60ml.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "tiger-balm",
+      "nameKo": "타이거밤 (호랑이 연고)",
+      "local": "Tiger Balm White·Red 19.4g/30g, Tiger Balm Oil 57ml (Haw Par)",
+      "category": "오일·밤",
+      "what": "캠퍼·멘톨 연고로 근육통·결림·코막힘에 문질러 발라요.",
+      "price": "5.5만동 (화이트 30g) / 7.5만동 (오일 57ml)",
+      "kid": "만 3세 미만은 사용 금지예요(라벨). 화이트는 캠퍼 25%·멘톨 10%, 오일은 메틸살리실산 38%가 든 강한 제품이에요. 오일은 수두나 감기로 열 나는 아이에겐 쓰지 않아요(라벨).",
+      "kidLevel": "check",
+      "caution": "바르는 용도로만 쓰고, 아이 손이 닿지 않게 보관해요(라벨).",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/sk771227/224428222461",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/tiger-balm-white-194g.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/tiger-balm-oil-57ml.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        }
+      ]
+    },
+    {
+      "id": "banana-boat",
+      "nameKo": "바나나보트 선크림",
+      "local": "Banana Boat — Kids SPF50+ / Ultra Protect SPF50 / Sport",
+      "category": "약국 화장품",
+      "what": "자외선 차단지수가 높은 선크림·선스프레이로 물놀이 날 많이 사요.",
+      "price": "25.8만동 (키즈 SPF50+ 선스프레이)",
+      "kid": "생후 6개월 미만만 의사 상담이 필요하다고 적혀 있어요(파마시티 라벨). 3살 아이도 쓸 수 있고, '키즈(Kids)' 제품을 골라요.",
+      "kidLevel": "ok",
+      "caution": "'울트라 프로텍트'에는 옥시벤존이 들어 있다고 표기돼 있어요. SPF50+를 발라도 아이가 1도 햇볕 화상을 입었다는 후기가 있으니 모자·래시가드도 같이 써요.",
+      "rx": null,
+      "sources": [
+        {
+          "url": "https://blog.naver.com/summerthecat/224417692611",
+          "date": "2026-09-20",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/sk771227/224428222461",
+          "date": "2026-10-01",
+          "sponsored": false
+        },
+        {
+          "url": "https://www.pharmacity.vn/banana-boat-kem-chong-nang-ultra-protect-spf50-90ml.html",
+          "date": "2026-10-02",
+          "sponsored": false
+        },
+        {
+          "url": "https://blog.naver.com/aribi1004/224369854334",
+          "date": "2026-08-06",
+          "sponsored": false
+        }
+      ]
+    }
+  ],
+  "customs": {
+    "text": "한국 입국 때 자가사용 의약품은 '6병 또는 용법상 3개월 복용량 이내'면 요건확인 없이 통관돼요. 건강기능식품은 6병까지예요. 의약품 값도 1인 면세한도 미화 800달러에 합산돼요. 이를 넘으면 의사 소견서 등으로 요건확인을 받아야 해요(자가치료용 미화 2천 달러 이하). 발기부전치료제 같은 오·남용 우려 의약품은 국내 의사 처방전에 적힌 수량만, 졸피뎀·디아제팜 같은 수면제·신경안정제는 식약처장 승인을 받아야 들여올 수 있어요(문의 식약처 마약정책과 043-719-2813). 식약처 수입불허 품목도 반입이 제한돼요. 멜라토닌은 한국에서 전문의약품 성분이라 식약처가 해외직구 제품 통관보류를 요청한 적이 있으니 사 오지 마세요.",
+    "sources": [
+      {
+        "url": "https://www.customs.go.kr/incheon/cm/cntnts/cntntsView.do?mi=10784&cntntsId=5480",
+        "date": "2026-10-02",
+        "sponsored": false
+      },
+      {
+        "url": "https://overseas.mofa.go.kr/no-ko/brd/m_26435/view.do?seq=27",
+        "date": "2025-07-31",
+        "sponsored": false
+      },
+      {
+        "url": "https://www.medipharmhealth.co.kr/news/article.html?no=117545",
+        "date": "2026-07-02",
+        "sponsored": false
+      }
+    ]
+  },
+  "phrases": [
+    {
+      "vi": "Cái này trẻ em 3 tuổi dùng được không?",
+      "ko": "이거 3살 아이가 써도 되나요?"
+    },
+    {
+      "vi": "Bé nhà tôi 3 tuổi 8 tháng, nặng ___ kg.",
+      "ko": "우리 아이는 3살 8개월이고 몸무게는 ___kg이에요."
+    },
+    {
+      "vi": "Có loại dành cho trẻ em không?",
+      "ko": "아이용 제품 있나요?"
+    },
+    {
+      "vi": "Thuốc này có corticoid (steroid) không?",
+      "ko": "이 약에 스테로이드가 들어 있나요?"
+    },
+    {
+      "vi": "Thuốc này có cần đơn bác sĩ không?",
+      "ko": "이 약은 처방전이 필요한가요?"
+    },
+    {
+      "vi": "Một ngày dùng mấy lần, mỗi lần bao nhiêu?",
+      "ko": "하루 몇 번, 한 번에 얼마나 써요(먹여요)?"
+    },
+    {
+      "vi": "Bé bị sốt.",
+      "ko": "아이가 열이 나요."
+    },
+    {
+      "vi": "Bé bị ho.",
+      "ko": "아이가 기침해요."
+    },
+    {
+      "vi": "Bé bị tiêu chảy.",
+      "ko": "아이가 설사해요."
+    },
+    {
+      "vi": "Bé bị muỗi đốt.",
+      "ko": "아이가 모기에 물렸어요."
+    },
+    {
+      "vi": "Bé bị dị ứng với ___.",
+      "ko": "아이가 ___에 알레르기가 있어요."
+    },
+    {
+      "vi": "Cho tôi thuốc chống muỗi cho trẻ em, loại Remos Baby.",
+      "ko": "아이용 모기 기피제, 레모스 베이비로 주세요."
+    },
+    {
+      "vi": "Cho tôi xem giá.",
+      "ko": "가격 좀 보여 주세요."
+    },
+    {
+      "vi": "Cái này bao nhiêu tiền?",
+      "ko": "이거 얼마예요?"
+    },
+    {
+      "vi": "Thanh toán bằng thẻ hoặc mã QR được không?",
+      "ko": "카드나 QR로 결제돼요?"
+    },
+    {
+      "vi": "Cho tôi xin hóa đơn.",
+      "ko": "영수증 주세요."
+    },
+    {
+      "vi": "Hạn sử dụng đến khi nào?",
+      "ko": "유통기한이 언제까지예요?"
+    },
+    {
+      "vi": "Viết cách dùng ra giấy giúp tôi được không?",
+      "ko": "복용법을 종이에 적어 주실 수 있나요?"
+    },
+    {
+      "vi": "Gần đây có phòng khám nhi không?",
+      "ko": "근처에 소아과 있나요?"
+    }
+  ]
+}

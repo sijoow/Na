@@ -253,6 +253,7 @@ export interface FoodGuide {
 }
 
 export interface SouvenirItem {
+  id: string;
   name: string;
   group: string;
   where: string;

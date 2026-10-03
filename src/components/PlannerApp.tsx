@@ -6,7 +6,6 @@ import { getTripStatus, isWithinTrip, toDateString } from "@/lib/date";
 import { getItemProgress } from "@/lib/trip";
 import { useTripSync, type SaveStatus } from "@/lib/useTripSync";
 import ChecklistTab from "./ChecklistTab";
-import InfoTab from "./InfoTab";
 import OverviewTab from "./OverviewTab";
 import ScheduleTab from "./ScheduleTab";
 import { btn, Modal } from "./ui";
@@ -18,45 +17,69 @@ const loadToursShopsTab = () => import("./ToursShopsTab");
 const loadReviewsTab = () => import("./ReviewsTab");
 const loadWeather = () => import("./WeatherSection");
 const loadAsk = () => import("./AskSection");
-const loadRanking = () => import("./RankingTab");
 const loadFood = () => import("./FoodTab");
 const loadSpa = () => import("./SpaSection");
 const loadDesert = () => import("./DesertTourTab");
 const loadVinTickets = () => import("./VinWondersTicketTab");
 const loadKids = () => import("./KidsPlacesTab");
+const loadDam = () => import("./DamMarketTab");
+const loadSouvenir = () => import("./SouvenirTab");
+const loadPharmacy = () => import("./PharmacyTab");
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
 const ReviewsTab = dynamic(loadReviewsTab, { loading: () => <TabLoading /> });
 const WeatherSection = dynamic(loadWeather, { loading: () => <TabLoading /> });
 const AskSection = dynamic(loadAsk, { loading: () => <TabLoading /> });
-const RankingTab = dynamic(loadRanking, { loading: () => <TabLoading /> });
 const FoodTab = dynamic(loadFood, { loading: () => <TabLoading /> });
 const SpaSection = dynamic(loadSpa, { loading: () => <TabLoading /> });
 const DesertTourTab = dynamic(loadDesert, { loading: () => <TabLoading /> });
 const VinWondersTicketTab = dynamic(loadVinTickets, { loading: () => <TabLoading /> });
 const KidsPlacesTab = dynamic(loadKids, { loading: () => <TabLoading /> });
+const DamMarketTab = dynamic(loadDam, { loading: () => <TabLoading /> });
+const SouvenirTab = dynamic(loadSouvenir, { loading: () => <TabLoading /> });
+const PharmacyTab = dynamic(loadPharmacy, { loading: () => <TabLoading /> });
 
-type Tab = "overview" | "schedule" | "map" | "stays" | "desert" | "vintickets" | "kids" | "tours" | "food" | "spa" | "weather" | "ai" | "reviews" | "checklist" | "info" | "rank";
+type Tab =
+  | "overview"
+  | "schedule"
+  | "map"
+  | "stays"
+  | "desert"
+  | "vintickets"
+  | "kids"
+  | "dam"
+  | "souvenir"
+  | "pharmacy"
+  | "tours"
+  | "food"
+  | "spa"
+  | "weather"
+  | "ai"
+  | "reviews"
+  | "checklist";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "overview", label: "홈" },
   { id: "schedule", label: "일정" },
   { id: "map", label: "지도·이동" },
   { id: "stays", label: "숙소" },
-  { id: "desert", label: "사막투어 예약" },
+  { id: "desert", label: "사막투어 (확정)" },
   { id: "vintickets", label: "빈원더스 티켓" },
   { id: "kids", label: "아이랑 갈 곳" },
+  { id: "dam", label: "담시장" },
+  { id: "souvenir", label: "기념품" },
+  { id: "pharmacy", label: "약국 쇼핑" },
   { id: "tours", label: "투어·쇼핑" },
   { id: "food", label: "맛집" },
   { id: "spa", label: "마사지" },
   { id: "weather", label: "날씨" },
-  { id: "ai", label: "AI 질문" },
   { id: "reviews", label: "후기" },
   { id: "checklist", label: "준비물" },
-  { id: "info", label: "정보·메모" },
-  { id: "rank", label: "호텔 순위" },
 ];
+
+// 탭 줄에는 없고 머리글 버튼으로 여는 화면 (주소 #ai 로 새로고침해도 유지)
+const HIDDEN_TABS: Tab[] = ["ai"];
 
 // 폰 하단 탭바: 자주 쓰는 4개 + 더보기
 const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
@@ -99,18 +122,18 @@ const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 
 // '더보기' 바텀시트에 크게 보여줄 탭
 const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
-  { id: "desert", emoji: "🏜️", label: "사막투어 예약", desc: "10/6 판랑 사막 · 업체 비교 · 예약 브리핑" },
+  { id: "desert", emoji: "🏜️", label: "사막투어 (확정)", desc: "10/6 HT나트랑 확정 · 당일 동선 · 준비물" },
   { id: "vintickets", emoji: "🎢", label: "빈원더스 티켓", desc: "10/5 구매처 비교 · 101cm 아이 표 · 현장 매표소" },
   { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 10/5 대신 코스 · 엄마·아이 네일" },
-  { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 기념품 · 아이 옷 · 환전" },
+  { id: "dam", emoji: "🧺", label: "담시장", desc: "층별 안내 · 지도 · 추천 가게 번호 · 시세표 · 흥정 팁" },
+  { id: "souvenir", emoji: "🎁", label: "기념품", desc: "커피·망고젤리·캐슈넛 등 30가지 · 사진 · 산 것 체크" },
+  { id: "pharmacy", emoji: "💊", label: "약국 쇼핑", desc: "베트남 약국 인기템 · 아이 사용 주의 · 한국 반입 규정" },
+  { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 아이 옷 · 환전" },
   { id: "food", emoji: "🍜", label: "맛집", desc: "한국인이 많이 가는 맛집 · 꼭 먹어볼 음식" },
   { id: "spa", emoji: "💆", label: "마사지·스파", desc: "아이랑 같이 받는 가족 마사지 · 출국 전 샤워" },
   { id: "weather", emoji: "🌦️", label: "날씨", desc: "실시간 예보 · 작년·10년 날씨 · Plan B" },
-  { id: "ai", emoji: "🤖", label: "AI에게 물어보기", desc: "우리 일정 기반 답변 · 웹 검색 · 토큰 사용량" },
   { id: "reviews", emoji: "📝", label: "후기", desc: "블로그 후기 요약" },
   { id: "checklist", emoji: "✅", label: "준비물", desc: "챙길 것 체크리스트" },
-  { id: "info", emoji: "🗒️", label: "정보·메모", desc: "항공편 · 메모 · 백업" },
-  { id: "rank", emoji: "🏆", label: "호텔 순위", desc: "구간별 숙소 비교 (걸어서 가산점) · 1차 후보 순위" },
 ];
 
 // 오늘 날짜는 브라우저에서만 계산한다 (서버 렌더링 때는 null → 하이드레이션 불일치 없음)
@@ -141,7 +164,7 @@ export default function PlannerApp() {
   const [tab, setTabState] = useState<Tab>(() => {
     if (typeof window === "undefined") return "overview";
     const hash = window.location.hash.slice(1);
-    return TABS.some((t) => t.id === hash) ? (hash as Tab) : "overview";
+    return TABS.some((t) => t.id === hash) || HIDDEN_TABS.includes(hash as Tab) ? (hash as Tab) : "overview";
   });
   const [moreOpen, setMoreOpen] = useState(false);
   const setTab = (next: Tab) => {
@@ -213,34 +236,49 @@ export default function PlannerApp() {
     setPickedDayId(dayId);
     setTab("schedule");
   };
+  const goHome = () => {
+    setTab("overview");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-dvh">
       <header className="sticky top-0 z-30 bg-page/90 pt-[env(safe-area-inset-top)] backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-5 md:h-auto md:px-8 md:pt-4 md:pb-1">
-          {/* 로고: 누르면 홈으로 */}
-          <h1 className="min-w-0 flex-1">
-            <button
-              type="button"
-              onClick={() => {
-                setTab("overview");
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              className="press flex min-w-0 items-center gap-2.5 rounded-xl py-1 pr-2 text-left"
-              aria-label="홈으로"
-            >
-              <VietnamFlag className="h-6 w-9 shrink-0 rounded-[5px] shadow-sm md:h-7 md:w-[42px]" />
-              <span className="min-w-0">
-                <span className="block truncate text-[18px] leading-tight font-extrabold tracking-tight md:text-[22px]">
-                  <span className="text-primary">나트랑</span> 여행기
-                </span>
-                <span className="block truncate text-[12px] leading-tight font-medium text-ink-3 md:text-[13px]">
-                  {state.tripTitle.match(/\d+박\s*\d+일/)?.[0] ?? state.tripTitle} ·{" "}
-                  {state.startDate.slice(5).replace("-", ".")} – {state.endDate.slice(5).replace("-", ".")} · {state.travelers}
-                </span>
-              </span>
+          {/* 로고(국기·제목): 누르면 홈으로 · 제목 바로 옆에 AI 질문 버튼 · 날짜 줄은 그 아래 */}
+          <div className="flex min-w-0 flex-1 items-center gap-2.5">
+            <button type="button" onClick={goHome} className="press shrink-0 rounded-md" aria-label="홈으로">
+              <VietnamFlag className="h-6 w-9 rounded-[5px] shadow-sm md:h-7 md:w-[42px]" />
             </button>
-          </h1>
+            <div className="min-w-0 flex-1">
+              <div className="flex min-w-0 items-center gap-2">
+                <h1 className="min-w-0">
+                  <button
+                    type="button"
+                    onClick={goHome}
+                    className="press block max-w-full truncate text-left text-[18px] leading-tight font-extrabold tracking-tight md:text-[22px]"
+                  >
+                    <span className="text-primary">나트랑</span> 여행기
+                  </button>
+                </h1>
+                {/* AI 질문: 탭 대신 제목 옆 버튼으로 연다 */}
+                <button
+                  type="button"
+                  onClick={() => setTab("ai")}
+                  aria-current={tab === "ai" ? "page" : undefined}
+                  className={`press flex min-h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-[12px] font-bold md:min-h-9 md:px-3 md:text-[14px] ${
+                    tab === "ai" ? "bg-primary text-white" : "bg-primary-soft text-primary-ink"
+                  }`}
+                >
+                  <span aria-hidden>✨</span>AI 질문
+                </button>
+              </div>
+              <p className="truncate text-[12px] leading-tight font-medium text-ink-3 md:text-[13px]">
+                {state.tripTitle.match(/\d+박\s*\d+일/)?.[0] ?? state.tripTitle} ·{" "}
+                {state.startDate.slice(5).replace("-", ".")} – {state.endDate.slice(5).replace("-", ".")} · {state.travelers}
+              </p>
+            </div>
+          </div>
           <SaveIndicator status={sync.saveStatus} error={sync.saveError} onRetry={sync.retrySave} />
         </div>
         {/* 태블릿/PC: 상단 탭 */}
@@ -293,15 +331,16 @@ export default function PlannerApp() {
         {tab === "desert" && <DesertTourTab state={state} update={update} />}
         {tab === "vintickets" && <VinWondersTicketTab state={state} update={update} />}
         {tab === "kids" && <KidsPlacesTab onGo={(t) => setTab(t)} />}
-        {tab === "tours" && <ToursShopsTab state={state} update={update} />}
+        {tab === "dam" && <DamMarketTab onGo={(t) => setTab(t)} />}
+        {tab === "souvenir" && <SouvenirTab state={state} update={update} onGo={(t) => setTab(t)} />}
+        {tab === "pharmacy" && <PharmacyTab onGo={(t) => setTab(t)} />}
+        {tab === "tours" && <ToursShopsTab onGo={(t) => setTab(t)} />}
         {tab === "food" && <FoodTab />}
         {tab === "spa" && <SpaSection />}
         {tab === "weather" && <WeatherSection />}
         {tab === "ai" && <AskSection />}
-        {tab === "rank" && <RankingTab />}
         {tab === "reviews" && <ReviewsTab />}
         {tab === "checklist" && <ChecklistTab state={state} update={update} />}
-        {tab === "info" && <InfoTab state={state} update={update} />}
       </main>
 
       {/* 폰: 하단 고정 탭바 */}

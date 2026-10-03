@@ -8,8 +8,8 @@ import type { TripState } from "@/lib/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// 모델은 환경변수로 바꿀 수 있음 (기본 claude-opus-5, 비용 절약을 위해 effort low)
-const MODEL = process.env.AI_MODEL?.trim() || "claude-opus-5";
+// 모델은 환경변수로 바꿀 수 있음 (기본 claude-sonnet-5 — 일정 질문엔 충분하고 Opus 5보다 약 2.5배 쌈, 비용 절약을 위해 effort low)
+const MODEL = process.env.AI_MODEL?.trim() || "claude-sonnet-5";
 const MAX_QUESTION = 500;
 
 // 예상 비용 계산용 (USD / 1M 토큰). 목록에 없는 모델은 비용 표시 생략.

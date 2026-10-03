@@ -52,6 +52,8 @@ interface NailShop {
   lat: number;
   lng: number;
   instagram: string;
+  /** 카톡 1:1 채팅 링크 (예약할 가게만) */
+  kakao?: string;
   /** 구글 이미지 검색어 (가게 사진 보기) */
   photoQuery: string;
   caution?: string;
@@ -282,6 +284,11 @@ function NailSection({ onGo }: { onGo?: (tab: "schedule") => void }) {
               ))}
           </dl>
           {s.caution && <p className="mt-2 rounded-xl bg-accent-soft px-3 py-2 text-[12px] leading-relaxed text-ink">⚠️ {s.caution}</p>}
+          {s.kakao && (
+            <a className={`${btn.primary} mt-3 w-full`} href={s.kakao} target="_blank" rel="noopener noreferrer">
+              💬 카톡으로 예약하기
+            </a>
+          )}
           <div className="mt-3 flex flex-wrap gap-2">
             <a className={smallBtn} href={mapUrl(s.lat, s.lng)} target="_blank" rel="noopener noreferrer">
               🗺️ 구글 지도

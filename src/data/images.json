@@ -652,5 +652,235 @@
       "kind": "scene",
       "caption": "네일아트 예시 (이 가게 아님)"
     }
+  },
+  "pharmacy": {
+    "bepanthen-balm": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-bepanthen-balm.jpg",
+      "credit": "User:Mattes",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bepanthen%C2%AE_%E2%80%94_BAYER_%E2%80%94_Augen-_und_Nasensalbe_(Dexpanthenol)_mit_Verpackung_und_Beipackzettel_%E2%80%94_Deutschland.jpg",
+      "kind": "item",
+      "caption": "비판텐 밤 (예시 사진, 이 제품 아님)"
+    },
+    "biafine": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-biafine.jpg",
+      "credit": "DrSidar",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mebo_tube.jpg",
+      "kind": "item",
+      "caption": "비아핀 (화상 연고) (예시 사진, 이 제품 아님)"
+    },
+    "differin": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-differin.jpg",
+      "credit": "SSYoung",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adapalene_Gel_(Differin)_in_China.jpg",
+      "kind": "item",
+      "caption": "디페린 (여드름 연고)"
+    },
+    "strepsils": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-strepsils.jpg",
+      "credit": "Psiĥedelisto",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Strepsils_lozenges_8_packs_(Philippines).jpg",
+      "kind": "item",
+      "caption": "스트렙실 (인후 정제)"
+    },
+    "prospan": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-prospan.jpg",
+      "credit": "Redvelvetcake5",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cough_medicine_in_a_medicine_measure_cup.jpg",
+      "kind": "item",
+      "caption": "프로스판 시럽 (예시 사진, 이 제품 아님)"
+    },
+    "smecta": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-smecta.jpg",
+      "credit": "R1235613",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E8%88%92%E8%85%B9%E9%81%94(Smecta).jpg",
+      "kind": "item",
+      "caption": "스멕타 (설사약 가루)"
+    },
+    "oresol": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-oresol.jpg",
+      "credit": "Cjp24",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oral_rehydration_salts_-_Packet.jpg",
+      "kind": "item",
+      "caption": "오레솔 (수분보충 가루) (예시 사진, 이 제품 아님)"
+    },
+    "salonpas": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-salonpas.jpg",
+      "credit": "AddisWang",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Salonpas_Pain_Relieving_Patch.jpg",
+      "kind": "item",
+      "caption": "샤론파스 (살론파스)"
+    },
+    "remos": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-remos.jpg",
+      "credit": "Tinton5",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:OFF!_is_an_insect_repellent.jpg",
+      "kind": "item",
+      "caption": "레모스 모기 기피제 (아이는 '레모스 베이비') (예시 사진, 이 제품 아님)"
+    },
+    "soffell": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-soffell.jpg",
+      "credit": "Tony Webster",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Off_and_Cutter_DEET_Insect_Repellent_-_Bug_Spray_(27827388427).jpg",
+      "kind": "item",
+      "caption": "소펠 모기 기피제 (예시 사진, 이 제품 아님)"
+    },
+    "tiger-balm": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-tiger-balm.jpg",
+      "credit": "Steffen Buus Kristensen",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tigerbalm.jpg",
+      "kind": "item",
+      "caption": "타이거밤 (호랑이 연고)"
+    },
+    "panadol": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/pharmacy-panadol.jpg",
+      "credit": "Retired electrician",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D1%80%D0%B0%D1%86%D0%B5%D1%82%D0%B0%D0%BC%D0%BE%D0%BB,_%D0%A4%D0%B0%D1%80%D0%BC%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82_%D0%9A%D1%83%D1%80%D1%81%D0%BA_(Paracetamol)_01.jpg",
+      "kind": "item",
+      "caption": "파나돌 (성인용 진통제) (예시 사진, 이 제품 아님)"
+    }
+  },
+  "souvenirItems": {
+    "g7": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-g7.jpg",
+      "credit": "Dragfyre",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Trung_Nguyen_G7_in_store.jpg",
+      "kind": "item",
+      "caption": "트룽응우옌 G7 3in1 인스턴트 커피 상자"
+    },
+    "consoc-drip": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-consoc-drip.jpg",
+      "credit": "Caphetuiloc",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hinh_anh_ca_phe_tui_loc_CafeTot.jpg",
+      "kind": "item",
+      "caption": "베트남 드립백 커피를 컵에 걸어 우리는 모습 (예시 사진, 이 제품 아님)"
+    },
+    "archcafe": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-archcafe.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vietnamese_Salted_Coffee_%26_Xin_chao%27s_coconut_Coffee_-_Xin_Chao,_Eastbourne_2026-08-14.jpg",
+      "kind": "item",
+      "caption": "베트남식 코코넛 커피(오른쪽) (예시 사진, 이 제품 아님)"
+    },
+    "cong-coconut": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-cong-coconut.jpg",
+      "credit": "CNEcija12345",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99ng_C%C3%A0_Ph%C3%AA_variety_of_drinks.jpg",
+      "kind": "item",
+      "caption": "콩카페(Cộng Cà Phê) 매장 음료들 (예시 사진, 이 제품 아님)"
+    },
+    "phuclong-lotus": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-phuclong-lotus.jpg",
+      "credit": "VuThiAnh",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tra_sen_-_Vietnamese_Lotus_Tea.JPG",
+      "kind": "item",
+      "caption": "베트남 연꽃차(짜센) 찻잎 (예시 사진, 이 제품 아님)"
+    },
+    "atiso": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-atiso.jpg",
+      "credit": "Badagnani",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Artichoketea.jpg",
+      "kind": "item",
+      "caption": "베트남 아티초크 차 티백과 내용물"
+    },
+    "cherish-jelly": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-cherish-jelly.jpg",
+      "credit": "Syced",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fudge_mango_jelly_from_Vietnam.jpg",
+      "kind": "item",
+      "caption": "베트남산 망고 젤리 사탕 (예시 사진, 이 제품 아님)"
+    },
+    "topfruit-jelly": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-topfruit-jelly.jpg",
+      "credit": "Secretlondon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Candy_kitten_sweet_aug_21.jpg",
+      "kind": "item",
+      "caption": "망고맛 젤리 사탕 (예시 사진, 이 제품 아님)"
+    },
+    "cherish-pudding": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-cherish-pudding.jpg",
+      "credit": "kibitan from Outram, Central Singapore, Singapore",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mango_pudding_by_kibitan_in_Outram,_Singapore.jpg",
+      "kind": "item",
+      "caption": "망고 푸딩 (예시 사진, 이 제품 아님)"
+    },
+    "gery": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-gery.jpg",
+      "credit": "Evan-Amos",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheez-It-Crackers.jpg",
+      "kind": "item",
+      "caption": "치즈 크래커 (예시 사진, 이 제품 아님)"
+    },
+    "calcheese": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-calcheese.jpg",
+      "credit": "WikiMagic45",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Richeese_Nabati_4.jpg",
+      "kind": "item",
+      "caption": "나바티 리치즈(Richeese) 치즈 웨하스"
+    },
+    "banh-dua": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-banh-dua.jpg",
+      "credit": "Lê Huỳnh Bộ",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_d%E1%BB%ABa_n%C6%B0%E1%BB%9Bng_(56066).jpg",
+      "kind": "item",
+      "caption": "구운 코코넛 과자(바인즈어느엉) 포장과 과자"
+    },
+    "vinamit-mango": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-vinamit-mango.jpg",
+      "credit": "Asabengurtza",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mangues_sechees.jpg",
+      "kind": "item",
+      "caption": "반건조 망고 슬라이스 (예시 사진, 이 제품 아님)"
+    },
+    "vinamit-jackfruit": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-vinamit-jackfruit.jpg",
+      "credit": "François Nguyen",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Freeze-dried_jackfruit.jpg",
+      "kind": "item",
+      "caption": "말린 잭프루트 칩 (예시 사진, 이 제품 아님)"
+    },
+    "cashew": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/souvenir-item-cashew.jpg",
+      "credit": "Phương Huy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A1t_%C4%91i%E1%BB%81u_B%C3%ACnh_Ph%C6%B0%E1%BB%9Bc,_th%C3%A1ng_12_n%C4%83m_2016_(1).jpg",
+      "kind": "item",
+      "caption": "베트남 빈프억산 볶은 캐슈넛"
+    }
+  },
+  "dam": {
+    "hero": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/dam-hero.jpg",
+      "credit": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dam_Market_Nha_Trang_1.jpg",
+      "kind": "photo",
+      "caption": "담시장 구관(원형 건물) · 2018 — 지금은 닫혀 있고 쇼핑은 뒤쪽 신관에서"
+    }
   }
 }

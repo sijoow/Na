@@ -2,15 +2,13 @@
 
 import { useState } from "react";
 import exchange from "@/data/exchange.json";
-import { FOOD, SOUVENIR } from "@/data/guide";
+import { FOOD } from "@/data/guide";
 
 const EXCHANGE = exchange;
 import type { FoodSpot } from "@/lib/guideTypes";
-import { toggleSouvenir } from "@/lib/trip";
-import type { TripState } from "@/lib/types";
 import { dishPhoto, groupPhoto, menuPhoto, Photo } from "./Photo";
 import { BlogPostRow } from "./ReviewsTab";
-import { btn, card, ProgressBar } from "./ui";
+import { btn, card } from "./ui";
 
 const FOOD_KIND: Record<string, string> = {
   pho: "🍜 쌀국수",
@@ -66,7 +64,7 @@ function NumberedList({ items, small = false }: { items: string[]; small?: boole
 }
 
 /** 기념품 요약: TOP10은 태그로, 나머지(동선·예산·주의)는 접기 */
-function SouvenirSummary({ text }: { text: string }) {
+export function SouvenirSummary({ text }: { text: string }) {
   const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
   const topLine = lines.find((l) => l.startsWith("필수"));
   const top = topLine ? splitNumbered(topLine.replace(/^필수\s*TOP\s*10\s*[:：]\s*/i, "")) : [];
@@ -99,7 +97,7 @@ function SouvenirSummary({ text }: { text: string }) {
   );
 }
 
-function mapUrl(name: string, lat: number | null, lng: number | null) {
+export function mapUrl(name: string, lat: number | null, lng: number | null) {
   return lat !== null && lng !== null
     ? `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} Nha Trang`)}`;
@@ -212,106 +210,6 @@ function FoodSpotCard({ spot: s }: { spot: FoodSpot }) {
         </button>
       </div>
     </article>
-  );
-}
-
-export function SouvenirSection({
-  state,
-  update,
-}: {
-  state: TripState;
-  update: (fn: (s: TripState) => TripState) => void;
-}) {
-  const bought = new Set(state.boughtSouvenirs ?? []);
-  const groups = [...new Set(SOUVENIR.items.map((i) => i.group))];
-  const done = SOUVENIR.items.filter((i) => bought.has(i.name)).length;
-  const total = SOUVENIR.items.length;
-
-  return (
-    <div className="space-y-5">
-      <section className={`${card} space-y-3 p-5 md:p-6`}>
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="text-[15px] font-semibold text-ink-3">기념품 쇼핑리스트</p>
-            <p className="mt-1 text-[24px] font-bold tracking-tight">
-              {done}/{total} 샀어요
-            </p>
-          </div>
-        </div>
-        <ProgressBar value={total ? Math.round((done / total) * 100) : 0} />
-        {SOUVENIR.summary && <SouvenirSummary text={SOUVENIR.summary} />}
-      </section>
-
-      {SOUVENIR.customs && (
-        <details className="rounded-3xl bg-danger-soft p-5">
-          <summary className="cursor-pointer text-[16px] font-bold text-danger">⚠️ 한국 입국 반입 금지·주의 (꼭 읽기)</summary>
-          <p className="mt-3 text-[14px] leading-relaxed whitespace-pre-line break-words text-ink">{SOUVENIR.customs}</p>
-        </details>
-      )}
-
-      {groups.map((g) => {
-        const items = SOUVENIR.items.filter((i) => i.group === g);
-        return (
-          <section key={g} className={`${card} px-4 pt-4 pb-2 md:px-5`}>
-            {groupPhoto(g) && (
-              <div className="mb-3">
-                <Photo photo={groupPhoto(g)} alt={g} className="aspect-[21/9]" />
-              </div>
-            )}
-            <h3 className="mb-1 text-[18px] font-bold tracking-tight">{g}</h3>
-            <ul>
-              {items.map((it, i) => {
-                const checked = bought.has(it.name);
-                return (
-                  <li key={`${it.name}-${i}`} className="border-t border-line first:border-0">
-                    <label className="flex cursor-pointer items-start gap-3 py-3">
-                      <input
-                        type="checkbox"
-                        className="mt-0.5"
-                        checked={checked}
-                        onChange={() => update((s) => toggleSouvenir(s, it.name))}
-                      />
-                      <span className="min-w-0 flex-1">
-                        <span className={`block text-[16px] font-semibold ${checked ? "text-ink-4 line-through" : "text-ink"}`}>
-                          {it.name}
-                        </span>
-                        <span className="mt-0.5 block text-[14px] text-primary-ink">
-                          {it.price} · {it.where}
-                        </span>
-                        <span className="mt-0.5 block text-[13px] leading-relaxed text-ink-3">
-                          {it.qtyTip}
-                          {it.note && ` · ${it.note}`}
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        );
-      })}
-
-      {SOUVENIR.places.length > 0 && (
-        <section>
-          <h3 className="mb-3 px-1 text-xl font-bold tracking-tight">어디서 사나요</h3>
-          <div className="grid grid-cols-1 items-start gap-3 lg:grid-cols-2">
-            {SOUVENIR.places.map((p, i) => (
-              <div key={`${p.name}-${i}`} className={`${card} p-5`}>
-                <p className="text-[18px] font-bold tracking-tight">{p.name}</p>
-                <p className="text-[13px] text-ink-3 break-words">
-                  {p.localName} · {p.hours}
-                </p>
-                <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line text-ink-2">{p.tips}</p>
-                <a className={`${btn.soft} mt-3 min-h-11 px-4 text-[14px]`} href={mapUrl(p.localName || p.name, p.lat, p.lng)} target="_blank" rel="noopener noreferrer">
-                  지도
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
   );
 }
 

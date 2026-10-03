@@ -829,6 +829,7 @@
   "souvenir": {
     "items": [
       {
+        "id": "g7",
         "name": "G7 커피 3in1 (Trung Nguyên, 50포 800g)",
         "group": "커피·차",
         "where": "롯데마트 두 지점(골드코스트점/냐짱점), GO! 나트랑. 공항 면세구역은 비쌈",
@@ -838,6 +839,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/cafe-g7-3in1-16g-50-goi-8935024129357-p2255 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "consoc-drip",
         "name": "콘삭(다람쥐) 드립백 커피 (Con Sóc Phin Lọc 10g×10)",
         "group": "커피·차",
         "where": "롯데마트(커피 코너, 골드코스트점은 4층에 커피가 몰려 있다는 후기)",
@@ -847,6 +849,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/cafe-con-soc-phin-loc-nau-10g-10goi-8935040100088-p5051 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "archcafe",
         "name": "아치카페 코코넛 카푸치노 (Archcafé Cappuccino Dừa, 12포)",
         "group": "커피·차",
         "where": "롯데마트(두 지점), 공항 면세구역",
@@ -856,6 +859,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/ca-phe-cappuccino-dua-archcafe-20g-x-12-goi-8936089171312-p11682 ; https://blog.naver.com/ldhimp9208/224392115931 ; https://blog.naver.com/maum7b/224305978231"
       },
       {
+        "id": "cong-coconut",
         "name": "콩카페 코코넛 커피 인스턴트 (Cộng Cà Phê 'Cốt Dừa Cà Phê')",
         "group": "커피·차",
         "where": "시내 콩카페(Cộng Cà Phê) 매장(D2 시내 일정 때), 깜란공항 면세구역(콩카페 제품 판매 후기). 롯데마트 온라인몰 검색에는 없음(2026-09-24)",
@@ -865,6 +869,7 @@
         "source": "https://shop.congcaphe.com/collections/ca-phe-hoa-tan ; https://blog.naver.com/yepp0225/223994892200"
       },
       {
+        "id": "phuclong-lotus",
         "name": "푹롱 연꽃차 (Trà Sen Phúc Long 100g)",
         "group": "커피·차",
         "where": "롯데마트 차 코너",
@@ -874,6 +879,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/tra-sen-phuc-long-lon-100g-8935328600422-p3733 ; https://blog.naver.com/nhatrangsheraton/224284671505"
       },
       {
+        "id": "atiso",
         "name": "아티초크 차 (Trà Atiso)",
         "group": "커피·차",
         "where": "롯데마트, 공항 면세구역, 캄란 바리바리(5+1 행사 후기, 2026-06)",
@@ -883,6 +889,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/tra-atiso-tra-dai-gia-tui-loc-30g-20-goi-x-1-5g-8935137601863-p11532 ; https://blog.naver.com/maum7b/224305978231"
       },
       {
+        "id": "cherish-jelly",
         "name": "체리쉬 망고젤리 (Kẹo Dẻo Xoài Cherish 280g)",
         "group": "과자·간식",
         "where": "롯데마트(행사가 잦음), 담시장",
@@ -892,6 +899,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/keo-deo-xoai-cherish-280g-8936023020867-p230604 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "topfruit-jelly",
         "name": "탑프루트 망고젤리 (Top Fruit / Top Fudge 망고)",
         "group": "과자·간식",
         "where": "담시장이 가장 저렴(후기), 롯데마트, 야시장",
@@ -901,6 +909,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/keo-deo-xoai-top-fruit-tvp-goi-320g-6959210713900-p91267 ; https://blog.naver.com/asdf213r1/224351387165 ; https://blog.naver.com/aak502/224300845248"
       },
       {
+        "id": "cherish-pudding",
         "name": "체리쉬 망고 푸딩 (Thạch Pudding Cherish Vị Xoài)",
         "group": "과자·간식",
         "where": "롯데마트, 야시장(더 싸다는 후기)",
@@ -910,6 +919,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/thach-pudding-cherish-vi-xoai-tui-850g-8936023021260-p12227 ; https://blog.naver.com/aak502/224300845248 ; https://www.korea.kr/news/policyNewsView.do?newsId=148896975"
       },
       {
+        "id": "gery",
         "name": "게리 치즈 크래커 (Gery Cheese Crackers)",
         "group": "과자·간식",
         "where": "롯데마트, GO! 나트랑",
@@ -919,6 +929,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/banh-quy-pho-mai-gery-270g-8992775347270-p28873 ; https://blog.naver.com/ldhimp9208/224392115931"
       },
       {
+        "id": "calcheese",
         "name": "칼치즈·아(Ahh) 치즈 웨하스 (Cal Cheese / Richeese Ahh)",
         "group": "과자·간식",
         "where": "롯데마트",
@@ -928,6 +939,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/banh-cal-cheese-153g-8996001350577-p20071 ; https://www.lottemart.vn/vi-ntg/product/nabati-richeese-ahh-cheese-wafer-90g-8993175541008-p26077 ; https://blog.naver.com/ldhimp9208/224392115931"
       },
       {
+        "id": "banh-dua",
         "name": "코코넛 과자 (Bánh Dừa Nướng 구운 코코넛)",
         "group": "과자·간식",
         "where": "롯데마트, 공항 면세구역(탑코코 코코넛 크래커)",
@@ -937,6 +949,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/banh-dua-nuong-lai-phu-goi-196g-8936023020904-p91385 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "vinamit-mango",
         "name": "비나밋 반건조 망고 (Xoài Sấy Dẻo Vinamit 250g)",
         "group": "견과·건과일",
         "where": "롯데마트(브랜드 제품), 담시장(벌크가 저렴하지만 유통기한 확인)",
@@ -946,6 +959,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/xoai-vinamit-say-deo-250g-8934743018027-p30841 ; https://www.korea.kr/news/reporterView.do?newsId=148913899"
       },
       {
+        "id": "vinamit-jackfruit",
         "name": "비나밋 잭프루트칩 (Mít Sấy Vinamit)",
         "group": "견과·건과일",
         "where": "롯데마트, 공항 면세구역",
@@ -955,6 +969,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/vinamit-jackfruit-250g-8934743022901-p12735 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "cashew",
         "name": "캐슈넛 (Hạt Điều, 껍질째 구운 것/소금구이)",
         "group": "견과·건과일",
         "where": "담시장 1층(시식 후 구매, D2 10/4) > 롯데마트(위생 포장을 원할 때)",
@@ -964,6 +979,7 @@
         "source": "https://blog.naver.com/nhatrangsheraton/224284671505 ; https://www.lottemart.vn/vi-ntg/product/hat-dieu-lua-yn-500g-8935273601048-p30699 ; https://www.korea.kr/news/reporterView.do?newsId=148913899"
       },
       {
+        "id": "macadamia",
         "name": "마카다미아 (Hạt Macca, 껍질째)",
         "group": "견과·건과일",
         "where": "담시장 또는 롯데마트",
@@ -973,6 +989,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/qua-macca-thd-2211010000005-p2427 ; https://blog.naver.com/csn324/224029788911"
       },
       {
+        "id": "haohao",
         "name": "하오하오 새우라면 (Mì Hảo Hảo Tôm Chua Cay 75g)",
         "group": "소스·라면·식재료",
         "where": "롯데마트, GO!, 편의점",
@@ -982,6 +999,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/mi-hao-hao-tom-chua-cay-75g-8934563138165-p12589 ; https://blog.naver.com/ldhimp9208/224392115931"
       },
       {
+        "id": "vifon-pho",
         "name": "비폰 소고기 쌀국수 (Phở Bò Vifon) - 반입 주의",
         "group": "소스·라면·식재료",
         "where": "롯데마트",
@@ -991,6 +1009,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/pho-bo-vifon-goi-65g-8935311110440-p8911 ; https://m.korea.kr/news/reporterView.do?newsId=148867207 ; https://www.korea.kr/news/reporterView.do?newsId=148913899"
       },
       {
+        "id": "chinsu",
         "name": "친수 칠리소스 (Tương Ớt Chin-su 250g)",
         "group": "소스·라면·식재료",
         "where": "롯데마트, GO!",
@@ -1000,6 +1019,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/tuong-ot-chinsu-chai-250g-8936017363505-p9200 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "namngu",
         "name": "남응우 피시소스 (Nước Mắm Nam Ngư)",
         "group": "소스·라면·식재료",
         "where": "롯데마트",
@@ -1009,6 +1029,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/nuoc-mam-nam-ngu-3in1-500ml-8936221048076-p233543 ; https://blog.naver.com/nhatrangsheraton/224284671505"
       },
       {
+        "id": "maggi",
         "name": "마기 간장 (Nước Tương Maggi Hảo Hạng)",
         "group": "소스·라면·식재료",
         "where": "롯데마트",
@@ -1018,6 +1039,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/maggi-soy-sauce-200ml-8934804028668-p20728 ; https://blog.naver.com/aak502/224300845248"
       },
       {
+        "id": "dh-salt",
         "name": "DH Foods 찍먹 소금 (새우소금 Muối Tôm / 나트랑 라임칠리소금 Muối Ớt Chanh Nha Trang)",
         "group": "소스·라면·식재료",
         "where": "롯데마트",
@@ -1027,6 +1049,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/muoi-tom-say-dh-foods-110g-8936079284824-p9612 ; https://blog.naver.com/iluv_-/224411690972"
       },
       {
+        "id": "goldenfarm",
         "name": "골든팜 망고 스무디 베이스 (Sinh Tố Xoài Golden Farm)",
         "group": "소스·라면·식재료",
         "where": "롯데마트",
@@ -1036,6 +1059,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/sinh-to-xoai-golden-farm-500ml-8935118320646-p232221 ; https://blog.naver.com/maum7b/224305978231 ; https://blog.naver.com/aak502/224300845248"
       },
       {
+        "id": "darlie",
         "name": "달리 치약 (Darlie Double Action) / 센소다인",
         "group": "생활·뷰티",
         "where": "롯데마트, 약국",
@@ -1045,6 +1069,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/kdr-darlie-db-action-225g-4891338007962-p3225 ; https://www.airport.kr/ap_ko/905/subview.do"
       },
       {
+        "id": "colgate-heart",
         "name": "콜게이트 하트치약 (Colgate 하트 스트립)",
         "group": "생활·뷰티",
         "where": "시내 약국(푹안캉·티엔빈 등, GLN 결제 가능), 담시장 1층 일부 가게. 롯데마트는 재고가 들쭉날쭉(2026-02 '없었다', 2026-06 '있었다' 후기). 공항이 가장 비쌈",
@@ -1054,6 +1079,7 @@
         "source": "https://blog.naver.com/simon629/224392793202 ; https://blog.naver.com/chochocho_o/224294261520 ; https://blog.naver.com/seol_ppu/224370208339"
       },
       {
+        "id": "coconut-oil",
         "name": "코코넛 오일 (Dầu Dừa Vietcoco)",
         "group": "생활·뷰티",
         "where": "롯데마트, 공항 면세구역(코코넛 크림·오일)",
@@ -1063,6 +1089,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/vietcoco-organic-extra-virgin-coconut-oil-250ml-8936079561970-p71441"
       },
       {
+        "id": "orion-an",
         "name": "오리온 안 쌀과자 김맛 (Orion An Vị Tảo Biển)",
         "group": "아이용",
         "where": "롯데마트, GO!",
@@ -1072,6 +1099,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/orion-an-seaweed-baked-rice-crackers-173-8g-8936036026542-p35409 ; https://blog.naver.com/aak502/224300845248"
       },
       {
+        "id": "chocopie",
         "name": "초코파이 수박맛·쿠스타스 (Orion Vietnam)",
         "group": "아이용",
         "where": "롯데마트",
@@ -1081,6 +1109,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/banh-chocopie-dua-hau-hop-336g-8936036028461-p11936 ; https://www.lottemart.vn/vi-ntg/product/banh-custas-12p-276g-8936036020137-p4268"
       },
       {
+        "id": "alpenliebe",
         "name": "알펜리베 2츄 (Alpenliebe 2Chew)",
         "group": "아이용",
         "where": "롯데마트",
@@ -1090,6 +1119,7 @@
         "source": "https://www.lottemart.vn/vi-ntg/product/alpenliebe-2chew-passion-fruit-and-chia-seed-flavored-chewy-canndy-220-5g-8935001718161-p47788 ; https://blog.naver.com/ldhimp9208/224392115931 ; https://blog.naver.com/chochocho_o/224294261520"
       },
       {
+        "id": "noni",
         "name": "노니 (Nhàu) 티백·캡슐 - 주의 품목",
         "group": "기타",
         "where": "롯데마트, 약국",
