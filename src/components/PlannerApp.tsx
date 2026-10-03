@@ -139,7 +139,7 @@ const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 스노클링(아미아나 시크릿 비치) · 원숭이섬" },
   { id: "nails", emoji: "💅", label: "네일 디자인", desc: "10/4 15:00 화이트 · 엄마 손·발 · 아이 — 요즘 디자인 고르기" },
   { id: "dam", emoji: "🧺", label: "담시장", desc: "층별 안내 · 지도 · 추천 가게 번호 · 시세표 · 흥정 팁" },
-  { id: "souvenir", emoji: "🎁", label: "기념품", desc: "커피·망고젤리·캐슈넛 등 30가지 · 사진 · 산 것 체크" },
+  { id: "souvenir", emoji: "🎁", label: "기념품", desc: "커피·망고젤리·캐슈넛 등 32가지 · 사진 · 산 것 체크" },
   { id: "pharmacy", emoji: "💊", label: "약국 쇼핑", desc: "베트남 약국 인기템 · 아이 사용 주의 · 한국 반입 규정" },
   { id: "tours", emoji: "🎟️", label: "투어·쇼핑", desc: "투어 · 아이 옷 · 환전" },
   { id: "food", emoji: "🍜", label: "맛집", desc: "한국인이 많이 가는 맛집 · 꼭 먹어볼 음식" },
