@@ -5,6 +5,7 @@
 
 import data from "@/data/kidsPlaces.json";
 import { Photo, refPhoto } from "./Photo";
+import SnorkelSection from "./SnorkelSection";
 import { btn, card } from "./ui";
 
 type Fit = "good" | "care" | "no";
@@ -139,6 +140,8 @@ export default function KidsPlacesTab({ onGo }: { onGo?: (tab: "schedule") => vo
           ))}
         </ul>
       </section>
+
+      <SnorkelSection />
 
       <NailSection onGo={onGo} />
 

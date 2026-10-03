@@ -136,7 +136,7 @@ const BOTTOM_TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "desert", emoji: "🏜️", label: "사막투어 (확정)", desc: "10/6 HT나트랑 확정 · 당일 동선 · 준비물" },
   { id: "vintickets", emoji: "🎢", label: "빈원더스 티켓", desc: "10/5 구매처 비교 · 101cm 아이 표 · 현장 매표소" },
-  { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 10/5 대신 코스 · 엄마·아이 네일" },
+  { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 스노클링(아미아나 시크릿 비치) · 원숭이섬" },
   { id: "nails", emoji: "💅", label: "네일 디자인", desc: "10/4 15:00 화이트 · 엄마 손·발 · 아이 — 요즘 디자인 고르기" },
   { id: "dam", emoji: "🧺", label: "담시장", desc: "층별 안내 · 지도 · 추천 가게 번호 · 시세표 · 흥정 팁" },
   { id: "souvenir", emoji: "🎁", label: "기념품", desc: "커피·망고젤리·캐슈넛 등 30가지 · 사진 · 산 것 체크" },
