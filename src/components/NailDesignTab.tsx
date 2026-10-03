@@ -56,6 +56,8 @@ interface Group {
 
 const GROUPS = data.groups as Group[];
 const NAIL_PHOTOS = (images as { nails?: Record<string, PhotoInfo> }).nails ?? {};
+// 사람이 실제로 한 네일 사진 (재사용 가능한 사진만) — 그룹 종류(발·손·아이)별
+const GALLERY = (images as { nailGallery?: Partial<Record<Kind, PhotoInfo[]>> }).nailGallery ?? {};
 
 interface Geo {
   x: number;
@@ -376,6 +378,8 @@ function DesignCard({ design, kind }: { design: Design; kind: Kind }) {
 export default function NailDesignTab() {
   const [groupId, setGroupId] = useState(GROUPS[0].id);
   const group = GROUPS.find((g) => g.id === groupId) ?? GROUPS[0];
+  const photos = GALLERY[group.kind] ?? [];
+  const [zoom, setZoom] = useState<PhotoInfo | null>(null);
 
   return (
     <div className="space-y-4">
@@ -402,7 +406,24 @@ export default function NailDesignTab() {
 
       <section className={`${card} p-4 md:p-6`}>
         <p className="text-[14px] leading-relaxed text-ink-2">{group.note}</p>
-        <ul className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {photos.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-[16px] font-bold text-ink">📷 실제 사진 {photos.length}장</h3>
+            <p className="text-[12px] text-ink-3">누르면 크게 보여요. 마음에 드는 사진을 직원에게 그대로 보여 주세요.</p>
+            <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+              {photos.map((p) => (
+                <li key={p.url}>
+                  <button type="button" onClick={() => setZoom(p)} className="press block w-full text-left">
+                    <Photo photo={p} alt={p.caption ?? "네일 실제 사진"} className="aspect-square" link={false} />
+                    <span className="mt-1 block text-[12px] leading-snug font-semibold text-ink-2">{p.caption}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <h3 className="mt-5 text-[16px] font-bold text-ink">🎨 추천 디자인 {group.designs.length}가지</h3>
+        <ul className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {group.designs.map((d) => (
             <DesignCard key={d.id} design={d} kind={group.kind} />
           ))}
@@ -444,8 +465,29 @@ export default function NailDesignTab() {
       </section>
 
       <p className="px-1 text-[12px] leading-relaxed text-ink-4">
-        {data.updatedAt} 기준 · 그림은 색과 배치를 보여 주는 예시예요. 실제 사진은 버튼으로 찾아보세요.
+        {data.updatedAt} 기준 · 그림은 색과 배치를 보여 주는 예시예요. 실제 사진은 위 사진 모음이나 버튼으로 찾아보세요.
       </p>
+
+      {zoom && (
+        <button
+          type="button"
+          onClick={() => setZoom(null)}
+          aria-label="사진 닫기"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-3 bg-black/90 p-4"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={zoom.url}
+            alt={zoom.caption ?? "네일 실제 사진"}
+            referrerPolicy="no-referrer"
+            className="max-h-[78dvh] max-w-full rounded-2xl object-contain"
+          />
+          <span className="text-center text-[16px] leading-snug font-bold text-white">{zoom.caption}</span>
+          <span className="text-center text-[12px] text-white/70">
+            사진: {zoom.credit} · {zoom.license} · 화면을 누르면 닫혀요
+          </span>
+        </button>
+      )}
     </div>
   );
 }
