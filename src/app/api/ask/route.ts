@@ -8,17 +8,22 @@ import type { TripState } from "@/lib/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// 모델은 환경변수로 바꿀 수 있음 (기본 claude-sonnet-5 — 일정 질문엔 충분하고 Opus 5보다 약 2.5배 쌈, 비용 절약을 위해 effort low)
-const MODEL = process.env.AI_MODEL?.trim() || "claude-sonnet-5";
+// 모델은 .env 의 AI_MODEL 로 바꿀 수 있음 (기본 claude-opus-5-5, 짧은 일정 질문이라 effort low).
+// 비용을 반쯤 줄이려면 AI_MODEL=claude-sonnet-5-5
+const MODEL = process.env.AI_MODEL?.trim() || "claude-opus-5-5";
 const MAX_QUESTION = 500;
 
-// 예상 비용 계산용 (USD / 1M 토큰). 목록에 없는 모델은 비용 표시 생략.
-const PRICE: Record<string, { input: number; output: number }> = {
-  "claude-opus-5": { input: 5, output: 25 },
-  "claude-opus-4-8": { input: 5, output: 25 },
-  "claude-sonnet-5": { input: 2, output: 10 },
-  "claude-haiku-4-5": { input: 1, output: 5 },
+// 안전 필터가 있는 모델만 거절 시 다른 모델로 자동 재시도(fallbacks)를 받는다 — 그 밖의 모델에 보내면 요청 자체가 거절될 수 있음
+const HAS_FALLBACKS = new Set(["claude-fable-5-1", "claude-fable-5", "claude-opus-5-5", "claude-opus-5", "claude-sonnet-5-5"]);
+
+// 예상 비용 계산용 (USD / 1M 토큰, cacheRead 는 캐시에서 읽은 입력). 목록에 없는 모델은 비용 표시 생략.
+const PRICE: Record<string, { input: number; output: number; cacheRead: number }> = {
+  "claude-opus-5-5": { input: 4, output: 20, cacheRead: 0.2 },
+  "claude-opus-5": { input: 5, output: 25, cacheRead: 0.5 },
+  "claude-sonnet-5-5": { input: 2, output: 10, cacheRead: 0.2 },
+  "claude-sonnet-5": { input: 2, output: 10, cacheRead: 0.2 },
 };
+const CACHE_WRITE = 1.25; // 캐시에 처음 쓸 때는 입력 단가의 1.25배
 const WEB_SEARCH_USD = 10 / 1000; // 검색 1회당
 
 const SYSTEM = `너는 한국인 가족(성인 2 + 만 3세 아이(2023년 1월생, 한국 나이 4살, 키 약 101cm))의 베트남 나트랑 여행 도우미야.
@@ -71,7 +76,7 @@ export async function POST(request: Request) {
 
   const client = new Anthropic();
   const messages: Anthropic.Beta.BetaMessageParam[] = [{ role: "user", content: question }];
-  const usage = { input: 0, output: 0, cacheRead: 0, webSearches: 0 };
+  const usage = { input: 0, output: 0, cacheRead: 0, cacheWrite: 0, webSearches: 0 };
 
   try {
     let answer = "";
@@ -79,9 +84,9 @@ export async function POST(request: Request) {
     for (let turn = 0; turn < 3; turn++) {
       const res = await client.beta.messages.create({
         model: MODEL,
-        max_tokens: 4000,
-        betas: ["server-side-fallback-2026-07-01"],
-        fallbacks: "default", // 안전 필터로 거절되면 서버가 다른 모델로 자동 재시도
+        max_tokens: 16000,
+        // 안전 필터로 거절되면 서버가 다른 모델로 자동 재시도
+        ...(HAS_FALLBACKS.has(MODEL) ? { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" as const } : {}),
         output_config: { effort: "low" },
         system: [
           { type: "text", text: SYSTEM },
@@ -94,6 +99,7 @@ export async function POST(request: Request) {
       usage.input += res.usage.input_tokens;
       usage.output += res.usage.output_tokens;
       usage.cacheRead += res.usage.cache_read_input_tokens ?? 0;
+      usage.cacheWrite += res.usage.cache_creation_input_tokens ?? 0;
       usage.webSearches += res.usage.server_tool_use?.web_search_requests ?? 0;
 
       if (res.stop_reason === "refusal") {
@@ -110,7 +116,10 @@ export async function POST(request: Request) {
 
     const price = PRICE[MODEL];
     const usd = price
-      ? ((usage.input + usage.cacheRead * 0.1) * price.input + usage.output * price.output) / 1_000_000 +
+      ? ((usage.input + usage.cacheWrite * CACHE_WRITE) * price.input +
+          usage.cacheRead * price.cacheRead +
+          usage.output * price.output) /
+          1_000_000 +
         usage.webSearches * WEB_SEARCH_USD
       : null;
 
