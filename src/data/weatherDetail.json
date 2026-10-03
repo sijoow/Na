@@ -1,0 +1,489 @@
+{
+  "fetchedAt": "10. 3. 15:00 (한국 시간)",
+  "method": "비 확률: Open-Meteo 앙상블 — ECMWF 51개·GFS 31개 예보 중 3시간 동안 0.5mm 이상 내린 비율(앞 ECMWF / 뒤 GFS), mm는 ECMWF 중앙값. 기온·체감·자외선·바람·천둥 지표(CAPE)는 Open-Meteo 기본 모델, 파도·수온은 Open-Meteo 바다 모델(바이다이 앞바다 격자). '천둥 가능'은 천둥 날씨 코드가 있거나, 대기 불안정(CAPE 1500 이상)과 비 확률 40% 이상이 겹친 칸이에요.",
+  "seaGrid": "12°N 109.4°E (해안에서 떨어진 앞바다 값이라 해변 물가는 이보다 잔잔해요)",
+  "desert": {
+    "date": "2026-10-06",
+    "sunrise": "05:33",
+    "verdict": "사구에 있는 09~12시 비 확률은 ECMWF 0%·GFS 13%라 거의 걱정 없어요. 09~10시 기온 30~31°C, 체감 최고 37°C, 자외선 최고 8.4예요. 바람은 돌풍 17km/h 이하로 약해 모래 날림은 적은 편이에요.",
+    "stats": {
+      "feelsMax": 37,
+      "uvMax": 8.4,
+      "gustMax": 17,
+      "rainE": 0,
+      "rainG": 13
+    },
+    "rows": [
+      {
+        "time": "06:00",
+        "what": "조식 · 06:45 체크아웃",
+        "where": "베스트웨스턴 (나트랑 시내)",
+        "emoji": "⛅",
+        "temp": 25,
+        "feels": 30,
+        "humidity": 95,
+        "uv": 0.1,
+        "wind": 7,
+        "gust": 13,
+        "cloud": 70,
+        "rainProb": 0,
+        "rainMm": 0,
+        "code": 2,
+        "cape": 510
+      },
+      {
+        "time": "07:00",
+        "what": "HT나트랑 차량 출발",
+        "where": "베스트웨스턴 (나트랑 시내)",
+        "emoji": "☀️",
+        "temp": 26,
+        "feels": 32,
+        "humidity": 88,
+        "uv": 1,
+        "wind": 7,
+        "gust": 17,
+        "cloud": 16,
+        "rainProb": 0,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 860
+      },
+      {
+        "time": "08:00",
+        "what": "판랑으로 이동 중",
+        "where": "남끄엉 사구 (판랑)",
+        "emoji": "☀️",
+        "temp": 28,
+        "feels": 33,
+        "humidity": 75,
+        "uv": 2.7,
+        "wind": 5,
+        "gust": 14,
+        "cloud": 2,
+        "rainProb": 2,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 930
+      },
+      {
+        "time": "09:00",
+        "what": "지프 · 모래썰매",
+        "where": "남끄엉 사구 (판랑)",
+        "emoji": "☀️",
+        "temp": 30,
+        "feels": 35,
+        "humidity": 69,
+        "uv": 4.9,
+        "wind": 5,
+        "gust": 17,
+        "cloud": 2,
+        "rainProb": 1,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 1120
+      },
+      {
+        "time": "10:00",
+        "what": "지프 · 모래썰매 → 10:15 씻기",
+        "where": "남끄엉 사구 (판랑)",
+        "emoji": "☀️",
+        "temp": 31,
+        "feels": 37,
+        "humidity": 63,
+        "uv": 7,
+        "wind": 4,
+        "gust": 17,
+        "cloud": 0,
+        "rainProb": 0,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 970
+      },
+      {
+        "time": "11:00",
+        "what": "래디슨으로 이동 중",
+        "where": "남끄엉 사구 (판랑)",
+        "emoji": "☀️",
+        "temp": 31,
+        "feels": 38,
+        "humidity": 58,
+        "uv": 8.4,
+        "wind": 6,
+        "gust": 18,
+        "cloud": 0,
+        "rainProb": 0,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 800
+      },
+      {
+        "time": "12:00",
+        "what": "래디슨 도착 · 점심",
+        "where": "래디슨 블루 (캄란)",
+        "emoji": "☀️",
+        "temp": 31,
+        "feels": 39,
+        "humidity": 70,
+        "uv": 8.8,
+        "wind": 8,
+        "gust": 24,
+        "cloud": 9,
+        "rainProb": 1,
+        "rainMm": 0,
+        "code": 0,
+        "cape": 2500
+      }
+    ],
+    "blocks": [
+      {
+        "time": "06~09",
+        "what": "출발·이동",
+        "e": 4,
+        "g": 3,
+        "mm": 0
+      },
+      {
+        "time": "09~12",
+        "what": "사구 지프·썰매",
+        "e": 0,
+        "g": 13,
+        "mm": 0
+      }
+    ],
+    "tips": [
+      "해 뜨는 시각 05:33 — 출발(07:00) 때 이미 밝고, 09시면 햇볕이 강해져요.",
+      "자외선이 8.4로 '매우 강함'이에요. 아이는 챙 넓은 모자·선글라스·얇은 긴소매, 선크림은 출발 전과 사구 도착 때 두 번 발라요.",
+      "체감 37°C — 물은 한 사람 500ml 이상, 아이는 지프에서 내릴 때마다 한 모금씩 마시게 해요.",
+      "햇볕 받은 모래는 오전에도 금방 뜨거워져요. 아이는 맨발 대신 샌들·아쿠아슈즈를 신기고 썰매 탈 때만 벗겨요.",
+      "모래가 눈에 들어갈 수 있으니 휴대폰·카메라는 지퍼백에 넣어요.",
+      "사구에는 그늘이 없어요. 천둥이 들리거나 먹구름이 다가오면 바로 차로 돌아가요."
+    ]
+  },
+  "resort": [
+    {
+      "date": "2026-10-06",
+      "label": "10/6(화) 사구 → 래디슨 도착",
+      "tMax": 31,
+      "tMin": 23,
+      "uvMax": 8.8,
+      "sunrise": "05:32",
+      "sunset": "17:30",
+      "sst": 29.9,
+      "waveMax": 0.6,
+      "ecmwf": {
+        "p1": 96,
+        "p10": 6,
+        "p20": 0,
+        "mm": 5.4
+      },
+      "gfs": {
+        "p1": 77,
+        "p10": 3,
+        "p20": 0,
+        "mm": 2
+      },
+      "blocks": [
+        {
+          "time": "12~15",
+          "what": "도착·점심·수영장",
+          "e": 47,
+          "g": 6,
+          "mm": 0.4,
+          "prevE": 45,
+          "prevG": 16,
+          "temp": "29~31",
+          "feelsMax": 39,
+          "uvMax": 8.8,
+          "gustMax": 26,
+          "wave": 0.5,
+          "thunder": true,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "15~18",
+          "what": "체크인·낮잠",
+          "e": 90,
+          "g": 45,
+          "mm": 1.8,
+          "prevE": 73,
+          "prevG": 29,
+          "temp": "27~29",
+          "feelsMax": 35,
+          "uvMax": 5.2,
+          "gustMax": 19,
+          "wave": 0.6,
+          "thunder": true,
+          "emoji": "⛈️"
+        },
+        {
+          "time": "18~21",
+          "what": "저녁 (배달)",
+          "e": 90,
+          "g": 68,
+          "mm": 2,
+          "prevE": 71,
+          "prevG": 19,
+          "temp": "25~26",
+          "feelsMax": 32,
+          "uvMax": 0.1,
+          "gustMax": 11,
+          "wave": 0.7,
+          "thunder": true,
+          "emoji": "🌦️"
+        },
+        {
+          "time": "21~24",
+          "what": "밤",
+          "e": 51,
+          "g": 55,
+          "mm": 0.5,
+          "prevE": 27,
+          "prevG": 6,
+          "temp": "25~25",
+          "feelsMax": 32,
+          "uvMax": 0,
+          "gustMax": 13,
+          "wave": 0.6,
+          "thunder": false,
+          "emoji": "🌧️"
+        }
+      ],
+      "notes": [
+        "비 확률 30% 미만인 낮 시간이 없어요 — 비가 그친 틈을 노려요.",
+        "피할 시간: 12~15시(천둥 가능), 15~18시(천둥 가능), 18~21시(천둥 가능) — 실내·낮잠·배달로",
+        "자외선 최고 8.8 — 11~14시 물놀이는 그늘·래시가드 필수",
+        "파도는 낮 동안 최고 0.6m(앞바다 기준)로 잔잔한 편 — 아이는 물가에서 발만, 어른이 꼭 옆에"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "label": "10/7(수) 리조트 데이",
+      "tMax": 30,
+      "tMin": 25,
+      "uvMax": 8.2,
+      "sunrise": "05:32",
+      "sunset": "17:29",
+      "sst": 29.8,
+      "waveMax": 0.4,
+      "ecmwf": {
+        "p1": 100,
+        "p10": 29,
+        "p20": 2,
+        "mm": 6.3
+      },
+      "gfs": {
+        "p1": 90,
+        "p10": 13,
+        "p20": 3,
+        "mm": 4.1
+      },
+      "blocks": [
+        {
+          "time": "06~09",
+          "what": "조식",
+          "e": 8,
+          "g": 0,
+          "mm": 0,
+          "prevE": 14,
+          "prevG": 6,
+          "temp": "26~28",
+          "feelsMax": 34,
+          "uvMax": 2.8,
+          "gustMax": 11,
+          "wave": 0.4,
+          "thunder": false,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "09~12",
+          "what": "키즈클럽·워터파크",
+          "e": 25,
+          "g": 3,
+          "mm": 0.1,
+          "prevE": 12,
+          "prevG": 6,
+          "temp": "29~30",
+          "feelsMax": 37,
+          "uvMax": 7.5,
+          "gustMax": 23,
+          "wave": 0.4,
+          "thunder": false,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "12~15",
+          "what": "점심·낮잠(마사지)",
+          "e": 82,
+          "g": 42,
+          "mm": 1,
+          "prevE": 71,
+          "prevG": 29,
+          "temp": "28~29",
+          "feelsMax": 36,
+          "uvMax": 8.2,
+          "gustMax": 25,
+          "wave": 0.4,
+          "thunder": true,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "15~18",
+          "what": "과일·비치",
+          "e": 96,
+          "g": 61,
+          "mm": 2.3,
+          "prevE": 69,
+          "prevG": 45,
+          "temp": "27~28",
+          "feelsMax": 34,
+          "uvMax": 4.3,
+          "gustMax": 20,
+          "wave": 0.4,
+          "thunder": true,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "18~21",
+          "what": "저녁",
+          "e": 88,
+          "g": 68,
+          "mm": 1.8,
+          "prevE": 71,
+          "prevG": 42,
+          "temp": "25~26",
+          "feelsMax": 33,
+          "uvMax": 0.1,
+          "gustMax": 13,
+          "wave": 0.5,
+          "thunder": true,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "21~24",
+          "what": "밤",
+          "e": 61,
+          "g": 61,
+          "mm": 0.6,
+          "prevE": 20,
+          "prevG": 39,
+          "temp": "26~26",
+          "feelsMax": 33,
+          "uvMax": 0,
+          "gustMax": 11,
+          "wave": 0.4,
+          "thunder": true,
+          "emoji": "⛅"
+        }
+      ],
+      "notes": [
+        "물놀이 좋은 시간: 06~09시, 09~12시 (비 확률 30% 미만)",
+        "피할 시간: 12~15시(천둥 가능), 15~18시(천둥 가능), 18~21시(천둥 가능) — 실내·낮잠·배달로",
+        "자외선 최고 8.2 — 11~14시 물놀이는 그늘·래시가드 필수",
+        "파도는 낮 동안 최고 0.4m(앞바다 기준)로 잔잔한 편 — 아이는 물가에서 발만, 어른이 꼭 옆에"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "label": "10/8(목) 체크아웃 → 쉐라톤",
+      "tMax": 30,
+      "tMin": 25,
+      "uvMax": 8.3,
+      "sunrise": "05:32",
+      "sunset": "17:29",
+      "sst": 29.8,
+      "waveMax": 0.6,
+      "ecmwf": {
+        "p1": 98,
+        "p10": 37,
+        "p20": 10,
+        "mm": 7.2
+      },
+      "gfs": {
+        "p1": 90,
+        "p10": 19,
+        "p20": 6,
+        "mm": 3.9
+      },
+      "blocks": [
+        {
+          "time": "06~09",
+          "what": "조식",
+          "e": 10,
+          "g": 19,
+          "mm": 0,
+          "prevE": 16,
+          "prevG": 23,
+          "temp": "25~27",
+          "feelsMax": 34,
+          "uvMax": 2.7,
+          "gustMax": 10,
+          "wave": 0.4,
+          "thunder": false,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "09~12",
+          "what": "마지막 수영",
+          "e": 16,
+          "g": 26,
+          "mm": 0.1,
+          "prevE": 12,
+          "prevG": 13,
+          "temp": "28~30",
+          "feelsMax": 37,
+          "uvMax": 8.1,
+          "gustMax": 17,
+          "wave": 0.5,
+          "thunder": false,
+          "emoji": "🌧️"
+        },
+        {
+          "time": "12~15",
+          "what": "체크아웃·이동",
+          "e": 76,
+          "g": 58,
+          "mm": 0.7,
+          "prevE": 55,
+          "prevG": 26,
+          "temp": "29~30",
+          "feelsMax": 38,
+          "uvMax": 8.3,
+          "gustMax": 21,
+          "wave": 0.5,
+          "thunder": true,
+          "emoji": "⛈️"
+        }
+      ],
+      "notes": [
+        "물놀이 좋은 시간: 06~09시, 09~12시 (비 확률 30% 미만)",
+        "피할 시간: 12~15시(천둥 가능) — 실내·낮잠·배달로",
+        "자외선 최고 8.3 — 11~14시 물놀이는 그늘·래시가드 필수",
+        "파도는 낮 동안 최고 0.6m(앞바다 기준)로 잔잔한 편 — 아이는 물가에서 발만, 어른이 꼭 옆에"
+      ]
+    }
+  ],
+  "typhoon": {
+    "issued": "03일 06:00 UTC (한국 15시)",
+    "storms": [
+      {
+        "kind": "TYPHOON",
+        "id": "26W",
+        "name": "CHOI-WAN",
+        "lat": 18.6,
+        "lng": 145.3,
+        "track": "북동쪽",
+        "knots": 6,
+        "distanceKm": 3928
+      }
+    ],
+    "disturbance": "없음",
+    "text": "JTWC 서태평양 안내 03일 06:00 UTC (한국 15시): 열대저기압 26W(CHOI-WAN) 18.6°N 145.3°E — 나트랑에서 약 3,928km, 북동쪽으로 이동. 남중국해 포함 서태평양의 새 열대 요란 없음. 여행 기간 나트랑·캄란에 영향을 줄 태풍은 없어요.",
+    "source": "https://www.metoc.navy.mil/jtwc/products/abpwweb.txt"
+  },
+  "sources": [
+    "https://open-meteo.com/en/docs (예보)",
+    "https://open-meteo.com/en/docs/ensemble-api (앙상블)",
+    "https://open-meteo.com/en/docs/marine-weather-api (바다)",
+    "https://www.metoc.navy.mil/jtwc/products/abpwweb.txt"
+  ]
+}

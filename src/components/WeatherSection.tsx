@@ -5,6 +5,7 @@ import resort from "@/data/resortWeather.json";
 import weather from "@/data/weather.json";
 import { BlogPostRow } from "./ReviewsTab";
 import { card } from "./ui";
+import WeatherDetail from "./WeatherDetail";
 
 const TRIP_DATES = ["2026-10-04", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09"];
 const SPOTS = [
@@ -138,6 +139,8 @@ export default function WeatherSection() {
           기상청이 10월 비를 평년보다 20~40% 적게 봐요. &lsquo;오전엔 야외, 저녁엔 실내&rsquo;만 지키면 충분해요.
         </p>
       </section>
+
+      <WeatherDetail />
 
       <ResortOutlook />
 
