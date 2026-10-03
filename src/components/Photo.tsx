@@ -30,6 +30,8 @@ const IMG = images as unknown as {
   pharmacy?: PhotoMap;
   /** 담시장 탭 사진 */
   dam?: PhotoMap;
+  /** 과일 가이드 사진 (fruits.json season[].name) */
+  fruits?: PhotoMap;
 };
 
 export const placePhoto = (id?: string | null) => (id ? IMG.places?.[id] : undefined);
@@ -64,6 +66,7 @@ export const stayPhoto = (id: string) => IMG.stays?.[id];
 export const groupPhoto = (group: string) => IMG.souvenirGroups?.[group];
 export const souvenirItemPhoto = (id: string) => IMG.souvenirItems?.[id];
 export const restaurantPhoto = (id: string) => IMG.restaurants?.[id];
+export const fruitPhoto = (name: string) => IMG.fruits?.[name];
 export const desertPhoto = (id?: string) => (id ? IMG.desert?.[id] : undefined);
 /** 'kids:capybara', 'places:vinwonders'처럼 '묶음:키'로 적은 사진 찾기 (데이터 파일에서 여러 묶음을 섞어 쓸 때) */
 export function refPhoto(ref?: string): PhotoInfo | undefined {

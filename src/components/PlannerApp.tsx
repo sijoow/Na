@@ -22,6 +22,7 @@ const loadSpa = () => import("./SpaSection");
 const loadDesert = () => import("./DesertTourTab");
 const loadVinTickets = () => import("./VinWondersTicketTab");
 const loadKids = () => import("./KidsPlacesTab");
+const loadNails = () => import("./NailDesignTab");
 const loadDam = () => import("./DamMarketTab");
 const loadSouvenir = () => import("./SouvenirTab");
 const loadPharmacy = () => import("./PharmacyTab");
@@ -36,6 +37,7 @@ const SpaSection = dynamic(loadSpa, { loading: () => <TabLoading /> });
 const DesertTourTab = dynamic(loadDesert, { loading: () => <TabLoading /> });
 const VinWondersTicketTab = dynamic(loadVinTickets, { loading: () => <TabLoading /> });
 const KidsPlacesTab = dynamic(loadKids, { loading: () => <TabLoading /> });
+const NailDesignTab = dynamic(loadNails, { loading: () => <TabLoading /> });
 const DamMarketTab = dynamic(loadDam, { loading: () => <TabLoading /> });
 const SouvenirTab = dynamic(loadSouvenir, { loading: () => <TabLoading /> });
 const PharmacyTab = dynamic(loadPharmacy, { loading: () => <TabLoading /> });
@@ -48,6 +50,7 @@ type Tab =
   | "desert"
   | "vintickets"
   | "kids"
+  | "nails"
   | "dam"
   | "souvenir"
   | "pharmacy"
@@ -67,6 +70,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "desert", label: "사막투어 (확정)" },
   { id: "vintickets", label: "빈원더스 티켓" },
   { id: "kids", label: "아이랑 갈 곳" },
+  { id: "nails", label: "네일 디자인" },
   { id: "dam", label: "담시장" },
   { id: "souvenir", label: "기념품" },
   { id: "pharmacy", label: "약국 쇼핑" },
@@ -125,6 +129,7 @@ const MORE_TABS: { id: Tab; emoji: string; label: string; desc: string }[] = [
   { id: "desert", emoji: "🏜️", label: "사막투어 (확정)", desc: "10/6 HT나트랑 확정 · 당일 동선 · 준비물" },
   { id: "vintickets", emoji: "🎢", label: "빈원더스 티켓", desc: "10/5 구매처 비교 · 101cm 아이 표 · 현장 매표소" },
   { id: "kids", emoji: "👶", label: "아이랑 갈 곳", desc: "만 3세 추천 순서 · 10/5 대신 코스 · 엄마·아이 네일" },
+  { id: "nails", emoji: "💅", label: "네일 디자인", desc: "10/4 15:00 화이트 · 엄마 손·발 · 아이 — 요즘 디자인 고르기" },
   { id: "dam", emoji: "🧺", label: "담시장", desc: "층별 안내 · 지도 · 추천 가게 번호 · 시세표 · 흥정 팁" },
   { id: "souvenir", emoji: "🎁", label: "기념품", desc: "커피·망고젤리·캐슈넛 등 30가지 · 사진 · 산 것 체크" },
   { id: "pharmacy", emoji: "💊", label: "약국 쇼핑", desc: "베트남 약국 인기템 · 아이 사용 주의 · 한국 반입 규정" },
@@ -331,6 +336,7 @@ export default function PlannerApp() {
         {tab === "desert" && <DesertTourTab state={state} update={update} />}
         {tab === "vintickets" && <VinWondersTicketTab state={state} update={update} />}
         {tab === "kids" && <KidsPlacesTab onGo={(t) => setTab(t)} />}
+        {tab === "nails" && <NailDesignTab />}
         {tab === "dam" && <DamMarketTab onGo={(t) => setTab(t)} />}
         {tab === "souvenir" && <SouvenirTab state={state} update={update} onGo={(t) => setTab(t)} />}
         {tab === "pharmacy" && <PharmacyTab onGo={(t) => setTab(t)} />}

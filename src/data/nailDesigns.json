@@ -1,0 +1,387 @@
+{
+  "updatedAt": "2026-10-03",
+  "shop": "10/4(일) 15:00 화이트 스파 앤 네일 — 엄마 손·발 아트 무제한(각 55만동) · 아이 키즈젤(아트 포함 28만동) · 아빠 발각질. 아트 무제한이라 디자인을 골라 가면 추가금 없이 해 줘요(풀스톤은 손가락당 10만동 추가).",
+  "intro": "한국에 돌아와 가을·겨울 옷에도 어울리는 디자인만 골랐어요. 그림은 색과 배치를 보여 주는 예시예요. '실제 사진' 버튼으로 사진을 찾아 직원에게 보여 주세요.",
+  "groups": [
+    {
+      "id": "mom-pedi",
+      "kind": "foot",
+      "title": "엄마 페디 (발)",
+      "note": "페디는 엄지에만 포인트를 주고 나머지는 한 가지 색으로 맞추면 실패가 없어요. 가을·겨울엔 스타킹·양말을 신으니 파츠 없이 평평하게 하세요.",
+      "designs": [
+        {
+          "id": "pedi-burgundy-magnet",
+          "name": "버건디 자석 페디",
+          "en": "Burgundy cat eye",
+          "say": "cat eye (mắt mèo) · burgundy",
+          "tags": ["가을·겨울", "요즘 1순위"],
+          "look": "깊은 와인색 바탕에 자석으로 빛 줄기를 넣어요. 다섯 발가락 모두 같은 색으로.",
+          "why": "한국에서 가을마다 가장 많이 하는 조합이에요. 어두운 색이라 발톱이 자라도 티가 덜 나요.",
+          "base": { "pattern": "magnet", "colors": ["#4f0f1d", "#b63a52"] },
+          "search": "버건디 자석 페디"
+        },
+        {
+          "id": "pedi-syrup-nude",
+          "name": "시럽 누드 페디",
+          "en": "Sheer nude (syrup)",
+          "say": "jelly / sheer nude (sơn thạch)",
+          "tags": ["사계절", "무난"],
+          "look": "속이 비치는 맑은 로즈 누드. 끝으로 갈수록 살짝 진하게.",
+          "why": "맨발처럼 깨끗해 보이고 어떤 옷에도 맞아요. 발톱이 자라도 경계가 안 보여서 오래 가요.",
+          "base": { "pattern": "syrup", "colors": ["#e39a96"] },
+          "search": "시럽 페디 누드"
+        },
+        {
+          "id": "pedi-cherry-syrup",
+          "name": "체리 레드 시럽",
+          "en": "Cherry red jelly",
+          "say": "jelly red (sơn thạch đỏ)",
+          "tags": ["가을·겨울", "발이 하얘 보여요"],
+          "look": "불투명 빨강이 아니라 젤리처럼 비치는 체리 레드. 여러 번 올려 깊이를 내요.",
+          "why": "원색 빨강보다 세련돼 보이고, 페디에서 가장 실패 없는 색이에요.",
+          "base": { "pattern": "syrup", "colors": ["#a80f2a"] },
+          "search": "체리 시럽 페디"
+        },
+        {
+          "id": "pedi-mocha-line",
+          "name": "모카 브라운 + 엄지 골드 라인",
+          "en": "Mocha brown, gold line on big toe",
+          "say": "brown one color · thin gold line on big toe",
+          "tags": ["가을", "차분함"],
+          "look": "우유 탄 커피색 원컬러. 엄지에만 얇은 금색 선 하나.",
+          "why": "2025년부터 이어지는 모카 브라운 유행이에요. 코트·니트 색과 잘 맞아요.",
+          "base": { "pattern": "solid", "colors": ["#7d5646"] },
+          "accent": { "pattern": "line", "colors": ["#7d5646", "#e0bd62"], "at": [0] },
+          "search": "모카 브라운 페디"
+        },
+        {
+          "id": "pedi-glazed-milk",
+          "name": "글레이즈드 밀키 화이트",
+          "en": "Glazed milky white (chrome powder)",
+          "say": "milky white + pearl chrome powder (tráng gương ngọc trai)",
+          "tags": ["사계절", "깔끔"],
+          "look": "우윳빛 바탕에 진주 파우더를 문질러 은은한 광을 내요.",
+          "why": "새하얀 풀컬러보다 덜 떠 보이고 고급스러워요. 리조트에서도 예뻐요.",
+          "base": { "pattern": "chrome", "colors": ["#f4ece6", "#e7d6cf"] },
+          "search": "글레이즈드 페디"
+        },
+        {
+          "id": "pedi-micro-french",
+          "name": "마이크로 프렌치 페디",
+          "en": "Micro French",
+          "say": "thin French tip (French mỏng)",
+          "tags": ["사계절", "단정"],
+          "look": "누드 바탕에 발톱 끝만 아주 얇게 흰 선.",
+          "why": "두꺼운 프렌치는 옛날 느낌이 나요. 선을 얇게 하면 요즘 스타일이에요.",
+          "base": { "pattern": "french", "colors": ["#efcfc4", "#ffffff"] },
+          "search": "프렌치 페디"
+        },
+        {
+          "id": "pedi-marble-accent",
+          "name": "누드 + 엄지 마블 포인트",
+          "en": "Nude with marble accent on big toe",
+          "say": "nude one color · marble art on big toe",
+          "tags": ["사계절", "포인트"],
+          "look": "나머지는 누드 베이지, 엄지에만 흰 대리석 무늬와 얇은 금색 결.",
+          "why": "아트 무제한을 살리면서도 과하지 않아요.",
+          "base": { "pattern": "solid", "colors": ["#dcb6a6"] },
+          "accent": { "pattern": "marble", "colors": ["#f6f0eb", "#9b8c85", "#cfa95e"], "at": [0] },
+          "search": "마블 페디 엄지 포인트"
+        },
+        {
+          "id": "pedi-silver-magnet",
+          "name": "그레이 벨벳 자석",
+          "en": "Silver gray velvet cat eye",
+          "say": "cat eye silver gray (mắt mèo xám bạc)",
+          "tags": ["겨울", "시크"],
+          "look": "회색 바탕에 은빛 자석 결. 벨벳처럼 보여요.",
+          "why": "검정보다 부드럽고 겨울 옷에 잘 어울려요.",
+          "base": { "pattern": "magnet", "colors": ["#5d626b", "#d9dde2"] },
+          "search": "실버 자석 페디"
+        },
+        {
+          "id": "pedi-tortoise-accent",
+          "name": "브라운 + 엄지 토터스(호피)",
+          "en": "Brown with tortoiseshell accent",
+          "say": "tortoiseshell art on big toe (họa tiết đồi mồi)",
+          "tags": ["가을", "포인트"],
+          "look": "나머지는 브라운 원컬러, 엄지에만 호박색 바탕의 거북 등껍질 무늬.",
+          "why": "가을마다 돌아오는 클래식이에요. 브라운 계열 옷·신발과 맞아요.",
+          "base": { "pattern": "solid", "colors": ["#8b5a3c"] },
+          "accent": { "pattern": "tortoise", "colors": ["#dba55c", "#5c3312", "#2a1508"], "at": [0] },
+          "search": "토터스 페디"
+        },
+        {
+          "id": "pedi-olive",
+          "name": "올리브·딥그린 원컬러",
+          "en": "Olive / deep green",
+          "say": "olive green one color",
+          "tags": ["가을", "원컬러"],
+          "look": "채도 낮은 카키 올리브 한 가지 색.",
+          "why": "흔하지 않으면서 튀지 않는 가을 색이에요.",
+          "base": { "pattern": "solid", "colors": ["#4d5a3b"] },
+          "search": "올리브 페디 원컬러"
+        },
+        {
+          "id": "pedi-champagne-glitter",
+          "name": "누드 + 샴페인 글리터 톡톡",
+          "en": "Nude with fine champagne glitter",
+          "say": "fine glitter, not chunky (kim tuyến mịn)",
+          "tags": ["사계절", "은은함"],
+          "look": "누드 바탕에 고운 금빛 글리터를 얇게. 굵은 글리터는 피해요.",
+          "why": "연말 분위기까지 이어 갈 수 있어요. 입자가 고와야 촌스럽지 않아요.",
+          "base": { "pattern": "glitter", "colors": ["#ecc9bb", "#d9b45a"] },
+          "search": "샴페인 글리터 페디"
+        },
+        {
+          "id": "pedi-smoky-syrup",
+          "name": "스모키 블랙 시럽",
+          "en": "Sheer black (smoky syrup)",
+          "say": "sheer black jelly (sơn thạch đen)",
+          "tags": ["가을·겨울", "시크"],
+          "look": "불투명 검정이 아니라 비치는 먹색. 끝으로 갈수록 진하게.",
+          "why": "풀 블랙보다 덜 세고 발이 깨끗해 보여요.",
+          "base": { "pattern": "syrup", "colors": ["#2c282b"] },
+          "search": "블랙 시럽 페디"
+        }
+      ]
+    },
+    {
+      "id": "mom-hand",
+      "kind": "hand",
+      "title": "엄마 손",
+      "note": "손은 짧은 길이에 둥근 네모(스퀘어 오프)나 짧은 아몬드가 요즘 모양이에요. 손과 발을 같은 색 계열로 맞추면 정돈돼 보여요.",
+      "designs": [
+        {
+          "id": "hand-velvet-magnet",
+          "name": "벨벳 자석 (로즈 모브)",
+          "en": "Velvet cat eye, rose mauve",
+          "say": "velvet cat eye (mắt mèo nhung)",
+          "tags": ["가을·겨울", "요즘 1순위"],
+          "look": "로즈 모브 바탕에 자석을 넓게 퍼뜨려 벨벳 같은 결을 내요.",
+          "why": "한국 네일샵에서 가장 많이 하는 디자인이에요. 한 가지 색인데도 밋밋하지 않아요.",
+          "base": { "pattern": "magnet", "colors": ["#855560", "#e6bcc6"] },
+          "search": "벨벳 자석네일"
+        },
+        {
+          "id": "hand-syrup-gradient",
+          "name": "시럽 그라데이션",
+          "en": "Syrup gradient (sheer ombre)",
+          "say": "sheer ombre (ombre sơn thạch)",
+          "tags": ["사계절", "손이 길어 보여요"],
+          "look": "큐티클 쪽은 투명하게, 끝으로 갈수록 핑크 누드가 진해져요.",
+          "why": "자라도 티가 안 나서 3~4주 가요. 회사에서도 무난해요.",
+          "base": { "pattern": "syrup", "colors": ["#e08f98"] },
+          "search": "시럽 그라데이션 네일"
+        },
+        {
+          "id": "hand-glazed",
+          "name": "글레이즈드 (진주 파우더)",
+          "en": "Glazed donut nails",
+          "say": "pearl chrome powder on milky pink (tráng gương ngọc trai)",
+          "tags": ["사계절", "깔끔"],
+          "look": "밀키 핑크 바탕에 진주 파우더로 은은한 광.",
+          "why": "꾸민 듯 안 꾸민 듯한 요즘 기본이에요.",
+          "base": { "pattern": "chrome", "colors": ["#f6ebe8", "#efd6de"] },
+          "search": "글레이즈드 네일"
+        },
+        {
+          "id": "hand-micro-french",
+          "name": "마이크로 프렌치",
+          "en": "Micro French",
+          "say": "thin French tip (French mỏng)",
+          "tags": ["사계절", "단정"],
+          "look": "누드 바탕, 끝에 아주 얇은 흰 선.",
+          "why": "어떤 자리에도 어울려요. 선이 얇을수록 요즘 느낌이에요.",
+          "base": { "pattern": "french", "colors": ["#f0d3c9", "#fffaf5"] },
+          "search": "마이크로 프렌치 네일"
+        },
+        {
+          "id": "hand-mocha",
+          "name": "모카 무스 원컬러",
+          "en": "Mocha mousse",
+          "say": "mocha brown one color",
+          "tags": ["가을", "원컬러"],
+          "look": "부드러운 밀크 브라운 한 가지 색.",
+          "why": "가을 옷과 가장 잘 맞는 색이에요. 손이 하얘 보여요.",
+          "base": { "pattern": "solid", "colors": ["#9a7361"] },
+          "search": "모카무스 네일"
+        },
+        {
+          "id": "hand-burgundy-accent",
+          "name": "버건디 + 약지 자석 포인트",
+          "en": "Burgundy with cat eye accent",
+          "say": "burgundy one color · cat eye on ring finger",
+          "tags": ["가을·겨울", "포인트"],
+          "look": "버건디 원컬러에 약지만 같은 색 자석.",
+          "why": "발을 버건디 자석으로 했다면 손과 세트가 돼요.",
+          "base": { "pattern": "solid", "colors": ["#611423"] },
+          "accent": { "pattern": "magnet", "colors": ["#4f0f1d", "#b63a52"], "at": [3] },
+          "search": "버건디 네일 자석 포인트"
+        },
+        {
+          "id": "hand-cheek",
+          "name": "치크(블러셔) 네일",
+          "en": "Blush nails",
+          "say": "blush nails (pink blush in the center)",
+          "tags": ["사계절", "여리여리"],
+          "look": "우윳빛 바탕 가운데에 볼터치처럼 분홍을 번지게 해요.",
+          "why": "한국에서 꾸준히 인기 있는 청순한 디자인이에요.",
+          "base": { "pattern": "cheek", "colors": ["#f8ece8", "#f08fa6"] },
+          "search": "치크네일"
+        },
+        {
+          "id": "hand-tortoise",
+          "name": "누드 + 토터스 포인트",
+          "en": "Nude with tortoiseshell accents",
+          "say": "tortoiseshell on two nails (họa tiết đồi mồi)",
+          "tags": ["가을", "포인트"],
+          "look": "누드 베이지 바탕, 검지와 약지에만 호피(거북 등껍질) 무늬.",
+          "why": "가을 느낌이 확실하고 브라운 옷과 잘 맞아요.",
+          "base": { "pattern": "solid", "colors": ["#e4c1b0"] },
+          "accent": { "pattern": "tortoise", "colors": ["#dba55c", "#5c3312", "#2a1508"], "at": [1, 3] },
+          "search": "토터스 네일"
+        },
+        {
+          "id": "hand-chrome-french",
+          "name": "실버 크롬 프렌치",
+          "en": "Silver chrome French",
+          "say": "French tip with silver chrome (French tráng gương bạc)",
+          "tags": ["겨울", "세련"],
+          "look": "누드 바탕, 끝 선을 은색 미러로.",
+          "why": "흰 프렌치보다 새로워 보이고 은 액세서리와 맞아요.",
+          "base": { "pattern": "french", "colors": ["#edd4ca", "#c7cbd2"] },
+          "search": "크롬 프렌치 네일"
+        },
+        {
+          "id": "hand-check",
+          "name": "브라운 + 체크 포인트",
+          "en": "Brown with check accents",
+          "say": "check pattern on two nails (họa tiết caro)",
+          "tags": ["가을·겨울", "포인트"],
+          "look": "밀크 브라운 바탕, 두 손가락에만 아이보리 체크.",
+          "why": "니트·코트 계절에 딱 맞아요. 전체에 하면 과하니 두 개만.",
+          "base": { "pattern": "solid", "colors": ["#b48a75"] },
+          "accent": { "pattern": "check", "colors": ["#f1e6da", "#7a4a3a"], "at": [1, 3] },
+          "search": "체크 네일 가을"
+        }
+      ]
+    },
+    {
+      "id": "kid",
+      "kind": "kid",
+      "title": "아이 (만 3세)",
+      "note": "아이는 큐티클을 밀지 않고 색과 스티커만 해요. 30~40분이면 끝나요. 손을 자주 빠는 아이는 파츠·큰 스티커 대신 색만 칠하고 탑젤로 덮어 달라고 하세요.",
+      "designs": [
+        {
+          "id": "kid-rainbow",
+          "name": "무지개 파스텔",
+          "en": "Pastel rainbow, one color per nail",
+          "say": "different pastel color on each nail",
+          "tags": ["인기", "쉬움"],
+          "look": "손가락마다 다른 파스텔 색.",
+          "why": "아이가 색을 직접 고르는 재미가 있고 금방 끝나요.",
+          "each": ["#ffb3c1", "#ffd6a5", "#fdf3a3", "#b9f0c2", "#a9c8ff"],
+          "base": { "pattern": "solid", "colors": ["#ffb3c1"] },
+          "search": "키즈네일 파스텔"
+        },
+        {
+          "id": "kid-character",
+          "name": "캐릭터 스티커 (산리오·하츄핑)",
+          "en": "Character stickers",
+          "say": "character stickers (hình dán nhân vật)",
+          "tags": ["인기", "화이트에 스티커 있음"],
+          "look": "연핑크 바탕에 두 손가락만 캐릭터 스티커. 그림은 하트로 대신 그렸어요.",
+          "why": "화이트 스파 앤 네일은 산리오·하츄핑 스티커가 있다는 후기가 있어요. 가서 아이가 고르게 하세요.",
+          "base": { "pattern": "solid", "colors": ["#ffd3de"] },
+          "accent": { "pattern": "heart", "colors": ["#ffffff", "#ff6f9c"], "at": [1, 3] },
+          "search": "키즈네일 산리오"
+        },
+        {
+          "id": "kid-glitter",
+          "name": "투명 글리터 톡톡",
+          "en": "Clear with glitter",
+          "say": "clear gel with fine glitter",
+          "tags": ["쉬움", "빨리 끝나요"],
+          "look": "투명에 가까운 연핑크에 고운 반짝이.",
+          "why": "가만히 못 있는 아이에게 가장 빨리 끝나는 디자인이에요.",
+          "base": { "pattern": "glitter", "colors": ["#fde6ee", "#f29bbb"] },
+          "search": "키즈네일 글리터"
+        },
+        {
+          "id": "kid-heart",
+          "name": "하트 포인트",
+          "en": "Heart accents",
+          "say": "small hearts on three nails",
+          "tags": ["귀여움"],
+          "look": "우윳빛 바탕, 엄지·중지·새끼에 작은 하트.",
+          "why": "아트 포함이라 추가금 없이 그려 달라고 할 수 있어요.",
+          "base": { "pattern": "solid", "colors": ["#fff0f3"] },
+          "accent": { "pattern": "heart", "colors": ["#fff0f3", "#ff5c8a"], "at": [0, 2, 4] },
+          "search": "키즈네일 하트"
+        },
+        {
+          "id": "kid-star",
+          "name": "하늘색 + 별",
+          "en": "Sky blue with stars",
+          "say": "sky blue · small stars",
+          "tags": ["귀여움"],
+          "look": "하늘색 바탕, 세 손가락에 노란 별.",
+          "why": "분홍을 안 좋아하는 아이에게 좋아요.",
+          "base": { "pattern": "solid", "colors": ["#cfe4ff"] },
+          "accent": { "pattern": "star", "colors": ["#cfe4ff", "#ffd54d"], "at": [0, 2, 4] },
+          "search": "키즈네일 별"
+        },
+        {
+          "id": "kid-strawberry",
+          "name": "딸기 포인트",
+          "en": "Strawberry dots",
+          "say": "strawberry (red with white dots) on two nails",
+          "tags": ["귀여움"],
+          "look": "크림색 바탕, 두 손가락만 빨강에 흰 점(딸기).",
+          "why": "과일 좋아하는 아이에게 좋아요.",
+          "base": { "pattern": "solid", "colors": ["#fff5ee"] },
+          "accent": { "pattern": "dot", "colors": ["#ff4d6d", "#ffffff"], "at": [1, 3] },
+          "search": "키즈네일 딸기"
+        },
+        {
+          "id": "kid-couple",
+          "name": "엄마랑 커플",
+          "en": "Matching with mom",
+          "say": "same color as mom, glitter on one nail",
+          "tags": ["사진 예뻐요"],
+          "look": "엄마와 같은 핑크 시럽, 약지 하나만 반짝이.",
+          "why": "엄마 손과 같이 사진 찍기 좋아요.",
+          "base": { "pattern": "syrup", "colors": ["#f09bb0"] },
+          "accent": { "pattern": "glitter", "colors": ["#f6b6c6", "#ffffff"], "at": [3] },
+          "search": "엄마랑 커플 네일 키즈"
+        }
+      ]
+    }
+  ],
+  "avoid": [
+    { "name": "야자수·플라밍고·수박 같은 휴양지 그림 풀세트", "why": "여행 중엔 예쁘지만 한국 가을엔 뜬금없어 보여요. 하고 싶으면 엄지 하나만." },
+    { "name": "형광·네온 원컬러", "why": "가을·겨울 옷과 안 맞고 금방 질려요." },
+    { "name": "굵은 글리터 풀컬러 · 큰 스톤 풀세트", "why": "가장 촌스러워 보이기 쉬워요. 스타킹·양말에도 걸려요. 풀스톤은 추가금도 있어요." },
+    { "name": "발가락마다 다른 원색", "why": "아이는 귀엽지만 어른 발엔 산만해 보여요." },
+    { "name": "두꺼운 3D 꽃·리본 파츠 (발)", "why": "신발 안에서 눌리고 떨어지기 쉬워요." },
+    { "name": "두꺼운 흰 프렌치 · 새하얀 풀컬러 페디", "why": "선이 두꺼우면 옛날 느낌이 나고, 흰 풀컬러는 가을엔 떠 보이고 변색이 잘 보여요." }
+  ],
+  "phrases": [
+    { "ko": "이 사진처럼 해 주세요", "en": "Please do it like this photo.", "vi": "Làm giống hình này giúp em nhé." },
+    { "ko": "색은 조금 더 어둡게 해 주세요", "en": "A little darker, please.", "vi": "Màu đậm hơn một chút nhé." },
+    { "ko": "엄지만 아트, 나머지는 한 가지 색으로", "en": "Art only on the big toes, one color on the others.", "vi": "Chỉ vẽ ngón cái thôi, các ngón còn lại sơn một màu." },
+    { "ko": "짧게, 끝은 둥근 네모로 다듬어 주세요", "en": "Short and squoval, please.", "vi": "Cắt ngắn, dũa vuông bo tròn góc nhé." },
+    { "ko": "큐티클은 살살, 깊게 자르지 말아 주세요", "en": "Please be gentle with the cuticles. Don't cut too deep.", "vi": "Cắt da nhẹ tay thôi, đừng cắt sâu quá nhé." },
+    { "ko": "아이는 큐티클 자르지 말고 색만 칠해 주세요", "en": "For my child: no cuticle cutting, color only.", "vi": "Bé không cắt da, chỉ sơn màu thôi nhé." },
+    { "ko": "파츠 없이 평평하게 해 주세요", "en": "No charms, keep it flat, please.", "vi": "Không gắn đá, để móng phẳng nhé." }
+  ],
+  "tips": [
+    "사진은 미리 2~3장 골라 저장해 두세요. 자리에 앉자마자 디자인을 고르라고 해요.",
+    "디자이너는 한국어를 못 하고, 한국어로 말하면 통역 직원을 불러 줘요. 사진을 보여 주는 게 가장 빨라요.",
+    "한국에서 한 젤이 남아 있으면 미리 말하세요. 새로 받으면 제거비는 2만동이에요.",
+    "색은 병이 아니라 컬러칩(샘플)으로 확인하세요. 자석·시럽은 올리는 횟수에 따라 진하기가 달라져요.",
+    "페디는 발톱을 너무 짧게 깎지 말라고 하세요. 양쪽 모서리를 깊이 파면 내성발톱이 될 수 있어요.",
+    "결제는 현금·원화 이체가 유리해요. 카드는 8%가 더 붙어요."
+  ]
+}

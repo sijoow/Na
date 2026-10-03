@@ -2,6 +2,7 @@
 
 import { GUIDE } from "@/data/guide";
 import fruits from "@/data/fruits.json";
+import { fruitPhoto, Photo } from "./Photo";
 import { ShopCard } from "./ToursShopsTab";
 import { card } from "./ui";
 
@@ -21,7 +22,8 @@ export default function FruitSection() {
       <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
         {fruits.season.map((f) => (
           <li key={f.name} className="rounded-2xl bg-surface-2 p-4">
-            <p className="text-[16px] font-bold text-ink">
+            <Photo photo={fruitPhoto(f.name)} alt={f.name} className="aspect-[4/3]" />
+            <p className="mt-2 text-[16px] font-bold text-ink">
               {f.name} <span className="text-[13px] font-semibold text-primary-ink">{f.vi}</span>
             </p>
             <p className="mt-0.5 text-[12px] font-semibold text-accent">{f.when}</p>

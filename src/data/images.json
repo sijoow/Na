@@ -882,5 +882,61 @@
       "kind": "photo",
       "caption": "담시장 구관(원형 건물) · 2018 — 지금은 닫혀 있고 쇼핑은 뒤쪽 신관에서"
     }
+  },
+  "fruits": {
+    "망고": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-mango.jpg",
+      "credit": "HaJunkiyada",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Fresh_mango_halves_scored_and_plated.jpg"
+    },
+    "석가": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-sugar-apple.jpg",
+      "credit": "Vengolis",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Annona_squamosa_20180920_133254.jpg"
+    },
+    "스타애플": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-star-apple.jpg",
+      "credit": "No machine-readable author provided. Hans B.~commonswiki assumed (based on copyr",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Chrysophyllum_cainito0.jpg"
+    },
+    "망고스틴": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-mangosteen.jpg",
+      "credit": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sweet_mangosteen.jpg"
+    },
+    "용과": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-dragon-fruit.jpg",
+      "credit": "Billjones94",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_half_cut_Pitaya_(Red_dragon_fruit)_in_West_Bengal,_India.jpg"
+    },
+    "람부탄 · 롱안": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-rambutan.jpg",
+      "credit": "Frank Schulenburg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rambutan_fruit,_half_peeled.jpg"
+    },
+    "잭프루트": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-jackfruit.jpg",
+      "credit": "Asit K. Ghosh Thaumaturgist",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jackfruit_NS-1_01_Asit.jpg"
+    },
+    "두리안": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-durian.jpg",
+      "credit": "PattayaPatrol",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DSCF0289_Fresh_durians_piled_high_at_a_bustling_market_stall_their_spiky_shells_ready_to_be_cracked_open_for_the_famously_fragrant_fruit_inside.jpg"
+    },
+    "자몽 (포멜로)": {
+      "url": "https://yogibo.openhost.cafe24.com/app/img/lsh/nhatrang/fruit-pomelo.jpg",
+      "credit": "Salix",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_maxima_%27Honey%27-_cut.JPG"
+    }
   }
 }
