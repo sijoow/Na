@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-// 휴대폰 '홈 화면에 추가' 용 앱 정보 (서비스워커·오프라인 캐시는 일부러 넣지 않음 — 데이터 동기화 꼬임 방지)
+// 휴대폰 '홈 화면에 추가' 용 앱 정보 (오프라인 보기는 public/sw.js + components/OfflineSave — 인터넷이 되면 항상 새 일정을 받고, 오프라인에서는 보기 전용)
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "나트랑 여행 플래너",

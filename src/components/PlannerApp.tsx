@@ -6,6 +6,7 @@ import { getTripStatus, isWithinTrip, toDateString } from "@/lib/date";
 import { getItemProgress } from "@/lib/trip";
 import { useTripSync, type SaveStatus } from "@/lib/useTripSync";
 import ChecklistTab from "./ChecklistTab";
+import OfflineSave from "./OfflineSave";
 import OverviewTab from "./OverviewTab";
 import ScheduleTab from "./ScheduleTab";
 import { btn, Modal } from "./ui";
@@ -26,6 +27,13 @@ const loadNails = () => import("./NailDesignTab");
 const loadDam = () => import("./DamMarketTab");
 const loadSouvenir = () => import("./SouvenirTab");
 const loadPharmacy = () => import("./PharmacyTab");
+// 오프라인 저장이 미리 받아 둘 코드 — 모든 탭과 지도(지도 배경 타일은 오프라인에서 안 나옴)
+const OFFLINE_LOADERS = [
+  loadMapTab, loadStaysTab, loadToursShopsTab, loadReviewsTab, loadWeather, loadAsk, loadFood, loadSpa, loadDesert,
+  loadVinTickets, loadKids, loadNails, loadDam, loadSouvenir, loadPharmacy,
+  () => import("./MapView"),
+  () => import("leaflet"),
+];
 const MapTab = dynamic(loadMapTab, { loading: () => <TabLoading /> });
 const StaysTab = dynamic(loadStaysTab, { loading: () => <TabLoading /> });
 const ToursShopsTab = dynamic(loadToursShopsTab, { loading: () => <TabLoading /> });
@@ -311,6 +319,7 @@ export default function PlannerApp() {
       </header>
 
       <main className="mx-auto max-w-7xl px-4 pt-2 pb-[calc(var(--tabbar-h)+1.5rem)] md:px-8 md:pt-3 md:pb-10">
+        {tab === "overview" && <OfflineSave loaders={OFFLINE_LOADERS} />}
         {tab === "overview" && (
           <OverviewTab
             state={state}

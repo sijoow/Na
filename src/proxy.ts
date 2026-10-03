@@ -44,7 +44,8 @@ function redirectTo(request: NextRequest, pathname: string) {
 export const config = {
   // Next 내부 파일(_next/…)과 public 폴더의 정적 파일(이미지 등)은 검사하지 않는다
   // 앱 아이콘(/icon/…, /apple-icon)과 manifest 는 폰이 쿠키 없이 받아 가므로 잠그지 않는다
+  // 오프라인용 서비스워커(/sw.js)도 브라우저가 따로 받아 가므로 잠그지 않는다 (내용에 비밀 없음)
   matcher: [
-    "/((?!_next/|__nextjs|favicon\\.ico|icon/|apple-icon$|manifest\\.webmanifest$|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml|webmanifest)$).*)",
+    "/((?!_next/|__nextjs|favicon\\.ico|sw\\.js$|icon/|apple-icon$|manifest\\.webmanifest$|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml|webmanifest)$).*)",
   ],
 };
