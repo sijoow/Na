@@ -65,7 +65,7 @@ interface KidsData {
   legend: { fit: Fit; label: string }[];
   plan: { title: string; summary: string; steps: { time: string; text: string }[]; total: string; note: string };
   places: Place[];
-  notRecommended: { name: string; price: string; why: string }[];
+  notRecommended: { name: string; price: string; why: string; detail?: NotRecommendedDetail }[];
   nails: {
     title: string;
     intro: string;
@@ -75,6 +75,18 @@ interface KidsData {
     shops: NailShop[];
     sources: string;
   };
+}
+
+/** 비추 장소인데 그래도 가려는 경우를 위한 상세 (원숭이섬: 패키지·가는 법·안전 수칙) */
+interface NotRecommendedDetail {
+  checkedAt: string;
+  verdict: string;
+  ifGoing: string[];
+  pier: { name: string; lat: number; lng: number; move: string };
+  hours: string;
+  packages: { name: string; where: string; url: string; price: string; note: string }[];
+  safety: string[];
+  posts: { title: string; url: string; date: string; summary: string }[];
 }
 
 const D = data as KidsData;
@@ -122,6 +134,7 @@ export default function KidsPlacesTab({ onGo }: { onGo?: (tab: "schedule") => vo
               <p className="text-[15px] font-bold text-ink">{n.name}</p>
               <p className="text-[13px] font-semibold text-ink-3">{n.price}</p>
               <p className="mt-0.5 text-[13px] leading-relaxed text-ink-2">{n.why}</p>
+              {n.detail && <NotRecommendedMore d={n.detail} />}
             </li>
           ))}
         </ul>
@@ -134,6 +147,65 @@ export default function KidsPlacesTab({ onGo }: { onGo?: (tab: "schedule") => vo
         열어요.
       </p>
     </div>
+  );
+}
+
+/** 비추 장소 펼쳐 보기 — 그래도 간다면 언제·어떻게, 패키지 상품, 안전 수칙, 후기 */
+function NotRecommendedMore({ d }: { d: NotRecommendedDetail }) {
+  return (
+    <details className="mt-2 rounded-2xl border border-line px-3 py-2.5">
+      <summary className="cursor-pointer text-[13px] font-bold text-ink-2">📦 패키지 · 가는 법 · 안전 수칙 ({d.checkedAt} 조사)</summary>
+      <p className="mt-2 text-[13px] leading-relaxed font-semibold text-ink">{d.verdict}</p>
+
+      <p className="mt-3 text-[13px] font-bold text-accent">그래도 간다면 (10/9 오전)</p>
+      <ul className="mt-1 space-y-1 text-[13px] leading-relaxed text-ink-2">
+        {d.ifGoing.map((t) => (
+          <li key={t}>· {t}</li>
+        ))}
+      </ul>
+
+      <p className="mt-3 text-[13px] font-bold text-accent">패키지 · 표</p>
+      <ul className="mt-1 space-y-2">
+        {d.packages.map((p) => (
+          <li key={p.name} className="rounded-xl bg-surface-2 px-3 py-2">
+            <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-[13px] font-bold text-primary-ink underline-offset-2 hover:underline">
+              {p.name} ↗
+            </a>
+            <span className="ml-1 text-[12px] text-ink-3">{p.where}</span>
+            <p className="text-[13px] font-semibold text-ink">{p.price}</p>
+            <p className="text-[12px] leading-relaxed text-ink-3">{p.note}</p>
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-3 text-[13px] font-bold text-accent">선착장 · 시간</p>
+      <p className="mt-1 text-[13px] leading-relaxed text-ink-2">
+        <a href={mapUrl(d.pier.lat, d.pier.lng)} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary-ink">
+          📍 {d.pier.name}
+        </a>{" "}
+        — {d.pier.move}
+      </p>
+      <p className="mt-1 text-[13px] leading-relaxed text-ink-2">🕒 {d.hours}</p>
+
+      <p className="mt-3 text-[13px] font-bold text-danger">안전 수칙</p>
+      <ul className="mt-1 space-y-1 text-[13px] leading-relaxed text-ink-2">
+        {d.safety.map((t) => (
+          <li key={t}>· {t}</li>
+        ))}
+      </ul>
+
+      <p className="mt-3 text-[13px] font-bold text-ink-3">최근 후기</p>
+      <ul className="mt-1 space-y-1">
+        {d.posts.map((p) => (
+          <li key={p.url} className="text-[12px] leading-relaxed text-ink-3">
+            <a href={p.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-ink-2 underline-offset-2 hover:underline">
+              {p.title}
+            </a>{" "}
+            ({p.date}) — {p.summary}
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
 
